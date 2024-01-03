@@ -4,7 +4,7 @@ import animationData from "../animation/internet-banner.json";
 import anim2Data from "../animation/internet-anim-01.json";
 import anim3Data from "../animation/internet-anim-02.json";
 import { Link } from "react-router-dom";
-// import scriptSrc from "../js";
+import scriptSrc from "../js/scripts.js";
 
 const Home = () => {
   useEffect(() => {
@@ -14,11 +14,11 @@ const Home = () => {
 
     // document.body.appendChild(swiperScript);
 
-    const scriptsScript = document.createElement("script");
-    scriptsScript.src = "./js/script.js";
-    scriptsScript.async = true;
+    // const scriptsScript = document.createElement("script");
+    // scriptsScript.src = scriptSrc;
+    // scriptsScript.async = true;
 
-    document.body.appendChild(scriptsScript);
+    // document.body.appendChild(scriptsScript);
 
     const container = document.getElementById("internet-banner");
     const container2 = document.getElementById("internet-anim-01");
@@ -50,9 +50,9 @@ const Home = () => {
 
     return () => {
       // document.body.removeChild(swiperScript);
-      if (document.body.contains(scriptsScript)) {
-        document.body.removeChild(scriptsScript);
-      }
+      // if (document.body.contains(scriptsScript)) {
+      //   document.body.removeChild(scriptsScript);
+      // }
       anim1.destroy();
       anim2.destroy();
       anim3.destroy();
