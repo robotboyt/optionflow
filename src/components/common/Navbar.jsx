@@ -91,18 +91,18 @@ const Navbar = () => {
                               >
                                 <Link to="/our-history">Наша історія</Link>
                               </li>
-                              <li>
+                              {/* <li>
                                 <Link to="our-team-member.html">
                                   Наша команда
                                 </Link>
-                              </li>
+                              </li> */}
                               <li>
-                                <Link to="faq.html">Faq</Link>
+                                <Link to="/faq">Faq</Link>
                               </li>
                             </ul>
                           </li>
                           <li>
-                            <Link to="contact-us.html">Контакти</Link>
+                            <Link to="/contacts">Контакти</Link>
                           </li>
                         </ul>
                       </div>
@@ -144,9 +144,9 @@ const Navbar = () => {
                   </div>
                   <div className="pbmit-button-box">
                     <div className="pbmit-header-button2">
-                      <a href="contact-us.html">
+                      <Link to="/contacts">
                         <span className="pbmit-btn">get in touch</span>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

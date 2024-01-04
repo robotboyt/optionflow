@@ -6,6 +6,8 @@ import Portfolio from "./pages/Portfolio";
 import Blog from "./pages/Blog";
 import About from "./pages/About";
 import History from "./pages/ History";
+import Faq from "./pages/Faq";
+import Contacts from "./pages/Contacts";
 
 const App = () => {
   return (
@@ -17,6 +19,8 @@ const App = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/about" element={<About />} />
         <Route path="/our-history" element={<History />} />
+        <Route path="/faq" element={<Faq />} />
+        <Route path="/contacts" element={<Contacts />} />
       </Routes>
     </div>
   );

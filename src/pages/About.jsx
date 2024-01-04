@@ -3,15 +3,15 @@ import Navbar from "../components/common/Navbar";
 
 const About = () => {
   return (
-    <div class="page-wrapper">
+    <div className="page-wrapper">
       <Navbar />
-      <div class="pbmit-title-bar-wrapper">
-        <div class="container">
-          <div class="pbmit-title-bar-content">
-            <div class="pbmit-title-bar-content-inner">
-              <div class="pbmit-tbar">
-                <div class="pbmit-tbar-inner container">
-                  <h1 class="pbmit-tbar-title">About Us</h1>
+      <div className="pbmit-title-bar-wrapper">
+        <div className="container">
+          <div className="pbmit-title-bar-content">
+            <div className="pbmit-title-bar-content-inner">
+              <div className="pbmit-tbar">
+                <div className="pbmit-tbar-inner container">
+                  <h1 className="pbmit-tbar-title">About Us</h1>
                 </div>
               </div>
             </div>
@@ -19,22 +19,22 @@ const About = () => {
         </div>
       </div>
 
-      <div class="page-content">
-        <section class="section-lg">
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-xl-6 col-md-12">
-                <div class="about-us-section-bg">
-                  <div class="about-us-section-wrap">
+      <div className="page-content">
+        <section className="section-lg">
+          <div className="container">
+            <div className="row align-items-center">
+              <div className="col-xl-6 col-md-12">
+                <div className="about-us-section-bg">
+                  <div className="about-us-section-wrap">
                     Become more productive with our services.
                   </div>
                 </div>
               </div>
-              <div class="col-xl-6 col-md-12">
-                <div class="about-us-section-home">
-                  <div class="pbmit-heading-subheading">
-                    <h4 class="pbmit-subtitle-white">WHY CHOOSE US</h4>
-                    <h2 class="pbmit-title">
+              <div className="col-xl-6 col-md-12">
+                <div className="about-us-section-home">
+                  <div className="pbmit-heading-subheading">
+                    <h4 className="pbmit-subtitle-white">WHY CHOOSE US</h4>
+                    <h2 className="pbmit-title">
                       We Offer Expert SEO and Marketing.
                     </h2>
                   </div>
@@ -43,21 +43,21 @@ const About = () => {
                     passionate about their work. Years of cooperation with both
                     corporations.
                   </div>
-                  <div class="pbmit-list-style-1">
-                    <ul class="icon-list-items">
-                      <li class="icon-list-item">
-                        <span class="icon-list-text">
+                  <div className="pbmit-list-style-1">
+                    <ul className="icon-list-items">
+                      <li className="icon-list-item">
+                        <span className="icon-list-text">
                           Perfect for large sites agencies
                         </span>
                       </li>
-                      <li class="icon-list-item">
-                        <span class="icon-list-text">
+                      <li className="icon-list-item">
+                        <span className="icon-list-text">
                           We appreciate your trust greatly
                         </span>
                       </li>
                     </ul>
                   </div>
-                  <a href="contact-us.html" class="pbmit-btn">
+                  <a href="contact-us.html" className="pbmit-btn">
                     Conatct Us
                   </a>
                 </div>
@@ -66,66 +66,66 @@ const About = () => {
           </div>
         </section>
 
-        <section class="section-lg pbmit-bg-color-light">
-          <div class="container">
-            <div class="pbmit-heading-subheading text-center">
-              <h4 class="pbmit-subtitle-white">OUR TEAM</h4>
-              <h2 class="pbmit-title">Our Expert Advisor</h2>
+        <section className="section-lg pbmit-bg-color-light">
+          <div className="container">
+            <div className="pbmit-heading-subheading text-center">
+              <h4 className="pbmit-subtitle-white">OUR TEAM</h4>
+              <h2 className="pbmit-title">Our Expert Advisor</h2>
             </div>
-            <div class="row">
-              <div class="col-md-6 col-lg-4">
-                <article class="pbmit-team-style-3">
-                  <div class="pbminfotech-post-item">
-                    <div class="pbmit-featured-img-wrapper">
-                      <div class="pbmit-featured-wrapper">
+            <div className="row">
+              <div className="col-md-6 col-lg-4">
+                <article className="pbmit-team-style-3">
+                  <div className="pbminfotech-post-item">
+                    <div className="pbmit-featured-img-wrapper">
+                      <div className="pbmit-featured-wrapper">
                         <img
                           src="images/coworking/team/team-01b.jpg"
-                          class="img-fluid"
+                          className="img-fluid"
                           alt=""
                         />
                       </div>
                     </div>
-                    <div class="pbminfotech-social-box">
-                      <div class="pbminfotech-box-social-links">
-                        <ul class="pbmit-social-links pbmit-team-social-links">
-                          <li class="pbmit-social-li pbmit-social-facebook">
+                    <div className="pbminfotech-social-box">
+                      <div className="pbminfotech-box-social-links">
+                        <ul className="pbmit-social-links pbmit-team-social-links">
+                          <li className="pbmit-social-li pbmit-social-facebook">
                             <a href="#" title="Facebook" target="_blank">
                               <span>
-                                <i class="pbmit-base-icon-facebook-squared"></i>
+                                <i className="pbmit-base-icon-facebook-squared"></i>
                               </span>
                             </a>
                           </li>
-                          <li class="pbmit-social-li pbmit-social-twitter">
+                          <li className="pbmit-social-li pbmit-social-twitter">
                             <a href="#" title="Twitter" target="_blank">
                               <span>
-                                <i class="pbmit-base-icon-twitter"></i>
+                                <i className="pbmit-base-icon-twitter"></i>
                               </span>
                             </a>
                           </li>
-                          <li class="pbmit-social-li pbmit-social-instagram">
+                          <li className="pbmit-social-li pbmit-social-instagram">
                             <a href="#" title="Instagram" target="_blank">
                               <span>
-                                <i class="pbmit-base-icon-instagram"></i>
+                                <i className="pbmit-base-icon-instagram"></i>
                               </span>
                             </a>
                           </li>
-                          <li class="pbmit-social-li pbmit-social-youtube">
+                          <li className="pbmit-social-li pbmit-social-youtube">
                             <a href="#" title="Youtube" target="_blank">
                               <span>
-                                <i class="pbmit-base-icon-youtube-play"></i>
+                                <i className="pbmit-base-icon-youtube-play"></i>
                               </span>
                             </a>
                           </li>
                         </ul>
                       </div>
                     </div>
-                    <div class="pbminfotech-box-content">
-                      <div class="pbminfotech-box-content-inner">
-                        <h3 class="pbmit-team-title">
+                    <div className="pbminfotech-box-content">
+                      <div className="pbminfotech-box-content-inner">
+                        <h3 className="pbmit-team-title">
                           <a href="team-member-detail.html">Michael Daniel</a>
                         </h3>
-                        <div class="pbminfotech-team-position">
-                          <div class="pbminfotech-box-team-position">
+                        <div className="pbminfotech-team-position">
+                          <div className="pbminfotech-box-team-position">
                             Project Manager
                           </div>
                         </div>
@@ -134,59 +134,59 @@ const About = () => {
                   </div>
                 </article>
               </div>
-              <div class="col-md-6 col-lg-4">
-                <article class="pbmit-team-style-3">
-                  <div class="pbminfotech-post-item">
-                    <div class="pbmit-featured-img-wrapper">
-                      <div class="pbmit-featured-wrapper">
+              <div className="col-md-6 col-lg-4">
+                <article className="pbmit-team-style-3">
+                  <div className="pbminfotech-post-item">
+                    <div className="pbmit-featured-img-wrapper">
+                      <div className="pbmit-featured-wrapper">
                         <img
                           src="images/coworking/team/team-02b.jpg"
-                          class="img-fluid"
+                          className="img-fluid"
                           alt=""
                         />
                       </div>
                     </div>
-                    <div class="pbminfotech-social-box">
-                      <div class="pbminfotech-box-social-links">
-                        <ul class="pbmit-social-links pbmit-team-social-links">
-                          <li class="pbmit-social-li pbmit-social-facebook">
+                    <div className="pbminfotech-social-box">
+                      <div className="pbminfotech-box-social-links">
+                        <ul className="pbmit-social-links pbmit-team-social-links">
+                          <li className="pbmit-social-li pbmit-social-facebook">
                             <a href="#" title="Facebook" target="_blank">
                               <span>
-                                <i class="pbmit-base-icon-facebook-squared"></i>
+                                <i className="pbmit-base-icon-facebook-squared"></i>
                               </span>
                             </a>
                           </li>
-                          <li class="pbmit-social-li pbmit-social-twitter">
+                          <li className="pbmit-social-li pbmit-social-twitter">
                             <a href="#" title="Twitter" target="_blank">
                               <span>
-                                <i class="pbmit-base-icon-twitter"></i>
+                                <i className="pbmit-base-icon-twitter"></i>
                               </span>
                             </a>
                           </li>
-                          <li class="pbmit-social-li pbmit-social-instagram">
+                          <li className="pbmit-social-li pbmit-social-instagram">
                             <a href="#" title="Instagram" target="_blank">
                               <span>
-                                <i class="pbmit-base-icon-instagram"></i>
+                                <i className="pbmit-base-icon-instagram"></i>
                               </span>
                             </a>
                           </li>
-                          <li class="pbmit-social-li pbmit-social-youtube">
+                          <li className="pbmit-social-li pbmit-social-youtube">
                             <a href="#" title="Youtube" target="_blank">
                               <span>
-                                <i class="pbmit-base-icon-youtube-play"></i>
+                                <i className="pbmit-base-icon-youtube-play"></i>
                               </span>
                             </a>
                           </li>
                         </ul>
                       </div>
                     </div>
-                    <div class="pbminfotech-box-content">
-                      <div class="pbminfotech-box-content-inner">
-                        <h3 class="pbmit-team-title">
+                    <div className="pbminfotech-box-content">
+                      <div className="pbminfotech-box-content-inner">
+                        <h3 className="pbmit-team-title">
                           <a href="team-member-detail.html">Eliana Ivy</a>
                         </h3>
-                        <div class="pbminfotech-team-position">
-                          <div class="pbminfotech-box-team-position">
+                        <div className="pbminfotech-team-position">
+                          <div className="pbminfotech-box-team-position">
                             General Manager
                           </div>
                         </div>
@@ -195,59 +195,59 @@ const About = () => {
                   </div>
                 </article>
               </div>
-              <div class="col-md-6 col-lg-4">
-                <article class="pbmit-team-style-3">
-                  <div class="pbminfotech-post-item">
-                    <div class="pbmit-featured-img-wrapper">
-                      <div class="pbmit-featured-wrapper">
+              <div className="col-md-6 col-lg-4">
+                <article className="pbmit-team-style-3">
+                  <div className="pbminfotech-post-item">
+                    <div className="pbmit-featured-img-wrapper">
+                      <div className="pbmit-featured-wrapper">
                         <img
                           src="images/coworking/team/team-03b.jpg"
-                          class="img-fluid"
+                          className="img-fluid"
                           alt=""
                         />
                       </div>
                     </div>
-                    <div class="pbminfotech-social-box">
-                      <div class="pbminfotech-box-social-links">
-                        <ul class="pbmit-social-links pbmit-team-social-links">
-                          <li class="pbmit-social-li pbmit-social-facebook">
+                    <div className="pbminfotech-social-box">
+                      <div className="pbminfotech-box-social-links">
+                        <ul className="pbmit-social-links pbmit-team-social-links">
+                          <li className="pbmit-social-li pbmit-social-facebook">
                             <a href="#" title="Facebook" target="_blank">
                               <span>
-                                <i class="pbmit-base-icon-facebook-squared"></i>
+                                <i className="pbmit-base-icon-facebook-squared"></i>
                               </span>
                             </a>
                           </li>
-                          <li class="pbmit-social-li pbmit-social-twitter">
+                          <li className="pbmit-social-li pbmit-social-twitter">
                             <a href="#" title="Twitter" target="_blank">
                               <span>
-                                <i class="pbmit-base-icon-twitter"></i>
+                                <i className="pbmit-base-icon-twitter"></i>
                               </span>
                             </a>
                           </li>
-                          <li class="pbmit-social-li pbmit-social-instagram">
+                          <li className="pbmit-social-li pbmit-social-instagram">
                             <a href="#" title="Instagram" target="_blank">
                               <span>
-                                <i class="pbmit-base-icon-instagram"></i>
+                                <i className="pbmit-base-icon-instagram"></i>
                               </span>
                             </a>
                           </li>
-                          <li class="pbmit-social-li pbmit-social-youtube">
+                          <li className="pbmit-social-li pbmit-social-youtube">
                             <a href="#" title="Youtube" target="_blank">
                               <span>
-                                <i class="pbmit-base-icon-youtube-play"></i>
+                                <i className="pbmit-base-icon-youtube-play"></i>
                               </span>
                             </a>
                           </li>
                         </ul>
                       </div>
                     </div>
-                    <div class="pbminfotech-box-content">
-                      <div class="pbminfotech-box-content-inner">
-                        <h3 class="pbmit-team-title">
+                    <div className="pbminfotech-box-content">
+                      <div className="pbminfotech-box-content-inner">
+                        <h3 className="pbmit-team-title">
                           <a href="team-member-detail.html">Richard Edward</a>
                         </h3>
-                        <div class="pbminfotech-team-position">
-                          <div class="pbminfotech-box-team-position">
+                        <div className="pbminfotech-team-position">
+                          <div className="pbminfotech-box-team-position">
                             Digital Strategist
                           </div>
                         </div>
@@ -260,43 +260,43 @@ const About = () => {
           </div>
         </section>
 
-        <section class="section-lg">
-          <div class="container">
-            <div class="row align-items-end">
-              <div class="col-xl-6 col-md-12">
-                <div class="pbmit-heading-subheading">
-                  <h4 class="pbmit-subtitle-white">SUCCESS STORIES</h4>
-                  <h2 class="pbmit-title">
+        <section className="section-lg">
+          <div className="container">
+            <div className="row align-items-end">
+              <div className="col-xl-6 col-md-12">
+                <div className="pbmit-heading-subheading">
+                  <h4 className="pbmit-subtitle-white">SUCCESS STORIES</h4>
+                  <h2 className="pbmit-title">
                     We have Marvelous and digital experience.
                   </h2>
                 </div>
-                <div class="pe-4">
+                <div className="pe-4">
                   Digital marketing is marketing and advertising of a business
                   service using online channels, electronic devices, and digital
                   technologies. A few examples of social media, email.
                 </div>
-                <div class="pbmit-ihbox pbmit-ihbox-style-20 mt-5">
-                  <div class="pbmit-ihbox-box d-flex align-items-center">
-                    <div class="pbmit-ihbox-icon">
-                      <div class="pbmit-ihbox-icon-wrapper">
-                        <div class="pbmit-icon-wrapper pbmit-icon-type-icon">
-                          <i class="pbmit-xido-icon pbmit-xido-icon-email"></i>
+                <div className="pbmit-ihbox pbmit-ihbox-style-20 mt-5">
+                  <div className="pbmit-ihbox-box d-flex align-items-center">
+                    <div className="pbmit-ihbox-icon">
+                      <div className="pbmit-ihbox-icon-wrapper">
+                        <div className="pbmit-icon-wrapper pbmit-icon-type-icon">
+                          <i className="pbmit-xido-icon pbmit-xido-icon-email"></i>
                         </div>
                       </div>
                     </div>
-                    <div class="pbmit-ihbox-contents">
-                      <div class="pbmit-heading-desc">Send Email</div>
-                      <h2 class="pbmit-element-title">needhelp@company.com</h2>
+                    <div className="pbmit-ihbox-contents">
+                      <div className="pbmit-heading-desc">Send Email</div>
+                      <h2 className="pbmit-element-title">needhelp@company.com</h2>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-xl-6 col-md-12 progressbar-section-home">
-                <div class="progressbar pbmit-progress-style-4">
-                  <span class="progress-label">Experience</span>
-                  <div class="progress progress-lg progress-percent-bg">
+              <div className="col-xl-6 col-md-12 progressbar-section-home">
+                <div className="progressbar pbmit-progress-style-4">
+                  <span className="progress-label">Experience</span>
+                  <div className="progress progress-lg progress-percent-bg">
                     <div
-                      class="progress-bar aos aos-init aos-animate"
+                      className="progress-bar aos aos-init aos-animate"
                       data-aos="slide-right"
                       data-aos-delay="200"
                       data-aos-duration="1000"
@@ -307,15 +307,15 @@ const About = () => {
                       aria-valuemax="100"
                       style={{ width: "90%" }}
                     >
-                      <span class="progress-percent">90%</span>
+                      <span className="progress-percent">90%</span>
                     </div>
                   </div>
                 </div>
-                <div class="progressbar pbmit-progress-style-4">
-                  <span class="progress-label">Development</span>
-                  <div class="progress progress-lg progress-percent-bg">
+                <div className="progressbar pbmit-progress-style-4">
+                  <span className="progress-label">Development</span>
+                  <div className="progress progress-lg progress-percent-bg">
                     <div
-                      class="progress-bar aos aos-init aos-animate"
+                      className="progress-bar aos aos-init aos-animate"
                       data-aos="slide-right"
                       data-aos-delay="200"
                       data-aos-duration="1000"
@@ -326,15 +326,15 @@ const About = () => {
                       aria-valuemax="100"
                       style={{ width: "80%" }}
                     >
-                      <span class="progress-percent">80%</span>
+                      <span className="progress-percent">80%</span>
                     </div>
                   </div>
                 </div>
-                <div class="progressbar pbmit-progress-style-4">
-                  <span class="progress-label">Marketing</span>
-                  <div class="progress progress-lg progress-percent-bg">
+                <div className="progressbar pbmit-progress-style-4">
+                  <span className="progress-label">Marketing</span>
+                  <div className="progress progress-lg progress-percent-bg">
                     <div
-                      class="progress-bar aos aos-init aos-animate"
+                      className="progress-bar aos aos-init aos-animate"
                       data-aos="slide-right"
                       data-aos-delay="200"
                       data-aos-duration="1000"
@@ -345,7 +345,7 @@ const About = () => {
                       aria-valuemax="100"
                       style={{ width: "70%" }}
                     >
-                      <span class="progress-percent">70%</span>
+                      <span className="progress-percent">70%</span>
                     </div>
                   </div>
                 </div>
@@ -354,13 +354,13 @@ const About = () => {
           </div>
         </section>
 
-        <section class="pbmit-bg-color-blackish">
-          <div class="container-fluid p-0">
-            <div class="row g-0">
-              <div class="col-lg-12 col-xl-6 testimonial-bg-left"></div>
-              <div class="col-lg-12 col-xl-6 testimonial-bg-right">
+        <section className="pbmit-bg-color-blackish">
+          <div className="container-fluid p-0">
+            <div className="row g-0">
+              <div className="col-lg-12 col-xl-6 testimonial-bg-left"></div>
+              <div className="col-lg-12 col-xl-6 testimonial-bg-right">
                 <div
-                  class="swiper-slider swiper-btn-white swiper-btn-right-arrow"
+                  className="swiper-slider swiper-btn-white swiper-btn-right-arrow"
                   data-autoplay="false"
                   data-dots="false"
                   data-arrows="true"
@@ -368,13 +368,13 @@ const About = () => {
                   data-margin="30"
                   data-effect="slide"
                 >
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <article class="pbmit-testimonial-style-3">
-                        <div class="pbminfotech-post-item">
-                          <div class="pbminfotech-box-content">
-                            <div class="pbminfotech-box-desc">
-                              <blockquote class="pbminfotech-testimonial-text">
+                  <div className="swiper-wrapper">
+                    <div className="swiper-slide">
+                      <article className="pbmit-testimonial-style-3">
+                        <div className="pbminfotech-post-item">
+                          <div className="pbminfotech-box-content">
+                            <div className="pbminfotech-box-desc">
+                              <blockquote className="pbminfotech-testimonial-text">
                                 <p>
                                   I am so grateful for everything that I have
                                   learned from you. You have my immense thanks
@@ -382,24 +382,24 @@ const About = () => {
                                 </p>
                               </blockquote>
                             </div>
-                            <div class="pbminfotech-testimonial-wrapper d-flex align-items-center">
-                              <div class="pbminfotech-box-img">
-                                <div class="pbmit-featured-img-wrapper">
-                                  <div class="pbmit-featured-wrapper">
+                            <div className="pbminfotech-testimonial-wrapper d-flex align-items-center">
+                              <div className="pbminfotech-box-img">
+                                <div className="pbmit-featured-img-wrapper">
+                                  <div className="pbmit-featured-wrapper">
                                     <img
                                       src="images/coworking/testimonial/testimonial-01.jpg"
-                                      class="img-fluid"
+                                      className="img-fluid"
                                       alt=""
                                     />
                                   </div>
                                 </div>
                               </div>
-                              <div class="pbminfotech-author-wrapper">
-                                <div class="pbminfotech-box-author">
-                                  <h3 class="pbminfotech-box-title">
+                              <div className="pbminfotech-author-wrapper">
+                                <div className="pbminfotech-box-author">
+                                  <h3 className="pbminfotech-box-title">
                                     Amelia Daniel
                                   </h3>
-                                  <div class="pbminfotech-testimonial-detail">
+                                  <div className="pbminfotech-testimonial-detail">
                                     Market Analyst
                                   </div>
                                 </div>
@@ -409,12 +409,12 @@ const About = () => {
                         </div>
                       </article>
                     </div>
-                    <div class="swiper-slide">
-                      <article class="pbmit-testimonial-style-3">
-                        <div class="pbminfotech-post-item">
-                          <div class="pbminfotech-box-content">
-                            <div class="pbminfotech-box-desc">
-                              <blockquote class="pbminfotech-testimonial-text">
+                    <div className="swiper-slide">
+                      <article className="pbmit-testimonial-style-3">
+                        <div className="pbminfotech-post-item">
+                          <div className="pbminfotech-box-content">
+                            <div className="pbminfotech-box-desc">
+                              <blockquote className="pbminfotech-testimonial-text">
                                 <p>
                                   I am so grateful for everything that I have
                                   learned from you. You have my immense thanks
@@ -422,24 +422,24 @@ const About = () => {
                                 </p>
                               </blockquote>
                             </div>
-                            <div class="pbminfotech-testimonial-wrapper d-flex align-items-center">
-                              <div class="pbminfotech-box-img">
-                                <div class="pbmit-featured-img-wrapper">
-                                  <div class="pbmit-featured-wrapper">
+                            <div className="pbminfotech-testimonial-wrapper d-flex align-items-center">
+                              <div className="pbminfotech-box-img">
+                                <div className="pbmit-featured-img-wrapper">
+                                  <div className="pbmit-featured-wrapper">
                                     <img
                                       src="images/coworking/testimonial/testimonial-02.jpg"
-                                      class="img-fluid"
+                                      className="img-fluid"
                                       alt=""
                                     />
                                   </div>
                                 </div>
                               </div>
-                              <div class="pbminfotech-author-wrapper">
-                                <div class="pbminfotech-box-author">
-                                  <h3 class="pbminfotech-box-title">
+                              <div className="pbminfotech-author-wrapper">
+                                <div className="pbminfotech-box-author">
+                                  <h3 className="pbminfotech-box-title">
                                     Jordan Billy
                                   </h3>
-                                  <div class="pbminfotech-testimonial-detail">
+                                  <div className="pbminfotech-testimonial-detail">
                                     Business Analysis
                                   </div>
                                 </div>
@@ -449,12 +449,12 @@ const About = () => {
                         </div>
                       </article>
                     </div>
-                    <div class="swiper-slide">
-                      <article class="pbmit-testimonial-style-3">
-                        <div class="pbminfotech-post-item">
-                          <div class="pbminfotech-box-content">
-                            <div class="pbminfotech-box-desc">
-                              <blockquote class="pbminfotech-testimonial-text">
+                    <div className="swiper-slide">
+                      <article className="pbmit-testimonial-style-3">
+                        <div className="pbminfotech-post-item">
+                          <div className="pbminfotech-box-content">
+                            <div className="pbminfotech-box-desc">
+                              <blockquote className="pbminfotech-testimonial-text">
                                 <p>
                                   I am so grateful for everything that I have
                                   learned from you. You have my immense thanks
@@ -462,24 +462,24 @@ const About = () => {
                                 </p>
                               </blockquote>
                             </div>
-                            <div class="pbminfotech-testimonial-wrapper d-flex align-items-center">
-                              <div class="pbminfotech-box-img">
-                                <div class="pbmit-featured-img-wrapper">
-                                  <div class="pbmit-featured-wrapper">
+                            <div className="pbminfotech-testimonial-wrapper d-flex align-items-center">
+                              <div className="pbminfotech-box-img">
+                                <div className="pbmit-featured-img-wrapper">
+                                  <div className="pbmit-featured-wrapper">
                                     <img
                                       src="images/coworking/testimonial/testimonial-03.jpg"
-                                      class="img-fluid"
+                                      className="img-fluid"
                                       alt=""
                                     />
                                   </div>
                                 </div>
                               </div>
-                              <div class="pbminfotech-author-wrapper">
-                                <div class="pbminfotech-box-author">
-                                  <h3 class="pbminfotech-box-title">
+                              <div className="pbminfotech-author-wrapper">
+                                <div className="pbminfotech-box-author">
+                                  <h3 className="pbminfotech-box-title">
                                     Ariella Olive
                                   </h3>
-                                  <div class="pbminfotech-testimonial-detail">
+                                  <div className="pbminfotech-testimonial-detail">
                                     Manager
                                   </div>
                                 </div>
@@ -489,12 +489,12 @@ const About = () => {
                         </div>
                       </article>
                     </div>
-                    <div class="swiper-slide">
-                      <article class="pbmit-testimonial-style-3">
-                        <div class="pbminfotech-post-item">
-                          <div class="pbminfotech-box-content">
-                            <div class="pbminfotech-box-desc">
-                              <blockquote class="pbminfotech-testimonial-text">
+                    <div className="swiper-slide">
+                      <article className="pbmit-testimonial-style-3">
+                        <div className="pbminfotech-post-item">
+                          <div className="pbminfotech-box-content">
+                            <div className="pbminfotech-box-desc">
+                              <blockquote className="pbminfotech-testimonial-text">
                                 <p>
                                   I am so grateful for everything that I have
                                   learned from you. You have my immense thanks
@@ -502,24 +502,24 @@ const About = () => {
                                 </p>
                               </blockquote>
                             </div>
-                            <div class="pbminfotech-testimonial-wrapper d-flex align-items-center">
-                              <div class="pbminfotech-box-img">
-                                <div class="pbmit-featured-img-wrapper">
-                                  <div class="pbmit-featured-wrapper">
+                            <div className="pbminfotech-testimonial-wrapper d-flex align-items-center">
+                              <div className="pbminfotech-box-img">
+                                <div className="pbmit-featured-img-wrapper">
+                                  <div className="pbmit-featured-wrapper">
                                     <img
                                       src="images/coworking/testimonial/testimonial-04.jpg"
-                                      class="img-fluid"
+                                      className="img-fluid"
                                       alt=""
                                     />
                                   </div>
                                 </div>
                               </div>
-                              <div class="pbminfotech-author-wrapper">
-                                <div class="pbminfotech-box-author">
-                                  <h3 class="pbminfotech-box-title">
+                              <div className="pbminfotech-author-wrapper">
+                                <div className="pbminfotech-box-author">
+                                  <h3 className="pbminfotech-box-title">
                                     Andrew Paul
                                   </h3>
-                                  <div class="pbminfotech-testimonial-detail">
+                                  <div className="pbminfotech-testimonial-detail">
                                     Andrew Paul
                                   </div>
                                 </div>
@@ -529,12 +529,12 @@ const About = () => {
                         </div>
                       </article>
                     </div>
-                    <div class="swiper-slide">
-                      <article class="pbmit-testimonial-style-3">
-                        <div class="pbminfotech-post-item">
-                          <div class="pbminfotech-box-content">
-                            <div class="pbminfotech-box-desc">
-                              <blockquote class="pbminfotech-testimonial-text">
+                    <div className="swiper-slide">
+                      <article className="pbmit-testimonial-style-3">
+                        <div className="pbminfotech-post-item">
+                          <div className="pbminfotech-box-content">
+                            <div className="pbminfotech-box-desc">
+                              <blockquote className="pbminfotech-testimonial-text">
                                 <p>
                                   I am so grateful for everything that I have
                                   learned from you. You have my immense thanks
@@ -542,24 +542,24 @@ const About = () => {
                                 </p>
                               </blockquote>
                             </div>
-                            <div class="pbminfotech-testimonial-wrapper d-flex align-items-center">
-                              <div class="pbminfotech-box-img">
-                                <div class="pbmit-featured-img-wrapper">
-                                  <div class="pbmit-featured-wrapper">
+                            <div className="pbminfotech-testimonial-wrapper d-flex align-items-center">
+                              <div className="pbminfotech-box-img">
+                                <div className="pbmit-featured-img-wrapper">
+                                  <div className="pbmit-featured-wrapper">
                                     <img
                                       src="images/coworking/testimonial/testimonial-05.jpg"
-                                      class="img-fluid"
+                                      className="img-fluid"
                                       alt=""
                                     />
                                   </div>
                                 </div>
                               </div>
-                              <div class="pbminfotech-author-wrapper">
-                                <div class="pbminfotech-box-author">
-                                  <h3 class="pbminfotech-box-title">
+                              <div className="pbminfotech-author-wrapper">
+                                <div className="pbminfotech-box-author">
+                                  <h3 className="pbminfotech-box-title">
                                     Emelia Ari
                                   </h3>
-                                  <div class="pbminfotech-testimonial-detail">
+                                  <div className="pbminfotech-testimonial-detail">
                                     Co Founder
                                   </div>
                                 </div>
@@ -576,25 +576,25 @@ const About = () => {
           </div>
         </section>
 
-        <section class="pbmit-bg-color-blackish">
-          <div class="container-fluid p-0">
-            <div class="row row-cols-5 g-0">
-              <div class="col">
-                <article class="pbmit-client-style-2">
-                  <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
-                    <h4 class="pbmit-hide">client 05</h4>
-                    <div class="pbmit-client-hover-img">
+        <section className="pbmit-bg-color-blackish">
+          <div className="container-fluid p-0">
+            <div className="row row-cols-5 g-0">
+              <div className="col">
+                <article className="pbmit-client-style-2">
+                  <div className="pbmit-client-wrapper pbmit-client-with-hover-img">
+                    <h4 className="pbmit-hide">client 05</h4>
+                    <div className="pbmit-client-hover-img">
                       <img
                         src="images/coworking/client/client-hover-05.png"
-                        class="img-fluid"
+                        className="img-fluid"
                         alt=""
                       />
                     </div>
-                    <div class="pbmit-featured-img-wrapper">
-                      <div class="pbmit-featured-wrapper">
+                    <div className="pbmit-featured-img-wrapper">
+                      <div className="pbmit-featured-wrapper">
                         <img
                           src="images/coworking/client/client-05.png"
-                          class="img-fluid"
+                          className="img-fluid"
                           alt=""
                         />
                       </div>
@@ -602,22 +602,22 @@ const About = () => {
                   </div>
                 </article>
               </div>
-              <div class="col">
-                <article class="pbmit-client-style-2">
-                  <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
-                    <h4 class="pbmit-hide">client 04</h4>
-                    <div class="pbmit-client-hover-img">
+              <div className="col">
+                <article className="pbmit-client-style-2">
+                  <div className="pbmit-client-wrapper pbmit-client-with-hover-img">
+                    <h4 className="pbmit-hide">client 04</h4>
+                    <div className="pbmit-client-hover-img">
                       <img
                         src="images/coworking/client/client-hover-04.png"
-                        class="img-fluid"
+                        className="img-fluid"
                         alt=""
                       />
                     </div>
-                    <div class="pbmit-featured-img-wrapper">
-                      <div class="pbmit-featured-wrapper">
+                    <div className="pbmit-featured-img-wrapper">
+                      <div className="pbmit-featured-wrapper">
                         <img
                           src="images/coworking/client/client-04.png"
-                          class="img-fluid"
+                          className="img-fluid"
                           alt=""
                         />
                       </div>
@@ -625,22 +625,22 @@ const About = () => {
                   </div>
                 </article>
               </div>
-              <div class="col">
-                <article class="pbmit-client-style-2">
-                  <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
-                    <h4 class="pbmit-hide">client 03</h4>
-                    <div class="pbmit-client-hover-img">
+              <div className="col">
+                <article className="pbmit-client-style-2">
+                  <div className="pbmit-client-wrapper pbmit-client-with-hover-img">
+                    <h4 className="pbmit-hide">client 03</h4>
+                    <div className="pbmit-client-hover-img">
                       <img
                         src="images/coworking/client/client-hover-03.png"
-                        class="img-fluid"
+                        className="img-fluid"
                         alt=""
                       />
                     </div>
-                    <div class="pbmit-featured-img-wrapper">
-                      <div class="pbmit-featured-wrapper">
+                    <div className="pbmit-featured-img-wrapper">
+                      <div className="pbmit-featured-wrapper">
                         <img
                           src="images/coworking/client/client-03.png"
-                          class="img-fluid"
+                          className="img-fluid"
                           alt=""
                         />
                       </div>
@@ -648,22 +648,22 @@ const About = () => {
                   </div>
                 </article>
               </div>
-              <div class="col">
-                <article class="pbmit-client-style-2">
-                  <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
-                    <h4 class="pbmit-hide">client 02</h4>
-                    <div class="pbmit-client-hover-img">
+              <div className="col">
+                <article className="pbmit-client-style-2">
+                  <div className="pbmit-client-wrapper pbmit-client-with-hover-img">
+                    <h4 className="pbmit-hide">client 02</h4>
+                    <div className="pbmit-client-hover-img">
                       <img
                         src="images/coworking/client/client-hover-02.png"
-                        class="img-fluid"
+                        className="img-fluid"
                         alt=""
                       />
                     </div>
-                    <div class="pbmit-featured-img-wrapper">
-                      <div class="pbmit-featured-wrapper">
+                    <div className="pbmit-featured-img-wrapper">
+                      <div className="pbmit-featured-wrapper">
                         <img
                           src="images/coworking/client/client-02.png"
-                          class="img-fluid"
+                          className="img-fluid"
                           alt=""
                         />
                       </div>
@@ -671,22 +671,22 @@ const About = () => {
                   </div>
                 </article>
               </div>
-              <div class="col">
-                <article class="pbmit-client-style-2">
-                  <div class="pbmit-client-wrapper pbmit-client-with-hover-img">
-                    <h4 class="pbmit-hide">client 01</h4>
-                    <div class="pbmit-client-hover-img">
+              <div className="col">
+                <article className="pbmit-client-style-2">
+                  <div className="pbmit-client-wrapper pbmit-client-with-hover-img">
+                    <h4 className="pbmit-hide">client 01</h4>
+                    <div className="pbmit-client-hover-img">
                       <img
                         src="images/coworking/client/client-hover-01.png"
-                        class="img-fluid"
+                        className="img-fluid"
                         alt=""
                       />
                     </div>
-                    <div class="pbmit-featured-img-wrapper">
-                      <div class="pbmit-featured-wrapper">
+                    <div className="pbmit-featured-img-wrapper">
+                      <div className="pbmit-featured-wrapper">
                         <img
                           src="images/coworking/client/client-01.png"
-                          class="img-fluid"
+                          className="img-fluid"
                           alt=""
                         />
                       </div>
@@ -698,48 +698,48 @@ const About = () => {
           </div>
         </section>
 
-        <section class="section-lg">
-          <div class="container">
-            <div class="pbmit-heading-subheading">
-              <h4 class="pbmit-subtitle-white">RECENT NEWS</h4>
-              <h2 class="pbmit-title">Read Our Latest News</h2>
+        <section className="section-lg">
+          <div className="container">
+            <div className="pbmit-heading-subheading">
+              <h4 className="pbmit-subtitle-white">RECENT NEWS</h4>
+              <h2 className="pbmit-title">Read Our Latest News</h2>
             </div>
-            <div class="row">
-              <article class="pbmit-blog-style-2 col-md-12">
-                <div class="post-item">
-                  <div class="pbminfotech-box-content">
-                    <div class="pbmit-meta-date-wrapper pbmit-meta-line">
-                      <div class="pbmit-meta-date">
-                        <span class="pbmit-date-wrap">17</span>
+            <div className="row">
+              <article className="pbmit-blog-style-2 col-md-12">
+                <div className="post-item">
+                  <div className="pbminfotech-box-content">
+                    <div className="pbmit-meta-date-wrapper pbmit-meta-line">
+                      <div className="pbmit-meta-date">
+                        <span className="pbmit-date-wrap">17</span>
                         <span> May , 2022 </span>
                       </div>
                     </div>
-                    <div class="pbmit-content-wrapper">
-                      <div class="pbmit-meta-cat-wrapper pbmit-meta-line">
-                        <div class="pbmit-meta-category">
+                    <div className="pbmit-content-wrapper">
+                      <div className="pbmit-meta-cat-wrapper pbmit-meta-line">
+                        <div className="pbmit-meta-category">
                           <a href="#" rel="category tag">
                             Agreements
                           </a>
                         </div>
                       </div>
-                      <h3 class="pbmit-post-title">
+                      <h3 className="pbmit-post-title">
                         <a href="#">
                           Easy ways to implement wellbeing programs
                         </a>
                       </h3>
                     </div>
-                    <div class="pbmit-featured-container">
-                      <div class="pbmit-featured-img-wrapper">
-                        <div class="pbmit-featured-wrapper">
+                    <div className="pbmit-featured-container">
+                      <div className="pbmit-featured-img-wrapper">
+                        <div className="pbmit-featured-wrapper">
                           <img
                             src="images/coworking/blog/blog-01.jpg"
-                            class="img-fluid"
+                            className="img-fluid"
                             alt=""
                           />
                         </div>
                       </div>
                     </div>
-                    <div class="pbmit-read-more-link">
+                    <div className="pbmit-read-more-link">
                       <a href="blog-single-details.html">
                         <span>Continue read</span>
                       </a>
@@ -747,41 +747,41 @@ const About = () => {
                   </div>
                 </div>
               </article>
-              <article class="pbmit-blog-style-2 col-md-12">
-                <div class="post-item">
-                  <div class="pbminfotech-box-content">
-                    <div class="pbmit-meta-date-wrapper pbmit-meta-line">
-                      <div class="pbmit-meta-date">
-                        <span class="pbmit-date-wrap">25</span>
+              <article className="pbmit-blog-style-2 col-md-12">
+                <div className="post-item">
+                  <div className="pbminfotech-box-content">
+                    <div className="pbmit-meta-date-wrapper pbmit-meta-line">
+                      <div className="pbmit-meta-date">
+                        <span className="pbmit-date-wrap">25</span>
                         <span> April , 2022 </span>
                       </div>
                     </div>
-                    <div class="pbmit-content-wrapper">
-                      <div class="pbmit-meta-cat-wrapper pbmit-meta-line">
-                        <div class="pbmit-meta-category">
+                    <div className="pbmit-content-wrapper">
+                      <div className="pbmit-meta-cat-wrapper pbmit-meta-line">
+                        <div className="pbmit-meta-category">
                           <a href="#" rel="category tag">
                             coworking
                           </a>
                         </div>
                       </div>
-                      <h3 class="pbmit-post-title">
+                      <h3 className="pbmit-post-title">
                         <a href="#">
                           Things Can Help Any coworking Flourish Again
                         </a>
                       </h3>
                     </div>
-                    <div class="pbmit-featured-container">
-                      <div class="pbmit-featured-img-wrapper">
-                        <div class="pbmit-featured-wrapper">
+                    <div className="pbmit-featured-container">
+                      <div className="pbmit-featured-img-wrapper">
+                        <div className="pbmit-featured-wrapper">
                           <img
                             src="images/coworking/blog/blog-01.jpg"
-                            class="img-fluid"
+                            className="img-fluid"
                             alt=""
                           />
                         </div>
                       </div>
                     </div>
-                    <div class="pbmit-read-more-link">
+                    <div className="pbmit-read-more-link">
                       <a href="blog-single-details.html">
                         <span>Continue read</span>
                       </a>
@@ -789,41 +789,41 @@ const About = () => {
                   </div>
                 </div>
               </article>
-              <article class="pbmit-blog-style-2 col-md-12">
-                <div class="post-item">
-                  <div class="pbminfotech-box-content">
-                    <div class="pbmit-meta-date-wrapper pbmit-meta-line">
-                      <div class="pbmit-meta-date">
-                        <span class="pbmit-date-wrap">08</span>
+              <article className="pbmit-blog-style-2 col-md-12">
+                <div className="post-item">
+                  <div className="pbminfotech-box-content">
+                    <div className="pbmit-meta-date-wrapper pbmit-meta-line">
+                      <div className="pbmit-meta-date">
+                        <span className="pbmit-date-wrap">08</span>
                         <span> April , 2022 </span>
                       </div>
                     </div>
-                    <div class="pbmit-content-wrapper">
-                      <div class="pbmit-meta-cat-wrapper pbmit-meta-line">
-                        <div class="pbmit-meta-category">
+                    <div className="pbmit-content-wrapper">
+                      <div className="pbmit-meta-cat-wrapper pbmit-meta-line">
+                        <div className="pbmit-meta-category">
                           <a href="#" rel="category tag">
                             Leadership
                           </a>
                         </div>
                       </div>
-                      <h3 class="pbmit-post-title">
+                      <h3 className="pbmit-post-title">
                         <a href="#">
                           Five Ways Elevate Your Employees Workplace
                         </a>
                       </h3>
                     </div>
-                    <div class="pbmit-featured-container">
-                      <div class="pbmit-featured-img-wrapper">
-                        <div class="pbmit-featured-wrapper">
+                    <div className="pbmit-featured-container">
+                      <div className="pbmit-featured-img-wrapper">
+                        <div className="pbmit-featured-wrapper">
                           <img
                             src="images/coworking/blog/blog-01.jpg"
-                            class="img-fluid"
+                            className="img-fluid"
                             alt=""
                           />
                         </div>
                       </div>
                     </div>
-                    <div class="pbmit-read-more-link">
+                    <div className="pbmit-read-more-link">
                       <a href="blog-single-details.html">
                         <span>Continue read</span>
                       </a>
@@ -836,11 +836,11 @@ const About = () => {
         </section>
       </div>
 
-      <footer class="pbmit-bg-color-secondary footer-style-1 footer site-footer">
-        <div class="footer-wrap pbmit-footer-big-area">
-          <div class="container">
-            <div class="row align-items-center">
-              <div class="col-md-9 col-sm-12">
+      <footer className="pbmit-bg-color-secondary footer-style-1 footer site-footer">
+        <div className="footer-wrap pbmit-footer-big-area">
+          <div className="container">
+            <div className="row align-items-center">
+              <div className="col-md-9 col-sm-12">
                 <h3>
                   Don't be shy - drop us a line
                   <br />
@@ -848,10 +848,10 @@ const About = () => {
                 </h3>
                 <a href="#">info@xido.com</a>
               </div>
-              <div class="col-md-3 col-sm-12">
-                <div class="pbmit-footer-logo">
+              <div className="col-md-3 col-sm-12">
+                <div className="pbmit-footer-logo">
                   <img
-                    class="img-fluid"
+                    className="img-fluid"
                     src="images/internet/logo-white.svg"
                     alt="optionflow"
                   />
@@ -860,13 +860,13 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div class="pbmit-footer-widget-area">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6 col-lg-3">
-                <div class="widget">
-                  <h3 class="widget-title">Our Company</h3>
-                  <div class="textwidget">
+        <div className="pbmit-footer-widget-area">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-6 col-lg-3">
+                <div className="widget">
+                  <h3 className="widget-title">Our Company</h3>
+                  <div className="textwidget">
                     <ul>
                       <li>
                         <a href="#">Contact Us</a>
@@ -887,10 +887,10 @@ const About = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-3">
-                <div class="widget">
-                  <h3 class="widget-title">Support</h3>
-                  <div class="textwidget">
+              <div className="col-md-6 col-lg-3">
+                <div className="widget">
+                  <h3 className="widget-title">Support</h3>
+                  <div className="textwidget">
                     <ul>
                       <li>
                         <a href="#">Company</a>
@@ -908,19 +908,19 @@ const About = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-3">
-                <div class="widget">
-                  <h3 class="widget-title">Need Help?</h3>
-                  <div class="pbmit-footer-contact">
-                    <div class="pbmit-footer-contact-info">
-                      <div class="pbmit-content-box">Customer Care</div>
-                      <div class="pbmit-contact-box">
+              <div className="col-md-6 col-lg-3">
+                <div className="widget">
+                  <h3 className="widget-title">Need Help?</h3>
+                  <div className="pbmit-footer-contact">
+                    <div className="pbmit-footer-contact-info">
+                      <div className="pbmit-content-box">Customer Care</div>
+                      <div className="pbmit-contact-box">
                         <a href="tel:(+1)555234-8765">(+1)555234-8765</a>
                       </div>
                     </div>
-                    <div class="pbmit-footer-contact-info">
-                      <div class="pbmit-content-box">Need live support?</div>
-                      <div class="pbmit-contact-box">
+                    <div className="pbmit-footer-contact-info">
+                      <div className="pbmit-content-box">Need live support?</div>
+                      <div className="pbmit-contact-box">
                         <a href="mailto:hello@infoxido.com">
                           hello@infoxido.com
                         </a>
@@ -929,49 +929,49 @@ const About = () => {
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 col-lg-3">
-                <div class="widget">
-                  <h3 class="widget-title">Subscribe</h3>
-                  <div class="mc4wp-form-fields">
-                    <div class="pbmit-footer-newsletter">
+              <div className="col-md-6 col-lg-3">
+                <div className="widget">
+                  <h3 className="widget-title">Subscribe</h3>
+                  <div className="mc4wp-form-fields">
+                    <div className="pbmit-footer-newsletter">
                       <input
                         type="email"
                         name="EMAIL"
                         placeholder="Get news &amp; updates"
                       />
                       <button type="submit" value="Sign up">
-                        <i class="pbmit-base-icon-arroba"></i>
+                        <i className="pbmit-base-icon-arroba"></i>
                       </button>
                     </div>
                     Our expertise, as well as our passion for web design sets us
                     apart from other agencies
                   </div>
-                  <ul class="pbmit-social-links">
-                    <li class="pbmit-social-li pbmit-social-facebook">
+                  <ul className="pbmit-social-links">
+                    <li className="pbmit-social-li pbmit-social-facebook">
                       <a href="#" target="_blank" rel="noopener">
                         <span>
-                          <i class="pbmit-base-icon-facebook-squared"></i>
+                          <i className="pbmit-base-icon-facebook-squared"></i>
                         </span>
                       </a>
                     </li>
-                    <li class="pbmit-social-li pbmit-social-twitter">
+                    <li className="pbmit-social-li pbmit-social-twitter">
                       <a href="#" target="_blank" rel="noopener">
                         <span>
-                          <i class="pbmit-base-icon-twitter"></i>
+                          <i className="pbmit-base-icon-twitter"></i>
                         </span>
                       </a>
                     </li>
-                    <li class="pbmit-social-li pbmit-social-instagram">
+                    <li className="pbmit-social-li pbmit-social-instagram">
                       <a href="#" target="_blank" rel="noopener">
                         <span>
-                          <i class="pbmit-base-icon-instagram"></i>
+                          <i className="pbmit-base-icon-instagram"></i>
                         </span>
                       </a>
                     </li>
-                    <li class="pbmit-social-li pbmit-social-youtube">
+                    <li className="pbmit-social-li pbmit-social-youtube">
                       <a href="#" target="_blank" rel="noopener">
                         <span>
-                          <i class="pbmit-base-icon-youtube-play"></i>
+                          <i className="pbmit-base-icon-youtube-play"></i>
                         </span>
                       </a>
                     </li>
@@ -981,23 +981,23 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div class="pbmit-footer-bottom">
-          <div class="container">
-            <div class="pbmit-footer-text-inner">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="pbmit-footer-copyright-text-area">
+        <div className="pbmit-footer-bottom">
+          <div className="container">
+            <div className="pbmit-footer-text-inner">
+              <div className="row">
+                <div className="col-md-6">
+                  <div className="pbmit-footer-copyright-text-area">
                     Copyright © 2022 <a href="#">Xido</a>, All Rights Reserved.
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="pbmit-footer-menu-area">
-                    <div class="menu-copyright-menu-container">
-                      <ul class="pbmit-footer-menu">
-                        <li class="menu-item">
+                <div className="col-md-6">
+                  <div className="pbmit-footer-menu-area">
+                    <div className="menu-copyright-menu-container">
+                      <ul className="pbmit-footer-menu">
+                        <li className="menu-item">
                           <a href="#">Privacy Policy</a>
                         </li>
-                        <li class="menu-item">
+                        <li className="menu-item">
                           <a href="#">Contact</a>
                         </li>
                       </ul>
