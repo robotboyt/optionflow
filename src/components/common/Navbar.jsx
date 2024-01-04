@@ -63,14 +63,33 @@ const Navbar = () => {
                           >
                             <Link to="/blog">Блог</Link>
                           </li>
-                          <li className="dropdown">
+                          <li
+                            className={`dropdown ${
+                              location.pathname === "/about" ||
+                              location.pathname === "/our-history"
+                                ? "active"
+                                : null
+                            }`}
+                          >
                             <Link to="/about">Тощо</Link>
                             <ul>
-                              <li>
+                              <li
+                                className={
+                                  location.pathname === "/about"
+                                    ? "active"
+                                    : null
+                                }
+                              >
                                 <Link to="/about">Про нас</Link>
                               </li>
-                              <li>
-                                <Link to="our-history.html">Наша історія</Link>
+                              <li
+                                className={
+                                  location.pathname === "/our-history"
+                                    ? "active"
+                                    : null
+                                }
+                              >
+                                <Link to="/our-history">Наша історія</Link>
                               </li>
                               <li>
                                 <Link to="our-team-member.html">

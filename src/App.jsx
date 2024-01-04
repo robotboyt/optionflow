@@ -5,6 +5,7 @@ import Service from "./pages/Service";
 import Portfolio from "./pages/Portfolio";
 import Blog from "./pages/Blog";
 import About from "./pages/About";
+import History from "./pages/ History";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/about" element={<About />} />
+        <Route path="/our-history" element={<History />} />
       </Routes>
     </div>
   );

@@ -155,18 +155,16 @@ const Home = () => {
                                 <Link to="/service">Послуги</Link>
                               </li>
                               <li className="">
-                                <Link to="portfolio-style-1.html">
-                                  Портфоліо
-                                </Link>
+                                <Link to="/portfolio">Портфоліо</Link>
                               </li>
                               <li className="">
-                                <Link to="blog-grid-view.html">Блог</Link>
+                                <Link to="/blog">Блог</Link>
                               </li>
                               <li className="dropdown">
-                                <Link to="about-us.html">Тощо</Link>
+                                <Link to="/about">Тощо</Link>
                                 <ul>
                                   <li>
-                                    <Link to="about-us.html">Про нас</Link>
+                                    <Link to="/about">Про нас</Link>
                                   </li>
                                   <li>
                                     <Link to="our-history.html">
