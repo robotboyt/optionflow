@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import Navbar from "../components/common/Navbar";
 
 const Service = () => {
   useEffect(() => {
@@ -19,125 +20,7 @@ const Service = () => {
   return (
     <div>
       <div className="page-wrapper">
-        <header className="site-header header-style-1">
-          <div className="site-header-menu">
-            <div className="container">
-              <div className="row">
-                <div className="col-md-12">
-                  <div className="d-flex align-items-center justify-content-between">
-                    <div className="site-branding">
-                      <a href="index.html">
-                        <img
-                          className="logo-img"
-                          alt="coworking"
-                          src="images/internet/logo.svg"
-                        />
-                      </a>
-                    </div>
-                    <div className="site-navigation ml-auto">
-                      <nav className="main-menu navbar-expand-xl navbar-light">
-                        <div className="navbar-header">
-                          <button className="navbar-toggler" type="button">
-                            <i className="pbmit-base-icon-menu-1"></i>
-                          </button>
-                        </div>
-                        <div className="pbmit-mobile-menu-bg"></div>
-                        <div
-                          className="collapse navbar-collapse clearfix show"
-                          id="pbmit-menu"
-                        >
-                          <div className="pbmit-menu-wrap">
-                            <span className="closepanel">
-                              <i className="pbmit-base-icon-close-circular-button-symbol"></i>
-                            </span>
-                            <ul className="navigation clearfix">
-                              <li className="">
-                                <Link to="/">Головна</Link>
-                              </li>
-                              <li className="active">
-                                <a href="service.html">Послуги</a>
-                              </li>
-                              <li className="">
-                                <a href="portfolio-style-1.html">Портфоліо</a>
-                              </li>
-                              <li className="">
-                                <a href="blog-grid-view.html">Блог</a>
-                              </li>
-                              <li className="dropdown">
-                                <a href="about-us.html">Тощо</a>
-                                <ul>
-                                  <li>
-                                    <a href="about-us.html">Про нас</a>
-                                  </li>
-                                  <li>
-                                    <a href="our-history.html">Наша історія</a>
-                                  </li>
-                                  <li className="">
-                                    <a href="our-team-member.html">
-                                      Наша команда
-                                    </a>
-                                  </li>
-                                  <li className="">
-                                    <a href="faq.html">Faq</a>
-                                  </li>
-                                </ul>
-                              </li>
-                              <li className="">
-                                <a href="contact-us.html">Контакти</a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </nav>
-                    </div>
-                    <div className="pbmit-right-main-box">
-                      <div className="pbmit-header-social-wrapper">
-                        <ul className="pbmit-social-links">
-                          <li className="pbmit-social-li pbmit-social-facebook">
-                            <a href="#" target="_blank">
-                              <span>
-                                <i className="pbmit-base-icon-facebook-squared"></i>
-                              </span>
-                            </a>
-                          </li>
-                          <li className="pbmit-social-li pbmit-social-twitter">
-                            <a href="#" target="_blank">
-                              <span>
-                                <i className="pbmit-base-icon-twitter"></i>
-                              </span>
-                            </a>
-                          </li>
-                          <li className="pbmit-social-li pbmit-social-instagram">
-                            <a href="#" target="_blank">
-                              <span>
-                                <i className="pbmit-base-icon-instagram"></i>
-                              </span>
-                            </a>
-                          </li>
-                          <li className="pbmit-social-li pbmit-social-youtube">
-                            <a href="#" target="_blank">
-                              <span>
-                                <i className="pbmit-base-icon-youtube-play"></i>
-                              </span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div className="pbmit-button-box">
-                        <div className="pbmit-header-button2">
-                          <a href="contact-us.html">
-                            <span className="pbmit-btn">get in touch</span>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </header>
-
+        <Navbar />
         <div className="pbmit-title-bar-wrapper">
           <div className="container">
             <div className="pbmit-title-bar-content">
