@@ -12,13 +12,13 @@ const Navbar = () => {
             <div className="col-md-12">
               <div className="d-flex align-items-center justify-content-between">
                 <div className="site-branding">
-                  <a href="index.html">
+                  <Link to="/">
                     <img
                       className="logo-img"
                       alt="coworking"
                       src="images/internet/logo.svg"
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div className="site-navigation ml-auto">
                   <nav className="main-menu navbar-expand-xl navbar-light">

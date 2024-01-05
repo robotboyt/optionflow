@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../components/common/Navbar";
 
 const Faq = () => {
+  useEffect(() => {
+    const scriptsScript = document.createElement("script");
+    scriptsScript.src = "../js/scripts.js";
+    scriptsScript.async = true;
+
+    document.body.appendChild(scriptsScript);
+
+    return () => {
+      document.body.removeChild(scriptsScript);
+    };
+  }, []);
   return (
     <div className="page-wrapper">
       <Navbar />

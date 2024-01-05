@@ -2,7 +2,7 @@ import React from "react";
 import Home from "./pages/Home";
 import { Route, Routes } from "react-router";
 import Service from "./pages/Service";
-import Portfolio from "./pages/Portfolio";
+import Portfolio from "./pages/Portfolio/Portfolio";
 import Blog from "./pages/Blog";
 import About from "./pages/About";
 import History from "./pages/ History";

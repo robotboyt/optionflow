@@ -118,7 +118,7 @@ const Home = () => {
                 <div className="col-md-12">
                   <div className="d-flex align-items-center">
                     <div className="site-branding">
-                      <Link to="index.html">
+                      <Link to="/">
                         <img
                           className="logo-img"
                           alt="coworking"
@@ -186,13 +186,6 @@ const Home = () => {
                           </div>
                         </div>
                       </nav>
-                    </div>
-                    <div className="pbmit-right-main-box">
-                      <div className="pbmit-header-search-btn pbmit-search-cart-box">
-                        <Link to="">
-                          <i className="pbmit-base-icon-search"></i>
-                        </Link>
-                      </div>
                     </div>
                   </div>
                 </div>

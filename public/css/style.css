@@ -2984,6 +2984,7 @@ a.pbmit-underline-text:hover {
 }
 .pbmit-ourhistory-type2 .pbmit-ourhistory-right .pbmit-timeline-image,
 .pbmit-ourhistory-type2 .pbmit-ourhistory-right .label {
+  color: var(--pbmit-global-color);
   margin-bottom: 30px;
 }
 .pbmit-ourhistory-type2 .label {
@@ -2993,7 +2994,7 @@ a.pbmit-underline-text:hover {
   font-size: 60px;
   line-height: 60px;
   color: transparent;
-  -webkit-text-stroke: 1px var(--pbmit-blackish-color);
+  /* -webkit-text-stroke: 1px var(--pbmit-blackish-color); */
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
   font-weight: 700;
