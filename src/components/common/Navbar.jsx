@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import CustomLink from "./CustomLink";
 
 const Navbar = () => {
   const location = useLocation();
@@ -38,14 +39,17 @@ const Navbar = () => {
                         </span>
                         <ul className="navigation clearfix">
                           <li className="">
-                            <Link to="/">Головна</Link>
+                            <CustomLink propsHref={"/"} propsText={"Головна"} />
                           </li>
                           <li
                             className={
                               location.pathname === "/service" ? "active" : null
                             }
                           >
-                            <Link to="/service">Послуги</Link>
+                            <CustomLink
+                              propsHref={"/service"}
+                              propsText={"Послуги"}
+                            />
                           </li>
                           <li
                             className={
@@ -54,24 +58,34 @@ const Navbar = () => {
                                 : null
                             }
                           >
-                            <Link to="/portfolio">Портфоліо</Link>
+                            <CustomLink
+                              propsHref={"/portfolio"}
+                              propsText={"Портфоліо"}
+                            />
                           </li>
                           <li
                             className={
                               location.pathname === "/blog" ? "active" : null
                             }
                           >
-                            <Link to="/blog">Блог</Link>
+                            <CustomLink
+                              propsHref={"/blog"}
+                              propsText={"Блог"}
+                            />
                           </li>
                           <li
                             className={`dropdown ${
                               location.pathname === "/about" ||
-                              location.pathname === "/our-history"
+                              location.pathname === "/our-history" ||
+                              location.pathname === "/faq"
                                 ? "active"
                                 : null
                             }`}
                           >
-                            <Link to="/about">Тощо</Link>
+                            <CustomLink
+                              propsHref={"/about"}
+                              propsText={"Тощо"}
+                            />
                             <ul>
                               <li
                                 className={
@@ -80,7 +94,10 @@ const Navbar = () => {
                                     : null
                                 }
                               >
-                                <Link to="/about">Про нас</Link>
+                                <CustomLink
+                                  propsHref={"/about"}
+                                  propsText={"Про нас"}
+                                />
                               </li>
                               <li
                                 className={
@@ -89,20 +106,34 @@ const Navbar = () => {
                                     : null
                                 }
                               >
-                                <Link to="/our-history">Наша історія</Link>
+                                <CustomLink
+                                  propsHref={"/our-history"}
+                                  propsText={"Наша історія"}
+                                />
                               </li>
-                              {/* <li>
-                                <Link to="our-team-member.html">
-                                  Наша команда
-                                </Link>
-                              </li> */}
-                              <li>
-                                <Link to="/faq">Faq</Link>
+                              <li
+                                className={
+                                  location.pathname === "/faq" ? "active" : null
+                                }
+                              >
+                                <CustomLink
+                                  propsHref={"/faq"}
+                                  propsText={"Faq"}
+                                />
                               </li>
                             </ul>
                           </li>
-                          <li>
-                            <Link to="/contacts">Контакти</Link>
+                          <li
+                            className={
+                              location.pathname === "/contacts"
+                                ? "active"
+                                : null
+                            }
+                          >
+                            <CustomLink
+                              propsHref={"/contacts"}
+                              propsText={"Контакти"}
+                            />
                           </li>
                         </ul>
                       </div>
@@ -144,9 +175,9 @@ const Navbar = () => {
                   </div>
                   <div className="pbmit-button-box">
                     <div className="pbmit-header-button2">
-                      <Link to="/contacts">
-                        <span className="pbmit-btn">get in touch</span>
-                      </Link>
+                      <CustomLink propsHref="/contacts">
+                        <span className="pbmit-btn">Get Consult</span>
+                      </CustomLink>
                     </div>
                   </div>
                 </div>

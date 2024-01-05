@@ -4,6 +4,7 @@ import animationData from "../animation/internet-banner.json";
 import anim2Data from "../animation/internet-anim-01.json";
 import anim3Data from "../animation/internet-anim-02.json";
 import { Link } from "react-router-dom";
+import CustomLink from "../components/common/CustomLink";
 
 const Home = () => {
   useEffect(() => {
@@ -149,38 +150,60 @@ const Home = () => {
                             </span>
                             <ul className="navigation clearfix">
                               <li className="active">
-                                <Link to="/">Головна</Link>
+                                <CustomLink
+                                  propsHref={"/"}
+                                  propsText={"Головна"}
+                                />
                               </li>
                               <li className="">
-                                <Link to="/service">Послуги</Link>
+                                <CustomLink
+                                  propsHref={"/service"}
+                                  propsText={"Послуги"}
+                                />
                               </li>
                               <li className="">
-                                <Link to="/portfolio">Портфоліо</Link>
+                                <CustomLink
+                                  propsHref={"/portfolio"}
+                                  propsText={"Портфоліо"}
+                                />
                               </li>
                               <li className="">
-                                <Link to="/blog">Блог</Link>
+                                <CustomLink
+                                  propsHref={"/blog"}
+                                  propsText={"Блог"}
+                                />
                               </li>
                               <li className="dropdown">
-                                <Link to="/about">Тощо</Link>
+                                <CustomLink
+                                  propsHref={"/about"}
+                                  propsText={"Тощо"}
+                                />
                                 <ul>
                                   <li>
-                                    <Link to="/about">Про нас</Link>
+                                    <CustomLink
+                                      propsHref={"/about"}
+                                      propsText={"Про нас"}
+                                    />
                                   </li>
                                   <li>
-                                    <Link to="/our-history">Наша історія</Link>
+                                    <CustomLink
+                                      propsHref={"/our-history"}
+                                      propsText={"Наша історія"}
+                                    />
                                   </li>
-                                  {/* <li>
-                                    <Link to="our-team-member.html">
-                                      Наша команда
-                                    </Link>
-                                  </li> */}
                                   <li>
-                                    <Link to="/faq">Faq</Link>
+                                    <CustomLink
+                                      propsHref={"/faq"}
+                                      propsText={"Faq"}
+                                    />
                                   </li>
                                 </ul>
                               </li>
                               <li>
-                                <Link to="/contacts">Контакти</Link>
+                                <CustomLink
+                                  propsHref={"/contacts"}
+                                  propsText={"Контакти"}
+                                />
                               </li>
                             </ul>
                           </div>
