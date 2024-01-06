@@ -5,15 +5,10 @@ import anim2Data from "../animation/internet-anim-01.json";
 import anim3Data from "../animation/internet-anim-02.json";
 import { Link } from "react-router-dom";
 import CustomLink from "../components/common/CustomLink";
+import { loadScript } from "../components/common/utils";
 
 const Home = () => {
   useEffect(() => {
-    const scriptsScript = document.createElement("script");
-    scriptsScript.src = "../js/scripts.js";
-    scriptsScript.async = true;
-
-    document.body.appendChild(scriptsScript);
-
     const container = document.getElementById("internet-banner");
     const container2 = document.getElementById("internet-anim-01");
     const container3 = document.getElementById("internet-anim-02");
@@ -42,10 +37,13 @@ const Home = () => {
       animationData: anim3Data,
     });
 
+    loadScript()
+      .then(() => {})
+      .catch((error) => {
+        console.error("Error of loading script:", error);
+      });
+
     return () => {
-      if (document.body.contains(scriptsScript)) {
-        document.body.removeChild(scriptsScript);
-      }
       anim1.destroy();
       anim2.destroy();
       anim3.destroy();
@@ -352,7 +350,7 @@ const Home = () => {
                 <div className="pbmit-heading-subheading-style-6">
                   <h4 className="pbmit-subtitle">IT-AGENCY</h4>
                   <h2 className="pbmit-title">
-                    Ми забезпечуємо найвищий рівень дизайну та швидкості у
+                    Ми забезпечуємо високий рівень дизайну та швидкості у
                     розробці додатків.
                   </h2>
                 </div>

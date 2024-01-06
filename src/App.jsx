@@ -8,6 +8,7 @@ import About from "./pages/About";
 import History from "./pages/ History";
 import Faq from "./pages/Faq";
 import Contacts from "./pages/Contacts";
+import NotFoundPage from "./pages/NotFoundPage";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/our-history" element={<History />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/contacts" element={<Contacts />} />
+        <Route path="/*" element={<NotFoundPage />} />
       </Routes>
     </div>
   );

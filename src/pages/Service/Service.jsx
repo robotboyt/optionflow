@@ -1,23 +1,19 @@
 import React, { useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
 import Navbar from "../../components/common/Navbar";
 import Footer from "../../components/common/Footer";
 import ServiceData from "./ServiceData";
 import ServiceContentBox from "./ServiceContentBox";
+import { loadScript } from "../../components/common/utils";
 
 const Service = () => {
   useEffect(() => {
-    const scriptsScript = document.createElement("script");
-    scriptsScript.src = "./js/scripts.js";
-    scriptsScript.async = true;
+    loadScript()
+      .then(() => {})
+      .catch((error) => {
+        console.error("Error of loading script:", error);
+      });
 
-    document.body.appendChild(scriptsScript);
-
-    return () => {
-      if (document.body.contains(scriptsScript)) {
-        document.body.removeChild(scriptsScript);
-      }
-    };
+    return () => {};
   }, []);
 
   return (
