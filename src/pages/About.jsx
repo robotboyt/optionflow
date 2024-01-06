@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../components/common/Navbar";
+import { loadScript } from "../components/common/utils";
 
 const About = () => {
+  useEffect(() => {
+    loadScript()
+      .then(() => {})
+      .catch((error) => {
+        console.error("Error of loading script:", error);
+      });
+    return () => {};
+  }, []);
   return (
     <div className="page-wrapper">
       <Navbar />
@@ -286,7 +295,9 @@ const About = () => {
                     </div>
                     <div className="pbmit-ihbox-contents">
                       <div className="pbmit-heading-desc">Send Email</div>
-                      <h2 className="pbmit-element-title">needhelp@company.com</h2>
+                      <h2 className="pbmit-element-title">
+                        needhelp@company.com
+                      </h2>
                     </div>
                   </div>
                 </div>
@@ -919,7 +930,9 @@ const About = () => {
                       </div>
                     </div>
                     <div className="pbmit-footer-contact-info">
-                      <div className="pbmit-content-box">Need live support?</div>
+                      <div className="pbmit-content-box">
+                        Need live support?
+                      </div>
                       <div className="pbmit-contact-box">
                         <a href="mailto:hello@infoxido.com">
                           hello@infoxido.com

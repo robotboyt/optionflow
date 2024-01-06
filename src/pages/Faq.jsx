@@ -1,17 +1,16 @@
 import React, { useEffect } from "react";
 import Navbar from "../components/common/Navbar";
+import { loadScript } from "../components/common/utils";
 
 const Faq = () => {
   useEffect(() => {
-    const scriptsScript = document.createElement("script");
-    scriptsScript.src = "../js/scripts.js";
-    scriptsScript.async = true;
+    loadScript()
+      .then(() => {})
+      .catch((error) => {
+        console.error("Error of loading script:", error);
+      });
 
-    document.body.appendChild(scriptsScript);
-
-    return () => {
-      document.body.removeChild(scriptsScript);
-    };
+    return () => {};
   }, []);
   return (
     <div className="page-wrapper">
