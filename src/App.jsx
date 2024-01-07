@@ -1,5 +1,5 @@
 import React from "react";
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home";
 import { Route, Routes } from "react-router";
 import Service from "./pages/Service/Service";
 import Portfolio from "./pages/Portfolio/Portfolio";
