@@ -5,7 +5,7 @@ import Service from "./pages/Service/Service";
 import Portfolio from "./pages/Portfolio/Portfolio";
 import Blog from "./pages/Blog/Blog";
 import About from "./pages/About";
-import History from "./pages/ History";
+import History from "./pages/History";
 import Faq from "./pages/Faq";
 import Contacts from "./pages/Contacts";
 import NotFoundPage from "./pages/NotFoundPage";
