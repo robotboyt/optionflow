@@ -9,4 +9,4 @@ This is the second (future) version of the project, written in React with variou
 3. **Possible avoidance of using old code and scripts**
 4. **Addition of new features**
 
-![optionflow logo]('/../src//images/color.png')
+![optionflow logo]("./../images/color.png")
