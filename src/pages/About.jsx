@@ -280,9 +280,11 @@ const About = () => {
                   </h2>
                 </div>
                 <div className="pe-4">
-                  Digital marketing is marketing and advertising of a business
-                  service using online channels, electronic devices, and digital
-                  technologies. A few examples of social media, email.
+                  SEO-френдлі сайт - це спеціально налаштований веб-ресурс, який
+                  має високий рівень оптимізації для пошукових систем. Такі
+                  сайти приваблюють більше уваги в Інтернеті, забезпечуючи
+                  ефективне просування, підвищення трафіку і залучення цільової
+                  аудиторії.
                 </div>
                 <div className="pbmit-ihbox pbmit-ihbox-style-20 mt-5">
                   <div className="pbmit-ihbox-box d-flex align-items-center">
