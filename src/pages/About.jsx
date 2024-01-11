@@ -20,7 +20,7 @@ const About = () => {
             <div className="pbmit-title-bar-content-inner">
               <div className="pbmit-tbar">
                 <div className="pbmit-tbar-inner container">
-                  <h1 className="pbmit-tbar-title">About Us</h1>
+                  <h1 className="pbmit-tbar-title">Про нас</h1>
                 </div>
               </div>
             </div>
@@ -35,39 +35,38 @@ const About = () => {
               <div className="col-xl-6 col-md-12">
                 <div className="about-us-section-bg">
                   <div className="about-us-section-wrap">
-                    Become more productive with our services.
+                    Станьте більш впізнаваними разом з нами.
                   </div>
                 </div>
               </div>
               <div className="col-xl-6 col-md-12">
                 <div className="about-us-section-home">
                   <div className="pbmit-heading-subheading">
-                    <h4 className="pbmit-subtitle-white">WHY CHOOSE US</h4>
+                    <h4 className="pbmit-subtitle-white">ЧОМУ САМЕ МИ</h4>
                     <h2 className="pbmit-title">
-                      We Offer Expert SEO and Marketing.
+                      Ми пропонуємо розробку та автоматизацію веб-сайтів.
                     </h2>
                   </div>
                   <div>
-                    We are a team of young, experienced developers who are
-                    passionate about their work. Years of cooperation with both
-                    corporations.
+                    Ми молода команда, яка складається з досвідчених
+                    розробників, які люблять і цінують свою роботу.
                   </div>
                   <div className="pbmit-list-style-1">
                     <ul className="icon-list-items">
                       <li className="icon-list-item">
                         <span className="icon-list-text">
-                          Perfect for large sites agencies
+                          Найкращий вибір для великих агентств та додатків.
                         </span>
                       </li>
                       <li className="icon-list-item">
                         <span className="icon-list-text">
-                          We appreciate your trust greatly
+                          Цінуємо наших клієнтів.
                         </span>
                       </li>
                     </ul>
                   </div>
                   <a href="contact-us.html" className="pbmit-btn">
-                    Conatct Us
+                    Консультація
                   </a>
                 </div>
               </div>
@@ -78,8 +77,8 @@ const About = () => {
         <section className="section-lg pbmit-bg-color-light">
           <div className="container">
             <div className="pbmit-heading-subheading text-center">
-              <h4 className="pbmit-subtitle-white">OUR TEAM</h4>
-              <h2 className="pbmit-title">Our Expert Advisor</h2>
+              <h4 className="pbmit-subtitle-white">НАША КОМАНДА</h4>
+              <h2 className="pbmit-title">Наші експерти</h2>
             </div>
             <div className="row">
               <div className="col-md-6 col-lg-4">
@@ -88,7 +87,7 @@ const About = () => {
                     <div className="pbmit-featured-img-wrapper">
                       <div className="pbmit-featured-wrapper">
                         <img
-                          src="images/coworking/team/team-01b.jpg"
+                          src="images/internet/team/team.png"
                           className="img-fluid"
                           alt=""
                         />
@@ -149,7 +148,7 @@ const About = () => {
                     <div className="pbmit-featured-img-wrapper">
                       <div className="pbmit-featured-wrapper">
                         <img
-                          src="images/coworking/team/team-02b.jpg"
+                          src="images/internet/team/team-1.png"
                           className="img-fluid"
                           alt=""
                         />
@@ -192,7 +191,7 @@ const About = () => {
                     <div className="pbminfotech-box-content">
                       <div className="pbminfotech-box-content-inner">
                         <h3 className="pbmit-team-title">
-                          <a href="team-member-detail.html">Eliana Ivy</a>
+                          <a href="team-member-detail.html">Elion Ivy</a>
                         </h3>
                         <div className="pbminfotech-team-position">
                           <div className="pbminfotech-box-team-position">
@@ -210,7 +209,7 @@ const About = () => {
                     <div className="pbmit-featured-img-wrapper">
                       <div className="pbmit-featured-wrapper">
                         <img
-                          src="images/coworking/team/team-03b.jpg"
+                          src="images/internet/team/team-2.png"
                           className="img-fluid"
                           alt=""
                         />
@@ -276,7 +275,8 @@ const About = () => {
                 <div className="pbmit-heading-subheading">
                   <h4 className="pbmit-subtitle-white">SUCCESS STORIES</h4>
                   <h2 className="pbmit-title">
-                    We have Marvelous and digital experience.
+                    Маємо досвід у розробці SEO-дружніх рішень з використанням
+                    новітніх технологій.
                   </h2>
                 </div>
                 <div className="pe-4">
@@ -304,7 +304,7 @@ const About = () => {
               </div>
               <div className="col-xl-6 col-md-12 progressbar-section-home">
                 <div className="progressbar pbmit-progress-style-4">
-                  <span className="progress-label">Experience</span>
+                  <span className="progress-label">Розробка</span>
                   <div className="progress progress-lg progress-percent-bg">
                     <div
                       className="progress-bar aos aos-init aos-animate"
@@ -323,7 +323,7 @@ const About = () => {
                   </div>
                 </div>
                 <div className="progressbar pbmit-progress-style-4">
-                  <span className="progress-label">Development</span>
+                  <span className="progress-label">Дизайн</span>
                   <div className="progress progress-lg progress-percent-bg">
                     <div
                       className="progress-bar aos aos-init aos-animate"
@@ -342,7 +342,7 @@ const About = () => {
                   </div>
                 </div>
                 <div className="progressbar pbmit-progress-style-4">
-                  <span className="progress-label">Marketing</span>
+                  <span className="progress-label">SEO</span>
                   <div className="progress progress-lg progress-percent-bg">
                     <div
                       className="progress-bar aos aos-init aos-animate"
@@ -387,9 +387,10 @@ const About = () => {
                             <div className="pbminfotech-box-desc">
                               <blockquote className="pbminfotech-testimonial-text">
                                 <p>
-                                  I am so grateful for everything that I have
-                                  learned from you. You have my immense thanks
-                                  for all of the support you’ve given me.
+                                  Прекрасная команда! Рад бути частиною
+                                  веб-студії, де кожен день викликає нові творчі
+                                  відкриття. Разом ми створюємо веб-рішення, що
+                                  завойовують позитивні враження!
                                 </p>
                               </blockquote>
                             </div>
@@ -411,7 +412,7 @@ const About = () => {
                                     Amelia Daniel
                                   </h3>
                                   <div className="pbminfotech-testimonial-detail">
-                                    Market Analyst
+                                    Аналітик ринку
                                   </div>
                                 </div>
                               </div>
@@ -427,9 +428,10 @@ const About = () => {
                             <div className="pbminfotech-box-desc">
                               <blockquote className="pbminfotech-testimonial-text">
                                 <p>
-                                  I am so grateful for everything that I have
-                                  learned from you. You have my immense thanks
-                                  for all of the support you’ve given me.
+                                  Наші бізнес-аналітики - експерти в
+                                  стратегічному розвитку. Ми знаходимо
+                                  потенційні можливості та створюємо оптимальні
+                                  шляхи до успіху вашої компанії.
                                 </p>
                               </blockquote>
                             </div>
@@ -451,7 +453,7 @@ const About = () => {
                                     Jordan Billy
                                   </h3>
                                   <div className="pbminfotech-testimonial-detail">
-                                    Business Analysis
+                                    Аналіз бізнесу
                                   </div>
                                 </div>
                               </div>
@@ -467,9 +469,10 @@ const About = () => {
                             <div className="pbminfotech-box-desc">
                               <blockquote className="pbminfotech-testimonial-text">
                                 <p>
-                                  I am so grateful for everything that I have
-                                  learned from you. You have my immense thanks
-                                  for all of the support you’ve given me.
+                                  Тут кожен професіонал своєї справи. Наша
+                                  студія - майстерня високотехнологічних рішень,
+                                  які не просто працюють, але і вражають
+                                  елегантністю та ефективністю.
                                 </p>
                               </blockquote>
                             </div>
@@ -491,7 +494,7 @@ const About = () => {
                                     Ariella Olive
                                   </h3>
                                   <div className="pbminfotech-testimonial-detail">
-                                    Manager
+                                    Менеджер
                                   </div>
                                 </div>
                               </div>
@@ -507,9 +510,10 @@ const About = () => {
                             <div className="pbminfotech-box-desc">
                               <blockquote className="pbminfotech-testimonial-text">
                                 <p>
-                                  I am so grateful for everything that I have
-                                  learned from you. You have my immense thanks
-                                  for all of the support you’ve given me.
+                                  Щоденно крокуємо в майбутнє веб-розробки. Наші
+                                  експерти знають, як дати відчуття інновацій
+                                  кожному проекту, навіть тим, які вже сьогодні
+                                  вважаються сучасними
                                 </p>
                               </blockquote>
                             </div>
@@ -531,7 +535,7 @@ const About = () => {
                                     Andrew Paul
                                   </h3>
                                   <div className="pbminfotech-testimonial-detail">
-                                    Andrew Paul
+                                    Розробник
                                   </div>
                                 </div>
                               </div>
@@ -547,9 +551,10 @@ const About = () => {
                             <div className="pbminfotech-box-desc">
                               <blockquote className="pbminfotech-testimonial-text">
                                 <p>
-                                  I am so grateful for everything that I have
-                                  learned from you. You have my immense thanks
-                                  for all of the support you’ve given me.
+                                  У нашій студії кожен клієнт - особливий. Ми
+                                  турбуємось про успіх кожного проекту, надаючи
+                                  індивідуальний підхід та гарантуючи якість на
+                                  рівні вищих стандартів галузі.
                                 </p>
                               </blockquote>
                             </div>
@@ -712,8 +717,8 @@ const About = () => {
         <section className="section-lg">
           <div className="container">
             <div className="pbmit-heading-subheading">
-              <h4 className="pbmit-subtitle-white">RECENT NEWS</h4>
-              <h2 className="pbmit-title">Read Our Latest News</h2>
+              <h4 className="pbmit-subtitle-white">ОСТАННІ ОНОВЛЕННЯ</h4>
+              <h2 className="pbmit-title">Читайте Наші Останні Новини</h2>
             </div>
             <div className="row">
               <article className="pbmit-blog-style-2 col-md-12">
@@ -752,7 +757,7 @@ const About = () => {
                     </div>
                     <div className="pbmit-read-more-link">
                       <a href="blog-single-details.html">
-                        <span>Continue read</span>
+                        <span>Продовжити читати</span>
                       </a>
                     </div>
                   </div>
@@ -794,7 +799,7 @@ const About = () => {
                     </div>
                     <div className="pbmit-read-more-link">
                       <a href="blog-single-details.html">
-                        <span>Continue read</span>
+                        <span>Продовжити читати</span>
                       </a>
                     </div>
                   </div>
@@ -836,7 +841,7 @@ const About = () => {
                     </div>
                     <div className="pbmit-read-more-link">
                       <a href="blog-single-details.html">
-                        <span>Continue read</span>
+                        <span>Продовжити читати</span>
                       </a>
                     </div>
                   </div>

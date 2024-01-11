@@ -352,7 +352,7 @@ const Navbar = () => {
                       <div className="pbmit-button-box">
                         <div className="pbmit-header-button2">
                           <CustomLink propsHref="/contacts">
-                            <span className="pbmit-btn">Get Consult</span>
+                            <span className="pbmit-btn">Консультація</span>
                           </CustomLink>
                         </div>
                       </div>

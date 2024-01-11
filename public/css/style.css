@@ -291,7 +291,7 @@
   font-size: 22px;
 }
 .testimonial-bg-left {
-  background-image: url(../images/coworking/bg/bg-img-01.jpg);
+  background-image: url(../images/internet/about-comments.png);
   border-radius: 0px;
   background-color: transparent;
   background-position: 50% 50%;
@@ -2837,7 +2837,7 @@ a.pbmit-underline-text:hover {
   padding: 80px 45px 80px 90px;
 }
 .about-us-section-bg {
-  background-image: url(../images/coworking/about.jpg);
+  background-image: url(../images/internet/about-us-preview.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
