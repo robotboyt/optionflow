@@ -1,168 +1,147 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
+import CustomLink from "./CustomLink";
 
 const Footer = () => {
+  const location = useLocation();
+
   return (
-    <footer className="pbmit-bg-color-secondary footer-style-1 footer site-footer">
-      <div className="footer-wrap pbmit-footer-big-area">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-md-9 col-sm-12">
-              <h3>
-                Don't be shy - drop us a line
-                <br />
-                We're looking forward to speaking to you!
-              </h3>
-              <a href="#">info@xido.com</a>
-            </div>
-            <div className="col-md-3 col-sm-12">
-              <div className="pbmit-footer-logo">
-                <img
-                  className="img-fluid"
-                  src="images/internet/logo-white.svg"
-                  alt="optionflow"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="pbmit-footer-widget-area">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6 col-lg-3">
-              <div className="widget">
-                <h3 className="widget-title">Our Company</h3>
-                <div className="textwidget">
-                  <ul>
-                    <li>
-                      <a href="#">Contact Us</a>
-                    </li>
-                    <li>
-                      <a href="#">FAQ</a>
-                    </li>
-                    <li>
-                      <a href="#">Report A Bug</a>
-                    </li>
-                    <li>
-                      <a href="#">Careers</a>
-                    </li>
-                    <li>
-                      <a href="#">About Us</a>
-                    </li>
-                  </ul>
+    <>
+      {location.pathname === "/" ? (
+        <footer className="pbmit-bg-color-secondary footer footer-style-2 site-footer">
+          <div className="footer-wrap pbmit-footer-big-area">
+            <div className="container">
+              <div className="row">
+                <div className="col-md-9 col-sm-12">
+                  <h3>
+                    Бізнес працює краще, коли в нього є власний веб-сайт,
+                    автоматизовані рішення та гнучке управління.
+                  </h3>
                 </div>
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-3">
-              <div className="widget">
-                <h3 className="widget-title">Support</h3>
-                <div className="textwidget">
-                  <ul>
-                    <li>
-                      <a href="#">Company</a>
-                    </li>
-                    <li>
-                      <a href="#">Careers</a>
-                    </li>
-                    <li>
-                      <a href="#">Press media</a>
-                    </li>
-                    <li>
-                      <a href="#">Our Blog</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-3">
-              <div className="widget">
-                <h3 className="widget-title">Need Help?</h3>
-                <div className="pbmit-footer-contact">
-                  <div className="pbmit-footer-contact-info">
-                    <div className="pbmit-content-box">Customer Care</div>
-                    <div className="pbmit-contact-box">
-                      <a href="tel:(+1)555234-8765">(+1)555234-8765</a>
-                    </div>
-                  </div>
-                  <div className="pbmit-footer-contact-info">
-                    <div className="pbmit-content-box">Need live support?</div>
-                    <div className="pbmit-contact-box">
-                      <a href="mailto:hello@infoxido.com">hello@infoxido.com</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-3">
-              <div className="widget">
-                <h3 className="widget-title">Subscribe</h3>
-                <div className="mc4wp-form-fields">
-                  <div className="pbmit-footer-newsletter">
-                    <input
-                      type="email"
-                      name="EMAIL"
-                      placeholder="Get news &amp; updates"
+                <div className="col-md-3 col-sm-12">
+                  <div className="pbmit-footer-logo">
+                    <img
+                      className="pbmit-main-logo"
+                      src="images/internet/footer-logo.svg"
+                      alt="optionflow"
                     />
-                    <button type="submit" value="Sign up">
-                      <i className="pbmit-base-icon-arroba"></i>
-                    </button>
                   </div>
-                  Our expertise, as well as our passion for web design sets us
-                  apart from other agencies
                 </div>
-                <ul className="pbmit-social-links">
-                  <li className="pbmit-social-li pbmit-social-facebook">
-                    <a href="#" target="_blank" rel="noopener">
-                      <span>
-                        <i className="pbmit-base-icon-facebook-squared"></i>
-                      </span>
-                    </a>
-                  </li>
-                  <li className="pbmit-social-li pbmit-social-twitter">
-                    <a href="#" target="_blank" rel="noopener">
-                      <span>
-                        <i className="pbmit-base-icon-twitter"></i>
-                      </span>
-                    </a>
-                  </li>
-                  <li className="pbmit-social-li pbmit-social-instagram">
-                    <a href="#" target="_blank" rel="noopener">
-                      <span>
-                        <i className="pbmit-base-icon-instagram"></i>
-                      </span>
-                    </a>
-                  </li>
-                  <li className="pbmit-social-li pbmit-social-youtube">
-                    <a href="#" target="_blank" rel="noopener">
-                      <span>
-                        <i className="pbmit-base-icon-youtube-play"></i>
-                      </span>
-                    </a>
-                  </li>
-                </ul>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="pbmit-footer-bottom">
-        <div className="container">
-          <div className="pbmit-footer-text-inner">
-            <div className="row">
-              <div className="col-md-6">
-                <div className="pbmit-footer-copyright-text-area">
-                  Copyright © 2022 <a href="#">Xido</a>, All Rights Reserved.
+          <div className="pbmit-footer-widget-area">
+            <div className="container">
+              <div className="row">
+                <div className="col-md-6 col-lg-3"></div>
+                <div className="col-md-6 col-lg-3">
+                  <div className="widget pbmit-two-column-menu">
+                    <h3 className="widget-title">Наша компанія</h3>
+                    <div className="textwidget">
+                      <ul>
+                        <li>
+                          <CustomLink propsHref="">Контакти</CustomLink>
+                        </li>
+                        <li>
+                          <CustomLink propsHref="">FAQ</CustomLink>
+                        </li>
+                        <li>
+                          <CustomLink propsHref="">
+                            Повідомити про помилку
+                          </CustomLink>
+                        </li>
+                        <li>
+                          <CustomLink propsHref="">Карьера</CustomLink>
+                        </li>
+                        <li>
+                          <CustomLink propsHref="">Про нас</CustomLink>
+                        </li>
+                        <li>
+                          <CustomLink propsHref="">Головна</CustomLink>
+                        </li>
+                        <li>
+                          <CustomLink propsHref="">Сервіси</CustomLink>
+                        </li>
+                        <li>
+                          <CustomLink propsHref="">Блог</CustomLink>
+                        </li>
+                        <li>
+                          <CustomLink propsHref="">Шукаємо</CustomLink>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div className="col-md-6">
-                <div className="pbmit-footer-menu-area">
-                  <div className="menu-copyright-menu-container">
-                    <ul className="pbmit-footer-menu">
-                      <li className="menu-item">
-                        <a href="#">Privacy Policy</a>
+                <div className="col-md-6 col-lg-3">
+                  <div className="widget">
+                    <h3 className="widget-title">Потрібна допомога?</h3>
+                    <div className="pbmit-footer-contact">
+                      <div className="pbmit-footer-contact-info">
+                        <div className="pbmit-content-box">Центр підтримки</div>
+                        <div className="pbmit-contact-box">
+                          <CustomLink propsHref="mailto:hello@infoxido.com">
+                            hello@infoxido.com
+                          </CustomLink>
+                        </div>
+                      </div>
+                      <div className="pbmit-footer-contact-info">
+                        <div className="pbmit-content-box">
+                          Потрібна жива підтримка?
+                        </div>
+                        <div className="pbmit-contact-box">
+                          <CustomLink propsHref="tel:(+1)555234-8765">
+                            (+1)555234-8765
+                          </CustomLink>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-6 col-lg-3">
+                  <div className="widget">
+                    <h3 className="widget-title">Підтримуйте звʼязок</h3>
+                    <div className="mc4wp-form-fields">
+                      <div className="pbmit-footer-newsletter">
+                        <input
+                          type="email"
+                          name="EMAIL"
+                          placeholder="новини &amp; оновлення"
+                        />
+                        <button type="submit" value="Sign up">
+                          <i className="pbmit-base-icon-arroba"></i>
+                        </button>
+                      </div>
+                      Наші знання, досвід і страсть до веб-дизайну вирізняють
+                      нас серед інших агентств.
+                    </div>
+                    <ul className="pbmit-social-links">
+                      <li className="pbmit-social-li pbmit-social-facebook">
+                        <CustomLink propsHref="" target="_blank" rel="noopener">
+                          <span>
+                            <i className="pbmit-base-icon-facebook-squared"></i>
+                          </span>
+                        </CustomLink>
                       </li>
-                      <li className="menu-item">
-                        <a href="#">Contact</a>
+                      <li className="pbmit-social-li pbmit-social-twitter">
+                        <CustomLink propsHref="" target="_blank" rel="noopener">
+                          <span>
+                            <i className="pbmit-base-icon-twitter"></i>
+                          </span>
+                        </CustomLink>
+                      </li>
+                      <li className="pbmit-social-li pbmit-social-instagram">
+                        <CustomLink propsHref="" target="_blank" rel="noopener">
+                          <span>
+                            <i className="pbmit-base-icon-instagram"></i>
+                          </span>
+                        </CustomLink>
+                      </li>
+                      <li className="pbmit-social-li pbmit-social-youtube">
+                        <CustomLink propsHref="" target="_blank" rel="noopener">
+                          <span>
+                            <i className="pbmit-base-icon-youtube-play"></i>
+                          </span>
+                        </CustomLink>
                       </li>
                     </ul>
                   </div>
@@ -170,9 +149,237 @@ const Footer = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </footer>
+          <div className="pbmit-footer-text-area">
+            <div className="container">
+              <div className="pbmit-footer-text-inner">
+                <div className="row">
+                  <div className="col-md-6">
+                    <div className="pbmit-footer-copyright-text-area">
+                      Copyright © 2024{" "}
+                      <CustomLink propsHref="/">optionflow</CustomLink>, All
+                      Rights Reserved.
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="pbmit-footer-menu-area">
+                      <div className="menu-copyright-menu-container">
+                        <ul className="pbmit-footer-menu">
+                          <li className="menu-item">
+                            <CustomLink propsHref="">Privacy Policy</CustomLink>
+                          </li>
+                          <li className="menu-item">
+                            <CustomLink propsHref="">Contact</CustomLink>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      ) : (
+        <footer className="pbmit-bg-color-secondary footer-style-1 footer site-footer">
+          <div className="footer-wrap pbmit-footer-big-area">
+            <div className="container">
+              <div className="row align-items-center">
+                <div className="col-md-9 col-sm-12">
+                  <h3>
+                    Не соромтеся звертатися до нас
+                    <br />З нетерпінням чекаємо можливості спілкування з вами!
+                  </h3>
+                  <CustomLink propsHref="#">info@optionflow.com</CustomLink>
+                </div>
+                <div className="col-md-3 col-sm-12">
+                  <div className="pbmit-footer-logo">
+                    <img
+                      className="img-fluid"
+                      src="images/internet/logo-white.svg"
+                      alt="optionflow"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="pbmit-footer-widget-area">
+            <div className="container">
+              <div className="row">
+                <div className="col-md-6 col-lg-3">
+                  <div className="widget">
+                    <h3 className="widget-title">Наша компанія</h3>
+                    <div className="textwidget">
+                      <ul>
+                        <li>
+                          <CustomLink propsHref="#">Контаки</CustomLink>
+                        </li>
+                        <li>
+                          <CustomLink propsHref="#">FAQ</CustomLink>
+                        </li>
+                        <li>
+                          <CustomLink propsHref="#">
+                            Повідомити про помилку
+                          </CustomLink>
+                        </li>
+                        <li>
+                          <CustomLink propsHref="#">Карьера</CustomLink>
+                        </li>
+                        <li>
+                          <CustomLink propsHref="#">Про нас</CustomLink>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-6 col-lg-3">
+                  <div className="widget">
+                    <h3 className="widget-title">Підтримка</h3>
+                    <div className="textwidget">
+                      <ul>
+                        <li>
+                          <CustomLink propsHref="#">Компания</CustomLink>
+                        </li>
+                        <li>
+                          <CustomLink propsHref="#">Карьера</CustomLink>
+                        </li>
+                        <li>
+                          <CustomLink propsHref="#">Мережі</CustomLink>
+                        </li>
+                        <li>
+                          <CustomLink propsHref="#">Блог</CustomLink>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-6 col-lg-3">
+                  <div className="widget">
+                    <h3 className="widget-title">Потрібна підтримка?</h3>
+                    <div className="pbmit-footer-contact">
+                      <div className="pbmit-footer-contact-info">
+                        <div className="pbmit-content-box">Центр кліентів</div>
+                        <div className="pbmit-contact-box">
+                          <CustomLink propsHref="mailto:hello@infoxido.com">
+                            info@optionflow.com
+                          </CustomLink>
+                        </div>
+                      </div>
+                      <div className="pbmit-footer-contact-info">
+                        <div className="pbmit-content-box">
+                          Потрібна жива підтримка?
+                        </div>
+                        <div className="pbmit-contact-box">
+                          <CustomLink propsHref="tel:(+1)555234-8765">
+                            (+1)555234-8765
+                          </CustomLink>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-6 col-lg-3">
+                  <div className="widget">
+                    <h3 className="widget-title">Підтримуйте Звʼязок</h3>
+                    <div className="mc4wp-form-fields">
+                      <div className="pbmit-footer-newsletter">
+                        <input
+                          type="email"
+                          name="EMAIL"
+                          placeholder="новини &amp; оновлення"
+                        />
+                        <button type="submit" value="Sign up">
+                          <i className="pbmit-base-icon-arroba"></i>
+                        </button>
+                      </div>
+                      Наші знання, досвід і страсть до веб-дизайну вирізняють
+                      нас серед інших агентств.
+                    </div>
+                    <ul className="pbmit-social-links">
+                      <li className="pbmit-social-li pbmit-social-facebook">
+                        <CustomLink
+                          propsHref="#"
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          <span>
+                            <i className="pbmit-base-icon-facebook-squared"></i>
+                          </span>
+                        </CustomLink>
+                      </li>
+                      <li className="pbmit-social-li pbmit-social-twitter">
+                        <CustomLink
+                          propsHref="#"
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          <span>
+                            <i className="pbmit-base-icon-twitter"></i>
+                          </span>
+                        </CustomLink>
+                      </li>
+                      <li className="pbmit-social-li pbmit-social-instagram">
+                        <CustomLink
+                          propsHref="#"
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          <span>
+                            <i className="pbmit-base-icon-instagram"></i>
+                          </span>
+                        </CustomLink>
+                      </li>
+                      <li className="pbmit-social-li pbmit-social-youtube">
+                        <CustomLink
+                          propsHref="#"
+                          target="_blank"
+                          rel="noopener"
+                        >
+                          <span>
+                            <i className="pbmit-base-icon-youtube-play"></i>
+                          </span>
+                        </CustomLink>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="pbmit-footer-bottom">
+            <div className="container">
+              <div className="pbmit-footer-text-inner">
+                <div className="row">
+                  <div className="col-md-6">
+                    <div className="pbmit-footer-copyright-text-area">
+                      Copyright © 2024{" "}
+                      <CustomLink propsHref="#">optionflow</CustomLink>, All
+                      Rights Reserved.
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="pbmit-footer-menu-area">
+                      <div className="menu-copyright-menu-container">
+                        <ul className="pbmit-footer-menu">
+                          <li className="menu-item">
+                            <CustomLink propsHref="#">
+                              Privacy Policy
+                            </CustomLink>
+                          </li>
+                          <li className="menu-item">
+                            <CustomLink propsHref="#">Contact</CustomLink>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      )}
+    </>
   );
 };
 

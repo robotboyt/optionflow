@@ -4,12 +4,12 @@ import animationData from "../../animation/internet-banner.json";
 import anim2Data from "../../animation/internet-anim-01.json";
 import anim3Data from "../../animation/internet-anim-02.json";
 import { Link } from "react-router-dom";
-import CustomLink from "../../components/common/CustomLink";
 import { loadScript } from "../../components/common/utils";
 import sliderContent from "./HomeSliderContent";
 import HomeSliderBlock from "./HomeSliderBlock";
 import HomeCommentSlide from "./HomeCommentSlide";
 import Navbar from "../../components/common/Navbar";
+import Footer from "../../components/common/Footer";
 
 const Home = () => {
   useEffect(() => {
@@ -312,39 +312,39 @@ const Home = () => {
                 <div className="block pbmit-tab-style-2">
                   <ul className="nav nav-tabs" role="tablist">
                     <li className="nav-item" role="presentation">
-                      <a
+                      <Link
                         className="nav-link active"
                         data-bs-toggle="tab"
-                        href="#tab-2-1"
+                        to="#tab-2-1"
                         aria-selected="true"
                         role="tab"
                       >
                         Header Builder
-                      </a>
+                      </Link>
                     </li>
                     <li className="nav-item" role="presentation">
-                      <a
+                      <Link
                         className="nav-link"
                         data-bs-toggle="tab"
-                        href="#tab-2-2"
+                        to="#tab-2-2"
                         aria-selected="false"
                         role="tab"
                         tabIndex="-1"
                       >
                         Safe and Private
-                      </a>
+                      </Link>
                     </li>
                     <li className="nav-item" role="presentation">
-                      <a
+                      <Link
                         className="nav-link"
                         data-bs-toggle="tab"
-                        href="#tab-2-3"
+                        to="#tab-2-3"
                         aria-selected="false"
                         role="tab"
                         tabIndex="-1"
                       >
                         Mobility Solutions
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                   <div className="tab-content">
@@ -532,172 +532,7 @@ const Home = () => {
         </section>
       </div>
 
-      <footer className="pbmit-bg-color-secondary footer footer-style-2 site-footer">
-        <div className="footer-wrap pbmit-footer-big-area">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-9 col-sm-12">
-                <h3>
-                  Business management tools are all the systems, application
-                  controls, calculating solutions.
-                </h3>
-              </div>
-              <div className="col-md-3 col-sm-12">
-                <div className="pbmit-footer-logo">
-                  <img
-                    className="pbmit-main-logo"
-                    src="images/internet/footer-logo.svg"
-                    alt="optionflow"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="pbmit-footer-widget-area">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-6 col-lg-3"></div>
-              <div className="col-md-6 col-lg-3">
-                <div className="widget pbmit-two-column-menu">
-                  <h3 className="widget-title">Our Company</h3>
-                  <div className="textwidget">
-                    <ul>
-                      <li>
-                        <Link to="">Contact Us</Link>
-                      </li>
-                      <li>
-                        <Link to="">FAQ</Link>
-                      </li>
-                      <li>
-                        <Link to="">Report Link Bug</Link>
-                      </li>
-                      <li>
-                        <Link to="">Careers</Link>
-                      </li>
-                      <li>
-                        <Link to="">About Us</Link>
-                      </li>
-                      <li>
-                        <Link to="">Home</Link>
-                      </li>
-                      <li>
-                        <Link to="">Product</Link>
-                      </li>
-                      <li>
-                        <Link to="">Our Blog</Link>
-                      </li>
-                      <li>
-                        <Link to="">Hiring</Link>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-6 col-lg-3">
-                <div className="widget">
-                  <h3 className="widget-title">Need Help?</h3>
-                  <div className="pbmit-footer-contact">
-                    <div className="pbmit-footer-contact-info">
-                      <div className="pbmit-content-box">Customer Care</div>
-                      <div className="pbmit-contact-box">
-                        <Link to="tel:(+1)555234-8765">(+1)555234-8765</Link>
-                      </div>
-                    </div>
-                    <div className="pbmit-footer-contact-info">
-                      <div className="pbmit-content-box">
-                        Need live support?
-                      </div>
-                      <div className="pbmit-contact-box">
-                        <Link to="mailto:hello@infoxido.com">
-                          hello@infoxido.com
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-6 col-lg-3">
-                <div className="widget">
-                  <h3 className="widget-title">Keep in touch</h3>
-                  <div className="mc4wp-form-fields">
-                    <div className="pbmit-footer-newsletter">
-                      <input
-                        type="email"
-                        name="EMAIL"
-                        placeholder="Get news &amp; updates"
-                      />
-                      <button type="submit" value="Sign up">
-                        <i className="pbmit-base-icon-arroba"></i>
-                      </button>
-                    </div>
-                    Our expertise, as well as our passion for web design sets us
-                    apart from other agencies
-                  </div>
-                  <ul className="pbmit-social-links">
-                    <li className="pbmit-social-li pbmit-social-facebook">
-                      <Link to="" target="_blank" rel="noopener">
-                        <span>
-                          <i className="pbmit-base-icon-facebook-squared"></i>
-                        </span>
-                      </Link>
-                    </li>
-                    <li className="pbmit-social-li pbmit-social-twitter">
-                      <Link to="" target="_blank" rel="noopener">
-                        <span>
-                          <i className="pbmit-base-icon-twitter"></i>
-                        </span>
-                      </Link>
-                    </li>
-                    <li className="pbmit-social-li pbmit-social-instagram">
-                      <Link to="" target="_blank" rel="noopener">
-                        <span>
-                          <i className="pbmit-base-icon-instagram"></i>
-                        </span>
-                      </Link>
-                    </li>
-                    <li className="pbmit-social-li pbmit-social-youtube">
-                      <Link to="" target="_blank" rel="noopener">
-                        <span>
-                          <i className="pbmit-base-icon-youtube-play"></i>
-                        </span>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="pbmit-footer-text-area">
-          <div className="container">
-            <div className="pbmit-footer-text-inner">
-              <div className="row">
-                <div className="col-md-6">
-                  <div className="pbmit-footer-copyright-text-area">
-                    Copyright © 2022 <Link to="">Xido</Link>, All Rights
-                    Reserved.
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="pbmit-footer-menu-area">
-                    <div className="menu-copyright-menu-container">
-                      <ul className="pbmit-footer-menu">
-                        <li className="menu-item">
-                          <Link to="">Privacy Policy</Link>
-                        </li>
-                        <li className="menu-item">
-                          <Link to="">Contact</Link>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

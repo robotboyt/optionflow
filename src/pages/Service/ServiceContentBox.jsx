@@ -1,4 +1,5 @@
 import React from "react";
+import CustomLink from "../../components/common/CustomLink";
 
 const ServiceContentBox = ({
   serviceTitle,
@@ -8,29 +9,31 @@ const ServiceContentBox = ({
   serviceCategory,
 }) => {
   return (
-    <div class="col-sm-12 col-md-4">
-      <article class="pbmit-service-style-6">
-        <div class="pbminfotech-post-item">
-          <div class="pbmit-service-image-wrapper">
-            <div class="pbmit-featured-img-wrapper">
-              <div class="pbmit-featured-wrapper">
-                <img src={serviceImg} class="img-fluid" alt="" />
+    <div className="col-sm-12 col-md-4">
+      <article className="pbmit-service-style-6">
+        <div className="pbminfotech-post-item">
+          <div className="pbmit-service-image-wrapper">
+            <div className="pbmit-featured-img-wrapper">
+              <div className="pbmit-featured-wrapper">
+                <img src={serviceImg} className="img-fluid" alt="" />
               </div>
             </div>
           </div>
-          <div class="pbminfotech-box-content">
-            <div class="pbminfotech-box-content-inner">
-              <div class="pbmit-service-icon-wrapper">
-                <i class={serviceIcon}></i>
+          <div className="pbminfotech-box-content">
+            <div className="pbminfotech-box-content-inner">
+              <div className="pbmit-service-icon-wrapper">
+                <i className={serviceIcon}></i>
               </div>
-              <div class="pbmit-service-title-wrapper">
-                <div class="pbmit-service-cat">
-                  <a href="#" rel="tag">
+              <div className="pbmit-service-title-wrapper">
+                <div className="pbmit-service-cat">
+                  <CustomLink propsHref="#" rel="tag">
                     {serviceCategory}
-                  </a>
+                  </CustomLink>
                 </div>
-                <h3 class="pbmit-service-title">
-                  <a href={serviceLink}>{serviceTitle}</a>
+                <h3 className="pbmit-service-title">
+                  <CustomLink propsHref={serviceLink}>
+                    {serviceTitle}
+                  </CustomLink>
                 </h3>
               </div>
             </div>

@@ -4,7 +4,7 @@ const ServiceData = [
     imageSrc: "images/coworking/services/service-01.jpg",
     category: "Corporate",
     title: "People Management",
-    link: "services-details-two.html",
+    link: "#",
     iconClass: "pbmit-xido-icon-website",
   },
   {
