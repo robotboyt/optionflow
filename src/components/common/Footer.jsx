@@ -155,7 +155,7 @@ const Footer = () => {
                 <div className="row">
                   <div className="col-md-6">
                     <div className="pbmit-footer-copyright-text-area">
-                      Copyright © 2024{" "}
+                      Copyright © 2023{" "}
                       <CustomLink propsHref="/">optionflow</CustomLink>, All
                       Rights Reserved.
                     </div>
@@ -352,7 +352,7 @@ const Footer = () => {
                 <div className="row">
                   <div className="col-md-6">
                     <div className="pbmit-footer-copyright-text-area">
-                      Copyright © 2024{" "}
+                      Copyright © 2023{" "}
                       <CustomLink propsHref="#">optionflow</CustomLink>, All
                       Rights Reserved.
                     </div>

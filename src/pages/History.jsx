@@ -160,16 +160,20 @@ const History = () => {
                   <div className="col-sm-12 pbmit-ourhistory-type2">
                     <div className="row pbmit-ourhistory-row">
                       <div className="col-md-6 col-sm-12 col-xs-6 pbmit-ourhistory-right">
-                        <span className="label">2010</span>
+                        <span className="label">2017</span>
                         <div className="content">
-                          <h4>We started business industry</h4>
+                          <h4>
+                            Двоє студентів знайомляться на першому курсі
+                            коледжу.
+                          </h4>
                           <div className="simple-text">
                             <p>
-                              There are many variations of challenging marketing
-                              business available. The majority have suffered
-                              alteration in some of form by injected a marketing
-                              business company. This company specialist and
-                              service are awesome.
+                              Вони починають ділитися цілями та думками щодо
+                              сфери ІТ, глибоко вивчають програмування та
+                              дизайн. Розглядають попит на ринку та досліджують,
+                              як створити свою власну студію. Знаходять
+                              однодумців, щоб утворити команду, яка спільно
+                              працює над інноваційними проектами.
                             </p>
                           </div>
                         </div>
@@ -190,16 +194,18 @@ const History = () => {
                   <div className="col-sm-12 pbmit-ourhistory-type2">
                     <div className="row pbmit-ourhistory-row">
                       <div className="col-md-6 col-sm-12 col-xs-6 pbmit-ourhistory-right">
-                        <span className="label">2012</span>
+                        <span className="label">2020</span>
                         <div className="content">
-                          <h4>We have expert Team Member</h4>
+                          <h4>Створюємо першу команду</h4>
                           <div className="simple-text">
                             <p>
-                              There are many variations of challenging marketing
-                              business available. The majority have suffered
-                              alteration in some of form by injected a marketing
-                              business company. This company specialist and
-                              service are awesome.
+                              Ми випробовуємо свої сили в геймдеві та беремо
+                              участь у державних проектах. Протягом безлічі
+                              ночей ми працюємо над проектами, обмінюючись
+                              ідеями та ентузіазмом. Ми намагаємося знайти
+                              партнерів та спонсорів для втілення наших ідей.
+                              Кожен успіх та, навіть, кожна невдача налаштовують
+                              нас докладати більше зусиль.
                             </p>
                           </div>
                         </div>
@@ -216,50 +222,22 @@ const History = () => {
                     </div>
                   </div>
                 </div>
+
                 <div className="pbmit-timeline-inner">
                   <div className="col-sm-12 pbmit-ourhistory-type2">
                     <div className="row pbmit-ourhistory-row">
                       <div className="col-md-6 col-sm-12 col-xs-6 pbmit-ourhistory-right">
-                        <span className="label">2014</span>
+                        <span className="label">2023</span>
                         <div className="content">
-                          <h4>Best company in the Landon</h4>
+                          <h4>Створення optionflow</h4>
                           <div className="simple-text">
                             <p>
-                              There are many variations of challenging marketing
-                              business available. The majority have suffered
-                              alteration in some of form by injected a marketing
-                              business company. This company specialist and
-                              service are awesome.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-md-6 pbmit-ourhistory-left">
-                        <span className="pbmit-timeline-image">
-                          <img
-                            src="images/coworking/history/history-03.jpg"
-                            className="img-fluid w-100"
-                            alt="Best company in the Landon"
-                          />
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="pbmit-timeline-inner">
-                  <div className="col-sm-12 pbmit-ourhistory-type2">
-                    <div className="row pbmit-ourhistory-row">
-                      <div className="col-md-6 col-sm-12 col-xs-6 pbmit-ourhistory-right">
-                        <span className="label">2016</span>
-                        <div className="content">
-                          <h4>We got the high level of success</h4>
-                          <div className="simple-text">
-                            <p>
-                              There are many variations of challenging marketing
-                              business available. The majority have suffered
-                              alteration in some of form by injected a marketing
-                              business company. This company specialist and
-                              service are awesome.
+                              На початку 2023 року ми заснували нашу студію в ці
+                              важкі для нашої країни часи. Знаходимо проекти та
+                              реалізовуємо їх на високому рівні, ставимо перед
+                              собою нові цілі та віддано працюємо, намагаючись
+                              досягти їх. Поступово розширюємо нашу студію та
+                              приваблюємо новий персонал.
                             </p>
                           </div>
                         </div>
