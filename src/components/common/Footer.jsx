@@ -186,7 +186,7 @@ const Footer = () => {
               <div className="row align-items-center">
                 <div className="col-md-9 col-sm-12">
                   <h3>
-                    Не соромтеся звертатися до нас
+                    Не соромтесь звертатися до нас
                     <br />З нетерпінням чекаємо можливості спілкування з вами!
                   </h3>
                   <CustomLink propsHref="#">info@optionflow.com</CustomLink>

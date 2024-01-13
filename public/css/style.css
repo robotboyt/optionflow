@@ -719,7 +719,7 @@
   padding: 40px 0px 30px 0px;
 }
 .our-history .about-us-left-bg-home3 {
-  background-image: url(../images/coworking/about.jpg);
+  background-image: url(../images/internet/history-1.png);
   background-position: center right;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2942,7 +2942,7 @@ a.pbmit-underline-text:hover {
   left: calc(50% - 13px);
   width: 18px;
   height: 18px;
-  background: transparent;
+  background: var(--pbmit-global-color);
   transform: rotate(45deg);
   border: 3px solid var(--pbmit-blackish-color);
 }
@@ -3080,7 +3080,7 @@ a.pbmit-underline-text:hover {
   left: calc(50% - 13px);
   width: 18px;
   height: 18px;
-  background: transparent;
+  background: var(--pbmit-global-color);
   transform: rotate(45deg);
   border: 3px solid var(--pbmit-blackish-color);
 }
