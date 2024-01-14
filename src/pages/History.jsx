@@ -113,28 +113,31 @@ const History = () => {
               </div>
               <div className="col-xl-6 col-md-12 about-us-right-home3">
                 <div className="pbmit-heading-subheading-style-3">
-                  <h4 className="pbmit-subtitle">WHAT WE OFFER</h4>
+                  <h4 className="pbmit-subtitle">Що ми пропонуємо</h4>
                   <h2 className="pbmit-title">
-                    We Offer Expert SEO and Marketing.
+                    Ми пропонуємо новітні IT-рішення та підтримку на кожному
+                    етапі проекту.
                   </h2>
                   <div>
-                    We are offer a broad range of businesses that manage money,
-                    including credit unions, banks, credit-card companies,
-                    insurance companies, accountancy companies, consumer-finance
-                    companies.
+                    Ми цінуємо унікальність кожного проекту та кожного клієнта.
+                    Наша команда розробляє індивідуальні стратегії, враховуючи
+                    особливості бізнесу кожного замовника. Регулярні оновлення,
+                    звіти та спілкування на кожному етапі проекту забезпечують
+                    повне залучення замовника в процес розробки.
                   </div>
                 </div>
                 <ul className="list-group list-group-borderless">
                   <li className="list-group-item">
-                    <i className="pbmit-base-icon-ok"></i> We Are Result
-                    Oriented
+                    <i className="pbmit-base-icon-ok"></i>
+                    Ми Орієнтовані На Результати
                   </li>
                   <li className="list-group-item">
-                    <i className="pbmit-base-icon-ok"></i> We Make To Execute
+                    <i className="pbmit-base-icon-ok"></i> Ми Творимо Для
+                    Виконання
                   </li>
                   <li className="list-group-item">
-                    <i className="pbmit-base-icon-ok"></i> Our experts works
-                    harder
+                    <i className="pbmit-base-icon-ok"></i> Наші Експерти
+                    Працюють Наполегливо
                   </li>
                 </ul>
                 <img
