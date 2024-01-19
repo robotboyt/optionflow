@@ -273,7 +273,7 @@ const About = () => {
             <div className="row align-items-end">
               <div className="col-xl-6 col-md-12">
                 <div className="pbmit-heading-subheading">
-                  <h4 className="pbmit-subtitle-white">SUCCESS STORIES</h4>
+                  <h4 className="pbmit-subtitle-white">Чому ми маємо успіх</h4>
                   <h2 className="pbmit-title">
                     Маємо досвід у розробці SEO-дружніх рішень з використанням
                     новітніх технологій.
@@ -296,9 +296,9 @@ const About = () => {
                       </div>
                     </div>
                     <div className="pbmit-ihbox-contents">
-                      <div className="pbmit-heading-desc">Send Email</div>
+                      <div className="pbmit-heading-desc">Відправити пошту</div>
                       <h2 className="pbmit-element-title">
-                        needhelp@company.com
+                        optionflowit@gmail.com
                       </h2>
                     </div>
                   </div>
@@ -515,7 +515,7 @@ const About = () => {
                                   Щоденно крокуємо в майбутнє веб-розробки. Наші
                                   експерти знають, як дати відчуття інновацій
                                   кожному проекту, навіть тим, які вже сьогодні
-                                  вважаються сучасними
+                                  вважаються сучасними.
                                 </p>
                               </blockquote>
                             </div>
