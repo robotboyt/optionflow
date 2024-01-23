@@ -62,12 +62,16 @@ const Home = () => {
             <div className="row align-items-center">
               <div className="col-xl-6 col-md-12">
                 <div className="pbmit-text-style-6">
+                  <h1 style={{ userSelect: "none" }}>&nbsp;</h1>
                   <h6 className="pbmit-subtitle">
-                    <span className="text-style">Ласкаво просимо</span> В
-                    ІТ-лабораторію — ваш стартап у світі можливостей!
+                    <span className="text-style">
+                      Welcome to
+                      <span style={{ color: "#5f51e3" }}> Option Flow </span>
+                      web-studio
+                    </span>
                   </h6>
                   <h2 className="pbmit-title">
-                    Створюємо нове і покращуємо старе.
+                    Цифрова ідентичність - як головна мета
                   </h2>
                   <p>
                     Наша пропозиція послуг об'єднує творчість та винятковість.
@@ -98,49 +102,25 @@ const Home = () => {
                       <div className="pbmit-ihbox-icon">
                         <div className="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image">
                           <img
-                            src="images/internet/router.png"
-                            className="img-fluid"
-                            alt="Flexible Package"
-                          />
-                        </div>
-                      </div>
-                      <h2 className="pbmit-element-title">Flexible Package</h2>
-                      <div className="pbmit-heading-desc">
-                        This provides every of the devices on your dwelling
-                        network with internet access.
-                      </div>
-                      <div className="pbmit-ihbox-btn">
-                        <Link to="">
-                          <span>Read More</span>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-4 col-md-6">
-                <div className="pbmit-ihbox-style-8">
-                  <div className="pbmit-ihbox-box">
-                    <div className="pbmit-ihbox-contents">
-                      <div className="pbmit-ihbox-icon">
-                        <div className="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image">
-                          <img
-                            src="images/internet/cloud.png"
-                            className="img-fluid"
-                            alt="Seamless Streaming"
+                            src="images/internet/web-service.png"
+                            className="img-fluid-service"
+                            alt="web-service"
                           />
                         </div>
                       </div>
                       <h2 className="pbmit-element-title">
-                        Seamless Streaming
+                        Розробка Web-сайт та інше
                       </h2>
                       <div className="pbmit-heading-desc">
-                        The dynamically exchange routes between your VPC and
-                        peer network by using BGP.
+                        <span>ASP.NET / ASP.NET Core...</span>
+                        <br />
+                        <span>React, HTML, CSS...</span>
+                        <br />
+                        <span>Ecommers, WordPress...</span>
                       </div>
                       <div className="pbmit-ihbox-btn">
-                        <Link to="">
-                          <span>Read More</span>
+                        <Link to="#">
+                          <span>Читати більше</span>
                         </Link>
                       </div>
                     </div>
@@ -154,20 +134,53 @@ const Home = () => {
                       <div className="pbmit-ihbox-icon">
                         <div className="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image">
                           <img
-                            src="images/internet/hand.png"
-                            className="img-fluid"
-                            alt="Easy to use"
+                            src="images/internet/smm-service.png"
+                            className="img-fluid-service"
+                            alt="smm-service"
                           />
                         </div>
                       </div>
-                      <h2 className="pbmit-element-title">Easy to use</h2>
+                      <h2 className="pbmit-element-title">SMM-послуги</h2>
                       <div className="pbmit-heading-desc">
-                        Which are commonly used for local area networking of
-                        devices and Internet access.
+                        <span>Розробка стратегії</span>
+                        <br />
+                        <span>Управління контентом</span>
+                        <br />
+                        <span>Реклама в соціальних мережах</span>
                       </div>
                       <div className="pbmit-ihbox-btn">
-                        <Link to="">
-                          <span>Read More</span>
+                        <Link to="#">
+                          <span>Читати більше</span>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-xl-4 col-md-6">
+                <div className="pbmit-ihbox-style-8">
+                  <div className="pbmit-ihbox-box">
+                    <div className="pbmit-ihbox-contents">
+                      <div className="pbmit-ihbox-icon">
+                        <div className="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image">
+                          <img
+                            src="images/internet/it-service.png"
+                            className="img-fluid-service"
+                            alt="it-service"
+                          />
+                        </div>
+                      </div>
+                      <h2 className="pbmit-element-title">IT-консультація</h2>
+                      <div className="pbmit-heading-desc">
+                        <span>Оптимізація ІТ-стратегії</span>
+                        <br />
+                        <span>Оптимізація бізнес-процесів </span>
+                        <br />
+                        <span>Управління ІТ-ризиками</span>
+                      </div>
+                      <div className="pbmit-ihbox-btn">
+                        <Link to="#">
+                          <span>Читати більше</span>
                         </Link>
                       </div>
                     </div>

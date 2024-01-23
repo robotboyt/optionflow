@@ -22,7 +22,7 @@ const Contacts = () => {
             <div className="pbmit-title-bar-content-inner">
               <div className="pbmit-tbar">
                 <div className="pbmit-tbar-inner container">
-                  <h1 className="pbmit-tbar-title">Contact Us</h1>
+                  <h1 className="pbmit-tbar-title">Контакти</h1>
                 </div>
               </div>
             </div>
@@ -37,13 +37,11 @@ const Contacts = () => {
               <div className="row">
                 <div className="col-md-5">
                   <div className="pbmit-heading-subheading">
-                    <h4 className="pbmit-subtitle-white">CONTACT WITH US</h4>
+                    <h4 className="pbmit-subtitle-white">Зв'язатися З Нами</h4>
                     <h2 className="pbmit-title">
-                      Feel free to get in touch with experts
+                      Просто зв'яжіться з нашими експертами
                     </h2>
-                    <div className="mt-2">
-                      Trusted by more than 4,200 customers
-                    </div>
+                    <div className="mt-2">Нам довіряють наші клієнти</div>
                   </div>
                   <ul className="pbmit-social-links">
                     <li className="pbmit-social-li pbmit-social-facebook">
@@ -88,7 +86,7 @@ const Contacts = () => {
                         <input
                           type="text"
                           className="form-control"
-                          placeholder="Full Name"
+                          placeholder="Повне ім'я"
                           name="name"
                           required=""
                         />
@@ -97,7 +95,7 @@ const Contacts = () => {
                         <input
                           type="text"
                           className="form-control"
-                          placeholder="Email Address"
+                          placeholder="Email адрес"
                           name="email"
                           required=""
                         />
@@ -107,7 +105,7 @@ const Contacts = () => {
                           className="form-control"
                           name="message"
                           rows="4"
-                          placeholder="Write Message"
+                          placeholder="Напишіть повідомлення"
                           required=""
                         ></textarea>
                       </div>
@@ -117,7 +115,7 @@ const Contacts = () => {
                           className="pbmit-btn pbmit-btn-hover-secondary"
                         >
                           <i className="form-btn-loader fa fa-circle-o-notch fa-spin fa-fw margin-bottom d-none"></i>
-                          Post Comment
+                          Відправити
                         </button>
                       </div>
                       <div className="col-md-12 col-lg-12 message-status"></div>
@@ -139,7 +137,9 @@ const Contacts = () => {
                         </div>
                       </div>
                       <div className="pbmit-ihbox-contents">
-                        <div className="pbmit-heading-desc">Send Email</div>
+                        <div className="pbmit-heading-desc">
+                          Відправити Email
+                        </div>
                         <h2 className="pbmit-element-title">
                           needhelp@company.com
                         </h2>
@@ -158,7 +158,9 @@ const Contacts = () => {
                         </div>
                       </div>
                       <div className="pbmit-ihbox-contents">
-                        <div className="pbmit-heading-desc">Call Anytime</div>
+                        <div className="pbmit-heading-desc">
+                          Телефонуйте у будь-який час
+                        </div>
                         <h2 className="pbmit-element-title">
                           + 92 666 888 0000
                         </h2>

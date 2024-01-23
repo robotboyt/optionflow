@@ -2525,6 +2525,7 @@ s .pbmit-ihbox-style-15 .pbmit-heading-desc {
 .pbmit-ihbox-style-22 .pbmit-ihbox-icon .pbmit-ihbox-icon-type-text::after,
 .pbmit-ihbox-style-22 .pbmit-ihbox-icon .pbmit-ihbox-icon-type-text {
   border-radius: 0px 0px 0px 80px;
+  background-color: var(--pbmit-secondary-color);
 }
 .pbmit-ihbox-style-22:hover .pbmit-ihbox-icon .pbmit-ihbox-icon-type-text,
 .pbmit-ihbox-style-22:hover .pbmit-ihbox-icon .pbmit-icon-type-icon {
@@ -5598,6 +5599,7 @@ body .pbmit-remove-before:before {
   font-family: "pbminfotech-base-icons";
   font-weight: normal;
 }
+
 /** Style 6 **/
 .pbmit-blog-style-6 {
   margin-bottom: 30px;
@@ -5666,6 +5668,72 @@ body .pbmit-remove-before:before {
   margin-right: 10px;
 }
 
+/* Career styles */
+.pbmit-career-style {
+  margin-bottom: 30px;
+}
+.pbmit-career-style .career-item {
+  position: relative;
+  padding: 20px;
+  background-color: var(--pbmit-white-color);
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  -webkit-box-shadow: 0px 2px 40px 0px rgb(0 0 0 / 5%);
+  -moz-box-shadow: 0px 2px 40px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 2px 40px 0px rgb(0 0 0 / 5%);
+}
+.pbmit-career-style:hover .career-item {
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+
+.pbmit-career-style .pbmit-career-title {
+  text-align: center;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+.pbmit-career-style .pbminfotech-box-content {
+  position: relative;
+  padding: 35px 0 0;
+}
+.pbmit-career-style .pbmit-meta-category {
+  top: -14px;
+  left: 20px;
+  padding: 5px 15px;
+  background-color: var(--pbmit-global-color);
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  margin-bottom: 15px;
+}
+.rtl .pbmit-career-style .pbmit-meta-category {
+  right: 20px;
+  left: inherit;
+}
+.pbmit-career-style .pbmit-meta-category:hover {
+  background-color: var(--pbmit-blackish-color);
+}
+.pbmit-career-style .pbmit-meta-category a {
+  color: var(--pbmit-white-color);
+}
+.pbmit-career-style .pbmit-meta-container > span {
+  display: inline-block;
+  font-size: 12px;
+  line-height: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.pbmit-text-color-white .pbmit-career-style-6 .pbmit-meta-container > span {
+  color: #787c8b;
+}
+.pbmit-career-style .pbmit-meta-container .pbmit-base-icon {
+  margin-right: 5px;
+  font-size: 15px;
+}
+.pbmit-career-style .pbmit-meta-container .pbmit-meta:not(:last-child) {
+  margin-right: 10px;
+}
 /*----------------------------------------*/
 /*  07 - Testimonial
 /*----------------------------------------*/
@@ -7691,7 +7759,7 @@ body .pbmit-remove-before:before {
 }
 .pbmit-footer-big-area h3,
 .pbmit-footer-big-area a {
-  font-size: 38px;
+  font-size: 30px;
   line-height: 48px;
   font-weight: 400;
   margin-bottom: 20px;
@@ -7891,7 +7959,7 @@ footer .widget .widget-title::before {
 }
 .pbmit-title-bar-wrapper {
   background-color: rgba(17, 22, 28, 0.8);
-  background-image: url(../images/internet/about-us2.png);
+  background-image: url(../images/coworking/titlebarbg.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

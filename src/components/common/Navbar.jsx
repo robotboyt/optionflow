@@ -33,17 +33,10 @@ const Navbar = () => {
                     <ul className="pbmit-contact-info">
                       <li>
                         <ul className="pbmit-social-links">
-                          <li className="pbmit-social-li pbmit-social-facebook">
+                          <li className="pbmit-social-li pbmit-social-linkedin">
                             <Link to="" target="_blank">
                               <span>
-                                <i className="pbmit-base-icon-facebook-squared"></i>
-                              </span>
-                            </Link>
-                          </li>
-                          <li className="pbmit-social-li pbmit-social-x-twitter">
-                            <Link to="" target="_blank">
-                              <span>
-                                <i className="pbmit-base-icon-twitter"></i>
+                                <i className="pbmit-base-icon-linkedin-squared"></i>
                               </span>
                             </Link>
                           </li>
@@ -51,13 +44,6 @@ const Navbar = () => {
                             <Link to="" target="_blank">
                               <span>
                                 <i className="pbmit-base-icon-instagram"></i>
-                              </span>
-                            </Link>
-                          </li>
-                          <li className="pbmit-social-li pbmit-social-linkedin">
-                            <Link to="" target="_blank">
-                              <span>
-                                <i className="pbmit-base-icon-linkedin-squared"></i>
                               </span>
                             </Link>
                           </li>
@@ -319,17 +305,10 @@ const Navbar = () => {
                     <div className="pbmit-right-main-box">
                       <div className="pbmit-header-social-wrapper">
                         <ul className="pbmit-social-links">
-                          <li className="pbmit-social-li pbmit-social-facebook">
+                          <li className="pbmit-social-li pbmit-social-linkedin">
                             <a href="#" target="_blank">
                               <span>
-                                <i className="pbmit-base-icon-facebook-squared"></i>
-                              </span>
-                            </a>
-                          </li>
-                          <li className="pbmit-social-li pbmit-social-twitter">
-                            <a href="#" target="_blank">
-                              <span>
-                                <i className="pbmit-base-icon-twitter"></i>
+                                <i className="pbmit-base-icon-linkedin-squared"></i>
                               </span>
                             </a>
                           </li>
@@ -337,13 +316,6 @@ const Navbar = () => {
                             <a href="#" target="_blank">
                               <span>
                                 <i className="pbmit-base-icon-instagram"></i>
-                              </span>
-                            </a>
-                          </li>
-                          <li className="pbmit-social-li pbmit-social-youtube">
-                            <a href="#" target="_blank">
-                              <span>
-                                <i className="pbmit-base-icon-youtube-play"></i>
                               </span>
                             </a>
                           </li>
