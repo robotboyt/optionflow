@@ -114,6 +114,12 @@ const Navbar = () => {
                                     propsText={"Блог"}
                                   />
                                 </li>
+                                <li className="">
+                                  <CustomLink
+                                    propsHref={"/career"}
+                                    propsText={"Карьера"}
+                                  />
+                                </li>
                                 <li className="dropdown">
                                   <CustomLink
                                     propsHref={"/about"}
@@ -231,6 +237,18 @@ const Navbar = () => {
                                 <CustomLink
                                   propsHref={"/blog"}
                                   propsText={"Блог"}
+                                />
+                              </li>
+                              <li
+                                className={
+                                  location.pathname === "/career"
+                                    ? "active"
+                                    : null
+                                }
+                              >
+                                <CustomLink
+                                  propsHref={"/career"}
+                                  propsText={"Карьера"}
                                 />
                               </li>
                               <li

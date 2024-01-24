@@ -4,7 +4,7 @@ const ServiceData = [
     imageSrc: "images/coworking/services/service-01.jpg",
     category: "Corporate",
     title: "People Management",
-    link: "#",
+    link: "/service-single",
     iconClass: "pbmit-xido-icon-website",
   },
   {
@@ -12,7 +12,7 @@ const ServiceData = [
     imageSrc: "images/coworking/services/service-02.jpg",
     category: "coworking",
     title: "Growth Strategy",
-    link: "#",
+    link: "/service-single",
     iconClass: "pbmit-xido-icon-investment",
   },
   {
@@ -20,7 +20,7 @@ const ServiceData = [
     imageSrc: "images/coworking/services/service-03.jpg",
     category: "Leadership",
     title: "Systems Maintenance",
-    link: "#",
+    link: "/service-single",
     iconClass: "pbmit-xido-icon-financial-consultant",
   },
   {
@@ -28,7 +28,7 @@ const ServiceData = [
     imageSrc: "images/coworking/services/service-04.jpg",
     category: "Lifestyle",
     title: "Innovativeness",
-    link: "#",
+    link: "/service-single",
     iconClass: "pbmit-xido-icon-atm-machine",
   },
   {
@@ -36,7 +36,7 @@ const ServiceData = [
     imageSrc: "images/coworking/services/service-05.jpg",
     category: "Marketing",
     title: "Admin Department",
-    link: "#",
+    link: "/service-single",
     iconClass: "pbmit-xido-icon-team",
   },
   {
@@ -44,7 +44,7 @@ const ServiceData = [
     imageSrc: "images/coworking/services/service-06.jpg",
     category: "Strategies",
     title: "Works Progress",
-    link: "#",
+    link: "/service-single",
     iconClass: "pbmit-xido-icon-rating",
   },
   {
@@ -52,7 +52,7 @@ const ServiceData = [
     imageSrc: "images/coworking/services/service-07.jpg",
     category: "Corporate",
     title: "coworking Spaces",
-    link: "#",
+    link: "/service-single",
     iconClass: "pbmit-xido-icon-statistics",
   },
   {
@@ -60,7 +60,7 @@ const ServiceData = [
     imageSrc: "images/coworking/services/service-08.jpg",
     category: "Leadership",
     title: "Global Movement",
-    link: "#",
+    link: "/service-single",
     iconClass: "pbmit-xido-icon-seo",
   },
   {
@@ -68,7 +68,7 @@ const ServiceData = [
     imageSrc: "images/coworking/services/service-09.jpg",
     category: "Marketing",
     title: "Work Alternatives",
-    link: "#",
+    link: "/service-single",
     iconClass: "pbmit-xido-icon-online-marketing-1",
   },
 ];

@@ -1,6 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import CustomLink from "../../components/common/CustomLink";
 
-const PortfolioBlock = ({ itemName, itemText }) => {
+const PortfolioBlock = ({ itemName, itemText, id }) => {
   return (
     <div className="col-sm-12 col-md-4">
       <article className="pbmit-portfolio-style-4">
@@ -20,7 +22,9 @@ const PortfolioBlock = ({ itemName, itemText }) => {
             <div className="pbminfotech-box-content-wrapper">
               <div className="pbminfotech-titlebox">
                 <h3 className="pbmit-portfolio-title">
-                  <a href="portfolio-details.html">{itemName}</a>
+                  <CustomLink propsHref="/portfolio-single">
+                    {itemName}
+                  </CustomLink>
                 </h3>
                 <div className="pbmit-port-cat">
                   <a href="portfolio-style-1.html" rel="tag">

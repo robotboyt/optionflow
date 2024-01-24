@@ -1,4 +1,5 @@
 import React from "react";
+import CustomLink from "../../components/common/CustomLink";
 
 const BlogContetBox = ({
   blogTitle,
@@ -21,14 +22,14 @@ const BlogContetBox = ({
           <div className="pbminfotech-box-content">
             <div className="pbmit-meta-container">
               <span className="pbmit-meta-category">
-                <a href="blog-classic.html" rel="category tag">
+                <CustomLink propsHref="/blog-single" rel="category tag">
                   {blogCategory}
-                </a>
+                </CustomLink>
               </span>
             </div>
             <div className="pbmit-box-content-wrapper">
               <h3 className="pbmit-post-title">
-                <a href="blog-single-details.html">{blogTitle}</a>
+                <CustomLink propsHref="/blog-single">{blogTitle}</CustomLink>
               </h3>
               <div className="pbmit-meta-container">
                 <span className="pbmit-meta pbmit-date-wrapper">

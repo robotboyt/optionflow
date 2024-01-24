@@ -5705,18 +5705,27 @@ body .pbmit-remove-before:before {
   background-color: var(--pbmit-global-color);
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 .rtl .pbmit-career-style .pbmit-meta-category {
   right: 20px;
   left: inherit;
 }
+
 .pbmit-career-style .pbmit-meta-category:hover {
   background-color: var(--pbmit-blackish-color);
 }
+
+.pbmit-career-style .pbmit-meta-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 .pbmit-career-style .pbmit-meta-category a {
   color: var(--pbmit-white-color);
 }
+
 .pbmit-career-style .pbmit-meta-container > span {
   display: inline-block;
   font-size: 12px;

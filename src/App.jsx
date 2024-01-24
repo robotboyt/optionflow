@@ -9,6 +9,11 @@ import History from "./pages/History";
 import Faq from "./pages/Faq";
 import Contacts from "./pages/Contacts";
 import NotFoundPage from "./pages/NotFoundPage";
+import PortfolioSingle from "./pages/Portfolio/PortfolioSingle";
+import BlogSingle from "./pages/Blog/BlogSingle";
+import ServiceSingle from "./pages/Service/ServiceSingle";
+import Career from "./pages/Career/Career";
+import CareerSingle from "./pages/Career/CareerSingle";
 
 const App = () => {
   return (
@@ -16,8 +21,13 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/service" element={<Service />} />
+        <Route path="/service-single" element={<ServiceSingle />} />
         <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/portfolio-single" element={<PortfolioSingle />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog-single" element={<BlogSingle />} />
+        <Route path="/career" element={<Career />} />
+        <Route path="/career-single" element={<CareerSingle />} />
         <Route path="/about" element={<About />} />
         <Route path="/our-history" element={<History />} />
         <Route path="/faq" element={<Faq />} />
