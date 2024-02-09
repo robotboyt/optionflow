@@ -549,7 +549,9 @@ progress {
 .img-fluid {
   max-width: 100%;
   height: auto;
+  border-radius: 30px;
 }
+
 .img-fluid-service {
   max-width: 200px;
   margin-left: -35px;

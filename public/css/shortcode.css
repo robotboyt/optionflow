@@ -2302,6 +2302,7 @@ s .pbmit-ihbox-style-15 .pbmit-heading-desc {
   color: var(--pbmit-blackish-color);
   background-color: #f0f2f7;
   z-index: 1;
+  border-radius: 20px;
 }
 .pbmit-ihbox-style-20 .pbmit-ihbox-svg .pbmit-ihbox-svg-wrapper {
   font-size: 15px;
@@ -2331,6 +2332,7 @@ s .pbmit-ihbox-style-15 .pbmit-heading-desc {
   transform: translate(-50%, -50%) scale(0);
   background: var(--pbmit-global-color);
   z-index: -1;
+  border-radius: 20px;
 }
 .pbmit-ihbox-style-20:hover
   .pbmit-ihbox-icon
@@ -3582,6 +3584,7 @@ s .pbmit-ihbox-style-15 .pbmit-heading-desc {
   background-color: var(--pbmit-global-color);
   color: var(--pbmit-white-color);
   min-width: 235px;
+  border-radius: 10px;
 }
 .pbmit-global-style-2 .pbminfotech-ele-fid-style-6 .pbmit-fld-wrap {
   border-radius: 10px;
@@ -3654,6 +3657,7 @@ s .pbmit-ihbox-style-15 .pbmit-heading-desc {
   padding: 30px 40px 30px 34px;
   background-color: var(--pbmit-white-color);
   color: var(--pbmit-blackish-color);
+  border-radius: 10px;
 }
 .pbmit-global-style-2 .pbminfotech-ele-fid-style-8 .pbmit-fld-wrap {
   -webkit-border-radius: 16px;
@@ -3941,6 +3945,7 @@ body .pbmit-remove-before:before {
   border-radius: 16px;
   border: 1px solid rgba(33, 41, 61, 0.1);
   overflow: hidden;
+  height: 450px;
 }
 .pbmit-service-style-3 .pbminfotech-post-item,
 .pbmit-service-style-3 .pbmit-service-icon-wrapper,
@@ -4006,6 +4011,7 @@ body .pbmit-remove-before:before {
 .pbmit-service-style-3 .pbmit-service-content p {
   color: rgb(255 255 255 / 40%);
 }
+
 .pbmit-service-style-3:hover .pbmit-service-icon-wrapper,
 .pbmit-service-style-3:hover .pbmit-service-content p {
   color: rgb(255 255 255 / 90%);
@@ -4222,6 +4228,7 @@ body .pbmit-remove-before:before {
 .pbmit-service-style-6 .pbminfotech-post-item {
   position: relative;
   border: 1px solid rgba(3, 3, 19, 0.2);
+  border-radius: 20px;
 }
 .pbmit-service-style-6 .pbminfotech-post-item::before,
 .pbmit-service-style-6 .pbmit-service-title a,
@@ -4243,10 +4250,12 @@ body .pbmit-remove-before:before {
   height: 70px;
   margin-bottom: 10px;
 }
+
 .pbmit-service-style-6 .pbmit-service-icon-wrapper {
   font-size: 70px;
   line-height: 70px;
   margin-bottom: 22px;
+  color: var(--pbmit-white-color);
 }
 .pbmit-bg-color-secondary .pbmit-service-style-6 .pbmit-service-icon-wrapper {
   color: var(--pbmit-white-color);
@@ -4275,7 +4284,6 @@ body .pbmit-remove-before:before {
   bottom: 0;
   width: 100%;
   padding: 30px 0 0;
-  border-top: 1px solid rgba(3, 3, 19, 0.2);
 }
 .pbmit-service-style-6:hover .pbmit-service-title-wrapper {
   border-color: rgba(255, 255, 255, 0.2);
@@ -4291,10 +4299,11 @@ body .pbmit-remove-before:before {
   z-index: 1;
 }
 .pbmit-service-style-6 .pbmit-featured-wrapper img {
-  opacity: 0;
-  visibility: hidden;
   width: 100%;
+  border-radius: 20px;
+  filter: brightness(0.5);
 }
+
 .pbmit-service-style-6:hover .pbmit-featured-wrapper img {
   opacity: 0.15;
   visibility: visible;
@@ -4310,7 +4319,17 @@ body .pbmit-remove-before:before {
   background-color: var(--pbmit-global-color);
   opacity: 0;
   visibility: hidden;
+  border-radius: 20px;
 }
+/* comment */
+/* .pbmit-featured-img-wrapper {
+  border-radius: 20px;
+}
+
+.pbmit-service-image-wrapper{
+  border-radius: 20px;
+} */
+
 .pbmit-service-style-6:hover .pbminfotech-post-item::after {
   opacity: 1;
   visibility: visible;
@@ -4328,6 +4347,10 @@ body .pbmit-remove-before:before {
 }
 .pbmit-bg-color-secondary .pbmit-service-style-6 .pbmit-service-title a {
   color: var(--pbmit-white-color);
+}
+
+.pbmit-service-title-wrapper .pbmit-service-title a {
+  color: white;
 }
 .pbmit-service-style-6:hover .pbmit-service-title a {
   color: var(--pbmit-white-color);
@@ -4511,6 +4534,7 @@ body .pbmit-remove-before:before {
   line-height: 34px;
   margin: 0 0 10px;
 }
+
 .pbmit-service-style-9 .pbmit-service-icon-wrapper img {
   width: 65px;
   height: 65px;
@@ -4937,6 +4961,7 @@ body .pbmit-remove-before:before {
   opacity: 0;
   z-index: -1;
   background-color: rgba(var(--pbmit-secondary-color-rgb), 0.5);
+  border-radius: 20px;
 }
 .pbmit-portfolio-style-4 .pbminfotech-overlay::before {
   right: 0;
@@ -4975,6 +5000,7 @@ body .pbmit-remove-before:before {
 }
 .pbmit-portfolio-style-4 .pbmit-featured-wrapper img {
   width: 100%;
+  border-radius: 20px;
 }
 .pbmit-portfolio-style-4 .pbminfotech-titlebox {
   position: absolute;
@@ -5014,6 +5040,7 @@ body .pbmit-remove-before:before {
   text-align: center;
   margin-top: 10px;
   margin-right: 10px;
+  border-radius: 10px;
 }
 .rtl .pbmit-portfolio-style-4 .pbminfotech-icon-box a {
   float: left;
@@ -5613,6 +5640,7 @@ body .pbmit-remove-before:before {
   -webkit-box-shadow: 0px 2px 40px 0px rgb(0 0 0 / 5%);
   -moz-box-shadow: 0px 2px 40px 0px rgba(0, 0, 0, 0.05);
   box-shadow: 0px 2px 40px 0px rgb(0 0 0 / 5%);
+  border-radius: 20px;
 }
 .pbmit-blog-style-6:hover .post-item {
   -webkit-transform: translateY(-10px);
@@ -5620,6 +5648,7 @@ body .pbmit-remove-before:before {
 }
 .pbmit-blog-style-6 .pbmit-featured-wrapper img {
   width: 100%;
+  border-radius: 20px;
 }
 .pbmit-blog-style-6 .pbmit-post-title {
   font-size: 24px;
@@ -5681,6 +5710,7 @@ body .pbmit-remove-before:before {
   -webkit-box-shadow: 0px 2px 40px 0px rgb(0 0 0 / 5%);
   -moz-box-shadow: 0px 2px 40px 0px rgba(0, 0, 0, 0.05);
   box-shadow: 0px 2px 40px 0px rgb(0 0 0 / 5%);
+  border-radius: 20px;
 }
 .pbmit-career-style:hover .career-item {
   -webkit-transform: translateY(-10px);
@@ -5705,33 +5735,25 @@ body .pbmit-remove-before:before {
   background-color: var(--pbmit-global-color);
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 .rtl .pbmit-career-style .pbmit-meta-category {
   right: 20px;
   left: inherit;
 }
-
 .pbmit-career-style .pbmit-meta-category:hover {
   background-color: var(--pbmit-blackish-color);
 }
-
-.pbmit-career-style .pbmit-meta-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
 .pbmit-career-style .pbmit-meta-category a {
   color: var(--pbmit-white-color);
 }
-
 .pbmit-career-style .pbmit-meta-container > span {
   display: inline-block;
   font-size: 12px;
   line-height: normal;
   text-transform: uppercase;
   letter-spacing: 1px;
+  margin: 1px;
 }
 .pbmit-text-color-white .pbmit-career-style-6 .pbmit-meta-container > span {
   color: #787c8b;

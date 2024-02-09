@@ -9,7 +9,7 @@ const CareerContentBox = ({ title, date, categories, link }) => {
           <div className="pbminfotech-box-content">
             <div className="pbmit-box-content-wrapper">
               <h3 className="pbmit-career-title">
-                <CustomLink propsHref="/career-single">{title}</CustomLink>
+                <CustomLink propsHref={link}>{title}</CustomLink>
               </h3>
               <div className="pbmit-meta-container">
                 {categories.map((categoryItem) => (

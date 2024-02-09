@@ -205,7 +205,8 @@ const Navbar = () => {
                               </li>
                               <li
                                 className={
-                                  location.pathname === "/service"
+                                  location.pathname === "/service" ||
+                                  location.pathname === "/service-single"
                                     ? "active"
                                     : null
                                 }
@@ -217,7 +218,8 @@ const Navbar = () => {
                               </li>
                               <li
                                 className={
-                                  location.pathname === "/portfolio"
+                                  location.pathname === "/portfolio" ||
+                                  location.pathname === "/portfolio-single"
                                     ? "active"
                                     : null
                                 }
@@ -229,7 +231,8 @@ const Navbar = () => {
                               </li>
                               <li
                                 className={
-                                  location.pathname === "/blog"
+                                  location.pathname === "/blog" ||
+                                  location.pathname === "/blog-single"
                                     ? "active"
                                     : null
                                 }
@@ -241,7 +244,8 @@ const Navbar = () => {
                               </li>
                               <li
                                 className={
-                                  location.pathname === "/career"
+                                  location.pathname === "/career" ||
+                                  location.pathname === "/career-single"
                                     ? "active"
                                     : null
                                 }

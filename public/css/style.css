@@ -719,10 +719,11 @@
   padding: 40px 0px 30px 0px;
 }
 .our-history .about-us-left-bg-home3 {
-  background-image: url(../images/coworking/about.jpg);
+  background-image: url(../images/coworking/about-2.jpg);
   background-position: center right;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 30px;
 }
 .about-us-left-bg-home3 {
   background-image: url(../images/finance/bg-img-01.jpg);
@@ -2844,6 +2845,7 @@ a.pbmit-underline-text:hover {
   padding: 500px 0px 0px 0px;
   justify-content: flex-end;
   display: flex;
+  border-radius: 30px;
 }
 .about-us-section-wrap {
   position: relative;
@@ -2855,6 +2857,7 @@ a.pbmit-underline-text:hover {
   padding: 50px 50px 50px 50px;
   color: var(--pbmit-white-color);
   background-color: var(--pbmit-blackish-color);
+  border-radius: 10px;
 }
 .about-us-section-home .pbmit-list-style-1 {
   padding: 25px 0 32px 0;
@@ -2867,15 +2870,17 @@ a.pbmit-underline-text:hover {
 }
 .pbmit-progress-style-4 .progress {
   overflow: visible;
-  border-radius: 0px !important;
+  /* border-radius: 0px !important; */
   position: relative !important;
   height: 8px !important;
   margin-top: 10px;
   background-color: #e9ecef !important;
 }
-.pbmit-progress-style-4 .progress .progress-bar {
+
+/* .pbmit-progress-style-4 .progress .progress-bar {
   border-radius: 0px !important;
-}
+} */
+
 .counter-section-about1 {
   background-color: var(--pbmit-global-color);
   color: var(--pbmit-white-color);
@@ -3013,6 +3018,7 @@ a.pbmit-underline-text:hover {
   padding: 50px 50px 40px;
   background: var(--pbmit-white-color);
   position: relative;
+  border-radius: 30px;
 }
 .pbmit-ourhistory-type2 .pbmit-ourhistory-right .content::before {
   position: absolute;
@@ -3396,6 +3402,16 @@ a.pbmit-underline-text:hover {
 .portfolio-single .pbmit-short-description {
   margin-bottom: 30px;
 }
+
+.pbmit-short-description .pbmit-short-head {
+  display: flex;
+}
+
+.pbmit-short-head .dropcap {
+  width: 100px;
+  margin-left: 30px;
+}
+
 .portfolio-single h4 {
   font-family: Quicksand, sans-serif;
   font-weight: normal;
@@ -3476,12 +3492,10 @@ a.pbmit-underline-text:hover {
   content: "\e86c";
   font-size: 20px;
 }
-.portfolio-challange-bg {
-  background-image: url(../images/coworking/project/project-01.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 150px;
+
+.portfolio-challange-bg img {
+  width: 640px;
+  height: 380px;
 }
 .portfolio-single .post-navigation {
   margin-top: 70px;
@@ -4694,7 +4708,7 @@ a.pbmit-underline-text:hover {
   padding: 15px;
   background-color: var(--pbmit-white-color);
   border: 1px solid #eee;
-  border-radius: 0;
+  border-radius: 10px;
   transition: all 500ms ease;
 }
 .contact-section-home1 textarea.form-control {
