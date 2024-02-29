@@ -1,18 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Navbar from "../components/common/Navbar";
 import Footer from "../components/common/Footer";
-import { loadScript } from "../components/common/utils";
+
 import CustomLink from "../components/common/CustomLink";
 
 const Contacts = () => {
-  useEffect(() => {
-    loadScript()
-      .then(() => {})
-      .catch((error) => {
-        console.error("Error of loading script:", error);
-      });
-    return () => {};
-  }, []);
   return (
     <div className="page-wrapper">
       <Navbar />

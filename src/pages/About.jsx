@@ -1,16 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Navbar from "../components/common/Navbar";
-import { loadScript } from "../components/common/utils";
 
 const About = () => {
-  useEffect(() => {
-    loadScript()
-      .then(() => {})
-      .catch((error) => {
-        console.error("Error of loading script:", error);
-      });
-    return () => {};
-  }, []);
   return (
     <div className="page-wrapper">
       <Navbar />

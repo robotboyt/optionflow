@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import CustomLink from "./CustomLink";
+import { loadScript } from "./utils";
 
 const Navbar = () => {
   const location = useLocation();
+
+  useEffect(() => {
+    loadScript()
+      .then(() => {})
+      .catch((error) => {
+        console.error("Error of loading script:", error);
+      });
+    return () => {};
+  }, []);
 
   return (
     <div>
@@ -323,31 +333,13 @@ const Navbar = () => {
                           </div>
                         </div>
                       </nav>
-                    </div>
-                    <div className="pbmit-right-main-box">
-                      <div className="pbmit-header-social-wrapper">
-                        <ul className="pbmit-social-links">
-                          <li className="pbmit-social-li pbmit-social-linkedin">
-                            <a href="#" target="_blank">
-                              <span>
-                                <i className="pbmit-base-icon-linkedin-squared"></i>
-                              </span>
-                            </a>
-                          </li>
-                          <li className="pbmit-social-li pbmit-social-instagram">
-                            <a href="#" target="_blank">
-                              <span>
-                                <i className="pbmit-base-icon-instagram"></i>
-                              </span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div className="pbmit-button-box">
-                        <div className="pbmit-header-button2">
-                          <CustomLink propsHref="/contacts">
-                            <span className="pbmit-btn">Консультація</span>
-                          </CustomLink>
+                      <div className="pbmit-right-main-box">
+                        <div className="pbmit-button-box">
+                          <div className="pbmit-header-button2">
+                            <CustomLink propsHref="/contacts">
+                              <span className="pbmit-btn">Консультація</span>
+                            </CustomLink>
+                          </div>
                         </div>
                       </div>
                     </div>

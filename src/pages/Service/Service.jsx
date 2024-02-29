@@ -1,21 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Navbar from "../../components/common/Navbar";
 import Footer from "../../components/common/Footer";
 import ServiceData from "./ServiceData";
 import ServiceContentBox from "./ServiceContentBox";
-import { loadScript } from "../../components/common/utils";
 
 const Service = () => {
-  useEffect(() => {
-    loadScript()
-      .then(() => {})
-      .catch((error) => {
-        console.error("Error of loading script:", error);
-      });
-
-    return () => {};
-  }, []);
-
   return (
     <div>
       <div className="page-wrapper">

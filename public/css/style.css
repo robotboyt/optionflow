@@ -3303,6 +3303,8 @@ a.pbmit-underline-text:hover {
 /**---  Service Detail Two ---**/
 .service-details-two .service-right-col img {
   border-radius: 16px;
+  height: 600px;
+  object-fit: cover;
 }
 .service-details-two .service-sidebar .post-list {
   background-color: var(--pbmit-white-color);
@@ -3504,7 +3506,6 @@ a.pbmit-underline-text:hover {
   padding-top: 40px;
   padding-bottom: 0;
   margin-bottom: 0;
-  border-top: 1px solid #e1e1e1;
   margin-top: -1px;
   padding: 41px 0;
   display: -ms-flexbox;
@@ -3622,6 +3623,7 @@ a.pbmit-underline-text:hover {
   box-shadow: 0 0 62px 4px rgb(0 0 0 / 8%);
   border: 1px solid rgba(3, 3, 19, 0.1);
 }
+
 .portfolio-single-two
   .pbmit-portfolio-lines-wrapper
   .pbmit-portfolio-line-li
@@ -3660,6 +3662,8 @@ a.pbmit-underline-text:hover {
 }
 .blog-classic-two .pbmit-featured-wrapper img {
   border-radius: 16px;
+  height: 600px;
+  object-fit: cover;
 }
 .blog-classic-two .pbmit-read-more-link a {
   background-color: var(--pbmit-global-color);
@@ -4038,11 +4042,13 @@ a.pbmit-underline-text:hover {
 .widget.single-service-contact {
   background-image: url(../images/coworking/pbmit-ads.png);
   background-repeat: no-repeat;
+  background-size: contain;
   background-position: right bottom;
   background-color: #f0f2f7;
   padding: 45px;
   margin-bottom: 40px;
   border: none;
+  border-radius: 16px;
 }
 .single-service-contact-inner img {
   border-radius: 50%;
@@ -4114,7 +4120,7 @@ a.pbmit-underline-text:hover {
   background-color: var(--pbmit-blackish-color);
 }
 .pbmit-ads-inner .pbmit-ads-logo {
-  background: #f0f2f7;
+  /* background: #f0f2f7; */
   display: inline-block;
   padding: 15px;
   width: 130px;
@@ -4122,7 +4128,7 @@ a.pbmit-underline-text:hover {
   z-index: 1;
 }
 .pbmit-ads-inner .pbmit-ads-logo-white {
-  background: var(--pbmit-white-color);
+  /* background: var(--pbmit-white-color); */
   display: inline-block;
   padding: 15px;
   width: 130px;
@@ -4772,6 +4778,22 @@ label.error {
   margin-bottom: 40px;
   width: 80%;
 }
+
+.upload-form-control {
+  background-color: #fff;
+  color: #787c8b;
+  height: 60px;
+  padding: 15px 50px 15px 30px;
+  padding-left: 0px;
+  font-size: 14px;
+  border: 1px solid black;
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  margin-bottom: 40px;
+  width: 30%;
+}
+
 .input-group .form-control {
   border: none;
 }

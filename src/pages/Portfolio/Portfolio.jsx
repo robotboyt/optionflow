@@ -1,18 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Navbar from "../../components/common/Navbar";
 import PortfolioBlock from "./PortfolioBlock";
 import Footer from "../../components/common/Footer";
-import { loadScript } from "../../components/common/utils";
 
 const Portfolio = () => {
-  useEffect(() => {
-    loadScript()
-      .then(() => {})
-      .catch((error) => {
-        console.error("Error of loading script:", error);
-      });
-    return () => {};
-  }, []);
   let portfolioContent = [
     {
       name: "Design Strategies",

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import lottie from "lottie-web";
 import animationData from "../../animation/internet-banner.json";
 import anim2Data from "../../animation/internet-anim-01.json";
@@ -7,15 +7,29 @@ import { Link } from "react-router-dom";
 import { loadScript } from "../../components/common/utils";
 import sliderContent from "./HomeSliderContent";
 import HomeSliderBlock from "./HomeSliderBlock";
-import HomeCommentSlide from "./HomeCommentSlide";
+// import HomeCommentSlide from "./HomeCommentSlide";
 import Navbar from "../../components/common/Navbar";
 import Footer from "../../components/common/Footer";
 
 const Home = () => {
+  const [apiData, setApiData] = useState({ 0: {} });
+  const [dataLoading, setDataLoading] = useState(false);
+
   useEffect(() => {
     const container = document.getElementById("internet-banner");
     const container2 = document.getElementById("internet-anim-01");
     const container3 = document.getElementById("internet-anim-02");
+
+    const fetchData = async () => {
+      const response = await fetch("http://127.0.0.1:5000/api/card");
+
+      if (!response.ok) {
+        console.error("Network response is not ok");
+        return;
+      }
+      setApiData(await response.json());
+      setDataLoading(true);
+    };
 
     const anim1 = lottie.loadAnimation({
       container: container,
@@ -41,11 +55,7 @@ const Home = () => {
       animationData: anim3Data,
     });
 
-    loadScript()
-      .then(() => {})
-      .catch((error) => {
-        console.error("Error of loading script:", error);
-      });
+    fetchData();
 
     return () => {
       anim1.destroy();
@@ -53,6 +63,9 @@ const Home = () => {
       anim3.destroy();
     };
   }, []);
+
+  console.log(apiData);
+
   return (
     <div className="page-wrapper">
       <Navbar />
@@ -95,98 +108,40 @@ const Home = () => {
         <section className="about-section-home6">
           <div className="container">
             <div className="row">
-              <div className="col-xl-4 col-md-6">
-                <div className="pbmit-ihbox-style-8">
-                  <div className="pbmit-ihbox-box">
-                    <div className="pbmit-ihbox-contents">
-                      <div className="pbmit-ihbox-icon">
-                        <div className="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image">
-                          <img
-                            src="images/internet/web-service.png"
-                            className="img-fluid-service"
-                            alt="web-service"
-                          />
+              {dataLoading
+                ? apiData.map((item) => (
+                    <div className="col-xl-4 col-md-6">
+                      <div className="pbmit-ihbox-style-8">
+                        <div className="pbmit-ihbox-box">
+                          <div className="pbmit-ihbox-contents">
+                            <div className="pbmit-ihbox-icon">
+                              <div className="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image">
+                                <img
+                                  src={item.imageUrl}
+                                  className="img-fluid-service"
+                                  alt="web-service"
+                                />
+                              </div>
+                            </div>
+                            <h2 className="pbmit-element-title">{item.name}</h2>
+                            <div className="pbmit-heading-desc">
+                              <span>{item.category.category1}</span>
+                              <br />
+                              <span>{item.category.category2}.</span>
+                              <br />
+                              <span>{item.category.category3}</span>
+                            </div>
+                            <div className="pbmit-ihbox-btn">
+                              <Link to="#">
+                                <span>Читати більше</span>
+                              </Link>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      <h2 className="pbmit-element-title">
-                        Розробка Web-сайт та інше
-                      </h2>
-                      <div className="pbmit-heading-desc">
-                        <span>ASP.NET / ASP.NET Core...</span>
-                        <br />
-                        <span>React, HTML, CSS...</span>
-                        <br />
-                        <span>Ecommers, WordPress...</span>
-                      </div>
-                      <div className="pbmit-ihbox-btn">
-                        <Link to="#">
-                          <span>Читати більше</span>
-                        </Link>
-                      </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-4 col-md-6">
-                <div className="pbmit-ihbox-style-8">
-                  <div className="pbmit-ihbox-box">
-                    <div className="pbmit-ihbox-contents">
-                      <div className="pbmit-ihbox-icon">
-                        <div className="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image">
-                          <img
-                            src="images/internet/smm-service.png"
-                            className="img-fluid-service"
-                            alt="smm-service"
-                          />
-                        </div>
-                      </div>
-                      <h2 className="pbmit-element-title">SMM-послуги</h2>
-                      <div className="pbmit-heading-desc">
-                        <span>Розробка стратегії</span>
-                        <br />
-                        <span>Управління контентом</span>
-                        <br />
-                        <span>Реклама в соціальних мережах</span>
-                      </div>
-                      <div className="pbmit-ihbox-btn">
-                        <Link to="#">
-                          <span>Читати більше</span>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-4 col-md-6">
-                <div className="pbmit-ihbox-style-8">
-                  <div className="pbmit-ihbox-box">
-                    <div className="pbmit-ihbox-contents">
-                      <div className="pbmit-ihbox-icon">
-                        <div className="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image">
-                          <img
-                            src="images/internet/it-service.png"
-                            className="img-fluid-service"
-                            alt="it-service"
-                          />
-                        </div>
-                      </div>
-                      <h2 className="pbmit-element-title">IT-консультація</h2>
-                      <div className="pbmit-heading-desc">
-                        <span>Оптимізація ІТ-стратегії</span>
-                        <br />
-                        <span>Оптимізація бізнес-процесів </span>
-                        <br />
-                        <span>Управління ІТ-ризиками</span>
-                      </div>
-                      <div className="pbmit-ihbox-btn">
-                        <Link to="#">
-                          <span>Читати більше</span>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                  ))
+                : null}
             </div>
           </div>
         </section>
@@ -295,8 +250,8 @@ const Home = () => {
             </div>
           </div>
         </section>
-
-        <section className="section-lg">
+        {/* Here i commend the video section of main page */}
+        {/* <section className="section-lg">
           <div className="container">
             <div className="video-section-home6">
               <Link
@@ -307,8 +262,7 @@ const Home = () => {
               </Link>
             </div>
           </div>
-        </section>
-
+        </section> */}
         <section>
           <div className="container">
             <div className="row align-items-center">
@@ -407,8 +361,8 @@ const Home = () => {
             </div>
           </div>
         </section>
-
-        <section>
+        {/* Here IS COMMENT OF Main Page  */}
+        {/* <section>
           <div className="container-fluid p-0">
             <div
               className="swiper-slider"
@@ -427,7 +381,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section className="section-lg">
           <div className="container">
