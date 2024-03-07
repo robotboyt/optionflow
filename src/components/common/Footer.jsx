@@ -15,7 +15,7 @@ const Footer = () => {
                 Не соромтесь звертатися до нас
                 <br />З нетерпінням чекаємо можливості спілкування з вами!
               </h3>
-              <CustomLink propsHref="#">info@optionflow.com</CustomLink>
+              <CustomLink propsHref="#">info@optionflow.pro</CustomLink>
             </div>
             <div className="col-md-3 col-sm-12">
               <div className="pbmit-footer-logo">
@@ -32,54 +32,28 @@ const Footer = () => {
       <div className="pbmit-footer-widget-area">
         <div className="container">
           <div className="row">
-            <div className="col-md-6 col-lg-3">
+            <div className="col-md-6 col-lg-4">
               <div className="widget">
                 <h3 className="widget-title">Наша компанія</h3>
                 <div className="textwidget">
                   <ul>
                     <li>
-                      <CustomLink propsHref="#">Контаки</CustomLink>
+                      <CustomLink propsHref="/contacts">Контаки</CustomLink>
                     </li>
                     <li>
-                      <CustomLink propsHref="#">FAQ</CustomLink>
+                      <CustomLink propsHref="/blog">Блог</CustomLink>
                     </li>
                     <li>
-                      <CustomLink propsHref="#">
-                        Повідомити про помилку
-                      </CustomLink>
+                      <CustomLink propsHref="/career">Карʼєра</CustomLink>
                     </li>
                     <li>
-                      <CustomLink propsHref="#">Карьера</CustomLink>
-                    </li>
-                    <li>
-                      <CustomLink propsHref="#">Про нас</CustomLink>
+                      <CustomLink propsHref="/about">Про нас</CustomLink>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div className="col-md-6 col-lg-3">
-              <div className="widget">
-                <h3 className="widget-title">Підтримка</h3>
-                <div className="textwidget">
-                  <ul>
-                    <li>
-                      <CustomLink propsHref="#">Компания</CustomLink>
-                    </li>
-                    <li>
-                      <CustomLink propsHref="#">Карьера</CustomLink>
-                    </li>
-                    <li>
-                      <CustomLink propsHref="#">Мережі</CustomLink>
-                    </li>
-                    <li>
-                      <CustomLink propsHref="#">Блог</CustomLink>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-3">
+            <div className="col-md-6 col-lg-4">
               <div className="widget">
                 <h3 className="widget-title">Потрібна підтримка?</h3>
                 <div className="pbmit-footer-contact">
@@ -87,7 +61,7 @@ const Footer = () => {
                     <div className="pbmit-content-box">Центр кліентів</div>
                     <div className="pbmit-contact-box">
                       <CustomLink propsHref="mailto:hello@infoxido.com">
-                        info@optionflow.com
+                        info@optionflow.pro
                       </CustomLink>
                     </div>
                   </div>
@@ -96,23 +70,23 @@ const Footer = () => {
                       Потрібна жива підтримка?
                     </div>
                     <div className="pbmit-contact-box">
-                      <CustomLink propsHref="tel:(+1)555234-8765">
-                        (+1)555234-8765
+                      <CustomLink propsHref="tel:+38 (099) 760 76 69">
+                        +38 (099) 760 76 69
                       </CustomLink>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="col-md-6 col-lg-3">
+            <div className="col-md-6 col-lg-4">
               <div className="widget">
-                <h3 className="widget-title">Підтримуйте Звʼязок</h3>
+                <h3 className="widget-title">Розсилка Новин</h3>
                 <div className="mc4wp-form-fields">
                   <div className="pbmit-footer-newsletter">
                     <input
                       type="email"
                       name="EMAIL"
-                      placeholder="новини &amp; оновлення"
+                      placeholder="Додайте вашу пошту"
                     />
                     <button type="submit" value="Sign up">
                       <i className="pbmit-base-icon-arroba"></i>
@@ -148,8 +122,8 @@ const Footer = () => {
             <div className="row">
               <div className="col-md-6">
                 <div className="pbmit-footer-copyright-text-area">
-                  Copyright © 2023{" "}
-                  <CustomLink propsHref="#">optionflow</CustomLink>, All Rights
+                  Copyright © 2024{" "}
+                  <CustomLink propsHref="#">OptionFlow</CustomLink>, All Rights
                   Reserved.
                 </div>
               </div>

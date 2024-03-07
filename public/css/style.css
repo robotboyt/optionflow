@@ -114,6 +114,10 @@
   letter-spacing: -1.2px;
   padding-right: 10px;
 }
+
+.text-style .color-text-name {
+  color: #5f51e3;
+}
 .pbmit-text-style-1 {
   position: relative;
   display: inline-block;

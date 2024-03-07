@@ -27,14 +27,14 @@ const Navbar = () => {
                     <ul className="pbmit-contact-info">
                       <li>
                         <i className="pbmit-base-icon-phone-volume-solid"></i>
-                        <Link to="tel:(+1)555234-8765">
-                          Phone: <span>(+1)555234-8765</span>
+                        <Link to="tel: +38(099)7607669">
+                          Телефон: <span>+38 (099) 760 76 69</span>
                         </Link>
                       </li>
                       <li>
                         <i className="pbmit-base-icon-mail-alt"></i>
-                        <Link to="mailto:hello@infoxido.com">
-                          Email: <span>hello@infoxido.com</span>
+                        <Link to="mailto:info@optionflow.pro">
+                          Пошта: <span>info@optionflow.pro</span>
                         </Link>
                       </li>
                     </ul>

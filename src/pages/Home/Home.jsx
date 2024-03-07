@@ -4,15 +4,13 @@ import animationData from "../../animation/internet-banner.json";
 import anim2Data from "../../animation/internet-anim-01.json";
 import anim3Data from "../../animation/internet-anim-02.json";
 import { Link } from "react-router-dom";
-import { loadScript } from "../../components/common/utils";
 import sliderContent from "./HomeSliderContent";
 import HomeSliderBlock from "./HomeSliderBlock";
-// import HomeCommentSlide from "./HomeCommentSlide";
 import Navbar from "../../components/common/Navbar";
 import Footer from "../../components/common/Footer";
 
 const Home = () => {
-  const [apiData, setApiData] = useState({ 0: {} });
+  const [apiData, setApiData] = useState({});
   const [dataLoading, setDataLoading] = useState(false);
 
   useEffect(() => {
@@ -20,15 +18,18 @@ const Home = () => {
     const container2 = document.getElementById("internet-anim-01");
     const container3 = document.getElementById("internet-anim-02");
 
-    const fetchData = async () => {
-      const response = await fetch("http://127.0.0.1:5000/api/card");
-
-      if (!response.ok) {
-        console.error("Network response is not ok");
-        return;
+    const getData = async () => {
+      try {
+        const response = await fetch("http://127.0.0.1:5000/cards");
+        if (!response.ok) {
+          console.log("it is error", response.status);
+        }
+        const data = await response.json();
+        setApiData(data);
+        setDataLoading(true);
+      } catch (error) {
+        console.log("Fetch data trouble", error);
       }
-      setApiData(await response.json());
-      setDataLoading(true);
     };
 
     const anim1 = lottie.loadAnimation({
@@ -55,7 +56,7 @@ const Home = () => {
       animationData: anim3Data,
     });
 
-    fetchData();
+    getData();
 
     return () => {
       anim1.destroy();
@@ -63,8 +64,6 @@ const Home = () => {
       anim3.destroy();
     };
   }, []);
-
-  console.log(apiData);
 
   return (
     <div className="page-wrapper">
@@ -78,8 +77,8 @@ const Home = () => {
                   <h1 style={{ userSelect: "none" }}>&nbsp;</h1>
                   <h6 className="pbmit-subtitle">
                     <span className="text-style">
-                      Welcome to
-                      <span style={{ color: "#5f51e3" }}> Option Flow </span>
+                      ЛАСКАВО ПРОСИМО ДО
+                      <span className="color-text-name"> Option Flow </span>
                       web-studio
                     </span>
                   </h6>
@@ -87,10 +86,10 @@ const Home = () => {
                     Цифрова ідентичність - як головна мета
                   </h2>
                   <p>
-                    Наша пропозиція послуг об'єднує творчість та винятковість.
+                    Cпільно творимо майбутнє: об'єднуємо іновації та творчість.
                   </p>
                   <div>
-                    <Link to="contact-us.html" className="pbmit-btn">
+                    <Link to="/contacts" className="pbmit-btn">
                       Отримати консультацію
                     </Link>
                   </div>
@@ -110,7 +109,7 @@ const Home = () => {
             <div className="row">
               {dataLoading
                 ? apiData.map((item) => (
-                    <div className="col-xl-4 col-md-6">
+                    <div className="col-xl-4 col-md-6" key={item.id}>
                       <div className="pbmit-ihbox-style-8">
                         <div className="pbmit-ihbox-box">
                           <div className="pbmit-ihbox-contents">
@@ -156,17 +155,15 @@ const Home = () => {
               </div>
               <div className="col-xl-6 col-md-12 agency-right-section-home6">
                 <div className="pbmit-heading-subheading-style-6">
-                  <h4 className="pbmit-subtitle">IT-AGENCY</h4>
+                  <h4 className="pbmit-subtitle">РОЗРОБКА ВЕБ-ДОДАТКІВ</h4>
                   <h2 className="pbmit-title">
-                    Ми забезпечуємо високий рівень дизайну та швидкості у
-                    розробці додатків.
+                    Розробка під ключ від OptionFlow
                   </h2>
                 </div>
                 <div className="mb-4">
-                  The Internet helps us with facts and figures, information and
-                  knowledge for personal, social and economic development. The
-                  use of the internet in our daily life depends on individual
-                  requirements and goals
+                  Завдяки нашим спеціалістам - ваш проєкт буде реалізовано від
+                  ідеї до готового продукту. Вам не потрібно шукати команди
+                  окремо під кожну частину проєкту!
                 </div>
                 <div className="pbmit-ihbox-style-9">
                   <div className="pbmit-ihbox-box d-flex align-items-center">
@@ -179,11 +176,11 @@ const Home = () => {
                     </div>
                     <div className="pbmit-ihbox-contents">
                       <h2 className="pbmit-element-title">
-                        Discover, Explore the Product
+                        Веб-сайти для бізнесу
                       </h2>
                       <div className="pbmit-heading-desc">
-                        An effective campaign demands Link great deal of time
-                        and planning run Link marketing.
+                        Розробляємо веб-сайти які не лише презентують вашу
+                        компанію, а й автоматизують бізнес-процеси
                       </div>
                     </div>
                   </div>
@@ -198,12 +195,11 @@ const Home = () => {
                       </div>
                     </div>
                     <div className="pbmit-ihbox-contents">
-                      <h2 className="pbmit-element-title">
-                        Marketing Strategy & Campaigns
-                      </h2>
+                      <h2 className="pbmit-element-title">Мобільні додатки</h2>
                       <div className="pbmit-heading-desc">
-                        An effective campaign demands Link great deal of time
-                        and planning run Link marketing.
+                        Наявність мобільного додатку підвищує технологічний
+                        статус вашого бренду, створюючи враження сучасності та
+                        інноваційності
                       </div>
                     </div>
                   </div>
@@ -218,8 +214,8 @@ const Home = () => {
             <div className="row">
               <div className="col-md-8">
                 <div className="pbmit-heading-subheading text-white">
-                  <h4 className="pbmit-subtitle">OUR SERVICES</h4>
-                  <h2 className="pbmit-title">Top Service of Intenrnet</h2>
+                  <h4 className="pbmit-subtitle">&nbsp;</h4>
+                  <h2 className="pbmit-title">Наші послуги</h2>
                 </div>
               </div>
               <div className="col-md-4">
