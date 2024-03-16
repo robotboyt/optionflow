@@ -1030,9 +1030,10 @@
 }
 .service-section-home6 {
   position: relative;
-  padding: 100px 0px 260px 0px;
+  /* padding: 100px 0px 260px 0px; */
 }
-.service-section-home6:before {
+
+/* .service-section-home6:before {
   position: absolute;
   content: "";
   width: 100%;
@@ -1043,8 +1044,8 @@
   background-image: url(../images/internet/download.png);
   bottom: -65px !important;
   background-repeat: no-repeat;
-}
-.service-section-home6:after {
+} */
+/* .service-section-home6:after {
   position: absolute;
   content: "";
   width: 100%;
@@ -1054,7 +1055,8 @@
   background-image: url(../images/internet/download2.png);
   bottom: -65px !important;
   background-repeat: no-repeat;
-}
+} */
+
 .counter-section-home6 {
   padding: 70px 0px 130px 0px;
 }
@@ -5032,4 +5034,8 @@ i.fa.fas.fa-exclamation-triangle {
   list-style-type: none;
   list-style-image: none;
   margin: 0 5px 5px 0;
+}
+
+.page-content {
+  background-color: var(--pbmit-secondary-color);
 }

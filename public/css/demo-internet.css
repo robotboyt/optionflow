@@ -3,11 +3,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Geologica&display=swap");
 :root {
   --pbmit-global-color: #5f51e3;
-  --pbmit-secondary-color: #1f273a;
-  --pbmit-light-color: #f2f4f9;
+  --pbmit-secondary-color: #000031;
+  --pbmit-light-color: #000031;
   --pbmit-white-color: #ffffff;
   --pbmit-blackish-color: #21293d;
-  --pbmit-link-color-normal: #21293d;
+  --pbmit-link-color-normal: #ffffff;
   --pbmit-link-color-hover: #5f51e3;
   --pbmit-global-color-rgb: 254, 168, 43;
   --pbmit-secondary-color-rgb: 31, 39, 58;

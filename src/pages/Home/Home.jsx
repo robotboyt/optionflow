@@ -8,9 +8,11 @@ import sliderContent from "./HomeSliderContent";
 import HomeSliderBlock from "./HomeSliderBlock";
 import Navbar from "../../components/common/Navbar";
 import Footer from "../../components/common/Footer";
+import axios from "axios";
 
 const Home = () => {
-  const [apiData, setApiData] = useState({});
+  const [cardData, setCardData] = useState({});
+  const [servicesData, setServicesData] = useState({});
   const [dataLoading, setDataLoading] = useState(false);
 
   useEffect(() => {
@@ -20,15 +22,15 @@ const Home = () => {
 
     const getData = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:5000/cards");
-        if (!response.ok) {
-          console.log("it is error", response.status);
-        }
-        const data = await response.json();
-        setApiData(data);
+        const cardResponse = await axios.get("http://127.0.0.1:5000/cards");
+        const servicesResponse = await axios.get(
+          "http://127.0.0.1:5000/services"
+        );
+        setCardData(cardResponse);
+        setServicesData(servicesResponse);
         setDataLoading(true);
       } catch (error) {
-        console.log("Fetch data trouble", error);
+        console.log("We get the error", error);
       }
     };
 
@@ -108,7 +110,7 @@ const Home = () => {
           <div className="container">
             <div className="row">
               {dataLoading
-                ? apiData.map((item) => (
+                ? cardData.data.map((item) => (
                     <div className="col-xl-4 col-md-6" key={item.id}>
                       <div className="pbmit-ihbox-style-8">
                         <div className="pbmit-ihbox-box">
@@ -233,32 +235,21 @@ const Home = () => {
               data-effect="slide"
             >
               <div className="swiper-wrapper">
-                {sliderContent.map((sliderItem) => (
-                  <HomeSliderBlock
-                    sliderTitle={sliderItem.title}
-                    sliderLink={sliderItem.link}
-                    sliderContent={sliderItem.content}
-                    sliderIcon={sliderItem.icon}
-                    key={sliderItem.id}
-                  />
-                ))}
+                {dataLoading
+                  ? servicesData.data.map((sliderItem) => (
+                      <HomeSliderBlock
+                        sliderTitle={sliderItem.title}
+                        sliderLink={sliderItem.href}
+                        sliderContent={sliderItem.subtitle}
+                        sliderIcon={sliderItem.icon}
+                        key={sliderItem.id}
+                      />
+                    ))
+                  : null}
               </div>
             </div>
           </div>
         </section>
-        {/* Here i commend the video section of main page */}
-        {/* <section className="section-lg">
-          <div className="container">
-            <div className="video-section-home6">
-              <Link
-                to="https://www.youtube.com/watch?v=Diq70ZhaQZE"
-                className="coworing-video-btn pbmin-lightbox-video"
-              >
-                <i className="fa fa-play"></i>
-              </Link>
-            </div>
-          </div>
-        </section> */}
         <section>
           <div className="container">
             <div className="row align-items-center">
@@ -269,8 +260,8 @@ const Home = () => {
               </div>
               <div className="col-xl-6 col-md-12 strategy-section-home6">
                 <div className="pbmit-heading-subheading-style-6">
-                  <h4 className="pbmit-subtitle">OUR STRATEGY</h4>
-                  <h2 className="pbmit-title">More Reliable Secure and Fast</h2>
+                  <h4 className="pbmit-subtitle">РОЗРОБКА З OPTIONFLOW</h4>
+                  <h2 className="pbmit-title">Робочий процесс</h2>
                 </div>
                 <div className="block pbmit-tab-style-2">
                   <ul className="nav nav-tabs" role="tablist">
@@ -282,7 +273,7 @@ const Home = () => {
                         aria-selected="true"
                         role="tab"
                       >
-                        Header Builder
+                        Аналіз потреб
                       </Link>
                     </li>
                     <li className="nav-item" role="presentation">
@@ -294,7 +285,7 @@ const Home = () => {
                         role="tab"
                         tabIndex="-1"
                       >
-                        Safe and Private
+                        Cтратегія проекту
                       </Link>
                     </li>
                     <li className="nav-item" role="presentation">
@@ -306,7 +297,7 @@ const Home = () => {
                         role="tab"
                         tabIndex="-1"
                       >
-                        Mobility Solutions
+                        Готовий результат
                       </Link>
                     </li>
                   </ul>
@@ -316,69 +307,71 @@ const Home = () => {
                       id="tab-2-1"
                       role="tabpanel"
                     >
-                      <p>
-                        Here, our authors share the latest trends and tendencies
-                        in the world of marketing, digital products, and web
-                        design, as well as useful tips.
-                      </p>
-                      <p>
-                        Join our awesome community of creative people today to
-                        stay ahead of all freshly-cooked marketing news!
-                      </p>
+                      <div className="pbmit-ihbox pbmit-ihbox-style-22">
+                        <div className="pbmit-ihbox-box">
+                          <div className="pbmit-ihbox-contents">
+                            <div className="pbmit-ihbox-icon">
+                              <div className="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-text">
+                                01
+                              </div>
+                            </div>
+                            <h2 className="pbmit-element-title">
+                              Аналіз потреб замовника
+                            </h2>
+                            <div className="pbmit-heading-desc">
+                              Після подання заявки ми зв'яжемося з замовником та
+                              дізнаємося деталі того, що саме він хоче отримати.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div className="tab-pane" id="tab-2-2" role="tabpanel">
-                      <p>
-                        The world authors share the latest trends and tendencies
-                        in the world of marketing, digital products, and web
-                        design, as well as useful tips.
-                      </p>
-                      <p>
-                        Join our awesome community of creative people today to
-                        stay ahead of all freshly-cooked marketing news!
-                      </p>
+                      <div className="pbmit-ihbox pbmit-ihbox-style-22">
+                        <div className="pbmit-ihbox-box">
+                          <div className="pbmit-ihbox-contents">
+                            <div className="pbmit-ihbox-icon">
+                              <div className="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-text">
+                                02
+                              </div>
+                            </div>
+                            <h2 className="pbmit-element-title">
+                              Будуємо стратегію проекту
+                            </h2>
+                            <div className="pbmit-heading-desc">
+                              Будуємо стратегію та план проекту і узгоджуємо їх
+                              із замовником та починаємо роботу.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div className="tab-pane" id="tab-2-3" role="tabpanel">
-                      <p>
-                        Stay ahead authors share the latest trends and
-                        tendencies in the world of marketing, digital products,
-                        and web design, as well as useful tips.
-                      </p>
-                      <p>
-                        Join our awesome community of creative people today to
-                        stay ahead of all freshly-cooked marketing news!
-                      </p>
+                      <div className="pbmit-ihbox pbmit-ihbox-style-22">
+                        <div className="pbmit-ihbox-box">
+                          <div className="pbmit-ihbox-contents">
+                            <div className="pbmit-ihbox-icon">
+                              <div className="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-text">
+                                03
+                              </div>
+                            </div>
+                            <h2 className="pbmit-element-title">
+                              Готовий результат
+                            </h2>
+                            <div className="pbmit-heading-desc">
+                              Після кропітливої роботи та детального перегляду
+                              проєкту ми передаємо готовий результат замовнику.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <Link to="our-plans.html" className="pbmit-btn mt-4">
-                  Know More
-                </Link>
               </div>
             </div>
           </div>
         </section>
-        {/* Here IS COMMENT OF Main Page  */}
-        {/* <section>
-          <div className="container-fluid p-0">
-            <div
-              className="swiper-slider"
-              data-loop="true"
-              data-center="true"
-              data-dots="true"
-              data-arrows="false"
-              data-columns="3.5"
-              data-margin="30"
-              data-effect="slide"
-            >
-              <div className="swiper-wrapper">
-                {[1, 2, 3, 4].map((slideItem) => (
-                  <HomeCommentSlide key={slideItem} />
-                ))}
-              </div>
-            </div>
-          </div>
-        </section> */}
-
         <section className="section-lg">
           <div className="container">
             <div className="row g-0">
