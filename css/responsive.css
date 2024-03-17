@@ -1549,7 +1549,6 @@ body {
     margin-top: 30px;
   }
   .about-us-home3 {
-    margin-right: 30px;
     text-align: right;
     margin-top: -446px;
   }
@@ -2093,10 +2092,7 @@ body {
     margin-bottom: 40px;
     padding: 40px 0px;
   }
-  .portfolio-challange-bg {
-    padding: 80px 0px;
-    margin-top: 30px;
-  }
+
   .post-navigation .nav-links {
     display: block;
   }
@@ -2154,9 +2150,11 @@ body {
     padding: 0;
     padding-top: 30px;
   }
-  .pbmit-ihbox-style-9 {
+
+  /* CHANGE HERE */
+  /* .pbmit-ihbox-style-9 {
     padding: 15px 0;
-  }
+  } */
   .about-us-home3 .pbminfotech-ele-fid-style-6 {
     margin-bottom: 30px;
   }
@@ -2662,5 +2660,61 @@ body {
   }
   .about-us-lottie {
     margin: 0;
+  }
+}
+
+@media (max-width: 581px) {
+  .career-single h4 {
+    width: 200px;
+  }
+}
+
+@media (max-width: 440px) {
+  .pbmit-ihbox-style-22 .pbmit-element-title {
+    width: 200px;
+  }
+}
+
+@media (max-width: 1320px) {
+  .portfolio-challange .row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-0.5 * var(--bs-gutter-x));
+    margin-left: calc(-0.5 * var(--bs-gutter-x));
+  }
+
+  .portfolio-challange a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1100px) {
+  .portfolio-challange-bg img {
+    max-width: 90vw;
+    height: auto;
+  }
+}
+
+@media (max-width: 490px) {
+  .about-us-section-wrap {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+
+@media (max-width: 991px) {
+  .pbminfotech-ele-fid-style-8 {
+    float: right;
+  }
+  .pbminfotech-ele-fid-style-6 {
+    float: right;
   }
 }

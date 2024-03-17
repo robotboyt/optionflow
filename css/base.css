@@ -16,8 +16,11 @@ INDEX:
 /*----------------------------------------*/
 /* 00 - General 
 /*----------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Geologica&display=swap");
+
 html {
-  font-family: sans-serif;
+  font-family: "Geologica", sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
@@ -25,6 +28,7 @@ html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  font-family: "Geologica", sans-serif;
 }
 body {
   margin: 0;
@@ -232,7 +236,7 @@ h5,
 h6 {
   font-family: var(--pbmit-heading-typography-font-family);
   font-weight: var(--pbmit-heading-font-variant);
-  color: var(--pbmit-heading-color);
+  color: var(--pbmit-white-color);
 }
 h1 {
   font-size: 50px;
@@ -494,6 +498,7 @@ body .pbmit-bg-color-white {
   padding-bottom: 130px;
 }
 .section-lg {
+  background-color: var(--pbmit-secondary-color);
   padding-top: 100px;
   padding-bottom: 80px;
 }
@@ -545,6 +550,7 @@ body .pbmit-bg-color-white {
 .site-header {
   position: relative;
   z-index: 99;
+  background-color: var(--pbmit-secondary-color);
 }
 .site-header .site-branding img {
   display: inline-block;
@@ -570,7 +576,7 @@ body .pbmit-bg-color-white {
   line-height: 120px;
   letter-spacing: 0px;
   text-transform: uppercase;
-  color: var(--pbmit-blackish-color);
+  color: var(--pbmit-white-color);
 }
 .site-navigation ul.navigation > li > a:hover {
   color: var(--pbmit-global-color);
@@ -641,7 +647,8 @@ body .pbmit-bg-color-white {
   z-index: 999;
 }
 .main-menu .navigation > li > ul li a {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid var(--pbmit-blackish-color);
+  background-color: var(--pbmit-blackish-color);
 }
 .main-menu .navigation > li > ul a {
   padding: 10px 20px;
@@ -651,7 +658,7 @@ body .pbmit-bg-color-white {
   line-height: 14px;
 }
 .main-menu .navigation > li > ul li {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--pbmit-blackish-color);
 }
 .main-menu .navigation > li > ul li.active a,
 .main-menu .navigation > li > ul a:hover {
@@ -688,7 +695,7 @@ body .pbmit-bg-color-white {
   position: fixed !important;
   top: 0px;
   width: 100%;
-  background-color: #fff;
+  background-color: var(--pbmit-light-color);
   z-index: 999;
   margin: 0;
   -webkit-box-shadow: 0px 13px 25px -12px rgba(0, 0, 0, 0.25);
