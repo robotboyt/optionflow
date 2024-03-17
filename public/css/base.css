@@ -236,7 +236,7 @@ h5,
 h6 {
   font-family: var(--pbmit-heading-typography-font-family);
   font-weight: var(--pbmit-heading-font-variant);
-  color: var(--pbmit-heading-color);
+  color: var(--pbmit-white-color);
 }
 h1 {
   font-size: 50px;

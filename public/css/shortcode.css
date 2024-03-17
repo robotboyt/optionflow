@@ -61,7 +61,7 @@ body {
 .pbmit-heading-subheading h4.pbmit-subtitle,
 .pbmit-heading-subheading h4.pbmit-subtitle-white {
   position: relative;
-  color: var(--pbmit-blackish-color);
+  color: #757c8c;
   margin-bottom: 5px;
   font-size: 13px;
   line-height: 20px;
@@ -87,7 +87,7 @@ body {
 }
 .pbmit-heading-subheading.text-center h4.pbmit-subtitle-white {
   position: relative;
-  color: var(--pbmit-blackish-color);
+  color: #757c8c;
   margin-bottom: 5px;
   font-size: 13px;
   line-height: 20px;
@@ -190,7 +190,7 @@ body {
   font-size: 50px;
   line-height: 60px;
   letter-spacing: 0;
-  color: #222b40;
+  color: var(--pbmit-white-color);
   text-transform: none;
   font-style: normal;
 }
@@ -292,7 +292,6 @@ body {
   font-family: Quicksand, sans-serif;
   font-weight: 700;
   font-size: 50px;
-  color: #21293d;
   line-height: 60px;
   letter-spacing: 0;
   font-style: normal;
@@ -2302,8 +2301,8 @@ s .pbmit-ihbox-style-15 .pbmit-heading-desc {
   line-height: 90px;
   position: relative;
   display: inline-block;
-  color: var(--pbmit-blackish-color);
-  background-color: #f0f2f7;
+  color: var(--pbmit-white-color);
+  background-color: var(--pbmit-blackish-color);
   z-index: 1;
   border-radius: 20px;
 }
@@ -3658,8 +3657,8 @@ s .pbmit-ihbox-style-15 .pbmit-heading-desc {
 }
 .pbminfotech-ele-fid-style-8 .pbmit-fld-wrap {
   padding: 30px 40px 30px 34px;
-  background-color: var(--pbmit-white-color);
-  color: var(--pbmit-blackish-color);
+  background-color: var(--pbmit-blackish-color);
+  color: var(--pbmit-white-color);
   border-radius: 10px;
 }
 .pbmit-global-style-2 .pbminfotech-ele-fid-style-8 .pbmit-fld-wrap {
@@ -8159,7 +8158,7 @@ footer .widget .widget-title::before {
 }
 .progressbar .progress-label {
   font-family: var(--pbmit-heading-typography-font-family);
-  color: var(--pbmit-heading-color);
+  color: var(--pbmit-white-color);
   display: inline-block;
   font-size: 18px;
   line-height: 24px;
@@ -8186,7 +8185,7 @@ footer .widget .widget-title::before {
   right: -15px;
   top: -35px;
   font-size: 17px;
-  color: var(--pbmit-blackish-color);
+  color: var(--pbmit-white-color);
   font-family: var(--pbmit-heading-typography-font-family);
   font-weight: 700;
 }
@@ -8340,17 +8339,19 @@ footer .widget .widget-title::before {
 }
 .accordion-style-3 .accordion-button {
   padding: 15px 25px;
+  color: var(--pbmit-white-color);
 }
 .accordion-style-3 .accordion-button::after {
   padding: 18px 25px 18px 12px;
   border-radius: 0;
-  background-color: #fff;
+  color: var(--pbmit-white-color);
+  background-color: var(--pbmit-blackish-color);
 }
 .accordion-style-3 .accordion-item.active .accordion-body {
-  background-color: var(--pbmit-white-color);
+  background-color: var(--pbmit-blackish-color);
 }
 .accordion-style-3 .accordion-body {
-  padding: 15px 22px 1px;
+  padding: 15px 22px;
 }
 .accordion-style-3 .accordion-item.active .accordion-button::after {
   content: "\e86e";
@@ -8644,7 +8645,7 @@ footer .widget .widget-title::before {
 /*----------------------------------------*/
 .list-group-borderless .list-group-item {
   border: none;
-  color: var(--pbmit-blackish-color);
+  color: var(--pbmit-white-color);
   padding: 0;
   padding-bottom: calc(13px / 2);
   background-color: transparent !important;
