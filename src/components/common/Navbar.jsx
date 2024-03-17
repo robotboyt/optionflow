@@ -186,7 +186,7 @@ const Navbar = () => {
                         <img
                           className="logo-img"
                           alt="coworking"
-                          src="images/internet/logo.svg"
+                          src="images/internet/logo-white.svg"
                         />
                       </Link>
                     </div>

@@ -294,6 +294,7 @@
 .about-us-section-icon ul.list-group .list-group-item i {
   font-size: 22px;
 }
+
 .testimonial-bg-left {
   background-image: url(../images/coworking/bg/bg-img-01.jpg);
   border-radius: 0px;
@@ -3429,7 +3430,7 @@ a.pbmit-underline-text:hover {
   font-size: 36px;
   line-height: 46px;
   letter-spacing: 0;
-  color: #030313;
+  color: var(--pbmit-white-color);
   text-transform: none;
   font-style: normal;
 }
@@ -3492,7 +3493,7 @@ a.pbmit-underline-text:hover {
 }
 .portfolio-challange {
   border-style: solid;
-  border-width: 1px 0px 1px 0px;
+  border-width: 1px 0px 0px 0px;
   border-color: #f2f0f1;
   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
   margin-top: 70px;
@@ -3628,17 +3629,17 @@ a.pbmit-underline-text:hover {
   margin-bottom: 40px;
   padding: 50px;
   border-radius: 16px;
-  background-color: var(--pbmit-white-color);
+  background-color: var(--pbmit-blackish-color);
   box-shadow: 0 0 62px 4px rgb(0 0 0 / 8%);
   border: 1px solid rgba(3, 3, 19, 0.1);
 }
 
-.portfolio-single-two
+/* .portfolio-single-two
   .pbmit-portfolio-lines-wrapper
   .pbmit-portfolio-line-li
   span.pbmit-portfolio-line-title {
   color: var(--pbmit-blackish-color);
-}
+} */
 .portfolio-single-two .pbmit-portfolio-line-li .pbmit-portfolio-line-value,
 .pbmit-portfolio-line-li .pbmit-portfolio-line-value a {
   color: #787c8b;
@@ -3648,9 +3649,9 @@ a.pbmit-underline-text:hover {
 .portfolio-challange .pbmit-base-icon-ok:before {
   font-size: 16px;
 }
-.portfolio-challange ul.list-group .list-group-item:hover {
+/* .portfolio-challange ul.list-group .list-group-item:hover {
   color: initial !important;
-}
+} */
 .portfolio-single-two .portfolio-challange-bg {
   border-radius: 8px;
 }
@@ -5045,4 +5046,8 @@ i.fa.fas.fa-exclamation-triangle {
 
 .page-content {
   background-color: var(--pbmit-secondary-color);
+}
+
+.career-single .pbmit-short-description {
+  margin-bottom: 30px;
 }

@@ -2471,7 +2471,7 @@ s .pbmit-ihbox-style-15 .pbmit-heading-desc {
   position: relative;
   overflow: hidden;
   padding: 40px 30px 30px;
-  background-color: #fff;
+  background-color: var(--pbmit-blackish-color);
   box-shadow: 0px 2px 40px 0px rgba(0, 0, 0, 0.05);
 }
 .pbmit-ihbox-style-22 .pbmit-ihbox-icon .pbmit-ihbox-icon-type-image img,
@@ -2566,7 +2566,7 @@ s .pbmit-ihbox-style-15 .pbmit-heading-desc {
   font-size: 22px;
   line-height: 32px;
   margin-bottom: 15px;
-  color: var(--pbmit-blackish-color);
+  color: var(--pbmit-white-color);
 }
 .pbmit-ihbox-style-22 .pbmit-element-heading,
 .pbmit-ihbox-style-22 .pbmit-element-subtitle {
@@ -8666,9 +8666,11 @@ li.list-group-item {
   padding: 0;
   padding-bottom: 10px;
 }
+
 ul.list-group .list-group-item:hover {
-  color: var(--pbmit-global-color) !important;
+  color: var(--pbmit-blackish-color) !important;
 }
+
 ul.list-group .list-group-item i {
   padding-right: 10px;
   color: var(--pbmit-global-color);
