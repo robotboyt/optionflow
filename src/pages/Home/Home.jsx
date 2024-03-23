@@ -4,11 +4,12 @@ import animationData from "../../animation/internet-banner.json";
 import anim2Data from "../../animation/internet-anim-01.json";
 import anim3Data from "../../animation/internet-anim-02.json";
 import { Link } from "react-router-dom";
-import sliderContent from "./HomeSliderContent";
+// import sliderContent from "./HomeSliderContent";
 import HomeSliderBlock from "./HomeSliderBlock";
 import Navbar from "../../components/common/Navbar";
 import Footer from "../../components/common/Footer";
 import axios from "axios";
+import MyThree from "../../animation/Three.js";
 
 const Home = () => {
   const [cardData, setCardData] = useState({});
@@ -98,9 +99,10 @@ const Home = () => {
                 </div>
               </div>
               <div className="col-xl-6 col-md-12">
-                <div className="internet-lottie">
+                {/* <div className="internet-lottie">
                   <div id="internet-banner" className="lottie-anim"></div>
-                </div>
+                </div> */}
+                <MyThree />
               </div>
             </div>
           </div>
@@ -151,9 +153,9 @@ const Home = () => {
           <div className="container">
             <div className="row align-items-center align-content-center">
               <div className="col-xl-6 col-md-12">
-                <div>
+                {/* <div>
                   <div id="internet-anim-01" className="lottie-anim"></div>
-                </div>
+                </div> */}
               </div>
               <div className="col-xl-6 col-md-12 agency-right-section-home6">
                 <div className="pbmit-heading-subheading-style-6">
@@ -254,9 +256,9 @@ const Home = () => {
           <div className="container">
             <div className="row align-items-center">
               <div className="col-xl-6 col-md-12">
-                <div className="strategy-lottie-home6">
+                {/* <div className="strategy-lottie-home6">
                   <div id="internet-anim-02" className="lottie-anim"></div>
-                </div>
+                </div> */}
               </div>
               <div className="col-xl-6 col-md-12 strategy-section-home6">
                 <div className="pbmit-heading-subheading-style-6">
