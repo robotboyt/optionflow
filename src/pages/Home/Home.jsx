@@ -1,25 +1,26 @@
-import React, { useEffect, useState } from "react";
-import lottie from "lottie-web";
-import animationData from "../../animation/internet-banner.json";
-import anim2Data from "../../animation/internet-anim-01.json";
-import anim3Data from "../../animation/internet-anim-02.json";
+import React, { useEffect, useState, useRef } from "react";
+// import lottie from "lottie-web";
+// import animationData from "../../animation/internet-banner.json";
+// import anim2Data from "../../animation/internet-anim-01.json";
+// import anim3Data from "../../animation/internet-anim-02.json";
 import { Link } from "react-router-dom";
 // import sliderContent from "./HomeSliderContent";
 import HomeSliderBlock from "./HomeSliderBlock";
 import Navbar from "../../components/common/Navbar";
 import Footer from "../../components/common/Footer";
 import axios from "axios";
-import MyThree from "../../animation/Three.js";
+import Sphere from "../../animation/Sphere.jsx";
 
 const Home = () => {
   const [cardData, setCardData] = useState({});
   const [servicesData, setServicesData] = useState({});
   const [dataLoading, setDataLoading] = useState(false);
+  // const canvasElement = useRef(null);
 
   useEffect(() => {
-    const container = document.getElementById("internet-banner");
-    const container2 = document.getElementById("internet-anim-01");
-    const container3 = document.getElementById("internet-anim-02");
+    // const container = document.getElementById("internet-banner");
+    // const container2 = document.getElementById("internet-anim-01");
+    // const container3 = document.getElementById("internet-anim-02");
 
     const getData = async () => {
       try {
@@ -35,38 +36,40 @@ const Home = () => {
       }
     };
 
-    const anim1 = lottie.loadAnimation({
-      container: container,
-      renderer: "svg",
-      loop: true,
-      autoplay: true,
-      animationData: animationData,
-    });
+    // const anim1 = lottie.loadAnimation({
+    //   container: container,
+    //   renderer: "svg",
+    //   loop: true,
+    //   autoplay: true,
+    //   animationData: animationData,
+    // });
 
-    const anim2 = lottie.loadAnimation({
-      container: container2,
-      renderer: "svg",
-      loop: true,
-      autoplay: true,
-      animationData: anim2Data,
-    });
+    // const anim2 = lottie.loadAnimation({
+    //   container: container2,
+    //   renderer: "svg",
+    //   loop: true,
+    //   autoplay: true,
+    //   animationData: anim2Data,
+    // });
 
-    const anim3 = lottie.loadAnimation({
-      container: container3,
-      renderer: "svg",
-      loop: true,
-      autoplay: true,
-      animationData: anim3Data,
-    });
+    // const anim3 = lottie.loadAnimation({
+    //   container: container3,
+    //   renderer: "svg",
+    //   loop: true,
+    //   autoplay: true,
+    //   animationData: anim3Data,
+    // });
 
     getData();
 
     return () => {
-      anim1.destroy();
-      anim2.destroy();
-      anim3.destroy();
+      // anim1.destroy();
+      // anim2.destroy();
+      // anim3.destroy();
     };
   }, []);
+
+  console.log(servicesData);
 
   return (
     <div className="page-wrapper">
@@ -99,10 +102,7 @@ const Home = () => {
                 </div>
               </div>
               <div className="col-xl-6 col-md-12">
-                {/* <div className="internet-lottie">
-                  <div id="internet-banner" className="lottie-anim"></div>
-                </div> */}
-                <MyThree />
+                <Sphere />
               </div>
             </div>
           </div>
@@ -149,14 +149,10 @@ const Home = () => {
           </div>
         </section>
 
-        <section>
+        <section className="web-section">
           <div className="container">
             <div className="row align-items-center align-content-center">
-              <div className="col-xl-6 col-md-12">
-                {/* <div>
-                  <div id="internet-anim-01" className="lottie-anim"></div>
-                </div> */}
-              </div>
+              <div className="col-xl-6 col-md-12">{/* ANIMATION */}</div>
               <div className="col-xl-6 col-md-12 agency-right-section-home6">
                 <div className="pbmit-heading-subheading-style-6">
                   <h4 className="pbmit-subtitle">РОЗРОБКА ВЕБ-ДОДАТКІВ</h4>
@@ -174,7 +170,7 @@ const Home = () => {
                     <div className="pbmit-ihbox-icon">
                       <div className="pbmit-ihbox-icon-wrapper">
                         <div className="pbmit-icon-wrapper pbmit-icon-type-icon">
-                          <i className="pbmit-xido-icon pbmit-xido-icon-cloud-computing"></i>
+                          <i className="pbmit-xido-icon pbmit-xido-icon-website"></i>
                         </div>
                       </div>
                     </div>
@@ -255,11 +251,6 @@ const Home = () => {
         <section>
           <div className="container">
             <div className="row align-items-center">
-              <div className="col-xl-6 col-md-12">
-                {/* <div className="strategy-lottie-home6">
-                  <div id="internet-anim-02" className="lottie-anim"></div>
-                </div> */}
-              </div>
               <div className="col-xl-6 col-md-12 strategy-section-home6">
                 <div className="pbmit-heading-subheading-style-6">
                   <h4 className="pbmit-subtitle">РОЗРОБКА З OPTIONFLOW</h4>
@@ -371,6 +362,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
+              {/* <div className="col-xl-6 col-md-12"></div> */}
             </div>
           </div>
         </section>

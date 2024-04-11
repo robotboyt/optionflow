@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../../components/common/Navbar";
 import Footer from "../../components/common/Footer";
+import { useParams } from "react-router-dom";
 
 const CareerSingle = () => {
+  const { id } = useParams();
+  useEffect(() => {}, [id]);
   return (
     <div className="page-wrapper">
       <Navbar />

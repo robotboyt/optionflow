@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import CustomLink from "./CustomLink";
+import logoWhite from "../../Images/logo-white.svg";
 
 const Footer = () => {
   const location = useLocation();
@@ -19,11 +20,7 @@ const Footer = () => {
             </div>
             <div className="col-md-3 col-sm-12">
               <div className="pbmit-footer-logo">
-                <img
-                  className="img-fluid"
-                  src="images/internet/logo-white.svg"
-                  alt="optionflow"
-                />
+                <img className="img-fluid" src={logoWhite} alt="optionflow" />
               </div>
             </div>
           </div>

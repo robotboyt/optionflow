@@ -1,19 +1,21 @@
 import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import logoBlack from "../../Images/logo.svg";
+import logoWhite from "../../Images/logo-white.svg";
 import CustomLink from "./CustomLink";
 import { loadScript } from "./utils";
 
 const Navbar = () => {
   const location = useLocation();
 
-  useEffect(() => {
-    loadScript()
-      .then(() => {})
-      .catch((error) => {
-        console.error("Error of loading script:", error);
-      });
-    return () => {};
-  }, []);
+  // useEffect(() => {
+  //   loadScript()
+  //     .then(() => {})
+  //     .catch((error) => {
+  //       console.error("Error of loading script:", error);
+  //     });
+  //   return () => {};
+  // }, []);
 
   return (
     <div>
@@ -74,12 +76,12 @@ const Navbar = () => {
                           <img
                             className="logo-img"
                             alt="coworking"
-                            src="images/internet/logo-white.svg"
+                            src={logoWhite}
                           />
                           <img
                             className="sticky-logo"
                             alt="coworking"
-                            src="images/internet/logo.svg"
+                            src={logoBlack}
                           />
                         </Link>
                       </div>
@@ -186,7 +188,7 @@ const Navbar = () => {
                         <img
                           className="logo-img"
                           alt="coworking"
-                          src="images/internet/logo-white.svg"
+                          src={logoWhite}
                         />
                       </Link>
                     </div>

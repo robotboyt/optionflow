@@ -1,10 +1,34 @@
-import React from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Navbar from "../../components/common/Navbar";
 import Footer from "../../components/common/Footer";
-import ServiceData from "./ServiceData";
+// import ServiceData from "./ServiceData";
 import ServiceContentBox from "./ServiceContentBox";
+import axios from "axios";
+import { DataContext } from "../../Context/DataContext";
 
 const Service = () => {
+  const [serviceData, setServiceData] = useState(null);
+  const { serviceNewData, setFetchedServiceData } = useContext(DataContext);
+
+  useEffect(() => {
+    const fetchService = async () => {
+      try {
+        const serviceResponse = await axios.get(
+          "http://127.0.0.1:5000/service"
+        );
+        setServiceData(serviceResponse.data);
+        setFetchedServiceData(serviceResponse.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    if (serviceNewData !== null) {
+      setServiceData(serviceNewData);
+    } else {
+      fetchService();
+    }
+  }, []);
+
   return (
     <div>
       <div className="page-wrapper">
@@ -27,16 +51,18 @@ const Service = () => {
           <section className="section-lg service-section">
             <div className="container">
               <div className="row">
-                {ServiceData.map((serviceItem) => (
-                  <ServiceContentBox
-                    serviceTitle={serviceItem.title}
-                    serviceCategory={serviceItem.category}
-                    serviceLink={serviceItem.link}
-                    serviceImg={serviceItem.imageSrc}
-                    serviceIcon={serviceItem.iconClass}
-                    key={serviceItem.id}
-                  />
-                ))}
+                {serviceData
+                  ? serviceData.map((serviceItem) => (
+                      <ServiceContentBox
+                        serviceTitle={serviceItem.title}
+                        serviceCategory={serviceItem.subtitle}
+                        serviceLink={`/service-single/${serviceItem.id}`}
+                        serviceImg={serviceItem.imageUrl}
+                        // serviceIcon={serviceItem.iconClass}
+                        key={serviceItem.id}
+                      />
+                    ))
+                  : null}
               </div>
             </div>
           </section>

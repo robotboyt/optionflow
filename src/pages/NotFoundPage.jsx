@@ -28,6 +28,7 @@ const NotFoundPage = () => {
                 justifyContent: "center",
                 alignItems: "center",
                 height: "400px",
+                color: "white",
               }}
             >
               <h3>{"PAGE NOT FOUND :("}</h3>

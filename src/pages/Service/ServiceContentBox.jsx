@@ -26,7 +26,7 @@ const ServiceContentBox = ({
               </div>
               <div className="pbmit-service-title-wrapper">
                 <div className="pbmit-service-cat">
-                  <CustomLink propsHref="/service-single" rel="tag">
+                  <CustomLink propsHref={serviceLink} rel="tag">
                     {serviceCategory}
                   </CustomLink>
                 </div>
