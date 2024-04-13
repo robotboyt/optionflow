@@ -1,6 +1,4 @@
 import React, { useEffect } from "react";
-import Navbar from "../../components/common/Navbar";
-import Footer from "../../components/common/Footer";
 import { useParams } from "react-router-dom";
 
 const BlogSingle = () => {
@@ -8,7 +6,6 @@ const BlogSingle = () => {
   useEffect(() => {}, [id]);
   return (
     <div className="page-wrapper">
-      <Navbar />
       <div className="pbmit-title-bar-wrapper">
         <div className="container">
           <div className="pbmit-title-bar-content">
@@ -250,7 +247,6 @@ const BlogSingle = () => {
           </div>
         </section>
       </div>
-      <Footer />
     </div>
   );
 };

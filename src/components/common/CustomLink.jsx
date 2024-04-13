@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { DataContext } from "../../Context/DataContext";
 
 const CustomLink = ({ propsHref, propsText, children }) => {
+  const { openedHeader, setHeaderOpened } = useContext(DataContext);
   const scrollToTop = () => {
+    if (openedHeader === true) {
+      setHeaderOpened(!openedHeader);
+    }
     window.scrollTo({
       top: 0,
       behavior: "smooth",

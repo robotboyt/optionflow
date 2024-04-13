@@ -1,6 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-import Footer from "../../components/common/Footer";
-import Navbar from "../../components/common/Navbar";
 import { DataContext } from "../../Context/DataContext";
 import { useParams } from "react-router-dom";
 import axios from "axios";
@@ -47,7 +45,6 @@ const ServiceSingle = () => {
 
   return (
     <div className="page-wrapper">
-      <Navbar />
       {currentService ? (
         <div>
           <div className="pbmit-title-bar-wrapper">
@@ -212,7 +209,6 @@ const ServiceSingle = () => {
           </div>
         </div>
       </div> */}
-      <Footer />
     </div>
   );
 };

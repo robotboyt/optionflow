@@ -1,13 +1,10 @@
 import React from "react";
-import Navbar from "../../components/common/Navbar";
-import Footer from "../../components/common/Footer";
 import BlogData from "./BlogData";
 import BlogContetBox from "./BlogContetBox";
 
 const Blog = () => {
   return (
     <div className="page-wrapper">
-      <Navbar />
       <div className="pbmit-title-bar-wrapper">
         <div className="container">
           <div className="pbmit-title-bar-content">
@@ -39,7 +36,6 @@ const Blog = () => {
           </div>
         </section>
       </div>
-      <Footer />
     </div>
   );
 };

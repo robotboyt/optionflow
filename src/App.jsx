@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Home from "./pages/Home/Home";
 import { Route, Routes } from "react-router";
 import Service from "./pages/Service/Service";
@@ -26,11 +26,14 @@ import "./css/magnific-popup.css";
 import "./css/shortcode.css";
 import "./css/demo-internet.css";
 import "./css/responsive.css";
+import Navbar from "./components/common/Navbar";
+import Footer from "./components/common/Footer";
 
 const App = () => {
   return (
     <div>
       <DataProvider>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/service" element={<Service />} />
@@ -47,6 +50,7 @@ const App = () => {
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/*" element={<NotFoundPage />} />
         </Routes>
+        <Footer />
       </DataProvider>
     </div>
   );

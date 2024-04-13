@@ -20,7 +20,7 @@ INDEX:
 @import url("https://fonts.googleapis.com/css2?family=Geologica&display=swap");
 
 html {
-  font-family: "Geologica", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
@@ -28,7 +28,7 @@ html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: "Geologica", sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 body {
   margin: 0;
@@ -602,14 +602,14 @@ body .pbmit-bg-color-white {
   font-family: "pbminfotech-base-icons";
   content: "\e811";
   margin-left: 8px;
-  font-size: 10px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 600;
   vertical-align: middle;
-  color: var(--pbmit-blackish-color);
 }
 .main-menu .navigation > li > ul,
 .main-menu .navigation > li > ul > li > ul {
-  min-width: 240px;
+  margin-top: -20px;
+  min-width: 200px;
   box-shadow: 0 0 60px 0 rgb(53 57 69 / 15%) !important;
   border-bottom: inherit;
   border-top: 4px solid var(--pbmit-global-color);
@@ -617,7 +617,7 @@ body .pbmit-bg-color-white {
   left: 0;
   z-index: 100;
   visibility: hidden;
-  background-color: #ffffff;
+  background-color: var(--pbmit-blackish-color);
   opacity: 0;
   -webkit-transform: translateY(15px);
   -moz-transform: translateY(15px);
@@ -648,13 +648,13 @@ body .pbmit-bg-color-white {
 }
 .main-menu .navigation > li > ul li a {
   border-bottom: 1px solid var(--pbmit-blackish-color);
-  background-color: var(--pbmit-blackish-color);
+  background-color: var(--pbmit-light-color);
 }
 .main-menu .navigation > li > ul a {
   padding: 10px 20px;
   display: block;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 14px;
 }
 .main-menu .navigation > li > ul li {
@@ -1039,4 +1039,8 @@ body .scroll-to-top:hover {
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
   transform: translateY(0);
+}
+
+.pbmit-base-icon-menu-1 {
+  color: var(--pbmit-white-color);
 }

@@ -1219,6 +1219,7 @@ body {
   font-size: 20px;
   line-height: 24px;
   margin-bottom: 8px;
+  color: var(--pbmit-white-color);
 }
 .pbmit-ihbox-style-9 .pbmit-element-heading,
 .pbmit-ihbox-style-9 .pbmit-element-subtitle {
@@ -6948,9 +6949,6 @@ body .pbmit-remove-before:before {
 }
 .header-style-6 .sticky-header .site-navigation ul.navigation > li > a {
   color: var(--pbmit-white-color);
-}
-.header-style-6 .sticky-header .site-navigation ul.navigation > li > a::after {
-  color: var(--pbmit-blackish-color);
 }
 .header-style-6 .sticky-header .pbmit-header-search-btn i {
   color: var(--pbmit-blackish-color);

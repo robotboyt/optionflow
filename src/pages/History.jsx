@@ -1,12 +1,8 @@
 import React from "react";
-import Navbar from "../components/common/Navbar";
-
-import Footer from "../components/common/Footer";
 
 const History = () => {
   return (
     <div className="page-wrapper">
-      <Navbar />
       <div className="pbmit-title-bar-wrapper">
         <div className="container">
           <div className="pbmit-title-bar-content">
@@ -255,7 +251,6 @@ const History = () => {
           </div>
         </section>
       </div>
-      <Footer />
     </div>
   );
 };

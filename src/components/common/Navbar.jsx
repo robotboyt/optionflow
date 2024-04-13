@@ -1,13 +1,25 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logoBlack from "../../Images/logo.svg";
 import logoWhite from "../../Images/logo-white.svg";
 import CustomLink from "./CustomLink";
-import { loadScript } from "./utils";
+import { DataContext } from "../../Context/DataContext";
+// import { loadScript } from "./utils";
 
 const Navbar = () => {
   const location = useLocation();
+  const { openedHeader, setHeaderOpened } = useContext(DataContext);
+  const [scrollWindow, setScrollWindow] = useState(0);
+  const [aboutSectionOpened, setAboutSerctionOpened] = useState(false);
 
+  const toogleAboutOpened = () => {
+    setAboutSerctionOpened(!aboutSectionOpened);
+  };
+
+  const toogleOpenNav = () => {
+    setHeaderOpened(!openedHeader);
+    setAboutSerctionOpened(false);
+  };
   // useEffect(() => {
   //   loadScript()
   //     .then(() => {})
@@ -17,10 +29,30 @@ const Navbar = () => {
   //   return () => {};
   // }, []);
 
+  document.body.style.overflow = openedHeader ? "hidden" : "";
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollWindow(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div>
       {location.pathname === "/" ? (
-        <header className="site-header header-style-6">
+        <header
+          className={
+            openedHeader
+              ? "site-header header-style-6 active"
+              : "site-header header-style-6"
+          }
+        >
           <div className="pbmit-header-overlay">
             <div className="pre-header-wrapper">
               <div className="container">
@@ -66,7 +98,13 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-            <div className="site-header-menu">
+            <div
+              className={
+                scrollWindow >= 115
+                  ? "site-header-menu sticky-header"
+                  : "site-header-menu"
+              }
+            >
               <div className="container">
                 <div className="row">
                   <div className="col-md-12">
@@ -87,18 +125,27 @@ const Navbar = () => {
                       </div>
                       <div className="site-navigation ms-auto">
                         <nav className="main-menu navbar-expand-xl navbar-light">
-                          <div className="navbar-header">
+                          <div
+                            className="navbar-header"
+                            onClick={toogleOpenNav}
+                          >
                             <button className="navbar-toggler" type="button">
                               <i className="pbmit-base-icon-menu-1"></i>
                             </button>
                           </div>
-                          <div className="pbmit-mobile-menu-bg"></div>
+                          <div
+                            className="pbmit-mobile-menu-bg"
+                            onClick={toogleOpenNav}
+                          ></div>
                           <div
                             className="collapse navbar-collapse clearfix show"
                             id="pbmit-menu"
                           >
                             <div className="pbmit-menu-wrap">
-                              <span className="closepanel">
+                              <span
+                                className="closepanel"
+                                onClick={toogleOpenNav}
+                              >
                                 <i className="pbmit-base-icon-close-circular-button-symbol"></i>
                               </span>
                               <ul className="navigation clearfix">
@@ -137,7 +184,9 @@ const Navbar = () => {
                                     propsHref={"/about"}
                                     propsText={"Тощо"}
                                   />
-                                  <ul>
+                                  <ul
+                                    className={aboutSectionOpened ? "open" : ""}
+                                  >
                                     <li>
                                       <CustomLink
                                         propsHref={"/about"}
@@ -157,6 +206,18 @@ const Navbar = () => {
                                       />
                                     </li>
                                   </ul>
+                                  <span
+                                    className="righticon"
+                                    onClick={toogleAboutOpened}
+                                  >
+                                    <i
+                                      className={
+                                        aboutSectionOpened
+                                          ? "pbmit-base-icon-up-open-big"
+                                          : "pbmit-base-icon-down-open-big"
+                                      }
+                                    ></i>
+                                  </span>
                                 </li>
                                 <li>
                                   <CustomLink
@@ -177,8 +238,23 @@ const Navbar = () => {
           </div>
         </header>
       ) : (
-        <header className="site-header header-style-1">
-          <div className="site-header-menu">
+        <header
+          className={
+            openedHeader
+              ? "site-header header-style-1 active"
+              : "site-header header-style-1"
+          }
+        >
+          {scrollWindow >= 30 ? (
+            <div style={{ widows: "100%", height: "100px" }}></div>
+          ) : null}
+          <div
+            className={
+              scrollWindow >= 30
+                ? "site-header-menu sticky-header"
+                : "site-header-menu"
+            }
+          >
             <div className="container">
               <div className="row">
                 <div className="col-md-12">
@@ -194,18 +270,24 @@ const Navbar = () => {
                     </div>
                     <div className="site-navigation ml-auto">
                       <nav className="main-menu navbar-expand-xl navbar-light">
-                        <div className="navbar-header">
+                        <div className="navbar-header" onClick={toogleOpenNav}>
                           <button className="navbar-toggler" type="button">
                             <i className="pbmit-base-icon-menu-1"></i>
                           </button>
                         </div>
-                        <div className="pbmit-mobile-menu-bg"></div>
+                        <div
+                          className="pbmit-mobile-menu-bg"
+                          onClick={toogleOpenNav}
+                        ></div>
                         <div
                           className="collapse navbar-collapse clearfix show"
                           id="pbmit-menu"
                         >
                           <div className="pbmit-menu-wrap">
-                            <span className="closepanel">
+                            <span
+                              className="closepanel"
+                              onClick={toogleOpenNav}
+                            >
                               <i className="pbmit-base-icon-close-circular-button-symbol"></i>
                             </span>
                             <ul className="navigation clearfix">
@@ -280,7 +362,9 @@ const Navbar = () => {
                                   propsHref={"/about"}
                                   propsText={"Тощо"}
                                 />
-                                <ul>
+                                <ul
+                                  className={aboutSectionOpened ? "open" : ""}
+                                >
                                   <li
                                     className={
                                       location.pathname === "/about"
@@ -318,6 +402,18 @@ const Navbar = () => {
                                     />
                                   </li>
                                 </ul>
+                                <span
+                                  className="righticon"
+                                  onClick={toogleAboutOpened}
+                                >
+                                  <i
+                                    className={
+                                      aboutSectionOpened
+                                        ? "pbmit-base-icon-up-open-big"
+                                        : "pbmit-base-icon-down-open-big"
+                                    }
+                                  ></i>
+                                </span>
                               </li>
                               <li
                                 className={

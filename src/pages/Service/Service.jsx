@@ -1,6 +1,4 @@
 import React, { useEffect, useState, useContext } from "react";
-import Navbar from "../../components/common/Navbar";
-import Footer from "../../components/common/Footer";
 // import ServiceData from "./ServiceData";
 import ServiceContentBox from "./ServiceContentBox";
 import axios from "axios";
@@ -27,12 +25,11 @@ const Service = () => {
     } else {
       fetchService();
     }
-  }, []);
+  }, [serviceNewData, setFetchedServiceData]);
 
   return (
     <div>
       <div className="page-wrapper">
-        <Navbar />
         <div className="pbmit-title-bar-wrapper">
           <div className="container">
             <div className="pbmit-title-bar-content">
@@ -67,7 +64,6 @@ const Service = () => {
             </div>
           </section>
         </div>
-        <Footer />
       </div>
     </div>
   );

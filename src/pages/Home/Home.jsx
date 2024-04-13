@@ -1,15 +1,15 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 // import lottie from "lottie-web";
 // import animationData from "../../animation/internet-banner.json";
 // import anim2Data from "../../animation/internet-anim-01.json";
 // import anim3Data from "../../animation/internet-anim-02.json";
 import { Link } from "react-router-dom";
 // import sliderContent from "./HomeSliderContent";
-import HomeSliderBlock from "./HomeSliderBlock";
-import Navbar from "../../components/common/Navbar";
-import Footer from "../../components/common/Footer";
+// import HomeSliderBlock from "./HomeSliderBlock";
 import axios from "axios";
 import Sphere from "../../animation/Sphere.jsx";
+import TabContent from "../../components/HomeComponents/TabContent.jsx";
+import SliderComponent from "../../components/HomeComponents/Slider.jsx";
 
 const Home = () => {
   const [cardData, setCardData] = useState({});
@@ -73,7 +73,6 @@ const Home = () => {
 
   return (
     <div className="page-wrapper">
-      <Navbar />
       <div className="page-content pbmit-bg-color-light">
         <section className="banner-section-bg">
           <div className="container">
@@ -233,139 +232,14 @@ const Home = () => {
               data-effect="slide"
             >
               <div className="swiper-wrapper">
-                {dataLoading
-                  ? servicesData.data.map((sliderItem) => (
-                      <HomeSliderBlock
-                        sliderTitle={sliderItem.title}
-                        sliderLink={sliderItem.href}
-                        sliderContent={sliderItem.subtitle}
-                        sliderIcon={sliderItem.icon}
-                        key={sliderItem.id}
-                      />
-                    ))
-                  : null}
+                {dataLoading ? (
+                  <SliderComponent sliderData={servicesData.data} />
+                ) : null}
               </div>
             </div>
           </div>
         </section>
-        <section>
-          <div className="container">
-            <div className="row align-items-center">
-              <div className="col-xl-6 col-md-12 strategy-section-home6">
-                <div className="pbmit-heading-subheading-style-6">
-                  <h4 className="pbmit-subtitle">РОЗРОБКА З OPTIONFLOW</h4>
-                  <h2 className="pbmit-title">Робочий процесс</h2>
-                </div>
-                <div className="block pbmit-tab-style-2">
-                  <ul className="nav nav-tabs" role="tablist">
-                    <li className="nav-item" role="presentation">
-                      <Link
-                        className="nav-link active"
-                        data-bs-toggle="tab"
-                        to="#tab-2-1"
-                        aria-selected="true"
-                        role="tab"
-                      >
-                        Аналіз потреб
-                      </Link>
-                    </li>
-                    <li className="nav-item" role="presentation">
-                      <Link
-                        className="nav-link"
-                        data-bs-toggle="tab"
-                        to="#tab-2-2"
-                        aria-selected="false"
-                        role="tab"
-                        tabIndex="-1"
-                      >
-                        Cтратегія проекту
-                      </Link>
-                    </li>
-                    <li className="nav-item" role="presentation">
-                      <Link
-                        className="nav-link"
-                        data-bs-toggle="tab"
-                        to="#tab-2-3"
-                        aria-selected="false"
-                        role="tab"
-                        tabIndex="-1"
-                      >
-                        Готовий результат
-                      </Link>
-                    </li>
-                  </ul>
-                  <div className="tab-content">
-                    <div
-                      className="tab-pane show active"
-                      id="tab-2-1"
-                      role="tabpanel"
-                    >
-                      <div className="pbmit-ihbox pbmit-ihbox-style-22">
-                        <div className="pbmit-ihbox-box">
-                          <div className="pbmit-ihbox-contents">
-                            <div className="pbmit-ihbox-icon">
-                              <div className="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-text">
-                                01
-                              </div>
-                            </div>
-                            <h2 className="pbmit-element-title">
-                              Аналіз потреб замовника
-                            </h2>
-                            <div className="pbmit-heading-desc">
-                              Після подання заявки ми зв'яжемося з замовником та
-                              дізнаємося деталі того, що саме він хоче отримати.
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="tab-pane" id="tab-2-2" role="tabpanel">
-                      <div className="pbmit-ihbox pbmit-ihbox-style-22">
-                        <div className="pbmit-ihbox-box">
-                          <div className="pbmit-ihbox-contents">
-                            <div className="pbmit-ihbox-icon">
-                              <div className="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-text">
-                                02
-                              </div>
-                            </div>
-                            <h2 className="pbmit-element-title">
-                              Будуємо стратегію проекту
-                            </h2>
-                            <div className="pbmit-heading-desc">
-                              Будуємо стратегію та план проекту і узгоджуємо їх
-                              із замовником та починаємо роботу.
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="tab-pane" id="tab-2-3" role="tabpanel">
-                      <div className="pbmit-ihbox pbmit-ihbox-style-22">
-                        <div className="pbmit-ihbox-box">
-                          <div className="pbmit-ihbox-contents">
-                            <div className="pbmit-ihbox-icon">
-                              <div className="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-text">
-                                03
-                              </div>
-                            </div>
-                            <h2 className="pbmit-element-title">
-                              Готовий результат
-                            </h2>
-                            <div className="pbmit-heading-desc">
-                              Після кропітливої роботи та детального перегляду
-                              проєкту ми передаємо готовий результат замовнику.
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* <div className="col-xl-6 col-md-12"></div> */}
-            </div>
-          </div>
-        </section>
+        <TabContent />
         <section className="section-lg">
           <div className="container">
             <div className="row g-0">
@@ -481,8 +355,6 @@ const Home = () => {
           </div>
         </section>
       </div>
-
-      <Footer />
     </div>
   );
 };

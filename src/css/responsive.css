@@ -574,7 +574,7 @@ body {
     padding-left: calc(var(--bs-gutter-x) * 0.8);
   }
   .sticky-header {
-    position: relative !important;
+    position: fixed !important;
   }
   /** Main menu resoposive **/
   .pbmit-menu-wrap {
@@ -606,6 +606,7 @@ body {
     -o-transition-delay: 300ms;
     transition-delay: 300ms;
     opacity: 1;
+    background: var(--pbmit-light-color);
   }
   .pbmit-mobile-menu-bg {
     position: fixed;
@@ -735,10 +736,12 @@ body {
     opacity: 1;
     visibility: visible;
     padding-bottom: 10px;
+    background-color: var(--pbmit-light-color);
   }
   .main-menu .navigation > li > ul li,
   .main-menu .navigation > li > ul li a {
     border: none;
+    padding-left: 20px;
   }
   .menu-right-box {
     position: relative;
@@ -818,7 +821,7 @@ body {
     color: var(--pbmit-blackish-color) !important;
   }
   .site-header .site-navigation ul.navigation > li > a {
-    color: var(--pbmit-blackish-color);
+    color: var(--pbmit-white-color);
   }
   .header-style-11 .pre-header-wrapper {
     display: none;

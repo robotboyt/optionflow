@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import Navbar from "../../components/common/Navbar";
-import Footer from "../../components/common/Footer";
+
 import { useParams } from "react-router-dom";
 
 const CareerSingle = () => {
@@ -8,7 +7,6 @@ const CareerSingle = () => {
   useEffect(() => {}, [id]);
   return (
     <div className="page-wrapper">
-      <Navbar />
       <div className="pbmit-title-bar-wrapper">
         <div className="container">
           <div className="pbmit-title-bar-content">
@@ -203,7 +201,6 @@ const CareerSingle = () => {
           </div>
         </section>
       </div>
-      <Footer />
     </div>
   );
 };

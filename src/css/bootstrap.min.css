@@ -195,6 +195,9 @@ ol,
 ul {
   padding-left: 2rem;
 }
+.dropdown ul {
+  padding-left: 0px;
+}
 dl,
 ol,
 ul {
@@ -3593,12 +3596,12 @@ fieldset:disabled .btn {
 .nav-justified .nav-item .nav-link {
   width: 100%;
 }
-.tab-content > .tab-pane {
+/* .tab-content > .tab-pane {
   display: none;
 }
 .tab-content > .active {
   display: block;
-}
+} */
 .navbar {
   --bs-navbar-padding-x: 0;
   --bs-navbar-padding-y: 0.5rem;

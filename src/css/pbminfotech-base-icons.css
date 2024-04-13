@@ -111,9 +111,15 @@
 } /* '' */
 .pbmit-base-icon-down-open-big:before {
   content: "\e811";
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
 } /* '' */
 .pbmit-base-icon-up-open-big:before {
   content: "\e812";
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
 } /* '' */
 .pbmit-base-icon-cancel:before {
   content: "\e813";
@@ -183,6 +189,7 @@
 } /* '' */
 .pbmit-base-icon-menu-1:before {
   content: "\e829";
+  font-weight: 600;
 } /* '' */
 .pbmit-base-icon-arrow-right-1:before {
   content: "\e82a";
@@ -348,6 +355,9 @@
 } /* '' */
 .pbmit-base-icon-close-circular-button-symbol:before {
   content: "\e860";
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
 } /* '' */
 .pbmit-base-icon-check-mark-1:before {
   content: "\e861";
