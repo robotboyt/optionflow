@@ -3305,8 +3305,12 @@ a.pbmit-underline-text:hover {
   padding-bottom: 60px;
 }
 .service-details .pbmit-title {
+  color: var(--pbmit-white-color);
   font-weight: 500;
   margin-bottom: 20px;
+}
+.service-details .mt-4 {
+  color: var(--pbmit-white-color);
 }
 .service-details h5 {
   font-weight: 500;
@@ -3690,6 +3694,9 @@ a.pbmit-underline-text:hover {
   padding: 15px 40px;
   display: inline-block;
   border-radius: 50px;
+}
+.post .pbmit-short-description {
+  color: var(--pbmit-white-color);
 }
 .blog-classic-two .post.blog-classic .pbmit-read-more-link a span::after {
   display: none;
@@ -5058,7 +5065,12 @@ i.fa.fas.fa-exclamation-triangle {
 }
 
 .career-single .pbmit-short-description {
+  color: var(--pbmit-white-color);
   margin-bottom: 30px;
+}
+
+.career-single h5 {
+  color: var(--pbmit-white-color);
 }
 
 .web-section {

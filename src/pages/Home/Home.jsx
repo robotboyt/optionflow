@@ -24,9 +24,9 @@ const Home = () => {
 
     const getData = async () => {
       try {
-        const cardResponse = await axios.get("http://127.0.0.1:5000/cards");
+        const cardResponse = await axios.get("http://192.168.0.66:8080/cards");
         const servicesResponse = await axios.get(
-          "http://127.0.0.1:5000/services"
+          "http://192.168.0.66:8080/services"
         );
         setCardData(cardResponse);
         setServicesData(servicesResponse);

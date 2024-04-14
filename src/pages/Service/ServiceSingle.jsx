@@ -23,7 +23,7 @@ const ServiceSingle = () => {
       const fetchService = async () => {
         try {
           const serviceResponse = await axios.get(
-            "http://127.0.0.1:5000/service"
+            "http://192.168.0.66:8080/service"
           );
 
           const resultResponse = await serviceResponse.data.filter(
@@ -193,22 +193,6 @@ const ServiceSingle = () => {
           </div>
         </div>
       ) : null}
-
-      {/* <div className="pbmit-title-bar-wrapper">
-        <div className="container">
-          <div className="pbmit-title-bar-content">
-            <div className="pbmit-title-bar-content-inner">
-              <div className="pbmit-tbar">
-                <div className="pbmit-tbar-inner container">
-                  <h1 className="pbmit-tbar-title">
-                    {currentService[0].title}
-                  </h1>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 };
