@@ -5092,3 +5092,15 @@ i.fa.fas.fa-exclamation-triangle {
     height: 60vh;
   }
 }
+
+.slick-dots li.slick-active button:before {
+  opacity: 0.75;
+  color: white;
+}
+
+.slick-dots li button:before {
+  color: rgb(208, 207, 207);
+  width: 30px;
+  height: 30px;
+  font-size: 12px;
+}

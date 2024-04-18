@@ -1373,7 +1373,10 @@ body {
   /** Section Padding **/
   .section-lg {
     padding-top: 60px;
-    padding-bottom: 40px;
+    padding-bottom: 100px;
+  }
+  .web-section {
+    padding-top: 70px;
   }
   .section-lgx {
     padding-top: 60px;

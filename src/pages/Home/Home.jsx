@@ -217,11 +217,8 @@ const Home = () => {
                   <h2 className="pbmit-title">Наші послуги</h2>
                 </div>
               </div>
-              <div className="col-md-4">
-                <div className="service6-arrow swiper-btn-white swiper-btn-circle swiper-btn-custom d-flex flex-row-reverse"></div>
-              </div>
             </div>
-            <div
+            {/* <div
               className="swiper-slider"
               data-arrows-class="service6-arrow"
               data-autoplay="false"
@@ -230,13 +227,15 @@ const Home = () => {
               data-columns="4"
               data-margin="30"
               data-effect="slide"
-            >
-              <div className="swiper-wrapper">
-                {dataLoading ? (
-                  <SliderComponent sliderData={servicesData.data} />
-                ) : null}
-              </div>
+            > */}
+            {/* <div className="swiper-wrapper"> */}
+            <div>
+              {dataLoading ? (
+                <SliderComponent sliderData={servicesData.data} />
+              ) : null}
             </div>
+            {/* </div> */}
+            {/* </div> */}
           </div>
         </section>
         <TabContent />
