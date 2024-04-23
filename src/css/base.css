@@ -647,7 +647,6 @@ body .pbmit-bg-color-white {
   z-index: 999;
 }
 .main-menu .navigation > li > ul li a {
-  border-bottom: 1px solid var(--pbmit-blackish-color);
   background-color: var(--pbmit-light-color);
 }
 .main-menu .navigation > li > ul a {
@@ -657,9 +656,7 @@ body .pbmit-bg-color-white {
   font-size: 13px;
   line-height: 14px;
 }
-.main-menu .navigation > li > ul li {
-  border-bottom: 1px solid var(--pbmit-blackish-color);
-}
+
 .main-menu .navigation > li > ul li.active a,
 .main-menu .navigation > li > ul a:hover {
   color: var(--pbmit-global-color);

@@ -105,6 +105,7 @@ body {
   background-color: var(--pbmit-blackish-color);
 }
 .pbmit-heading-subheading h2.pbmit-title {
+  color: var(--pbmit-white-color);
   font-size: 50px;
   line-height: 60px;
   letter-spacing: 0px;
@@ -376,6 +377,11 @@ body {
   letter-spacing: 0;
   color: #1e266d;
 }
+
+.pbmit-title-text {
+  color: #757c8c;
+}
+
 .pbmit-heading-subheading-style-8 .pbmit-subtitle::before {
   position: absolute;
   content: "";
@@ -2359,6 +2365,7 @@ s .pbmit-ihbox-style-15 .pbmit-heading-desc {
   line-height: 28px;
   margin-bottom: 8px;
   font-weight: 500;
+  color: var(--pbmit-white-color);
 }
 .pbmit-ihbox-style-20 .pbmit-element-heading,
 .pbmit-ihbox-style-20 .pbmit-element-subtitle {
@@ -2474,6 +2481,7 @@ s .pbmit-ihbox-style-15 .pbmit-heading-desc {
   position: relative;
   overflow: hidden;
   padding: 40px 30px 30px;
+  margin-bottom: 20px;
   background-color: var(--pbmit-blackish-color);
   box-shadow: 0px 2px 40px 0px rgba(0, 0, 0, 0.05);
 }
@@ -7772,7 +7780,7 @@ body .pbmit-remove-before:before {
 .footer.site-footer {
   padding: 60px 0;
   color: var(--pbmit-white-color);
-  background-image: url(../Images/coworking/bg/footer-bg.png);
+  background-image: url(../Images/internet/map.png);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -7995,7 +8003,7 @@ footer .widget .widget-title::before {
 }
 .pbmit-title-bar-wrapper {
   background-color: rgba(17, 22, 28, 0.8);
-  background-image: url(../Images/coworking/titlebarbg.jpg);
+  background-image: url(../Images/internet/titlebarbg.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -8658,6 +8666,7 @@ footer .widget .widget-title::before {
 }
 ul.list-group {
   margin-bottom: 1.75em;
+  margin-left: 30px;
 }
 li.list-group-item {
   background-color: transparent;
@@ -8665,10 +8674,6 @@ li.list-group-item {
   font-weight: 500;
   padding: 0;
   padding-bottom: 10px;
-}
-
-ul.list-group .list-group-item:hover {
-  color: var(--pbmit-blackish-color) !important;
 }
 
 ul.list-group .list-group-item i {
@@ -9102,4 +9107,8 @@ ul.list-group .list-group-item i {
 .lottie-anim {
   width: 100%;
   height: 100%;
+}
+
+.mt-2-subtitle {
+  color: #757c8c;
 }

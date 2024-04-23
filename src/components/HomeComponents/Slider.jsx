@@ -25,21 +25,23 @@ const SliderComponent = ({ sliderData }) => {
     slidesToScroll: 1,
   };
   return (
-    <div className="slider-container">
+    <>
       {sliderData.length > 0 ? (
-        <Slider {...settings}>
-          {sliderData.map((item) => (
-            <HomeSliderBlock
-              sliderTitle={item.title}
-              sliderIcon={item.icon}
-              sliderContent={item.subtitle}
-              sliderLink={item.href}
-              key={item.id.toString()}
-            />
-          ))}
-        </Slider>
+        <div className="slider-container">
+          <Slider {...settings}>
+            {sliderData.map((item) => (
+              <HomeSliderBlock
+                sliderTitle={item.title}
+                sliderIcon={item.icon}
+                sliderContent={item.subtitle}
+                sliderLink={item.href}
+                key={item.id.toString()}
+              />
+            ))}
+          </Slider>
+        </div>
       ) : null}
-    </div>
+    </>
   );
 };
 

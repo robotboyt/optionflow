@@ -2677,6 +2677,9 @@ body {
   .career-single h4 {
     width: 200px;
   }
+  .portfolio-details h4 {
+    width: 300px;
+  }
 }
 
 @media (max-width: 440px) {

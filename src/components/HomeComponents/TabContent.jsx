@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import lottie from "lottie-web";
+import an1 from "../../animation/an-6.json";
 
 const TabContent = () => {
   const [click, setClick] = useState(0);
+  const animationContainer = useRef(null);
+
   let testArr = [
     {
       id: 1,
@@ -19,6 +23,23 @@ const TabContent = () => {
       text: "Після кропітливої роботи та детального перегляду проєкту ми передаємо готовий результат замовнику.",
     },
   ];
+
+  useEffect(() => {
+    const anim1 = lottie.loadAnimation({
+      container: animationContainer.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: an1,
+    });
+
+    return () => {
+      if (anim1) {
+        anim1.destroy();
+      }
+    };
+  }, []);
+
   return (
     <section>
       <div className="container">
@@ -81,7 +102,9 @@ const TabContent = () => {
               </div>
             </div>
           </div>
-          {/* <div className="col-xl-6 col-md-12"></div> */}
+          <div className="col-xl-6 col-md-12 strategy-home-images">
+            <div ref={animationContainer} className="animation-block"></div>
+          </div>
         </div>
       </div>
     </section>

@@ -124,7 +124,6 @@ h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
-  line-height: 1.2;
   color: var(--bs-heading-color);
 }
 .h1,
@@ -7403,7 +7402,7 @@ fieldset:disabled .btn {
 }
 .mb-4 {
   margin-bottom: 1.5rem !important;
-  color: var(--pbmit-white-color);
+  color: #757c8c;
 }
 .mb-5 {
   margin-bottom: 3rem !important;

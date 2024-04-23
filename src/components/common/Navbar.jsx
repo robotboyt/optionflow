@@ -4,6 +4,7 @@ import logoBlack from "../../Images/logo.svg";
 import logoWhite from "../../Images/logo-white.svg";
 import CustomLink from "./CustomLink";
 import { DataContext } from "../../Context/DataContext";
+import { matchPath } from "react-router-dom";
 // import { loadScript } from "./utils";
 
 const Navbar = () => {
@@ -20,14 +21,6 @@ const Navbar = () => {
     setHeaderOpened(!openedHeader);
     setAboutSerctionOpened(false);
   };
-  // useEffect(() => {
-  //   loadScript()
-  //     .then(() => {})
-  //     .catch((error) => {
-  //       console.error("Error of loading script:", error);
-  //     });
-  //   return () => {};
-  // }, []);
 
   document.body.style.overflow = openedHeader ? "hidden" : "";
 
@@ -300,7 +293,7 @@ const Navbar = () => {
                               <li
                                 className={
                                   location.pathname === "/service" ||
-                                  location.pathname === "/service-single"
+                                  location.pathname.includes("/service-single/")
                                     ? "active"
                                     : null
                                 }

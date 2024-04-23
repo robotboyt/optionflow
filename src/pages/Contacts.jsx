@@ -30,7 +30,9 @@ const Contacts = () => {
                     <h2 className="pbmit-title">
                       Просто зв'яжіться з нашими експертами
                     </h2>
-                    <div className="mt-2">Нам довіряють наші клієнти</div>
+                    <div className="mt-2 mt-2-subtitle">
+                      Нам довіряють наші клієнти
+                    </div>
                   </div>
                   <ul className="pbmit-social-links">
                     <li className="pbmit-social-li pbmit-social-facebook">

@@ -1,11 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import lottie from "lottie-web";
-// import animationData from "../../animation/internet-banner.json";
-// import anim2Data from "../../animation/internet-anim-01.json";
-// import anim3Data from "../../animation/internet-anim-02.json";
 import { Link } from "react-router-dom";
-// import sliderContent from "./HomeSliderContent";
-// import HomeSliderBlock from "./HomeSliderBlock";
 import axios from "axios";
 import Sphere from "../../animation/Sphere.jsx";
 import TabContent from "../../components/HomeComponents/TabContent.jsx";
@@ -15,13 +9,8 @@ const Home = () => {
   const [cardData, setCardData] = useState({});
   const [servicesData, setServicesData] = useState({});
   const [dataLoading, setDataLoading] = useState(false);
-  // const canvasElement = useRef(null);
 
   useEffect(() => {
-    // const container = document.getElementById("internet-banner");
-    // const container2 = document.getElementById("internet-anim-01");
-    // const container3 = document.getElementById("internet-anim-02");
-
     const getData = async () => {
       try {
         const cardResponse = await axios.get("http://192.168.0.66:8080/cards");
@@ -36,37 +25,9 @@ const Home = () => {
       }
     };
 
-    // const anim1 = lottie.loadAnimation({
-    //   container: container,
-    //   renderer: "svg",
-    //   loop: true,
-    //   autoplay: true,
-    //   animationData: animationData,
-    // });
-
-    // const anim2 = lottie.loadAnimation({
-    //   container: container2,
-    //   renderer: "svg",
-    //   loop: true,
-    //   autoplay: true,
-    //   animationData: anim2Data,
-    // });
-
-    // const anim3 = lottie.loadAnimation({
-    //   container: container3,
-    //   renderer: "svg",
-    //   loop: true,
-    //   autoplay: true,
-    //   animationData: anim3Data,
-    // });
-
     getData();
 
-    return () => {
-      // anim1.destroy();
-      // anim2.destroy();
-      // anim3.destroy();
-    };
+    return () => {};
   }, []);
 
   console.log(servicesData);
@@ -151,7 +112,6 @@ const Home = () => {
         <section className="web-section">
           <div className="container">
             <div className="row align-items-center align-content-center">
-              <div className="col-xl-6 col-md-12">{/* ANIMATION */}</div>
               <div className="col-xl-6 col-md-12 agency-right-section-home6">
                 <div className="pbmit-heading-subheading-style-6">
                   <h4 className="pbmit-subtitle">РОЗРОБКА ВЕБ-ДОДАТКІВ</h4>
@@ -218,24 +178,12 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            {/* <div
-              className="swiper-slider"
-              data-arrows-class="service6-arrow"
-              data-autoplay="false"
-              data-dots="false"
-              data-arrows="true"
-              data-columns="4"
-              data-margin="30"
-              data-effect="slide"
-            > */}
-            {/* <div className="swiper-wrapper"> */}
+
             <div>
               {dataLoading ? (
                 <SliderComponent sliderData={servicesData.data} />
               ) : null}
             </div>
-            {/* </div> */}
-            {/* </div> */}
           </div>
         </section>
         <TabContent />
