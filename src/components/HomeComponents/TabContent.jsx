@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import lottie from "lottie-web";
-import an1 from "../../animation/an-6.json";
+import an1 from "../../animation/an-3.json";
 
 const TabContent = () => {
   const [click, setClick] = useState(0);
@@ -35,7 +35,9 @@ const TabContent = () => {
 
     return () => {
       if (anim1) {
+        // anim1.stop();
         anim1.destroy();
+        // anim1 = null;
       }
     };
   }, []);

@@ -1195,10 +1195,13 @@ body {
   line-height: 100px;
   fill: var(--pbmit-white-color);
 }
+
 .pbmit-ihbox-style-9:hover .pbmit-ihbox-icon-wrapper.pbmit-ihbox-icon-type-text,
 .pbmit-ihbox-style-9:hover .pbmit-ihbox-icon-wrapper .pbmit-icon-type-icon,
 .pbmit-ihbox-style-9:hover .pbmit-ihbox-svg-wrapper {
   background-color: var(--pbmit-global-color);
+  font-size: 90px;
+  transition: 0.3s ease-in-out;
 }
 .pbmit-ihbox-style-9 .pbmit-ihbox-icon-wrapper.pbmit-ihbox-icon-type-image img,
 .pbmit-ihbox-style-9 .pbmit-ihbox-icon-wrapper.pbmit-ihbox-icon-type-text,
@@ -1211,8 +1214,15 @@ body {
 .pbmit-ihbox-style-9 {
   transition: all 0.5s ease 0s;
   background-color: var(--pbmit-blackish-color);
-  margin-bottom: 10px;
+  margin: 10px;
+  width: 640px;
 }
+
+.sub-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .pbmit-ihbox-style-9 .pbmit-ihbox-icon-wrapper.pbmit-ihbox-icon-type-text {
   font-size: 45px;
   line-height: 100px;
@@ -5784,8 +5794,7 @@ body .pbmit-remove-before:before {
 /*----------------------------------------*/
 /*  07 - Testimonial
 /*----------------------------------------*/
-/** Style 1 **/
-.pbmit-testimonial-style-1 .pbminfotech-box-content {
+* Style 1 * .pbmit-testimonial-style-1 .pbminfotech-box-content {
   position: relative;
   padding-top: 110px;
 }

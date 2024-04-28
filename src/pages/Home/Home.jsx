@@ -124,42 +124,82 @@ const Home = () => {
                   ідеї до готового продукту. Вам не потрібно шукати команди
                   окремо під кожну частину проєкту!
                 </div>
-                <div className="pbmit-ihbox-style-9">
-                  <div className="pbmit-ihbox-box d-flex align-items-center">
-                    <div className="pbmit-ihbox-icon">
-                      <div className="pbmit-ihbox-icon-wrapper">
-                        <div className="pbmit-icon-wrapper pbmit-icon-type-icon">
-                          <i className="pbmit-xido-icon pbmit-xido-icon-website"></i>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="pbmit-ihbox-contents">
-                      <h2 className="pbmit-element-title">
-                        Веб-сайти для бізнесу
-                      </h2>
-                      <div className="pbmit-heading-desc">
-                        Розробляємо веб-сайти які не лише презентують вашу
-                        компанію, а й автоматизують бізнес-процеси
+              </div>
+            </div>
+            <div className="sub-section">
+              <div className="pbmit-ihbox-style-9">
+                <div className="pbmit-ihbox-box d-flex align-items-center">
+                  <div className="pbmit-ihbox-icon">
+                    <div className="pbmit-ihbox-icon-wrapper">
+                      <div className="pbmit-icon-wrapper pbmit-icon-type-icon">
+                        <i className="pbmit-xido-icon pbmit-xido-icon-satellite"></i>
                       </div>
                     </div>
                   </div>
+                  <div className="pbmit-ihbox-contents">
+                    <h2 className="pbmit-element-title">
+                      Веб-сайти для бізнесу
+                    </h2>
+                    <div className="pbmit-heading-desc">
+                      Розробляємо веб-сайти які не лише презентують вашу
+                      компанію, а й автоматизують бізнес-процеси
+                    </div>
+                  </div>
                 </div>
-                <div className="pbmit-ihbox-style-9">
-                  <div className="pbmit-ihbox-box d-flex align-items-center">
-                    <div className="pbmit-ihbox-icon">
-                      <div className="pbmit-ihbox-icon-wrapper">
-                        <div className="pbmit-icon-wrapper pbmit-icon-type-icon">
-                          <i className="pbmit-xido-icon pbmit-xido-icon-satellite"></i>
-                        </div>
+              </div>
+              <div className="pbmit-ihbox-style-9">
+                <div className="pbmit-ihbox-box d-flex align-items-center">
+                  <div className="pbmit-ihbox-icon">
+                    <div className="pbmit-ihbox-icon-wrapper">
+                      <div className="pbmit-icon-wrapper pbmit-icon-type-icon">
+                        <i className="pbmit-xido-icon  pbmit-xido-icon-ar-camera"></i>
                       </div>
                     </div>
-                    <div className="pbmit-ihbox-contents">
-                      <h2 className="pbmit-element-title">Мобільні додатки</h2>
-                      <div className="pbmit-heading-desc">
-                        Наявність мобільного додатку підвищує технологічний
-                        статус вашого бренду, створюючи враження сучасності та
-                        інноваційності
+                  </div>
+                  <div className="pbmit-ihbox-contents">
+                    <h2 className="pbmit-element-title">Мобільні додатки</h2>
+                    <div className="pbmit-heading-desc">
+                      Наявність мобільного додатку підвищує технологічний статус
+                      вашого бренду, створюючи враження сучасності та
+                      інноваційності
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="pbmit-ihbox-style-9">
+                <div className="pbmit-ihbox-box d-flex align-items-center">
+                  <div className="pbmit-ihbox-icon">
+                    <div className="pbmit-ihbox-icon-wrapper">
+                      <div className="pbmit-icon-wrapper pbmit-icon-type-icon">
+                        <i className="pbmit-xido-icon pbmit-xido-icon-analysis"></i>
                       </div>
+                    </div>
+                  </div>
+                  <div className="pbmit-ihbox-contents">
+                    <h2 className="pbmit-element-title">Blockchain розробка</h2>
+                    <div className="pbmit-heading-desc">
+                      Blockchain це не тільки грошові перекази криптовалют, але
+                      й безпечні обміни інформації такими як повідомлення або
+                      корпоративні системи управління даними.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="pbmit-ihbox-style-9">
+                <div className="pbmit-ihbox-box d-flex align-items-center">
+                  <div className="pbmit-ihbox-icon">
+                    <div className="pbmit-ihbox-icon-wrapper">
+                      <div className="pbmit-icon-wrapper pbmit-icon-type-icon">
+                        <i className="pbmit-xido-icon pbmit-xido-icon-networking"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="pbmit-ihbox-contents">
+                    <h2 className="pbmit-element-title">ШІ - розробка</h2>
+                    <div className="pbmit-heading-desc">
+                      Штучний інтелект це вже не майбутнє - а реальність.
+                      Створюємо онлайн-чати на основі ШІ для більш зручної
+                      комунікації з клієнтами та аналізу даних.
                     </div>
                   </div>
                 </div>
