@@ -141,8 +141,8 @@ const PortfolioSingle = () => {
                 <div className="portfolio-challange">
                   <div className="row">
                     <div className="col-md-6">
-                      <h5>Про проект</h5>
-                      <div>
+                      <h4>Про проект</h4>
+                      <div className="subchallange">
                         Тут подані основні деталі проекту, які ми розробили
                         спеціально для нього. Крім того, при натисканні на фото
                         ви зможете переглянути демонстраційну версію проекту
@@ -174,63 +174,6 @@ const PortfolioSingle = () => {
                     </a>
                   </div>
                 </div>
-                <div>
-                  <h5>Остані кроки</h5>
-                  <div>
-                    Після передачі проекту клієнту ми насолоджуємося подяками та
-                    отримуємо ще одного щасливого клієнта. Дякуємо за довіру та
-                    вибір Option Flow у створенні сайту для вашого бізнесу.
-                  </div>
-                </div>
-
-                <nav className="navigation post-navigation" aria-label="Posts">
-                  <div className="nav-links">
-                    <div className="nav-previous">
-                      <a href="#" rel="prev">
-                        <span className="pbmit-portfolio-nav-icon">
-                          <i className="pbmit-base-icon-left-small"></i>
-                        </span>
-                        <span className="pbmit-portfolio-nav-wrapper">
-                          <span className="pbmit-portfolio-nav-head">
-                            Попередня
-                          </span>
-                          <span className="pbmit-portfolio-nav nav-title">
-                            Sociology Coliving
-                          </span>
-                        </span>
-                        <span className="pbmit-portfolio-nav-thumbnail">
-                          <img
-                            src="images/coworking/project/project-03s.jpg"
-                            className="img-fluid"
-                            alt=""
-                          />
-                        </span>
-                      </a>
-                    </div>
-                    <div className="nav-next">
-                      <a href="#" rel="next">
-                        <span className="pbmit-portfolio-nav-thumbnail">
-                          <img
-                            src="../../public/images/coworking/project/project-01s.jpg"
-                            className="img-fluid"
-                            alt=""
-                          />
-                        </span>
-                        <span className="pbmit-portfolio-nav-wrapper">
-                          <span className="pbmit-portfolio-nav-head">
-                            Наступна
-                          </span>
-                          <span className="pbmit-portfolio-nav nav-title">
-                            Armazem Cowork
-                          </span>
-                        </span>
-                        <span className="pbmit-portfolio-nav-icon">
-                          <i className="pbmit-base-icon-right-small"></i>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                </nav>
               </div>
             </div>
           </div>

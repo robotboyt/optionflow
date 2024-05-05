@@ -81,57 +81,43 @@ const BlogSingle = () => {
                               sociis natoque Amet consectetur adipiscing elit ut
                               aliquam purus sit amet luctus
                             </p>
+                            <p>
+                              Posuere morbi leo urna molestie at. Ipsum dolor
+                              sit amet consectetur adipiscing elit pellentesque
+                              habitant morbi. Odio ut enim blandit volutpat
+                              maecenas volutpat. Tristique magna sit amet purus
+                              gravida. Vitae proin sagittis nisl rhoncus.
+                              Sagittis nisl rhoncus mattis rhoncus urna. Mauris
+                              vitae ultricies leo integer. Elit eget gravida cum
+                              sociis natoque Amet consectetur adipiscing elit ut
+                              aliquam purus sit amet luctus
+                            </p>
+                            <p>
+                              Posuere morbi leo urna molestie at. Ipsum dolor
+                              sit amet consectetur adipiscing elit pellentesque
+                              habitant morbi. Odio ut enim blandit volutpat
+                              maecenas volutpat. Tristique magna sit amet purus
+                              gravida. Vitae proin sagittis nisl rhoncus.
+                              Sagittis nisl rhoncus mattis rhoncus urna. Mauris
+                              vitae ultricies leo integer. Elit eget gravida cum
+                              sociis natoque Amet consectetur adipiscing elit ut
+                              aliquam purus sit amet luctus
+                            </p>
+                            <p>
+                              Posuere morbi leo urna molestie at. Ipsum dolor
+                              sit amet consectetur adipiscing elit pellentesque
+                              habitant morbi. Odio ut enim blandit volutpat
+                              maecenas volutpat. Tristique magna sit amet purus
+                              gravida. Vitae proin sagittis nisl rhoncus.
+                              Sagittis nisl rhoncus mattis rhoncus urna. Mauris
+                              vitae ultricies leo integer. Elit eget gravida cum
+                              sociis natoque Amet consectetur adipiscing elit ut
+                              aliquam purus sit amet luctus
+                            </p>
                           </div>
                         </div>
                       </div>
                     </article>
-
-                    <nav className="navigation post-navigation">
-                      <div className="nav-links">
-                        <div className="nav-previous">
-                          <a href="" rel="prev">
-                            <span className="pbmit-post-nav-thumbnail">
-                              <span className="pbmit-post-nav-icon">
-                                <i className="pbmit-base-icon-left-small"></i>
-                              </span>
-                              <img
-                                src="images/coworking/blog/blog-03s.jpg"
-                                className="img-fluid"
-                                alt=""
-                              />
-                            </span>
-                            <span className="pbmit-post-nav-wrapper">
-                              <span className="pbmit-post-nav-head">
-                                Previous
-                              </span>
-                              <span className="pbmit-post-nav nav-title">
-                                Five Ways Elevate Your Employees Workplace
-                              </span>
-                            </span>
-                          </a>
-                        </div>
-                        <div className="nav-next">
-                          <a href="#" rel="next">
-                            <span className="pbmit-post-nav-wrapper">
-                              <span className="pbmit-post-nav-head">Next</span>
-                              <span className="pbmit-post-nav nav-title">
-                                Easy ways to implement wellbeing programs
-                              </span>
-                            </span>
-                            <span className="pbmit-post-nav-thumbnail">
-                              <img
-                                src="images/coworking/blog/blog-01s.jpg"
-                                className="img-fluid"
-                                alt=""
-                              />
-                              <span className="pbmit-post-nav-icon">
-                                <i className="pbmit-base-icon-right-small"></i>
-                              </span>
-                            </span>
-                          </a>
-                        </div>
-                      </div>
-                    </nav>
                   </div>
                 </div>
               </div>

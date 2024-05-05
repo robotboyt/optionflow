@@ -500,7 +500,7 @@ body .pbmit-bg-color-white {
 .section-lg {
   background-color: var(--pbmit-secondary-color);
   padding-top: 100px;
-  padding-bottom: 80px;
+  padding-bottom: 100px;
 }
 .section-lgx {
   padding-top: 100px;
@@ -508,6 +508,7 @@ body .pbmit-bg-color-white {
 }
 .section-lgt {
   padding-top: 100px;
+  padding-bottom: 100px;
 }
 .section-lgb {
   padding-bottom: 100px;
@@ -708,8 +709,8 @@ body .pbmit-bg-color-white {
   display: inline-block;
 }
 .sticky-header .site-navigation ul.navigation > li > a {
-  height: 90px;
-  line-height: 90px;
+  height: 100px;
+  line-height: 100px;
 }
 .site-header-menu {
   transition: all 200ms ease;

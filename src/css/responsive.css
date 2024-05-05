@@ -1400,243 +1400,7 @@ body {
   .swiper-buttons {
     display: none;
   }
-  /*=== Homepage 01 ===*/
-  .text-about1 {
-    padding-right: 0px;
-  }
-  .progressbar-section-home {
-    padding-top: 40px;
-  }
-  .pbmit-text-style h2.pbmit-title {
-    font-weight: 400;
-    letter-spacing: -1.2px;
-    font-size: 45px;
-    line-height: 60px;
-  }
-  .pbmit-text-style-1:before {
-    display: none;
-  }
-  .counter-section-coworking .pbminfotech-ele-fid-style-5 {
-    margin-top: 0;
-  }
-  .service-section-coworking {
-    padding: 60px 0px 150px 0px;
-  }
-  .service-section-coworking .pbmit-ihbox-style-3 {
-    margin-bottom: 30px;
-  }
-  .portfolio-section-home1 .pbmit-portfolio-style-3 {
-    margin-bottom: 0;
-  }
-  .pbmit-ihbox-style-4 {
-    padding-right: 0;
-    margin-bottom: 30px !important;
-  }
-  .testimonial-bg-left {
-    padding: 150px 0px 150px 0px;
-  }
-  .testimonial-bg-right {
-    padding: 0px 6px;
-  }
-  .pbmit-testimonial-style-3 {
-    padding: 60px 30px 60px 30px;
-  }
-  .pbmit-client-style-2 {
-    padding: 60px 0;
-  }
-  .appointment-left-section {
-    width: 100%;
-    margin-left: 0;
-    padding: 60px 30px 20px 30px;
-  }
-  .form-control {
-    width: 100%;
-  }
-  .form-style-1 .pbmit-btn {
-    margin-bottom: 40px;
-  }
-  .row-cols-5 > * {
-    width: 100% !important;
-  }
-  .pbmit-blog-style-2 .pbmit-read-more-link {
-    padding-left: 0;
-  }
-  .pbmit-blog-style-2 .pbmit-content-wrapper,
-  .pbmit-blog-style-2 .pbminfotech-box-content .pbmit-meta-date-wrapper,
-  .pbmit-blog-style-2 .pbmit-read-more-link {
-    width: 100%;
-  }
-  .pbmit-ele-blog:not(:last-child) .pbmit-blog-style-2 .pbmit-read-more-link {
-    padding-bottom: 30px;
-  }
-  .pbmit-blog-style-2 .pbminfotech-box-content {
-    display: block;
-  }
-  .pbmit-blog-style-2 .pbmit-read-more-link {
-    margin-left: 0 !important;
-    margin-top: 30px;
-  }
-  .pbmit-element-blog-style-2 .pbmit-element-posts-wrapper {
-    padding-top: 0px;
-  }
-  .pbmit-blog-style-2 .pbmit-content-wrapper {
-    padding: 0;
-    margin-top: 30px;
-  }
-  /*=== Homepage 02 ===*/
-  .pbmit-heading-subheading-style-2 .pbmit-element-title {
-    font-size: 46px;
-    line-height: 60px;
-  }
-  .pbmit-heading-subheading-style-2 {
-    margin-bottom: 30px;
-  }
-  .pbmit-heading-subheading-style-2 h2.pbmit-title {
-    font-size: 30px;
-    line-height: 32px;
-  }
-  .agency-lottie {
-    margin: 30px 0px 0px 0px;
-  }
-  .agency-banner-section-bg .d-flex {
-    display: block !important;
-  }
-  .agency-banner-section-bg .d-flex .pbmit-btn-hover-secondary {
-    margin-top: 30px;
-  }
-  .counter-section-home2 .row .col-md-4 {
-    margin-bottom: 10px;
-  }
-  ul.list-group {
-    margin-bottom: 0;
-  }
-  .pbmit-static-box-style-1 .pbmit-contentbox {
-    display: block;
-  }
-  .pbmit-static-box-style-1 .pbminfotech-static-box-desc {
-    width: 100%;
-    padding: 0;
-  }
-  .team-section-home2 .team-desc {
-    padding: 0;
-    margin-bottom: 30px;
-  }
-  .pbmit-custom-heading .pbmit-title {
-    font-size: 60px;
-  }
-  .counter-section-home2 .col-md-4.ps-5 {
-    padding-left: 0 !important;
-  }
-  .service-section-bg .text-center.mt-5 {
-    margin-top: 0 !important;
-  }
-  .team-section-home2 {
-    padding: 80px 0px;
-  }
-  .about3-section {
-    display: block !important;
-  }
-  .about3-section .pbmit-btn {
-    margin-bottom: 20px;
-  }
-  .about3-section .about-us-2-left-section {
-    padding: 40px 15px 0px;
-  }
-  /*=== Homepage 03 ===*/
-  .pbmit-text-style-3 .pbmit-element-title {
-    font-size: 55px;
-    line-height: 60px;
-  }
-  .pbmit-heading-subheading-style-3 .pbmit-title {
-    font-size: 30px;
-    line-height: 32px;
-    padding-right: 0 !important;
-  }
-  .pbminfotech-ele-fid-style-5 {
-    margin-top: 30px;
-  }
-  .pbmit-ihbox-one {
-    margin-top: 30px;
-  }
-  .about-us-home3 {
-    text-align: right;
-    margin-top: -446px;
-  }
-  .pbmit-tab-style-1 {
-    display: block;
-  }
-  .tab-content {
-    padding-left: 0px;
-  }
-  .pbminfotech-ele-fid:not(:last-child)
-    .pbminfotech-ele-fid-style-7
-    .pbmit-circle::after {
-    display: none;
-  }
-  .pbminfotech-ele-fid:not(:last-child) .pbminfotech-ele-fid-style-7 {
-    margin-bottom: 30px;
-  }
-  .about-us-right-home3 ul.list-group {
-    margin-bottom: 20px;
-  }
-  .about-us-section-home3 {
-    padding: 50px 0;
-  }
-  /*=== Client ===*/
-  .pbmit-client-style-2 .pbmit-client-with-hover-img .pbmit-client-hover-img,
-  .pbmit-client-style-2 .thsn-client-wrapper {
-    width: 100%;
-  }
-  .pbmit-element-client-style-2 .pbmit-ele-client {
-    padding: 60px 0px;
-  }
-  /*=== Homepage 04 ===*/
-  .pbmit-heading-subheading-style-4 .pbmit-title {
-    font-size: 30px;
-    line-height: 32px;
-  }
-  .pbmit-text-style-4 .pbmit-title {
-    font-size: 54px;
-    line-height: 56px;
-  }
-  .pbmit-blog-style-4 {
-    margin-bottom: 30px;
-  }
-  .about-us-home4 {
-    padding: 0px;
-    margin: 50px 0px 40px 0px;
-  }
-  /*=== Homepage 05 ===*/
-  .pbmit-text-style-5 .pbmit-stroke-text {
-    font-size: 50px;
-    line-height: 60px;
-  }
-  .pbmit-heading-subheading-style-5 .pbmit-title {
-    font-size: 30px;
-    line-height: 32px;
-  }
-  .banner-arrow-img-home-5 img {
-    display: none;
-  }
-  .we-are-lottie-home5 {
-    margin: 0;
-  }
-  .testimonial-section-bg-home2 .pbmit-custom-heading .pbmit-title {
-    font-size: 100px;
-    line-height: 100px;
-  }
-  .appointment-lottie {
-    margin: 0px 0px -52px 0px;
-  }
-  .pbmit-blog-style-1 {
-    margin-bottom: 30px;
-  }
-  .swiper-slide .pbmit-blog-style-1 {
-    margin-bottom: 0;
-  }
-  .testimonial5-arrow {
-    display: none !important;
-  }
+
   /*=== Homepage 06 ===*/
   .pbmit-heading-subheading-style-6 .pbmit-title {
     font-size: 30px;
@@ -1668,335 +1432,7 @@ body {
     margin-top: 0;
     display: none;
   }
-  /*=== Homepage 07 ===*/
-  .client-section-home7 {
-    padding: 60px 0px;
-  }
-  .startup-section-bg-right {
-    padding: 0 15px;
-  }
-  .startup-section-bg-right .pbmit-text-style-4 .text-sm-white,
-  .startup-section-bg-right .pbmit-text-style-4 .pbmit-title {
-    color: #fff;
-  }
-  .startup-section-bg-right .pbmit-btn.pbmit-btn-outline {
-    color: #fff;
-    border: 2px solid #fff;
-  }
-  .pbmit-service-style-7 {
-    margin-bottom: 30px;
-  }
-  .Service-section-home7 .pbmit-btn {
-    margin-top: 0px;
-  }
-  .pbmit-text-style-4 .pbmit-title {
-    font-size: 54px;
-    line-height: 56px;
-  }
-  .pbmit-heading-subheading-style-7 .pbmit-title {
-    font-size: 30px;
-    line-height: 32px;
-  }
-  .pbmit-ihbox-style-14 .pbmit-ihbox-box:after {
-    display: none;
-  }
-  .pbmit-ihbox-style-14 {
-    margin-bottom: 30px;
-  }
-  .pbminfotech-ele-fid-style-11 {
-    margin-bottom: 30px;
-  }
-  .about-us-right-section-home7 {
-    padding: 0px 15px;
-  }
-  .pbmit-ihbox-style-14 {
-    padding: 0px;
-  }
-  /*=== Homepage 08 ===*/
-  .pbmit-text-style-8 .pbmit-title {
-    font-size: 50px;
-    line-height: 55px;
-  }
-  .pbmit-heading-subheading-style-8 .pbmit-title {
-    font-size: 30px;
-    line-height: 32px;
-  }
-  .pbmit-ihbox-style-7 {
-    margin-bottom: 30px;
-    padding: 0px;
-  }
-  /*=== Homepage 09 ===*/
-  .pbmit-text-style-9 .pbmit-title {
-    font-size: 54px;
-    line-height: 56px;
-  }
-  .pbmit-heading-subheading-style-9 .pbmit-title {
-    font-size: 30px;
-    line-height: 32px;
-  }
-  .bannar-section-bg-home9 {
-    padding: 135px 0px 0px 0px;
-  }
-  .about-section-home9 .pbmit-ihbox-style-15:not(:last-child) {
-    margin-bottom: 30px;
-  }
-  .client-section-home9 .row-cols-6 .col {
-    width: 100%;
-    margin-bottom: 15px;
-  }
-  .vedio-section-home9 .pbmit-vedio-title {
-    font-size: 54px;
-    line-height: 56px;
-  }
-  .gradient-circle-overlay::before {
-    display: none;
-  }
-  .about-section-home9 {
-    margin: 0;
-  }
-  .home9-testimonial-arrow .swiper-button-prev,
-  .home9-testimonial-arrow .swiper-button-next {
-    display: none;
-  }
-  /*=== Homepage 10 ===*/
-  .pbmit-text-style-10 .pbmit-title {
-    font-size: 54px;
-    line-height: 56px;
-  }
-  .banner-section-home10 .col:last-child .pbminfotech-ele-fid-style-3 {
-    padding: 0px;
-    border-left: none;
-    margin-top: 30px;
-    margin-left: 0;
-  }
-  .banner-section-home10 {
-    padding: 130px 0px 30px 0px;
-  }
-  .pbmit-heading-subheading-style-10 .pbmit-title {
-    font-size: 30px;
-    line-height: 32px;
-  }
-  .progressbar-section-home10 {
-    padding-bottom: 70px;
-  }
-  .client-left-section-home10 .pbminfotech-ele-fid-style-4 {
-    border-right: none;
-    padding: 0px;
-  }
-  .pbmit-blog-style-3 {
-    margin-bottom: 30px;
-  }
-  /*=== Homepage 11 ===*/
-  .pbmit-text-style-11 .pbmit-title {
-    font-size: 62px;
-    line-height: 64px;
-  }
-  .pbmit-text-style-11 .pbmit-heading-title {
-    font-size: 68px;
-    line-height: 78px;
-  }
-  .pbmit-text-style-11 {
-    padding: 0;
-  }
-  .pbmit-text-style-11 .pbmit-heading-title {
-    margin: 0px 0px -52px -14px;
-  }
-  .pbmit-heading-subheading-style-11 .pbmit-title {
-    font-size: 30px;
-    line-height: 32px;
-  }
-  .pbmit-ihbox-style-27.pbmit-infobox-27-one {
-    margin-bottom: 30px;
-  }
-  .pbmit-ihbox-style-28 {
-    margin-bottom: 30px;
-  }
-  .progress-section-home11 {
-    padding: 60px 30px 60px 30px;
-  }
-  .client-section-home11 .row .col {
-    flex: none;
-  }
-  .client-section-home11 .pbmit-client-style-4 {
-    border-right: none;
-  }
-  /*=== Homepage 12 ===*/
-  .fitness-section-home12-bg::after {
-    display: none;
-  }
-  .video-section-home12 {
-    padding: 100px 0;
-    margin-top: 30px;
-    border-radius: 20px;
-  }
-  .fitness-section-home12 .d-flex {
-    display: block !important;
-  }
-  .fitness-section-home12 .d-flex .me-3 {
-    margin: 0 0 30px 0 !important;
-    display: block;
-  }
-  .about-right-section-home12 {
-    padding: 50px 30px 30px 100px;
-  }
-  .about-right-section-home12-inner {
-    --bs-gutter-x: 0;
-  }
-  .about-right-section-home12-inner .pbmit-title {
-    margin-bottom: 40px;
-  }
-  .appointment-section-home12 {
-    padding: 50px 30px 40px 30px;
-  }
-  .pbmit-ihbox-style-11 {
-    margin-top: 30px !important;
-  }
-  .testimonial-section-home12 {
-    padding: 0px 0 60px !important;
-  }
-  .fitness-section-home12 {
-    padding-bottom: 0;
-  }
-  .home12-service-lottie-bg {
-    padding: 20% 20% 20% 20%;
-    background-size: contain;
-  }
-  .portfolio12-arrow {
-    justify-content: start;
-    margin-bottom: 30px;
-  }
-  .portfolio-section-home12 .pbmit-heading-subheading-style-12 {
-    margin-bottom: 30px;
-  }
-  /*=== Homepage 13 ===*/
-  .banner-section-home13 .banner-section-right::before {
-    width: 740px;
-    height: 740px;
-  }
-  .about-section-home13 .about-section-left {
-    display: block;
-    padding: 25px;
-  }
-  .about-section-home13 .about-img-one {
-    margin: 0px;
-  }
-  .about-section-home13 .about-section-right {
-    display: block;
-    padding: 25px;
-  }
-  .about-section-home13 .about-img-two {
-    margin: 0px;
-  }
-  .business-section-home13 {
-    padding: 40px 0 60px 0;
-  }
-  .business-section-home13 .business-section-right .list-group {
-    margin-bottom: 30px;
-  }
-  .feedback-section-home13 .feedback-heading {
-    font-size: 60px !important;
-  }
-  /*=== Homepage 14 ===*/
-  .pbmit-text-style-14 .pbmit-title {
-    font-size: 60px;
-    line-height: 70px;
-  }
-  .pbmit-heading-subheading-style-14 .pbmit-title {
-    font-size: 30px;
-    line-height: 32px;
-  }
-  .apoiment-section-home14 {
-    padding: 70px 30px 60px;
-  }
-  .pbmit-newsletter-hosting {
-    display: block;
-  }
-  .pbmit-newsletter-hosting .pbmit-title {
-    line-height: 30px;
-  }
-  .hosting-section-bg-home14 .d-flex {
-    display: block !important;
-  }
-  .apoiment-left-section-home14 {
-    padding: 10px 0;
-  }
-  .pbmit-ihbox-style-24 {
-    margin-bottom: 20px;
-  }
-  .client-section-home14 .d-flex {
-    display: block !important;
-  }
-  .pbmit-client-style-3 {
-    width: 100%;
-  }
-  .pbmit-client-style-3 .pbmit-client-wrapper {
-    width: fit-content;
-    margin: auto;
-  }
-  .pbmit-testimonial-style-9 .pbmit-featured-wrapper {
-    width: 100%;
-  }
-  /*=== Homepage 15 ===*/
-  .pbmit-heading-subheading-style-15 .pbmit-title {
-    font-size: 30px;
-    line-height: 32px;
-  }
-  .banner-section-bg-home15 {
-    padding: 140px 0px 40px 0px;
-  }
-  .pbmit-text-style-15 .pbmit-title {
-    font-size: 44px;
-  }
-  .pbmit-text-style-15 .mt-5 {
-    margin-top: 1rem !important;
-  }
-  .service-main-section-home15 .pbmit-heading-subheading-style-8.text-center {
-    margin-bottom: 30px;
-  }
-  .banner-section-bg-home15 .pbmit-btn-home15 {
-    display: block;
-    width: fit-content;
-    margin: 0 auto 30px !important;
-  }
-  .hr-software-lottie-home15 {
-    margin-top: -45px;
-  }
-  .client-main-section-home15 .d-flex {
-    display: block !important;
-  }
-  .client-section-home15 {
-    padding-right: 0;
-    text-align: center;
-    border: 0;
-    margin-bottom: 30px;
-  }
-  .client-main-section-home15 .row-cols-6 {
-    display: block;
-    width: 100%;
-    padding: 0 15px;
-    margin-right: 0;
-  }
-  .client-main-section-home15 .row-cols-6 .col-md-2 {
-    width: 100%;
-  }
-  .pbmit-heading-desc-service {
-    padding: 0px;
-  }
-  .counter-section-home15 .d-flex {
-    display: block !important;
-  }
-  .counter-section-home15 .d-flex .pbminfotech-ele-fid-style-9 {
-    width: 100%;
-  }
-  .appointment-section-home15 .list-group {
-    display: block !important;
-  }
-  .team-left-section-home15 {
-    padding: 40px 0px;
-  }
-  .about-us-section-home {
-    padding: 50px 15px 0;
-  }
+
   /*=== pbmit-ourhistory ===*/
   .pbmit-ourhistory-type2 .pbmit-ourhistory-right .label::before {
     right: 50%;
@@ -2161,10 +1597,6 @@ body {
     padding-top: 30px;
   }
 
-  /* CHANGE HERE */
-  /* .pbmit-ihbox-style-9 {
-    padding: 15px 0;
-  } */
   .about-us-home3 .pbminfotech-ele-fid-style-6 {
     margin-bottom: 30px;
   }
@@ -2174,74 +1606,7 @@ body {
   .startup-right-section-home7 {
     padding: 0 15px;
   }
-  /* Homepage 09 */
-  .testimonial-section-home9 .pbmit-element-viewtype-carousel-1 {
-    margin-right: 0px;
-    padding-top: 30px;
-  }
-  /* Homepage 11 */
-  .pbmit-text-style-11 .button-text {
-    display: block;
-    padding-top: 30px;
-  }
-  .about-us-section-home11 {
-    padding-bottom: 0;
-    padding-top: 0;
-  }
-  /* Homepage 12 */
-  .testimonail-right-section-home-12 .pbmit-title {
-    font-size: 60px !important;
-  }
-  .pbmit-newsletter-fitness .pbmit-submit-box {
-    display: contents;
-  }
-  .appointment-section-home12 .pbmit-submit-box button {
-    margin: 20px 0;
-    width: 100%;
-  }
-  .accordion-style-1 .accordion-header {
-    line-height: unset;
-  }
-  .accordion-style-1 .accordion-header .accordion-button {
-    padding: 25px;
-  }
-  .service-right-section-home12 .pbmit-heading-subheading-style-12 {
-    margin-bottom: 0;
-  }
-  /* Homepage 13 */
-  .banner-section-home13
-    .pbmit-heading-subheading-style-1-text-style-15
-    .pbmit-title {
-    font-size: 30px;
-    line-height: 32px;
-  }
-  .banner-section-home13 .pbmit-heading-subheading-style-1-text-style-15 {
-    margin-bottom: 30px;
-  }
-  .update-section-home13 .update-section-one {
-    padding: 0;
-  }
-  /* Homepage 14 */
-  .apoiment-section-home14 .pbmit-submit-box button {
-    margin: 0;
-  }
-  .testimonial-section-home14 .swiper-buttons {
-    display: none;
-  }
-  /* Homepage 15 */
-  .pbmit-submit-box-1 {
-    display: block;
-  }
-  .pbmit-submit-box-1 input[type="email"] {
-    width: 100%;
-  }
-  .pbmit-submit-box-1 button {
-    margin: 20px 0 0 0;
-    width: 100%;
-  }
-  .pbmit-ihbox-style-13 {
-    margin-bottom: 30px;
-  }
+
   /** Section Title **/
   .pbmit-heading-subheading .pbmit-element-title {
     font-size: 32px;
@@ -2270,58 +1635,7 @@ body {
   .pbmit-element-client-style-2 .pbmit-ele-client {
     padding: 40px 0px;
   }
-  /*=== Testimonial ===*/
-  .pbmit-testimonial-style-1 .pbminfotech-box-content {
-    text-align: center;
-  }
-  .pbmit-testimonial-style-1 .pbminfotech-box-content::before {
-    width: 100%;
-  }
-  .pbmit-testimonial-style-1 .pbminfotech-author-box {
-    flex-direction: column;
-  }
-  .pbmit-testimonial-style-1 .pbminfotech-testimonial-rating {
-    margin-top: 20px;
-  }
-  .pbmit-ourhistory-type2 .label {
-    text-align: left;
-    font-size: 30px;
-  }
-  .pbmit-timeline
-    .pbmit-timeline-inner:nth-child(even)
-    .row.pbmit-ourhistory-row
-    .pbmit-ourhistory-right
-    .label {
-    padding-right: 120px;
-  }
-  .pbmit-timeline
-    .pbmit-timeline-inner:nth-child(odd)
-    .row.pbmit-ourhistory-row
-    .pbmit-ourhistory-right
-    .label {
-    padding-left: 120px;
-  }
-  .pbmit-blog-style-5 .pbminfotech-box-content {
-    display: block;
-  }
-  .pbmit-blog-style-5 .pbmit-content-wrapper {
-    padding: 20px 0;
-  }
-  .pbmit-portfolio-lines-wrapper ul {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 30px 30px;
-  }
-  .pbmit-single-project-details-list {
-    padding: 30px;
-  }
-  .post-navigation .pbmit-post-nav.nav-title {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-  }
+
   /** Blog */
   .comments-box .media {
     display: block;
@@ -2490,37 +1804,14 @@ body {
     display: block;
   }
 }
-@media (max-width: 400px) {
-  .coworing-video {
-    display: block;
-  }
-  .coworing-video a {
-    margin-bottom: 10px;
-  }
-  .testimonial-section-bg-home2 .pbmit-custom-heading .pbmit-title {
-    font-size: 50px !important;
-  }
-}
+
 @media (max-width: 375px) {
   .pbmit-ihbox-style-17 .pbmit-html-code-box {
     width: inherit;
     height: inherit;
   }
 }
-@media (max-width: 360px) {
-  .pbmit-testimonial-style-6 .pbmit-featured-wrapper {
-    width: auto;
-  }
-  .pbmit-testimonial-style-6 .pbminfotech-box-author {
-    flex-direction: column;
-  }
-  .pbmit-testimonial-style-6 .pbminfotech-testimonial-detail {
-    padding-left: 0;
-  }
-  .pbmit-testimonial-style-6 .pbminfotech-testimonial-detail::before {
-    display: none;
-  }
-}
+
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
   .pbmit-blog-style-2 .pbmit-content-wrapper {
     width: 50%;
@@ -2729,5 +2020,46 @@ body {
   }
   .pbminfotech-ele-fid-style-6 {
     float: right;
+  }
+}
+
+@media (max-width: 870px) {
+  .sphere {
+    width: 100%;
+    height: 60vh;
+  }
+}
+
+@media (max-width: 854px) {
+  .pbmit-blog-style-2 .pbmit-read-more-link a::after {
+    display: none;
+  }
+  .pbmit-blog-style-2 .pbmit-read-more-link a::before {
+    display: none;
+  }
+}
+
+@media (max-width: 854px) {
+  .pbmit-blog-style-2 .pbmit-read-more-link {
+    display: flex;
+  }
+}
+
+@media (max-width: 500px) {
+  .pbmit-blog-style-2 .pbmit-read-more-link {
+    padding-left: 0px;
+  }
+
+  .pbmit-blog-style-2 .pbmit-read-more-link a > span {
+    margin-left: -50px;
+    display: flex;
+  }
+}
+
+@media (max-width: 575px) {
+  .pbmit-portfolio-lines-wrapper ul {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px 30px;
   }
 }

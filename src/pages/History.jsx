@@ -23,90 +23,17 @@ const History = () => {
             <div className="row">
               <div className="col-xl-6 col-md-12">
                 <div className="about-us-left-bg-home3">
-                  <div className="about-us-home3">
-                    <div className="row">
-                      <div className="col-lg-6 col-md-12">
-                        <div className="pbminfotech-ele-fid-style-8">
-                          <div className="pbmit-fld-contents">
-                            <div className="pbmit-fld-wrap">
-                              <h3 className="pbmit-fid-title">
-                                <span>Вдалі проекти</span>
-                              </h3>
-                              <h4 className="pbmit-fid-inner d-flex">
-                                <span className="pbmit-fid"></span>
-                                <span
-                                  className="pbmit-number-rotate numinate"
-                                  data-appear-animation="animateDigits"
-                                  data-from="0"
-                                  data-to="10"
-                                  data-interval="3"
-                                  data-before=""
-                                  data-before-style=""
-                                  data-after=""
-                                  data-after-style=""
-                                >
-                                  10
-                                </span>
-                                <span className="pbmit-fid">
-                                  <span>+</span>
-                                </span>
-                              </h4>
-                              <div className="pbmit-fid-description">
-                                <div className="pbmit-heading-desc">
-                                  Різної складності
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-6 col-md-12">
-                        <div className="pbminfotech-ele-fid-style-6">
-                          <div className="pbmit-fld-contents">
-                            <div className="pbmit-fld-wrap">
-                              <h3 className="pbmit-fid-title">
-                                <span>Співробітники</span>
-                              </h3>
-                              <h4 className="pbmit-fid-inner d-flex">
-                                <span className="pbmit-fid"></span>
-                                <span
-                                  className="pbmit-number-rotate numinate"
-                                  data-appear-animation="animateDigits"
-                                  data-from="0"
-                                  data-to="25"
-                                  data-interval="5"
-                                  data-before=""
-                                  data-before-style=""
-                                  data-after=""
-                                  data-after-style=""
-                                >
-                                  25
-                                </span>
-                                <span className="pbmit-fid">
-                                  <span>+</span>
-                                </span>
-                              </h4>
-                              <div className="pbmit-fid-description">
-                                <div className="pbmit-heading-desc">
-                                  Кращих спеціалістів
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <div className="about-us-home3"></div>
                 </div>
               </div>
               <div className="col-xl-6 col-md-12 about-us-right-home3">
-                <div className="pbmit-heading-subheading-style-3">
-                  <h4 className="pbmit-subtitle">Що ми пропонуємо</h4>
+                <div className="pbmit-heading-subheading">
+                  <h4 className="pbmit-subtitle-color">Що ми пропонуємо</h4>
                   <h2 className="pbmit-title">
                     Ми пропонуємо новітні IT-рішення та підтримку на кожному
                     етапі проекту.
                   </h2>
-                  <div>
+                  <div className="pbmit-title-text">
                     Ми цінуємо унікальність кожного проекту та кожного клієнта.
                     Наша команда розробляє індивідуальні стратегії, враховуючи
                     особливості бізнесу кожного замовника. Регулярні оновлення,
@@ -220,7 +147,7 @@ const History = () => {
                       <div className="col-md-6 col-sm-12 col-xs-6 pbmit-ourhistory-right">
                         <span className="label">2023</span>
                         <div className="content">
-                          <h4>Створення optionflow</h4>
+                          <h4>Створення Option Flow</h4>
                           <div className="simple-text">
                             <p>
                               На початку 2023 року ми заснували нашу студію в ці

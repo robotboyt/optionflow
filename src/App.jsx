@@ -21,8 +21,6 @@ import "./css/bootstrap.min.css";
 import "./css/fontawesome.css";
 import "./css/flaticon.css";
 import "./css/pbminfotech-base-icons.css";
-import "./css/swiper.min.css";
-import "./css/magnific-popup.css";
 import "./css/shortcode.css";
 import "./css/demo-internet.css";
 import "./css/responsive.css";

@@ -23,7 +23,7 @@ const ServiceSingle = () => {
       const fetchService = async () => {
         try {
           const serviceResponse = await axios.get(
-            "http://192.168.0.66:8080/service"
+            "http://192.168.0.66:2000/api/service"
           );
 
           const resultResponse = await serviceResponse.data.filter(
@@ -168,10 +168,15 @@ const ServiceSingle = () => {
                     <div className="service-details">
                       <h4 className="pbmit-title">{currentService[0].title}</h4>
                       <div className="mt-4">
-                        <span className="dropcap rounded">
+                        {/* <span className="dropcap rounded">
                           {currentService[0].subtitle}
-                        </span>
-                        {currentService[0].article}
+                        </span> */}
+                        {/* {currentService[0].article} */}
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: currentService[0].article,
+                          }}
+                        ></div>
                       </div>
                       {/* <div>
                     <div>

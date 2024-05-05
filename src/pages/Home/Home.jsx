@@ -13,9 +13,11 @@ const Home = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const cardResponse = await axios.get("http://192.168.0.66:8080/cards");
+        const cardResponse = await axios.get(
+          "http://192.168.0.66:2000/api/cards"
+        );
         const servicesResponse = await axios.get(
-          "http://192.168.0.66:8080/services"
+          "http://192.168.0.66:2000/api/services"
         );
         setCardData(cardResponse);
         setServicesData(servicesResponse);
@@ -29,8 +31,6 @@ const Home = () => {
 
     return () => {};
   }, []);
-
-  console.log(servicesData);
 
   return (
     <div className="page-wrapper">

@@ -1,11 +1,8 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
 import CustomLink from "./CustomLink";
 import logoWhite from "../../Images/logo-white.svg";
 
 const Footer = () => {
-  const location = useLocation();
-
   return (
     <footer className="pbmit-bg-color-secondary footer-style-1 footer site-footer">
       <div className="footer-wrap pbmit-footer-big-area">

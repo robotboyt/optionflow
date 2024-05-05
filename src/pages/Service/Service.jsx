@@ -12,7 +12,7 @@ const Service = () => {
     const fetchService = async () => {
       try {
         const serviceResponse = await axios.get(
-          "http://192.168.0.66:8080/service"
+          "http://192.168.0.66:2000/api/service"
         );
         setServiceData(serviceResponse.data);
         setFetchedServiceData(serviceResponse.data);
@@ -26,6 +26,8 @@ const Service = () => {
       fetchService();
     }
   }, [serviceNewData, setFetchedServiceData]);
+
+  console.log(serviceData);
 
   return (
     <div>

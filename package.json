@@ -29,7 +29,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "postbuild": "purgecss -cc src/css/base.css src/css/bootstrap.min.css src/css/demo-internet.css src/css/flaticon.css src/css/fontawesome.css src/css/magnific-popup.css src/css/pbminfotech-base-icon.css src/css/responsive.css src/css/shortcode.css src/css/style.css --content src/App.jsx src/pages/Service/Service src/pages/Service/ServiceContentBox src/pages/Service/ServiceSingle src/pages/Portfolio/Portfolio src/pages/Portfolio/PortfolioBlock src/pages/Portfolio/PortfolioSingle src/pages/Home/Home src/pages/Home/HomeSliderBlock src/pages/Home/HomeCommentSlide src/pages/About src/pages/Career/Career src/pages/Career/CareerSingle src/pages/Career/CareerContentBox src/pages/Blog/BlogSingle src/pages/Blog/Blog src/pages/Blog/BlogContetBox src/pages/Contacts src/pages/Faq src/pages/History src/pages/NotFoundPage src/animation/Sphere src/components/HomeComponents/Slider src/components/HomeComponents/TabContent src/components/common/CustomLink src/components/common/Footer src/components/common/Navbar -o src/clean.css"
   },
   "eslintConfig": {
     "extends": [
@@ -51,6 +52,8 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "gh-pages": "^6.1.1"
+    "@fullhuman/postcss-purgecss": "^6.0.0",
+    "gh-pages": "^6.1.1",
+    "postcss": "^8.4.38"
   }
 }

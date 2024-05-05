@@ -17,9 +17,7 @@ const CareerContentBox = ({ title, date, categories, link }) => {
                     className="pbmit-meta-category"
                     key={categoryItem.toString()}
                   >
-                    <a href="career.html" rel="category tag">
-                      {categoryItem}
-                    </a>
+                    {categoryItem}
                   </span>
                 ))}
               </div>
