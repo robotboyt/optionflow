@@ -6,7 +6,8 @@
   --pbmit-secondary-color: #000031;
   --pbmit-light-color: #000031;
   --pbmit-white-color: #ffffff;
-  --pbmit-blackish-color: #21293d;
+  --pbmit-blackish-color: rgba(28, 108, 220, 0.2);
+  --pbmit-blackish-text-color: #21293d;
   --pbmit-link-color-normal: #ffffff;
   --pbmit-link-color-hover: #5f51e3;
   --pbmit-global-color-rgb: 254, 168, 43;

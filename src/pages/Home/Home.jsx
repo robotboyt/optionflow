@@ -213,7 +213,7 @@ const Home = () => {
             <div className="row">
               <div className="col-md-8">
                 <div className="pbmit-heading-subheading text-white">
-                  <h4 className="pbmit-subtitle">&nbsp;</h4>
+                  <h4 className="pbmit-subtitle">Що ми вміємо?</h4>
                   <h2 className="pbmit-title">Наші послуги</h2>
                 </div>
               </div>

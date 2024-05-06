@@ -28,7 +28,7 @@ const History = () => {
               </div>
               <div className="col-xl-6 col-md-12 about-us-right-home3">
                 <div className="pbmit-heading-subheading">
-                  <h4 className="pbmit-subtitle-color">Що ми пропонуємо</h4>
+                  <h4 className="pbmit-subtitle">Що ми пропонуємо</h4>
                   <h2 className="pbmit-title">
                     Ми пропонуємо новітні IT-рішення та підтримку на кожному
                     етапі проекту.
@@ -68,7 +68,7 @@ const History = () => {
         <section className="section-lgx pbmit-bg-color-light">
           <div className="container">
             <div className="pbmit-heading-subheading text-center">
-              <h4 className="pbmit-subtitle-white">Наша Історія</h4>
+              <h4 className="pbmit-subtitle">Наша Історія</h4>
               <h2 className="pbmit-title">Як ми створили нашу студію</h2>
             </div>
             <div className="pbmit-timeline">

@@ -27,16 +27,26 @@
 .pbmit-text-style-6 .text-style {
   display: inline-block;
   padding: 3px 18px;
-  color: var(--pbmit-blackish-color);
+  color: var(--pbmit-secondary-color);
+  font-weight: 600;
   background-color: var(--pbmit-white-color);
   -webkit-border-radius: 16px;
   -moz-border-radius: 16px;
   border-radius: 16px;
 }
+
+.pbmit-text-style-6 .text-style .color-text-name {
+  color: var(--pbmit-global-color);
+}
+
 .pbmit-text-style-6 .pbmit-title {
   font-size: 50px;
   line-height: 72px;
   color: #fff;
+  font-weight: 600;
+  background: linear-gradient(45deg, #5f51e3, #ffcc00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .pbmit-text-style-6 p {
   font-family: "Roboto", Sans-serif;
@@ -294,9 +304,7 @@
 .service-sidebar .post-list .widget-title {
   color: var(--pbmit-white-color);
 }
-.service-sidebar .post-list .widget-title::before {
-  background-color: var(--pbmit-white-color);
-}
+
 .service-sidebar .widget {
   margin-bottom: 30px;
 }
@@ -509,9 +517,6 @@
   border-radius: 16px;
 }
 
-.service-details-two .service-sidebar .post-list .widget-title::before {
-  background-color: var(--pbmit-blackish-color);
-}
 .service-details-two .post-list li a {
   color: #787c8b;
   border-radius: 16px;
@@ -860,9 +865,7 @@
 .blog-classic-two .widget.widget-search .widget-title {
   color: var(--pbmit-blackish-color);
 }
-.blog-classic-two .widget .widget-title::before {
-  display: none;
-}
+
 .blog-classic-two .widget .widget-title::after {
   position: absolute;
   top: 50%;
@@ -1262,15 +1265,6 @@
   line-height: 30px;
   padding-bottom: 0;
   color: var(--pbmit-white-color);
-}
-.widget .widget-title::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 30px;
-  height: 1px;
-  background-color: var(--pbmit-blackish-color);
 }
 
 /** 06 - Contact us **/

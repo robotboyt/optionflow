@@ -4,12 +4,7 @@ body {
 /*----------------------------------------*/
 /*  00 - Section Title
 /*----------------------------------------*/
-.pbmit-heading-subheading.text-white .pbmit-subtitle:before {
-  display: none;
-}
-.pbmit-heading-subheading.text-white .pbmit-subtitle {
-  color: var(--pbmit-white-color);
-}
+
 .pbmit-heading-subheading.text-white .pbmit-title {
   color: var(--pbmit-white-color);
   font-weight: 700;
@@ -33,51 +28,19 @@ body {
 }
 .pbmit-heading-subheading h4.pbmit-subtitle,
 .pbmit-heading-subheading h4.pbmit-subtitle-white {
-  position: relative;
-  color: #757c8c;
-  margin-bottom: 5px;
-  font-size: 13px;
+  font-weight: 700;
+  font-size: 14px;
   line-height: 20px;
-  letter-spacing: 1px;
+  letter-spacing: 0.4px;
+  color: var(--pbmit-global-color);
   text-transform: uppercase;
-}
-.pbmit-heading-subheading h4.pbmit-subtitle:before {
-  position: absolute;
-  content: "";
-  top: 50%;
-  width: 50px;
-  height: 1px;
-  left: -60px;
-  background-color: var(--pbmit-white-color);
-}
-.pbmit-heading-subheading h4.pbmit-subtitle-white:before {
-  position: absolute;
-  content: "";
-  top: 50%;
-  width: 50px;
-  height: 1px;
-  left: -60px;
-  background-color: var(--pbmit-blackish-color);
-}
-.pbmit-heading-subheading.text-center h4.pbmit-subtitle-white {
-  position: relative;
-  color: #757c8c;
-  margin-bottom: 5px;
-  font-size: 13px;
-  line-height: 20px;
-  letter-spacing: 1px;
   display: inline-block;
+  font-style: normal;
+  padding: 6px 22px;
+  background-color: rgba(28, 108, 220, 0.2);
+  border-radius: 20px;
 }
-.pbmit-heading-subheading.text-center h4.pbmit-subtitle-white:after {
-  position: absolute;
-  content: "";
-  top: 50%;
-  width: 50px;
-  height: 1px;
-  right: -60px;
-  left: inherit;
-  background-color: var(--pbmit-blackish-color);
-}
+
 .pbmit-heading-subheading h2.pbmit-title {
   color: var(--pbmit-white-color);
   font-size: 50px;
@@ -115,11 +78,10 @@ body {
   margin-bottom: 30px;
 }
 .pbmit-heading-subheading-style-6 .pbmit-subtitle {
-  padding: 0 40px;
   font-family: Quicksand, sans-serif;
   font-weight: 600;
   font-size: 13px;
-  color: #757c8c;
+  color: var(--pbmit-global-color);
   text-transform: uppercase;
   line-height: 20px;
   letter-spacing: 0.5px;
@@ -127,6 +89,9 @@ body {
   position: relative;
   display: inline-block;
   text-align: left;
+  padding: 6px 22px;
+  background-color: rgba(28, 108, 220, 0.2);
+  border-radius: 20px;
 }
 .pbmit-heading-subheading-style-6 .pbmit-title {
   font-family: Quicksand, sans-serif;
@@ -137,15 +102,7 @@ body {
   font-style: normal;
   color: var(--pbmit-white-color);
 }
-.pbmit-heading-subheading-style-6 .pbmit-subtitle:before {
-  position: absolute;
-  content: "";
-  left: 0;
-  top: 50%;
-  width: 30px;
-  height: 2px;
-  background-color: rgba(var(--pbmit-secondary-color-rgb), 0.6);
-}
+
 .pbmit-heading-subheading-style-6.text-center .pbmit-subtitle:after {
   position: absolute;
   content: "";
