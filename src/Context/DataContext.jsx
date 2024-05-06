@@ -3,8 +3,8 @@ import React, { createContext, useState } from "react";
 const DataContext = createContext();
 
 const DataProvider = ({ children }) => {
-  const [serviceNewData, setServiceNewData] = useState(null);
   const [openedHeader, setOpenedHeader] = useState(false);
+  const [serviceNewData, setServiceNewData] = useState(null);
 
   const setFetchedServiceData = (newData) => {
     setServiceNewData(newData);

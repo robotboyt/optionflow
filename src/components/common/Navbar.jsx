@@ -306,7 +306,9 @@ const Navbar = () => {
                               <li
                                 className={
                                   location.pathname === "/portfolio" ||
-                                  location.pathname === "/portfolio-single"
+                                  location.pathname.includes(
+                                    "/portfolio-single/"
+                                  )
                                     ? "active"
                                     : null
                                 }

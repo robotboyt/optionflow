@@ -1,55 +1,25 @@
-import React from "react";
-
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import PortfolioBlock from "./PortfolioBlock";
 
 const Portfolio = () => {
-  let portfolioContent = [
-    {
-      name: "Design Strategies",
-      text: " Specific",
-      id: 1,
-    },
-    {
-      name: "Sociology Coliving",
-      text: " Private",
-      id: 2,
-    },
-    {
-      name: "Working Together",
-      text: "Lifestyle",
-      id: 3,
-    },
-    {
-      name: "Armazem Cowork",
-      text: "Corporate",
-      id: 4,
-    },
-    {
-      name: "Innovation Center",
-      text: "Venture",
-      id: 5,
-    },
-    {
-      name: "Future Workspace",
-      text: "Vision",
-      id: 6,
-    },
-    {
-      name: "Unique coworking",
-      text: "Corporate",
-      id: 7,
-    },
-    {
-      name: "Typographia Cowork",
-      text: "Lifestyle",
-      id: 8,
-    },
-    {
-      name: "Running Practice",
-      text: "Private",
-      id: 9,
-    },
-  ];
+  const [portfolioData, setPortfolioData] = useState(null);
+  useEffect(() => {
+    const fetchService = async () => {
+      try {
+        const serviceResponse = await axios.get(
+          "https://optionflow.pro/api/Main/Portfolio"
+        );
+        setPortfolioData(serviceResponse.data);
+        console.log("fesdf");
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchService();
+  }, []);
+
+  console.log(portfolioData);
   return (
     <div className="page-wrapper">
       <div className="pbmit-title-bar-wrapper">
@@ -69,13 +39,11 @@ const Portfolio = () => {
         <section className="section-lg">
           <div className="container">
             <div className="row">
-              {portfolioContent.map((item) => (
-                <PortfolioBlock
-                  itemName={item.name}
-                  itemText={item.text}
-                  key={item.id}
-                />
-              ))}
+              {portfolioData
+                ? portfolioData.map((item) => (
+                    <PortfolioBlock portfolioObject={item} key={item.id} />
+                  ))
+                : null}
             </div>
           </div>
         </section>

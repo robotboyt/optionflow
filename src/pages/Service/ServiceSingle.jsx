@@ -23,7 +23,7 @@ const ServiceSingle = () => {
       const fetchService = async () => {
         try {
           const serviceResponse = await axios.get(
-            "http://192.168.0.66:2000/api/service"
+            "https://optionflow.pro/api/Main/Services"
           );
 
           const resultResponse = await serviceResponse.data.filter(
@@ -161,35 +161,19 @@ const ServiceSingle = () => {
                   </div>
                   <div className="col-lg-8 service-right-col order-1">
                     <img
-                      src={currentService[0].imageUrl}
+                      src={currentService[0].serviceImg}
                       className="w-100"
                       alt=""
                     />
                     <div className="service-details">
                       <h4 className="pbmit-title">{currentService[0].title}</h4>
                       <div className="mt-4">
-                        {/* <span className="dropcap rounded">
-                          {currentService[0].subtitle}
-                        </span> */}
-                        {/* {currentService[0].article} */}
                         <div
                           dangerouslySetInnerHTML={{
-                            __html: currentService[0].article,
+                            __html: currentService[0].description,
                           }}
                         ></div>
                       </div>
-                      {/* <div>
-                    <div>
-                      Posuere morbi leo urna molestie at. Ipsum dolor sit amet
-                      consectetur adipiscing elit pellentesque habitant morbi.
-                      Odio ut enim blandit volutpat maecenas volutpat. Tristique
-                      magna sit amet purus gravida. Vitae proin sagittis nisl
-                      rhoncus. Sagittis nisl rhoncus mattis rhoncus urna. Mauris
-                      vitae ultricies leo integer. Elit eget gravida cum sociis
-                      natoque Amet consectetur adipiscing elit ut aliquam purus
-                      sit amet luctus.
-                    </div>
-                  </div> */}
                     </div>
                   </div>
                 </div>

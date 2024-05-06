@@ -12,10 +12,11 @@ const Service = () => {
     const fetchService = async () => {
       try {
         const serviceResponse = await axios.get(
-          "http://192.168.0.66:2000/api/service"
+          "https://optionflow.pro/api/Main/Services"
         );
         setServiceData(serviceResponse.data);
         setFetchedServiceData(serviceResponse.data);
+        console.log("fesdf");
       } catch (error) {
         console.error(error);
       }
@@ -51,16 +52,19 @@ const Service = () => {
             <div className="container">
               <div className="row">
                 {serviceData
-                  ? serviceData.map((serviceItem) => (
-                      <ServiceContentBox
-                        serviceTitle={serviceItem.title}
-                        serviceCategory={serviceItem.subtitle}
-                        serviceLink={`/service-single/${serviceItem.id}`}
-                        serviceImg={serviceItem.imageUrl}
-                        // serviceIcon={serviceItem.iconClass}
-                        key={serviceItem.id}
-                      />
-                    ))
+                  ? serviceData
+                      .reverse()
+                      .map((serviceItem) => (
+                        <ServiceContentBox
+                          serviceTitle={serviceItem.title}
+                          serviceCategory={serviceItem.category}
+                          serviceLink={`/service-single/${serviceItem.id}`}
+                          serviceImg={serviceItem.serviceImage}
+                          serviceDescription={serviceItem.description}
+                          serviceIcon={serviceItem.iconType}
+                          key={serviceItem.id}
+                        />
+                      ))
                   : null}
               </div>
             </div>
