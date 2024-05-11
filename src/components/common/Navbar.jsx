@@ -5,7 +5,6 @@ import logoWhite from "../../Images/logo-white.svg";
 import CustomLink from "./CustomLink";
 import { DataContext } from "../../Context/DataContext";
 import { matchPath } from "react-router-dom";
-// import { loadScript } from "./utils";
 
 const Navbar = () => {
   const location = useLocation();
@@ -321,7 +320,7 @@ const Navbar = () => {
                               <li
                                 className={
                                   location.pathname === "/blog" ||
-                                  location.pathname === "/blog-single"
+                                  location.pathname.includes("/blog-single/")
                                     ? "active"
                                     : null
                                 }

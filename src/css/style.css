@@ -688,6 +688,7 @@
 .pbmit-portfolio-line-li .pbmit-portfolio-line-value,
 .pbmit-portfolio-line-li .pbmit-portfolio-line-value a {
   color: #c5c5c5;
+  line-height: 25px;
 }
 .portfolio-challange {
   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;

@@ -11,11 +11,11 @@ const Service = () => {
   useEffect(() => {
     const fetchService = async () => {
       try {
-        const serviceResponse = await axios.get(
+        const dataResponse = await axios.get(
           "https://optionflow.pro/api/Main/Services"
         );
-        setServiceData(serviceResponse.data);
-        setFetchedServiceData(serviceResponse.data);
+        setServiceData(dataResponse.data);
+        setFetchedServiceData(dataResponse.data);
         console.log("fesdf");
       } catch (error) {
         console.error(error);

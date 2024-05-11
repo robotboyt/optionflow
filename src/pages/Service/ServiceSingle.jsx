@@ -22,18 +22,18 @@ const ServiceSingle = () => {
     } else {
       const fetchService = async () => {
         try {
-          const serviceResponse = await axios.get(
+          const dataResponse = await axios.get(
             "https://optionflow.pro/api/Main/Services"
           );
 
-          const resultResponse = await serviceResponse.data.filter(
+          const resultResponse = await dataResponse.data.filter(
             (obj) => obj.id === +id
           );
           if (resultResponse.length === 0) {
             navigate("/*");
           }
           await setCurrentService(resultResponse);
-          setFetchedServiceData(serviceResponse.data);
+          setFetchedServiceData(dataResponse.data);
         } catch (error) {
           console.error(error);
         }
@@ -46,7 +46,7 @@ const ServiceSingle = () => {
   return (
     <div className="page-wrapper">
       {currentService ? (
-        <div>
+        <>
           <div className="pbmit-title-bar-wrapper">
             <div className="container">
               <div className="pbmit-title-bar-content">
@@ -180,7 +180,7 @@ const ServiceSingle = () => {
               </div>
             </section>
           </div>
-        </div>
+        </>
       ) : null}
     </div>
   );

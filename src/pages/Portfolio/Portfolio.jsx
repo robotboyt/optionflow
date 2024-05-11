@@ -1,25 +1,33 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import PortfolioBlock from "./PortfolioBlock";
+import { DataContext } from "../../Context/DataContext";
 
 const Portfolio = () => {
   const [portfolioData, setPortfolioData] = useState(null);
+  const { portfolioNewData, setFetchedPortfolioData } = useContext(DataContext);
+
   useEffect(() => {
     const fetchService = async () => {
       try {
-        const serviceResponse = await axios.get(
+        const dataResponse = await axios.get(
           "https://optionflow.pro/api/Main/Portfolio"
         );
-        setPortfolioData(serviceResponse.data);
-        console.log("fesdf");
+        setPortfolioData(dataResponse.data);
+        setFetchedPortfolioData(dataResponse.data);
+        console.log("requeest");
       } catch (error) {
         console.error(error);
       }
     };
-    fetchService();
-  }, []);
 
-  console.log(portfolioData);
+    if (portfolioNewData !== null) {
+      setPortfolioData(portfolioNewData);
+    } else {
+      fetchService();
+    }
+  }, [portfolioNewData, setFetchedPortfolioData]);
+
   return (
     <div className="page-wrapper">
       <div className="pbmit-title-bar-wrapper">
@@ -28,7 +36,7 @@ const Portfolio = () => {
             <div className="pbmit-title-bar-content-inner">
               <div className="pbmit-tbar">
                 <div className="pbmit-tbar-inner container">
-                  <h1 className="pbmit-tbar-title">Portfolio Style 1</h1>
+                  <h1 className="pbmit-tbar-title">Наше Порфтоліо</h1>
                 </div>
               </div>
             </div>
@@ -40,9 +48,11 @@ const Portfolio = () => {
           <div className="container">
             <div className="row">
               {portfolioData
-                ? portfolioData.map((item) => (
-                    <PortfolioBlock portfolioObject={item} key={item.id} />
-                  ))
+                ? portfolioData
+                    .reverse()
+                    .map((item) => (
+                      <PortfolioBlock portfolioObject={item} key={item.id} />
+                    ))
                 : null}
             </div>
           </div>

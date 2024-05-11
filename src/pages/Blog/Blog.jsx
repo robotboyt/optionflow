@@ -1,8 +1,33 @@
-import React from "react";
-import BlogData from "./BlogData";
+import React, { useEffect, useState, useContext } from "react";
 import BlogContetBox from "./BlogContetBox";
+import { DataContext } from "../../Context/DataContext";
+import axios from "axios";
 
 const Blog = () => {
+  const [blogData, setBlogData] = useState(null);
+  const { blogNewData, setFetchedBlogData } = useContext(DataContext);
+
+  useEffect(() => {
+    const fetchService = async () => {
+      try {
+        const dataResponse = await axios.get(
+          "https://optionflow.pro/api/Main/Blog"
+        );
+        setBlogData(dataResponse.data);
+        setFetchedBlogData(dataResponse.data);
+        console.log("fesdf");
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    if (blogNewData !== null) {
+      setBlogData(blogNewData);
+    } else {
+      fetchService();
+    }
+  }, []);
+
+  console.log(blogData);
   return (
     <div className="page-wrapper">
       <div className="pbmit-title-bar-wrapper">
@@ -11,7 +36,7 @@ const Blog = () => {
             <div className="pbmit-title-bar-content-inner">
               <div className="pbmit-tbar">
                 <div className="pbmit-tbar-inner container">
-                  <h1 className="pbmit-tbar-title">Blog</h1>
+                  <h1 className="pbmit-tbar-title">Блог</h1>
                 </div>
               </div>
             </div>
@@ -22,16 +47,11 @@ const Blog = () => {
         <section className="section-lg">
           <div className="container">
             <div className="row">
-              {BlogData.map((blogItem) => (
-                <BlogContetBox
-                  blogTitle={blogItem.title}
-                  blogDate={blogItem.date}
-                  blogComments={blogItem.comments}
-                  blogCategory={blogItem.category}
-                  blogImg={blogItem.imageSrc}
-                  key={blogItem.id}
-                />
-              ))}
+              {blogData
+                ? blogData.map((blogItem) => (
+                    <BlogContetBox blogObject={blogItem} key={blogItem.id} />
+                  ))
+                : null}
             </div>
           </div>
         </section>
