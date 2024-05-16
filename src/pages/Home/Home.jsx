@@ -1,13 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import CustomLink from "../../components/common/CustomLink.jsx";
 import axios from "axios";
 import Sphere from "../../animation/Sphere.jsx";
 import TabContent from "../../components/HomeComponents/TabContent.jsx";
 import SliderComponent from "../../components/HomeComponents/Slider.jsx";
+import { DataContext } from "../../Context/DataContext.jsx";
 
 const Home = () => {
   const [cardData, setCardData] = useState({});
   const [servicesData, setServicesData] = useState({});
+  const [blogData, setBlogData] = useState(null);
+  const { blogNewData, setFetchedBlogData } = useContext(DataContext);
   const [dataLoading, setDataLoading] = useState(false);
 
   useEffect(() => {
@@ -19,9 +23,14 @@ const Home = () => {
         const servicesResponse = await axios.get(
           "http://192.168.0.66:2000/api/services"
         );
+        const blogResponse = await axios.get(
+          "https://optionflow.pro/api/Main/Blog"
+        );
         setCardData(cardResponse);
         setServicesData(servicesResponse);
+        setBlogData(blogResponse.data.slice(0, 3));
         setDataLoading(true);
+        setFetchedBlogData(blogResponse.data);
       } catch (error) {
         console.log("We get the error", error);
       }
@@ -31,6 +40,8 @@ const Home = () => {
 
     return () => {};
   }, []);
+
+  console.log(blogData);
 
   return (
     <div className="page-wrapper">
@@ -55,9 +66,9 @@ const Home = () => {
                     Cпільно творимо майбутнє: об'єднуємо іновації та творчість.
                   </p>
                   <div>
-                    <Link to="/contacts" className="pbmit-btn">
+                    <CustomLink propsHref="/contacts" className="pbmit-btn">
                       Отримати консультацію
-                    </Link>
+                    </CustomLink>
                   </div>
                 </div>
               </div>
@@ -95,9 +106,9 @@ const Home = () => {
                               <span>{item.category.category3}</span>
                             </div>
                             <div className="pbmit-ihbox-btn">
-                              <Link to="#">
+                              <CustomLink propsHref="#">
                                 <span>Читати більше</span>
-                              </Link>
+                              </CustomLink>
                             </div>
                           </div>
                         </div>
@@ -232,110 +243,56 @@ const Home = () => {
             <div className="row g-0">
               <div className="col-xl-5 col-md-12 p-0">
                 <div className="pbmit-heading-subheading-style-6">
-                  <h4 className="pbmit-subtitle">LATEST NEWS</h4>
+                  <h4 className="pbmit-subtitle">ОСТАННІ ПУБЛІКАЦІЇ</h4>
                   <h2 className="pbmit-title">
-                    What's new?
+                    Що нового?
                     <br />
-                    My Blog And News.
+                    Наш блог та новини
                   </h2>
                 </div>
-                <Link
-                  to="blog-grid-view.html"
+                <CustomLink
+                  propsHref="/blog"
                   className="pbmit-btn pbmit-btn-hover-secondary"
                 >
-                  View All
-                </Link>
+                  ДИВИТИСЬ ВСІ
+                </CustomLink>
               </div>
               <div className="col-xl-7 col-md-12 p-0">
                 <article className="pbmit-blog-style-5 col-md-12">
-                  <div className="post-item">
-                    <div className="pbminfotech-box-content">
-                      <div className="pbmit-meta-container">
-                        <span className="pbmit-date-wrapper">
-                          <span className="pbmit-post-date pbmit-meta-line">
-                            May 17
-                          </span>
-                        </span>
-                        <span className="pbmit-meta-category pbmit-meta-line">
-                          <Link to="" rel="category tag">
-                            Broadband
-                          </Link>
-                        </span>
-                      </div>
-                      <div className="pbmit-content-wrapper">
-                        <h3 className="pbmit-post-title">
-                          <Link to="blog-single-details-two.html">
-                            Easy ways to implement wellbeing programs
-                          </Link>
-                        </h3>
-                      </div>
-                      <div className="pbmit-read-more-link">
-                        <Link to="blog-single-details-two.html">
-                          <span className="pbmit-arrow"></span>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-                <article className="pbmit-blog-style-5 col-md-12">
-                  <div className="post-item">
-                    <div className="pbminfotech-box-content">
-                      <div className="pbmit-meta-container">
-                        <span className="pbmit-date-wrapper">
-                          <span className="pbmit-post-date pbmit-meta-line">
-                            Apr 25
-                          </span>
-                        </span>
-                        <span className="pbmit-meta-category pbmit-meta-line">
-                          <Link to="" rel="category tag">
-                            Internet
-                          </Link>
-                        </span>
-                      </div>
-                      <div className="pbmit-content-wrapper">
-                        <h3 className="pbmit-post-title">
-                          <Link to="blog-single-details-two.html">
-                            Things Can Help Any coworking Flourish Again
-                          </Link>
-                        </h3>
-                      </div>
-                      <div className="pbmit-read-more-link">
-                        <Link to="blog-single-details-two.html">
-                          <span className="pbmit-arrow"></span>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-                <article className="pbmit-blog-style-5 col-md-12">
-                  <div className="post-item">
-                    <div className="pbminfotech-box-content">
-                      <div className="pbmit-meta-container">
-                        <span className="pbmit-date-wrapper">
-                          <span className="pbmit-post-date pbmit-meta-line">
-                            Apr 08
-                          </span>
-                        </span>
-                        <span className="pbmit-meta-category pbmit-meta-line">
-                          <Link to="" rel="category tag">
-                            Mobile
-                          </Link>
-                        </span>
-                      </div>
-                      <div className="pbmit-content-wrapper">
-                        <h3 className="pbmit-post-title">
-                          <Link to="blog-single-details-two.html">
-                            Five Ways Elevate Your Employees Workplace
-                          </Link>
-                        </h3>
-                      </div>
-                      <div className="pbmit-read-more-link">
-                        <Link to="blog-single-details-two.html">
-                          <span className="pbmit-arrow"></span>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
+                  {blogData
+                    ? blogData.map((blogItem) => (
+                        <div className="post-item" key={blogItem.id.toString()}>
+                          <div className="pbminfotech-box-content">
+                            <div className="pbmit-meta-container">
+                              <span className="pbmit-date-wrapper">
+                                <span className="pbmit-post-date pbmit-meta-line">
+                                  {blogItem.dateCreate}
+                                </span>
+                              </span>
+                              <span className="pbmit-meta-category pbmit-meta-line">
+                                {blogItem.shortTitle}
+                              </span>
+                            </div>
+                            <div className="pbmit-content-wrapper">
+                              <h3 className="pbmit-post-title">
+                                <CustomLink
+                                  propsHref={`/blog-single/${blogItem.id}`}
+                                >
+                                  {blogItem.title}
+                                </CustomLink>
+                              </h3>
+                            </div>
+                            <div className="pbmit-read-more-link">
+                              <CustomLink
+                                propsHref={`/blog-single/${blogItem.id}`}
+                              >
+                                <span className="pbmit-arrow"></span>
+                              </CustomLink>
+                            </div>
+                          </div>
+                        </div>
+                      ))
+                    : null}
                 </article>
               </div>
             </div>

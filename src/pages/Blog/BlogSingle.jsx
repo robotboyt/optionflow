@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import { DataContext } from "../../Context/DataContext";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
+import CustomLink from "../../components/common/CustomLink";
 
 const BlogSingle = () => {
   const navigate = useNavigate();
@@ -74,7 +75,7 @@ const BlogSingle = () => {
                             <div className="pbmit-featured-container">
                               <div className="pbmit-featured-wrapper">
                                 <img
-                                  src={currentBlog[0].blogImage}
+                                  src={`https://optionflow.pro/${currentBlog[0].blogImage}`}
                                   className="img-fluid w-100"
                                   alt=""
                                 />
@@ -101,19 +102,21 @@ const BlogSingle = () => {
                               className="recent-post-list-li"
                               key={postItem.id.toString()}
                             >
-                              <a className="recent-post-thum" href="#">
+                              <CustomLink
+                                className="recent-post-thum"
+                                propsHref={`/blog-single/${postItem.id}`}
+                              >
                                 <img
-                                  src={postItem.blogImage}
+                                  src={`https://optionflow.pro/${postItem.blogImage}`}
                                   className="img-fluid"
                                   alt=""
                                 />
-                              </a>
-                              <div className="media-body">
-                                <a href={`/blog-single/${postItem.id}`}>
+
+                                <div className="media-body">
                                   {postItem.title}
-                                </a>
-                                <span className="post-date"></span>
-                              </div>
+                                  <span className="post-date"></span>
+                                </div>
+                              </CustomLink>
                             </li>
                           ))}
                         </ul>
@@ -142,7 +145,7 @@ const BlogSingle = () => {
                             <div className="pbmit-ads-logo-white">
                               <img
                                 className="size-full"
-                                src="images/internet/logo.svg"
+                                src="https://optionflow.pro/images/internet/logo.svg"
                                 alt="single15img"
                               />
                             </div>
@@ -154,9 +157,9 @@ const BlogSingle = () => {
                               Мета
                             </h3>
                             <div className="pbmit-ads-button">
-                              <a href="#">
+                              <CustomLink propsHref={"/contacts"}>
                                 <span>Консультація</span>
-                              </a>
+                              </CustomLink>
                             </div>
                           </div>
                         </div>

@@ -811,8 +811,10 @@ body {
   transform: perspective(400px) rotateY(0deg);
 }
 .pbmit-portfolio-style-4 .pbmit-featured-wrapper img {
+  height: 400px;
   width: 100%;
   border-radius: 20px;
+  object-fit: cover;
 }
 .pbmit-portfolio-style-4 .pbminfotech-titlebox {
   position: absolute;
@@ -1229,6 +1231,14 @@ body {
   -webkit-transform: translateY(-10px);
   transform: translateY(-10px);
 }
+
+/* .pbmit-box-content-wrapper {
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} */
+
 .pbmit-blog-style-6 .pbmit-featured-wrapper img {
   width: 100%;
   border-radius: 20px;
@@ -1240,6 +1250,10 @@ body {
   line-height: 30px;
   margin-bottom: 20px;
   font-weight: normal;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: white;
 }
 .pbmit-blog-style-6 .pbminfotech-box-content {
   position: relative;

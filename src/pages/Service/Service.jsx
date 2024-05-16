@@ -14,8 +14,9 @@ const Service = () => {
         const dataResponse = await axios.get(
           "https://optionflow.pro/api/Main/Services"
         );
-        setServiceData(dataResponse.data);
-        setFetchedServiceData(dataResponse.data);
+        let data = dataResponse.data.reverse();
+        setServiceData(data);
+        setFetchedServiceData(data);
         console.log("fesdf");
       } catch (error) {
         console.error(error);
@@ -26,10 +27,7 @@ const Service = () => {
     } else {
       fetchService();
     }
-  }, [serviceNewData, setFetchedServiceData]);
-
-  console.log(serviceData);
-
+  }, []);
   return (
     <div>
       <div className="page-wrapper">
@@ -52,19 +50,17 @@ const Service = () => {
             <div className="container">
               <div className="row">
                 {serviceData
-                  ? serviceData
-                      .reverse()
-                      .map((serviceItem) => (
-                        <ServiceContentBox
-                          serviceTitle={serviceItem.title}
-                          serviceCategory={serviceItem.category}
-                          serviceLink={`/service-single/${serviceItem.id}`}
-                          serviceImg={serviceItem.serviceImage}
-                          serviceDescription={serviceItem.description}
-                          serviceIcon={serviceItem.iconType}
-                          key={serviceItem.id}
-                        />
-                      ))
+                  ? serviceData.map((serviceItem) => (
+                      <ServiceContentBox
+                        serviceTitle={serviceItem.title}
+                        serviceCategory={serviceItem.category}
+                        serviceLink={`/service-single/${serviceItem.id}`}
+                        serviceImg={serviceItem.serviceImage}
+                        serviceDescription={serviceItem.description}
+                        serviceIcon={serviceItem.iconType}
+                        key={serviceItem.id}
+                      />
+                    ))
                   : null}
               </div>
             </div>

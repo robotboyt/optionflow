@@ -1,6 +1,35 @@
-import React from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { DataContext } from "../Context/DataContext";
+import axios from "axios";
+import CustomLink from "../components/common/CustomLink";
 
 const About = () => {
+  const [blogData, setBlogData] = useState(null);
+  const { blogNewData, setFetchedBlogData } = useContext(DataContext);
+
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const blogResponse = await axios.get(
+          "https://optionflow.pro/api/Main/Blog"
+        );
+        setBlogData(blogResponse.data.slice(0, 3));
+        setFetchedBlogData(blogResponse.data);
+      } catch (error) {
+        console.log("Here is some error in fetch:", error);
+      }
+    };
+    getData();
+
+    if (blogNewData !== null) {
+      setBlogData(blogNewData.slice(0, 3));
+    } else {
+      getData();
+    }
+
+    return () => {};
+  }, []);
+
   return (
     <div className="page-wrapper">
       <div className="pbmit-title-bar-wrapper">
@@ -83,19 +112,26 @@ const About = () => {
                 </div>
                 <div className="pbmit-ihbox pbmit-ihbox-style-20 mt-5">
                   <div className="pbmit-ihbox-box d-flex align-items-center">
-                    <div className="pbmit-ihbox-icon">
-                      <div className="pbmit-ihbox-icon-wrapper">
-                        <div className="pbmit-icon-wrapper pbmit-icon-type-icon">
-                          <i className="pbmit-xido-icon pbmit-xido-icon-email"></i>
+                    <a
+                      href="mailto:info@optionflow.pro"
+                      className="about-us-email-widget"
+                    >
+                      <div className="pbmit-ihbox-icon">
+                        <div className="pbmit-ihbox-icon-wrapper">
+                          <div className="pbmit-icon-wrapper pbmit-icon-type-icon">
+                            <i className="pbmit-xido-icon pbmit-xido-icon-email"></i>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="pbmit-ihbox-contents">
-                      <div className="pbmit-heading-desc">Відправити пошту</div>
-                      <h2 className="pbmit-element-title">
-                        optionflowit@gmail.com
-                      </h2>
-                    </div>
+                      <div className="pbmit-ihbox-contents">
+                        <div className="pbmit-heading-desc">
+                          Відправити пошту
+                        </div>
+                        <h2 className="pbmit-element-title">
+                          optionflowit@gmail.com
+                        </h2>
+                      </div>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -170,130 +206,51 @@ const About = () => {
             </div>
             <div className="row">
               <article className="pbmit-blog-style-2 col-md-12">
-                <div className="post-item">
-                  <div className="pbminfotech-box-content">
-                    <div className="pbmit-meta-date-wrapper pbmit-meta-line">
-                      <div className="pbmit-meta-date">
-                        <span className="pbmit-date-wrap">17</span>
-                        <span> May , 2022 </span>
-                      </div>
-                    </div>
-                    <div className="pbmit-content-wrapper">
-                      <div className="pbmit-meta-cat-wrapper pbmit-meta-line">
-                        <div className="pbmit-meta-category">
-                          <a href="#" rel="category tag">
-                            Agreements
-                          </a>
+                {blogData
+                  ? blogData.map((blogItem) => (
+                      <div className="post-item" key={blogItem.id.toString()}>
+                        <div className="pbminfotech-box-content">
+                          <div className="pbmit-content-wrapper">
+                            <div className="pbmit-meta-cat-wrapper pbmit-meta-line">
+                              <div className="pbmit-meta-category">
+                                <CustomLink
+                                  propsHref={`/blog-single/${blogItem.id}`}
+                                  rel="category tag"
+                                >
+                                  {blogItem.category}
+                                </CustomLink>
+                              </div>
+                            </div>
+                            <h3 className="pbmit-post-title">
+                              <CustomLink
+                                propsHref={`/blog-single/${blogItem.id}`}
+                              >
+                                {blogItem.title}
+                              </CustomLink>
+                            </h3>
+                          </div>
+                          <div className="pbmit-featured-container">
+                            <div className="pbmit-featured-img-wrapper">
+                              <div className="pbmit-featured-wrapper">
+                                <img
+                                  src="images/coworking/blog/blog-01.jpg"
+                                  className="img-fluid"
+                                  alt=""
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <div className="pbmit-read-more-link">
+                            <CustomLink
+                              propsHref={`/blog-single/${blogItem.id}`}
+                            >
+                              <span>Продовжити читати</span>
+                            </CustomLink>
+                          </div>
                         </div>
                       </div>
-                      <h3 className="pbmit-post-title">
-                        <a href="#">
-                          Easy ways to implement wellbeing programs
-                        </a>
-                      </h3>
-                    </div>
-                    <div className="pbmit-featured-container">
-                      <div className="pbmit-featured-img-wrapper">
-                        <div className="pbmit-featured-wrapper">
-                          <img
-                            src="images/coworking/blog/blog-01.jpg"
-                            className="img-fluid"
-                            alt=""
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="pbmit-read-more-link">
-                      <a href="blog-single-details.html">
-                        <span>Продовжити читати</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <article className="pbmit-blog-style-2 col-md-12">
-                <div className="post-item">
-                  <div className="pbminfotech-box-content">
-                    <div className="pbmit-meta-date-wrapper pbmit-meta-line">
-                      <div className="pbmit-meta-date">
-                        <span className="pbmit-date-wrap">25</span>
-                        <span> April , 2022 </span>
-                      </div>
-                    </div>
-                    <div className="pbmit-content-wrapper">
-                      <div className="pbmit-meta-cat-wrapper pbmit-meta-line">
-                        <div className="pbmit-meta-category">
-                          <a href="#" rel="category tag">
-                            coworking
-                          </a>
-                        </div>
-                      </div>
-                      <h3 className="pbmit-post-title">
-                        <a href="#">
-                          Things Can Help Any coworking Flourish Again
-                        </a>
-                      </h3>
-                    </div>
-                    <div className="pbmit-featured-container">
-                      <div className="pbmit-featured-img-wrapper">
-                        <div className="pbmit-featured-wrapper">
-                          <img
-                            src="images/coworking/blog/blog-01.jpg"
-                            className="img-fluid"
-                            alt=""
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="pbmit-read-more-link">
-                      <a href="blog-single-details.html">
-                        <span>Продовжити читати</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <article className="pbmit-blog-style-2 col-md-12">
-                <div className="post-item">
-                  <div className="pbminfotech-box-content">
-                    <div className="pbmit-meta-date-wrapper pbmit-meta-line">
-                      <div className="pbmit-meta-date">
-                        <span className="pbmit-date-wrap">08</span>
-                        <span> April , 2022 </span>
-                      </div>
-                    </div>
-                    <div className="pbmit-content-wrapper">
-                      <div className="pbmit-meta-cat-wrapper pbmit-meta-line">
-                        <div className="pbmit-meta-category">
-                          <a href="#" rel="category tag">
-                            Leadership
-                          </a>
-                        </div>
-                      </div>
-                      <h3 className="pbmit-post-title">
-                        <a href="#">
-                          Five Ways Elevate Your Employees Workplace
-                        </a>
-                      </h3>
-                    </div>
-                    <div className="pbmit-featured-container">
-                      <div className="pbmit-featured-img-wrapper">
-                        <div className="pbmit-featured-wrapper">
-                          <img
-                            src="images/coworking/blog/blog-01.jpg"
-                            className="img-fluid"
-                            alt=""
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="pbmit-read-more-link">
-                      <a href="blog-single-details.html">
-                        <span>Продовжити читати</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
+                    ))
+                  : null}
               </article>
             </div>
           </div>

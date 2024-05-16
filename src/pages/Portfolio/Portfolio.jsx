@@ -13,8 +13,9 @@ const Portfolio = () => {
         const dataResponse = await axios.get(
           "https://optionflow.pro/api/Main/Portfolio"
         );
-        setPortfolioData(dataResponse.data);
-        setFetchedPortfolioData(dataResponse.data);
+        let data = dataResponse.data.reverse();
+        setPortfolioData(data);
+        setFetchedPortfolioData(data);
         console.log("requeest");
       } catch (error) {
         console.error(error);
@@ -26,7 +27,7 @@ const Portfolio = () => {
     } else {
       fetchService();
     }
-  }, [portfolioNewData, setFetchedPortfolioData]);
+  }, []);
 
   return (
     <div className="page-wrapper">
@@ -48,11 +49,9 @@ const Portfolio = () => {
           <div className="container">
             <div className="row">
               {portfolioData
-                ? portfolioData
-                    .reverse()
-                    .map((item) => (
-                      <PortfolioBlock portfolioObject={item} key={item.id} />
-                    ))
+                ? portfolioData.map((item) => (
+                    <PortfolioBlock portfolioObject={item} key={item.id} />
+                  ))
                 : null}
             </div>
           </div>

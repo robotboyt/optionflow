@@ -58,8 +58,8 @@
   margin-bottom: 35px;
 }
 .pbmit-text-style-6 .pbmit-btn:hover {
-  color: var(--pbmit-blackish-color);
-  background-color: var(--pbmit-white-color);
+  color: var(--pbmit-white-color);
+  background-color: var(--pbmit-blackish-color);
 }
 .pbmit-text-style-6 .button-text {
   font-family: Quicksand, sans-serif;
@@ -94,7 +94,7 @@
 
 /** 00 - About Us **/
 .about-us-section-home-left {
-  background-image: url(../Images/coworking/about.jpg);
+  /* background-image: url(../Images/coworking/about.jpg); */
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -104,7 +104,7 @@
   padding: 80px 45px 80px 90px;
 }
 .about-us-section-bg {
-  background-image: url(../Images/coworking/about.jpg);
+  /* background-image: url(../Images/coworking/about.jpg); */
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -128,6 +128,11 @@
 
 .about-us-right-home3 {
   padding: 50px 15px 50px 180px;
+}
+
+.about-us-email-widget {
+  display: flex;
+  align-items: center;
 }
 
 /** 01 - our history**/
@@ -321,6 +326,12 @@
 .portfolio-challange .subchallange {
   color: #757c8c;
 }
+
+.portfolio-challange-bg {
+  width: 640px;
+  height: 380px;
+}
+
 .post-list {
   list-style-type: none;
   margin: 0;
@@ -702,8 +713,11 @@
 }
 
 .portfolio-challange-bg img {
-  width: 640px;
-  height: 380px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
 }
 .portfolio-single .post-navigation {
   margin-top: 70px;
@@ -1039,12 +1053,14 @@
 }
 .sidebar .recent-post-list li {
   padding-bottom: 30px;
-  display: flex !important;
-  align-items: center;
   width: 100%;
 }
 .sidebar .recent-post-list li:last-child {
   padding-bottom: 0;
+}
+
+.recent-post-list {
+  padding-left: 0px;
 }
 .sidebar .recent-post-list .media {
   display: flex;
@@ -1095,7 +1111,7 @@
   background: none;
 }
 .widget.single-service-contact {
-  background-image: url(../Images/coworking/pbmit-ads.png);
+  background-image: url(../Images/internet/widgetImage.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right bottom;
@@ -1195,7 +1211,7 @@
   line-height: 36px;
   padding: 30px 0 30px 0;
   font-weight: 600;
-  color: var(--pbmit-blackish-color);
+  color: #0b2242;
 }
 .pbmit-ads-inner h3.pbmit-ads-title span {
   color: var(--pbmit-global-color);
@@ -1217,7 +1233,6 @@
   left: -50px;
   width: 100%;
   height: 100%;
-  background-color: var(--pbmit-white-color);
   z-index: -1;
 }
 .pbmit-ads-inner .pbmit-ads-button {
@@ -1461,6 +1476,10 @@ textarea.form-control:focus {
   padding: 25px 0 32px 0;
 }
 
+.section-lg .pe-4 {
+  color: #757c8c;
+}
+
 .pbmit-list-style-1 .icon-list-items li {
   position: relative;
   font-size: 22px;
@@ -1481,4 +1500,59 @@ textarea.form-control:focus {
 
 .service-section-home3 .col-md-6 {
   margin-bottom: 200px;
+}
+
+.resume-send-block {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custum-file-upload {
+  height: 200px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  gap: 20px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--pbmit-global-color);
+  background-color: var(--pbmit-secondary-color);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.custum-file-upload:hover {
+  transition: 0.2s ease-in-out;
+  box-shadow: 0px 48px 35px -48px var(--pbmit-global-color);
+}
+
+.custum-file-upload .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custum-file-upload .icon svg {
+  height: 80px;
+  fill: #e8e8e8;
+}
+
+.custum-file-upload .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custum-file-upload .text span {
+  font-weight: 400;
+  color: #e8e8e8;
+}
+
+.custum-file-upload input {
+  display: none;
 }

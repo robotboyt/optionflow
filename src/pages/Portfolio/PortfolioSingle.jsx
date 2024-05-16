@@ -37,7 +37,7 @@ const PortfolioSingle = () => {
       };
       fetchService();
     }
-  }, [id, portfolioNewData]);
+  }, [id]);
 
   return (
     <div className="page-wrapper">
@@ -98,9 +98,7 @@ const PortfolioSingle = () => {
                               Категорія:
                             </span>
                             <span className="pbmit-portfolio-line-value">
-                              <a href="#" rel="tag">
-                                {currentPortfolio[0].category}
-                              </a>
+                              {currentPortfolio[0].category}
                             </span>
                           </li>
                         </ul>
@@ -139,10 +137,14 @@ const PortfolioSingle = () => {
 
                         <a
                           href={currentPortfolio[0].projectLink}
-                          className="col-md-6"
+                          class="col-md-6"
                           target="_blank"
                         >
-                          <div className="portfolio-challange-bg"></div>
+                          <div class="portfolio-challange-bg">
+                            <img
+                              src={`https://optionflow.pro/${currentPortfolio[0].portfolioImage}`}
+                            />
+                          </div>
                         </a>
                       </div>
                     </div>

@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import logoBlack from "./../../Images/logo.svg";
 import { useNavigate } from "react-router-dom";
+import CustomLink from "../../components/common/CustomLink";
 
 const ServiceSingle = () => {
   const navigate = useNavigate();
@@ -33,7 +34,7 @@ const ServiceSingle = () => {
             navigate("/*");
           }
           await setCurrentService(resultResponse);
-          setFetchedServiceData(dataResponse.data);
+          setFetchedServiceData(dataResponse.data.reverse());
         } catch (error) {
           console.error(error);
         }
@@ -73,43 +74,21 @@ const ServiceSingle = () => {
                         <h2 className="widget-title">Всі послуги</h2>
                         <div className="all-post-list">
                           <ul>
-                            <li className="post-active">
-                              <a href="services-details.html">ІТ-консалтинг</a>
-                            </li>
-                            <li>
-                              <a href="services-details.html">
-                                Супровід проектів
-                              </a>
-                            </li>
-                            <li>
-                              <a href="services-details.html">
-                                Розробка мобільних додатків
-                              </a>
-                            </li>
-                            <li>
-                              <a href="services-details.html">
-                                {" "}
-                                React розробка{" "}
-                              </a>
-                            </li>
-                            <li>
-                              <a href="services-details.html"> SSM послуги </a>
-                            </li>
-                            <li>
-                              <a href="services-details.html">
-                                .Net Core розробка
-                              </a>
-                            </li>
-                            <li>
-                              <a href="services-details.html">
-                                Контекстна та таргетована реклама
-                              </a>
-                            </li>
-                            <li>
-                              <a href="services-details.html">
-                                Корпоративні платформи
-                              </a>
-                            </li>
+                            {serviceNewData.map((serviceItem) => (
+                              <li
+                                className={
+                                  serviceItem.title === currentService[0].title
+                                    ? "post-active"
+                                    : null
+                                }
+                              >
+                                <CustomLink
+                                  propsHref={`/service-single/${serviceItem.id}`}
+                                >
+                                  {serviceItem.title}
+                                </CustomLink>
+                              </li>
+                            ))}
                           </ul>
                         </div>
                       </aside>
@@ -119,7 +98,7 @@ const ServiceSingle = () => {
                             <div className="pbmit-download">
                               <div className="pbmit-item-download">
                                 <a
-                                  href="#"
+                                  href="https://optionflow.pro/docs/OptionFlow.pdf"
                                   target="_blank"
                                   rel="noopener noreferrer"
                                 >
@@ -150,9 +129,9 @@ const ServiceSingle = () => {
                               Мета
                             </h3>
                             <div className="pbmit-ads-button">
-                              <a href="#">
+                              <CustomLink propsHref={"/contacts"}>
                                 <span>Консультація</span>
-                              </a>
+                              </CustomLink>
                             </div>
                           </div>
                         </div>
@@ -161,7 +140,7 @@ const ServiceSingle = () => {
                   </div>
                   <div className="col-lg-8 service-right-col order-1">
                     <img
-                      src={currentService[0].serviceImg}
+                      src={`https://optionflow.pro/${currentService[0].serviceImage}`}
                       className="w-100"
                       alt=""
                     />

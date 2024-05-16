@@ -1,8 +1,47 @@
-import React from "react";
-
+import React, { useState } from "react";
 import CustomLink from "../components/common/CustomLink";
+import axios from "axios";
 
 const Contacts = () => {
+  const initialState = {
+    contact: {
+      id: 0,
+      name: "",
+      email: "",
+      mobile: "",
+      description: "",
+    },
+  };
+
+  const [data, setData] = useState(initialState);
+
+  const handleSubmitForm = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await axios.post(
+        "https://optionflow.pro/api/Main/Contact",
+        data
+      );
+      console.log("Has been sended", response.data);
+      console.log(data);
+    } catch (error) {
+      console.log("We got Error", error);
+      console.log(data);
+    }
+    setData(initialState);
+  };
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setData((prevData) => ({
+      ...prevData,
+      contact: {
+        ...prevData.contact,
+        [name]: value,
+      },
+    }));
+  };
+
   return (
     <div className="page-wrapper">
       <div className="pbmit-title-bar-wrapper">
@@ -35,17 +74,10 @@ const Contacts = () => {
                     </div>
                   </div>
                   <ul className="pbmit-social-links">
-                    <li className="pbmit-social-li pbmit-social-facebook">
+                    <li className="pbmit-social-li pbmit-social-linkedin">
                       <CustomLink propsHref="#" target="_blank">
                         <span>
-                          <i className="pbmit-base-icon-facebook-squared"></i>
-                        </span>
-                      </CustomLink>
-                    </li>
-                    <li className="pbmit-social-li pbmit-social-twitter">
-                      <CustomLink propsHref="#" target="_blank">
-                        <span>
-                          <i className="pbmit-base-icon-twitter"></i>
+                          <i className="pbmit-base-icon-linkedin-squared"></i>
                         </span>
                       </CustomLink>
                     </li>
@@ -56,13 +88,6 @@ const Contacts = () => {
                         </span>
                       </CustomLink>
                     </li>
-                    <li className="pbmit-social-li pbmit-social-youtube">
-                      <CustomLink propsHref="#" target="_blank">
-                        <span>
-                          <i className="pbmit-base-icon-youtube-play"></i>
-                        </span>
-                      </CustomLink>
-                    </li>
                   </ul>
                 </div>
                 <div className="col-md-7">
@@ -70,16 +95,18 @@ const Contacts = () => {
                     className="contact-left-section contact-form"
                     method="post"
                     id="contact-form"
-                    action="send.php"
+                    onSubmit={handleSubmitForm}
                   >
                     <div className="row">
-                      <div className="col-lg-6 col-md-6">
+                      <div className="col-lg-12 col-ms-12">
                         <input
                           type="text"
                           className="form-control"
                           placeholder="Повне ім'я"
                           name="name"
-                          required=""
+                          required={true}
+                          value={data.contact.name}
+                          onChange={handleChange}
                         />
                       </div>
                       <div className="col-lg-6 col-md-6">
@@ -88,16 +115,31 @@ const Contacts = () => {
                           className="form-control"
                           placeholder="Email адрес"
                           name="email"
-                          required=""
+                          required={true}
+                          value={data.contact.email}
+                          onChange={handleChange}
+                        />
+                      </div>
+                      <div className="col-lg-6 col-md-6">
+                        <input
+                          type="text"
+                          className="form-control"
+                          placeholder="Мобільний"
+                          name="mobile"
+                          required={true}
+                          value={data.contact.mobile}
+                          onChange={handleChange}
                         />
                       </div>
                       <div className="col-lg-12 col-sm-12">
                         <textarea
                           className="form-control"
-                          name="message"
+                          name="description"
                           rows="4"
                           placeholder="Напишіть повідомлення"
-                          required=""
+                          required={true}
+                          value={data.contact.description}
+                          onChange={handleChange}
                         ></textarea>
                       </div>
                       <div className="col-lg-12 col-sm-12">

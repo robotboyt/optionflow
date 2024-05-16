@@ -9,6 +9,7 @@ const DataProvider = ({ children }) => {
   const [portfolioNewData, setPortfolioNewData] = useState(null);
   const [blogNewData, setBlogNewData] = useState(null);
   const [careerNewData, setCareerNewData] = useState(null);
+  const [historyNewData, setHistoryNewData] = useState(null);
 
   const setFetchedServiceData = (newData) => {
     setServiceNewData(newData);
@@ -26,6 +27,10 @@ const DataProvider = ({ children }) => {
     setCareerNewData(newData);
   };
 
+  const setFetchedHistoryData = (newData) => {
+    setHistoryNewData(newData);
+  };
+
   const setHeaderOpened = () => {
     setOpenedHeader(!openedHeader);
   };
@@ -41,6 +46,8 @@ const DataProvider = ({ children }) => {
         setFetchedBlogData,
         careerNewData,
         setFetchedCareerData,
+        historyNewData,
+        setFetchedHistoryData,
         setHeaderOpened,
         openedHeader,
       }}

@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { DataContext } from "../Context/DataContext";
+import axios from "axios";
 
 const History = () => {
   return (

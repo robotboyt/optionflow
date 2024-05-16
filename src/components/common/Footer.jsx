@@ -54,7 +54,7 @@ const Footer = () => {
                   <div className="pbmit-footer-contact-info">
                     <div className="pbmit-content-box">Центр кліентів</div>
                     <div className="pbmit-contact-box">
-                      <CustomLink propsHref="mailto:hello@infoxido.com">
+                      <CustomLink propsHref="mailto:info@optionflow.pro">
                         info@optionflow.pro
                       </CustomLink>
                     </div>
@@ -98,11 +98,11 @@ const Footer = () => {
                     </a>
                   </li>
                   <li className="pbmit-social-li pbmit-social-instagram">
-                    <CustomLink propsHref="#" target="_blank" rel="noopener">
+                    <a href="#" target="_blank" rel="noopener">
                       <span>
                         <i className="pbmit-base-icon-instagram"></i>
                       </span>
-                    </CustomLink>
+                    </a>
                   </li>
                 </ul>
               </div>

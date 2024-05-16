@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import CustomLink from "../../components/common/CustomLink";
 
 const ServiceContentBox = ({
@@ -15,7 +15,11 @@ const ServiceContentBox = ({
           <div className="pbmit-service-image-wrapper">
             <div className="pbmit-featured-img-wrapper">
               <div className="pbmit-featured-wrapper">
-                <img src={serviceImg} className="img-fluid" alt="" />
+                <img
+                  src={`https://optionflow.pro/${serviceImg}`}
+                  className="img-fluid"
+                  alt=""
+                />
               </div>
             </div>
           </div>
