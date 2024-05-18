@@ -5,6 +5,7 @@ import axios from "axios";
 import logoBlack from "./../../Images/logo.svg";
 import { useNavigate } from "react-router-dom";
 import CustomLink from "../../components/common/CustomLink";
+import Loader from "../../animation/Loader";
 
 const ServiceSingle = () => {
   const navigate = useNavigate();
@@ -42,7 +43,7 @@ const ServiceSingle = () => {
 
       fetchService();
     }
-  }, [id]);
+  }, [id, navigate, serviceNewData, setFetchedServiceData]);
 
   return (
     <div className="page-wrapper">
@@ -160,7 +161,9 @@ const ServiceSingle = () => {
             </section>
           </div>
         </>
-      ) : null}
+      ) : (
+        <Loader />
+      )}
     </div>
   );
 };

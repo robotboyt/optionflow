@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import CustomLink from "../../components/common/CustomLink.jsx";
 import axios from "axios";
 import Sphere from "../../animation/Sphere.jsx";
@@ -11,7 +10,7 @@ const Home = () => {
   const [cardData, setCardData] = useState({});
   const [servicesData, setServicesData] = useState({});
   const [blogData, setBlogData] = useState(null);
-  const { blogNewData, setFetchedBlogData } = useContext(DataContext);
+  const { setFetchedBlogData } = useContext(DataContext);
   const [dataLoading, setDataLoading] = useState(false);
 
   useEffect(() => {
@@ -39,7 +38,7 @@ const Home = () => {
     getData();
 
     return () => {};
-  }, []);
+  }, [setFetchedBlogData]);
 
   console.log(blogData);
 

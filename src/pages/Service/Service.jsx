@@ -3,6 +3,7 @@ import React, { useEffect, useState, useContext } from "react";
 import ServiceContentBox from "./ServiceContentBox";
 import axios from "axios";
 import { DataContext } from "../../Context/DataContext";
+import Loader from "../../animation/Loader";
 
 const Service = () => {
   const [serviceData, setServiceData] = useState(null);
@@ -22,12 +23,12 @@ const Service = () => {
         console.error(error);
       }
     };
-    if (serviceNewData !== null) {
+    if (serviceNewData !== null && serviceData === null) {
       setServiceData(serviceNewData);
-    } else {
+    } else if (serviceData === null) {
       fetchService();
     }
-  }, []);
+  }, [serviceData, serviceNewData, setFetchedServiceData]);
   return (
     <div>
       <div className="page-wrapper">
@@ -49,19 +50,21 @@ const Service = () => {
           <section className="section-lg service-section">
             <div className="container">
               <div className="row">
-                {serviceData
-                  ? serviceData.map((serviceItem) => (
-                      <ServiceContentBox
-                        serviceTitle={serviceItem.title}
-                        serviceCategory={serviceItem.category}
-                        serviceLink={`/service-single/${serviceItem.id}`}
-                        serviceImg={serviceItem.serviceImage}
-                        serviceDescription={serviceItem.description}
-                        serviceIcon={serviceItem.iconType}
-                        key={serviceItem.id}
-                      />
-                    ))
-                  : null}
+                {serviceData ? (
+                  serviceData.map((serviceItem) => (
+                    <ServiceContentBox
+                      serviceTitle={serviceItem.title}
+                      serviceCategory={serviceItem.category}
+                      serviceLink={`/service-single/${serviceItem.id}`}
+                      serviceImg={serviceItem.serviceImage}
+                      serviceDescription={serviceItem.description}
+                      serviceIcon={serviceItem.iconType}
+                      key={serviceItem.id}
+                    />
+                  ))
+                ) : (
+                  <Loader />
+                )}
               </div>
             </div>
           </section>

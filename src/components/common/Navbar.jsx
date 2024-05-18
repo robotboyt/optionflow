@@ -333,7 +333,7 @@ const Navbar = () => {
                               <li
                                 className={
                                   location.pathname === "/career" ||
-                                  location.pathname === "/career-single"
+                                  location.pathname.includes("/career-single/")
                                     ? "active"
                                     : null
                                 }

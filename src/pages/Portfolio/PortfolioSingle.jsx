@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { DataContext } from "../../Context/DataContext";
 import axios from "axios";
+import Loader from "../../animation/Loader";
 
 const PortfolioSingle = () => {
   const navigate = useNavigate();
@@ -37,7 +38,7 @@ const PortfolioSingle = () => {
       };
       fetchService();
     }
-  }, [id]);
+  }, [id, navigate, portfolioNewData, setFetchedPortfolioData]);
 
   return (
     <div className="page-wrapper">
@@ -139,10 +140,12 @@ const PortfolioSingle = () => {
                           href={currentPortfolio[0].projectLink}
                           class="col-md-6"
                           target="_blank"
+                          rel="noreferrer"
                         >
                           <div class="portfolio-challange-bg">
                             <img
                               src={`https://optionflow.pro/${currentPortfolio[0].portfolioImage}`}
+                              alt="Portfolio present"
                             />
                           </div>
                         </a>
@@ -154,7 +157,9 @@ const PortfolioSingle = () => {
             </section>
           </div>
         </>
-      ) : null}
+      ) : (
+        <Loader />
+      )}
     </div>
   );
 };

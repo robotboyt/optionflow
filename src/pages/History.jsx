@@ -3,6 +3,25 @@ import { DataContext } from "../Context/DataContext";
 import axios from "axios";
 
 const History = () => {
+  const [historyData, setHistoryData] = useState(null);
+  const { historyNewData, setFetchedHistoryData } = useContext(DataContext);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const dataResponse = await axios.get(
+          "https://optionflow.pro/api/Main/OurHistory"
+        );
+        setHistoryData(dataResponse.data);
+        setFetchedHistoryData(dataResponse.data);
+      } catch (error) {
+        console.log("we got some Error", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div className="page-wrapper">
       <div className="pbmit-title-bar-wrapper">
@@ -76,104 +95,34 @@ const History = () => {
             <div className="pbmit-timeline">
               <div className="pbmit-first-timeline"></div>
               <div className="pbmit-timeline-post-items">
-                <div className="pbmit-timeline-inner">
-                  <div className="col-sm-12 pbmit-ourhistory-type2">
-                    <div className="row pbmit-ourhistory-row">
-                      <div className="col-md-6 col-sm-12 col-xs-6 pbmit-ourhistory-right">
-                        <span className="label">2017</span>
-                        <div className="content">
-                          <h4>
-                            Двоє студентів знайомляться на першому курсі
-                            коледжу.
-                          </h4>
-                          <div className="simple-text">
-                            <p>
-                              Вони починають ділитися цілями та думками щодо
-                              сфери ІТ, глибоко вивчають програмування та
-                              дизайн. Розглядають попит на ринку та досліджують,
-                              як створити свою власну студію. Знаходять
-                              однодумців, щоб утворити команду, яка спільно
-                              працює над інноваційними проектами.
-                            </p>
+                {historyData
+                  ? historyData.history.map((historyItem) => (
+                      <div className="pbmit-timeline-inner">
+                        <div className="col-sm-12 pbmit-ourhistory-type2">
+                          <div className="row pbmit-ourhistory-row">
+                            <div className="col-md-6 col-sm-12 col-xs-6 pbmit-ourhistory-right">
+                              <span className="label">{historyItem.year}</span>
+                              <div className="content">
+                                <h4>{historyItem.title}</h4>
+                                <div className="simple-text">
+                                  <p>{historyItem.description}</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="col-md-6 pbmit-ourhistory-left">
+                              <span className="pbmit-timeline-image">
+                                <img
+                                  src="images/coworking/history/history-01.jpg"
+                                  className="img-fluid w-100"
+                                  alt="We started  business industry"
+                                />
+                              </span>
+                            </div>
                           </div>
                         </div>
                       </div>
-                      <div className="col-md-6 pbmit-ourhistory-left">
-                        <span className="pbmit-timeline-image">
-                          <img
-                            src="images/coworking/history/history-01.jpg"
-                            className="img-fluid w-100"
-                            alt="We started  business industry"
-                          />
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="pbmit-timeline-inner">
-                  <div className="col-sm-12 pbmit-ourhistory-type2">
-                    <div className="row pbmit-ourhistory-row">
-                      <div className="col-md-6 col-sm-12 col-xs-6 pbmit-ourhistory-right">
-                        <span className="label">2020</span>
-                        <div className="content">
-                          <h4>Створюємо першу команду</h4>
-                          <div className="simple-text">
-                            <p>
-                              Ми випробовуємо свої сили в геймдеві та беремо
-                              участь у державних проектах. Протягом безлічі
-                              ночей ми працюємо над проектами, обмінюючись
-                              ідеями та ентузіазмом. Ми намагаємося знайти
-                              партнерів та спонсорів для втілення наших ідей.
-                              Кожен успіх та, навіть, кожна невдача налаштовують
-                              нас докладати більше зусиль.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-md-6 pbmit-ourhistory-left">
-                        <span className="pbmit-timeline-image">
-                          <img
-                            src="images/coworking/history/history-02.jpg"
-                            className="img-fluid w-100"
-                            alt="We have expert Team Member"
-                          />
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pbmit-timeline-inner">
-                  <div className="col-sm-12 pbmit-ourhistory-type2">
-                    <div className="row pbmit-ourhistory-row">
-                      <div className="col-md-6 col-sm-12 col-xs-6 pbmit-ourhistory-right">
-                        <span className="label">2023</span>
-                        <div className="content">
-                          <h4>Створення Option Flow</h4>
-                          <div className="simple-text">
-                            <p>
-                              На початку 2023 року ми заснували нашу студію в ці
-                              важкі для нашої країни часи. Знаходимо проекти та
-                              реалізовуємо їх на високому рівні, ставимо перед
-                              собою нові цілі та віддано працюємо, намагаючись
-                              досягти їх. Поступово розширюємо нашу студію та
-                              прибавляємо новий персонал.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-md-6 pbmit-ourhistory-left">
-                        <span className="pbmit-timeline-image">
-                          <img
-                            src="images/coworking/history/history-04.jpg"
-                            className="img-fluid w-100"
-                            alt="We got the high level of success"
-                          />
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                    ))
+                  : null}
               </div>
               <div className="pbmit-last-timeline"></div>
             </div>

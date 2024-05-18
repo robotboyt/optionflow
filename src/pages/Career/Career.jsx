@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import { DataContext } from "../../Context/DataContext";
 import CareerContentBox from "./CareerContentBox";
+import Loader from "../../animation/Loader";
 
 const Career = () => {
   const [careerData, setCareerData] = useState(null);
@@ -12,20 +13,22 @@ const Career = () => {
         const dataResponse = await axios.get(
           "https://optionflow.pro/api/Main/Career"
         );
-        setCareerData(dataResponse.data);
-        setFetchedCareerData(dataResponse.data);
+        const data = dataResponse.data.reverse();
+        setCareerData(data);
+        setFetchedCareerData(data);
         console.log("requeest");
       } catch (error) {
         console.error(error);
       }
     };
 
-    if (careerNewData !== null) {
+    if (careerNewData !== null && careerData === null) {
+      console.log("here is second");
       setCareerData(careerNewData);
-    } else {
+    } else if (careerData === null) {
       fetchService();
     }
-  }, [careerNewData, setFetchedCareerData]);
+  }, [careerData, careerNewData, setFetchedCareerData]);
 
   console.log(careerData);
 
@@ -48,13 +51,14 @@ const Career = () => {
         <section className="section-lg">
           <div className="container">
             <div className="row">
-              {careerData
-                ? careerData
-                    .reverse()
-                    .map((item) => (
-                      <CareerContentBox careerObject={item} key={item.id} />
-                    ))
-                : null}
+              {careerData ? (
+                careerData.map((item) => (
+                  <CareerContentBox careerObject={item} key={item.id} />
+                ))
+              ) : (
+                <Loader />
+              )}
+              {/* <Loader /> */}
             </div>
           </div>
         </section>

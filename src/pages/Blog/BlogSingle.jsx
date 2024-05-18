@@ -3,13 +3,13 @@ import { DataContext } from "../../Context/DataContext";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import CustomLink from "../../components/common/CustomLink";
+import Loader from "../../animation/Loader";
 
 const BlogSingle = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   const { blogNewData, setFetchedBlogData } = useContext(DataContext);
   const [currentBlog, setCurrentBlog] = useState(null);
-  const [categoryCount, setCategoryCount] = useState(0);
 
   useEffect(() => {
     if (blogNewData !== null) {
@@ -41,7 +41,7 @@ const BlogSingle = () => {
 
       fetchService();
     }
-  }, [id, blogNewData]);
+  }, [id, navigate, blogNewData, setFetchedBlogData]);
 
   return (
     <div className="page-wrapper">
@@ -132,9 +132,11 @@ const BlogSingle = () => {
                             )
                           ).map((categoryItem) => (
                             <li key={categoryItem.toString()}>
-                              <a href="/blog/blogCategory/:id">
+                              <CustomLink
+                                propsHref={`/blog-category/${categoryItem}`}
+                              >
                                 {categoryItem}
-                              </a>
+                              </CustomLink>
                             </li>
                           ))}
                         </ul>
@@ -171,7 +173,9 @@ const BlogSingle = () => {
             </section>
           </div>
         </>
-      ) : null}
+      ) : (
+        <Loader />
+      )}
     </div>
   );
 };
