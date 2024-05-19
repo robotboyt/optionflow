@@ -9,6 +9,7 @@ const Blog = () => {
   const { category } = useParams();
   const [blogData, setBlogData] = useState(null);
   const { blogNewData, setFetchedBlogData } = useContext(DataContext);
+  const [filteredData, setFilteredData] = useState(null);
 
   useEffect(() => {
     const fetchService = async () => {
@@ -16,27 +17,27 @@ const Blog = () => {
         const dataResponse = await axios.get(
           "https://optionflow.pro/api/Main/Blog"
         );
-        if (category !== undefined) {
-          setBlogData(
-            dataResponse.data.filter((object) => object.category === category)
-          );
-        } else {
-          setBlogData(dataResponse.data);
-        }
+        setBlogData(dataResponse.data);
         setFetchedBlogData(dataResponse.data);
-        console.log("fesdf");
+        console.log("request");
       } catch (error) {
         console.error(error);
       }
     };
+
+    if (category !== undefined) {
+      console.log(blogNewData);
+      setFilteredData(blogNewData.filter((item) => item.category === category));
+    }
+
     if (blogNewData !== null && blogData === null) {
       setBlogData(blogNewData);
     } else if (blogData === null) {
       fetchService();
     }
-  }, [blogData, blogNewData, setFetchedBlogData]);
+  }, [blogData, blogNewData, setFetchedBlogData, category]);
 
-  console.log(blogData);
+  let data = category ? filteredData : blogData;
   console.log(category);
 
   return (
@@ -58,8 +59,8 @@ const Blog = () => {
         <section className="section-lg">
           <div className="container">
             <div className="row">
-              {blogData ? (
-                blogData.map((blogItem) => (
+              {data ? (
+                data.map((blogItem) => (
                   <BlogContetBox blogObject={blogItem} key={blogItem.id} />
                 ))
               ) : (
