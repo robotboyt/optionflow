@@ -16,6 +16,8 @@ const SliderComponent = ({ sliderData }) => {
     }
     return () => {};
   }, []);
+
+  console.log(sliderData, "data");
   var settings = {
     dots: true,
     infinite: true,
@@ -32,7 +34,7 @@ const SliderComponent = ({ sliderData }) => {
             {sliderData.map((item) => (
               <HomeSliderBlock
                 sliderTitle={item.title}
-                sliderIcon={item.icon}
+                sliderIcon={item.iconType}
                 sliderContent={item.subtitle}
                 sliderLink={item.href}
                 key={item.id.toString()}

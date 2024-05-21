@@ -104,7 +104,7 @@
   padding: 80px 45px 80px 90px;
 }
 .about-us-section-bg {
-  /* background-image: url(../Images/coworking/about.jpg); */
+  background-image: url(../Images/internet/about.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -296,6 +296,23 @@
   background: var(--pbmit-global-color);
   transform: rotate(45deg);
   border: 3px solid var(--pbmit-blackish-color);
+}
+
+.our-history .about-us-left-bg-home3 {
+  background-image: url(../Images/internet/history.jpg);
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 30px;
+}
+
+.our-history {
+  padding-top: 135px;
+}
+
+.about-us-left-bg-home3 {
+  height: 100%;
+  position: relative;
 }
 
 /** 02 - Service Detail **/

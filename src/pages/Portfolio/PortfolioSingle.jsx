@@ -69,11 +69,11 @@ const PortfolioSingle = () => {
                       <h4>{currentPortfolio[0].title}</h4>
                       {currentPortfolio[0].shortTitle}
                     </div>
-                    <img
+                    {/* <img
                       src={currentPortfolio[0].portfolioImage}
                       className="img-fluid w-100 mb-4"
                       alt=""
-                    />
+                    /> */}
                     <div className="pbmit-single-project-details-list">
                       <div className="pbmit-portfolio-lines-wrapper">
                         <ul className="pbmit-portfolio-lines-ul">

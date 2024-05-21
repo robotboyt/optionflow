@@ -22,6 +22,8 @@ const History = () => {
     fetchData();
   }, []);
 
+  console.log(historyData);
+
   return (
     <div className="page-wrapper">
       <div className="pbmit-title-bar-wrapper">
@@ -97,7 +99,10 @@ const History = () => {
               <div className="pbmit-timeline-post-items">
                 {historyData
                   ? historyData.history.map((historyItem) => (
-                      <div className="pbmit-timeline-inner">
+                      <div
+                        className="pbmit-timeline-inner"
+                        key={historyItem.year}
+                      >
                         <div className="col-sm-12 pbmit-ourhistory-type2">
                           <div className="row pbmit-ourhistory-row">
                             <div className="col-md-6 col-sm-12 col-xs-6 pbmit-ourhistory-right">

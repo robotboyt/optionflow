@@ -12,7 +12,7 @@ const HomeSliderBlock = ({
       <article className="pbmit-service-style-3">
         <div className="pbminfotech-post-item">
           <div className="pbmit-service-icon-wrapper">
-            <i className={sliderIcon}></i>
+            <i className={`pbmit-xido-icon-${sliderIcon}`}></i>
           </div>
           <div className="pbminfotech-box-content">
             <h3 className="pbmit-service-title">

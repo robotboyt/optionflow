@@ -5,9 +5,44 @@ import Sphere from "../../animation/Sphere.jsx";
 import TabContent from "../../components/HomeComponents/TabContent.jsx";
 import SliderComponent from "../../components/HomeComponents/Slider.jsx";
 import { DataContext } from "../../Context/DataContext.jsx";
+import Loader from "../../animation/Loader.jsx";
+import webImg from "../../Images/internet/web-service.png";
+import smmImg from "../../Images/internet/smm-service.png";
+import itImg from "../../Images/internet/it-service.png";
 
 const Home = () => {
-  const [cardData, setCardData] = useState({});
+  const [cardData, setCardData] = useState([
+    {
+      id: 1,
+      name: "Розробка Web-сайт та інше",
+      imageUrl: webImg,
+      category: {
+        category1: "ASP.NET / ASP.NET Core...",
+        category2: "React, HTML, CSS...",
+        category3: "Ecommers, WordPress...",
+      },
+    },
+    {
+      id: 2,
+      name: "SMM-послуги",
+      imageUrl: smmImg,
+      category: {
+        category1: "Розробка стратегії",
+        category2: "Управління контентом",
+        category3: "Реклама в соціальних мережах",
+      },
+    },
+    {
+      id: 3,
+      name: "IT-консультація",
+      imageUrl: itImg,
+      category: {
+        category1: "Оптимізація ІТ-стратегії",
+        category2: "Оптимізація бізнес-процесів",
+        category3: "Управління ІТ-ризиками",
+      },
+    },
+  ]);
   const [servicesData, setServicesData] = useState({});
   const [blogData, setBlogData] = useState(null);
   const { setFetchedBlogData } = useContext(DataContext);
@@ -16,17 +51,14 @@ const Home = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const cardResponse = await axios.get(
-          "http://192.168.0.66:2000/api/cards"
-        );
         const servicesResponse = await axios.get(
-          "http://192.168.0.66:2000/api/services"
+          "https://optionflow.pro/api/Main/Services"
         );
         const blogResponse = await axios.get(
           "https://optionflow.pro/api/Main/Blog"
         );
-        setCardData(cardResponse);
-        setServicesData(servicesResponse);
+        // setCardData(servicesData.data);
+        setServicesData(servicesResponse.data.reverse());
         setBlogData(blogResponse.data.slice(0, 3));
         setDataLoading(true);
         setFetchedBlogData(blogResponse.data);
@@ -38,9 +70,10 @@ const Home = () => {
     getData();
 
     return () => {};
-  }, [setFetchedBlogData]);
+  }, []);
 
-  console.log(blogData);
+  console.log(servicesData, "servie");
+  console.log(cardData, "index");
 
   return (
     <div className="page-wrapper">
@@ -81,40 +114,42 @@ const Home = () => {
         <section className="about-section-home6">
           <div className="container">
             <div className="row">
-              {dataLoading
-                ? cardData.data.map((item) => (
-                    <div className="col-xl-4 col-md-6" key={item.id}>
-                      <div className="pbmit-ihbox-style-8">
-                        <div className="pbmit-ihbox-box">
-                          <div className="pbmit-ihbox-contents">
-                            <div className="pbmit-ihbox-icon">
-                              <div className="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image">
-                                <img
-                                  src={item.imageUrl}
-                                  className="img-fluid-service"
-                                  alt="web-service"
-                                />
-                              </div>
+              {dataLoading ? (
+                cardData.map((item) => (
+                  <div className="col-xl-4 col-md-6" key={item.id}>
+                    <div className="pbmit-ihbox-style-8">
+                      <div className="pbmit-ihbox-box">
+                        <div className="pbmit-ihbox-contents">
+                          <div className="pbmit-ihbox-icon">
+                            <div className="pbmit-ihbox-icon-wrapper pbmit-ihbox-icon-type-image">
+                              <img
+                                src={item.imageUrl}
+                                className="img-fluid-service"
+                                alt="web-service"
+                              />
                             </div>
-                            <h2 className="pbmit-element-title">{item.name}</h2>
-                            <div className="pbmit-heading-desc">
-                              <span>{item.category.category1}</span>
-                              <br />
-                              <span>{item.category.category2}.</span>
-                              <br />
-                              <span>{item.category.category3}</span>
-                            </div>
-                            <div className="pbmit-ihbox-btn">
-                              <CustomLink propsHref="#">
-                                <span>Читати більше</span>
-                              </CustomLink>
-                            </div>
+                          </div>
+                          <h2 className="pbmit-element-title">{item.name}</h2>
+                          <div className="pbmit-heading-desc">
+                            <span>{item.category.category1}</span>
+                            <br />
+                            <span>{item.category.category2}.</span>
+                            <br />
+                            <span>{item.category.category3}</span>
+                          </div>
+                          <div className="pbmit-ihbox-btn">
+                            <CustomLink propsHref="#">
+                              <span>Читати більше</span>
+                            </CustomLink>
                           </div>
                         </div>
                       </div>
                     </div>
-                  ))
-                : null}
+                  </div>
+                ))
+              ) : (
+                <Loader />
+              )}
             </div>
           </div>
         </section>
@@ -231,8 +266,10 @@ const Home = () => {
 
             <div>
               {dataLoading ? (
-                <SliderComponent sliderData={servicesData.data} />
-              ) : null}
+                <SliderComponent sliderData={servicesData} />
+              ) : (
+                <Loader />
+              )}
             </div>
           </div>
         </section>
@@ -258,40 +295,42 @@ const Home = () => {
               </div>
               <div className="col-xl-7 col-md-12 p-0">
                 <article className="pbmit-blog-style-5 col-md-12">
-                  {blogData
-                    ? blogData.map((blogItem) => (
-                        <div className="post-item" key={blogItem.id.toString()}>
-                          <div className="pbminfotech-box-content">
-                            <div className="pbmit-meta-container">
-                              <span className="pbmit-date-wrapper">
-                                <span className="pbmit-post-date pbmit-meta-line">
-                                  {blogItem.dateCreate}
-                                </span>
+                  {blogData ? (
+                    blogData.map((blogItem) => (
+                      <div className="post-item" key={blogItem.id.toString()}>
+                        <div className="pbminfotech-box-content">
+                          <div className="pbmit-meta-container">
+                            <span className="pbmit-date-wrapper">
+                              <span className="pbmit-post-date pbmit-meta-line">
+                                {blogItem.dateCreate}
                               </span>
-                              <span className="pbmit-meta-category pbmit-meta-line">
-                                {blogItem.shortTitle}
-                              </span>
-                            </div>
-                            <div className="pbmit-content-wrapper">
-                              <h3 className="pbmit-post-title">
-                                <CustomLink
-                                  propsHref={`/blog-single/${blogItem.id}`}
-                                >
-                                  {blogItem.title}
-                                </CustomLink>
-                              </h3>
-                            </div>
-                            <div className="pbmit-read-more-link">
+                            </span>
+                            {/* <span className="pbmit-meta-category pbmit-meta-line">
+                              {blogItem.shortTitle}
+                            </span> */}
+                          </div>
+                          <div className="pbmit-content-wrapper">
+                            <h3 className="pbmit-post-title">
                               <CustomLink
                                 propsHref={`/blog-single/${blogItem.id}`}
                               >
-                                <span className="pbmit-arrow"></span>
+                                {blogItem.title}
                               </CustomLink>
-                            </div>
+                            </h3>
+                          </div>
+                          <div className="pbmit-read-more-link">
+                            <CustomLink
+                              propsHref={`/blog-single/${blogItem.id}`}
+                            >
+                              <span className="pbmit-arrow"></span>
+                            </CustomLink>
                           </div>
                         </div>
-                      ))
-                    : null}
+                      </div>
+                    ))
+                  ) : (
+                    <Loader />
+                  )}
                 </article>
               </div>
             </div>
