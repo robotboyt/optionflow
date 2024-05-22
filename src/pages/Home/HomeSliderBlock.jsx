@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import CustomLink from "../../components/common/CustomLink";
 
 const HomeSliderBlock = ({
   sliderTitle,
@@ -16,16 +16,21 @@ const HomeSliderBlock = ({
           </div>
           <div className="pbminfotech-box-content">
             <h3 className="pbmit-service-title">
-              <Link to={sliderLink}>{sliderTitle}</Link>
+              <CustomLink propsHref={`/service-single/${sliderLink}`}>
+                {sliderTitle}
+              </CustomLink>
             </h3>
             <div className="pbmit-service-content">
               <p>{sliderContent}</p>
             </div>
           </div>
           <div className="pbmit-service-btn">
-            <Link className="btn-arrow" to={sliderLink}>
+            <CustomLink
+              className="btn-arrow"
+              propsHref={`/service-single/${sliderLink}`}
+            >
               Read More
-            </Link>
+            </CustomLink>
           </div>
         </div>
       </article>

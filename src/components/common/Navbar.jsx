@@ -1,10 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logoBlack from "../../Images/logo.svg";
 import logoWhite from "../../Images/logo-white.svg";
 import CustomLink from "./CustomLink";
 import { DataContext } from "../../Context/DataContext";
-import { matchPath } from "react-router-dom";
 
 const Navbar = () => {
   const location = useLocation();
@@ -104,14 +102,11 @@ const Navbar = () => {
                       <div className="site-branding">
                         <Link to="/">
                           <img
-                            className="logo-img"
+                            className={
+                              scrollWindow >= 115 ? "sticky-logo" : "logo-img"
+                            }
                             alt="coworking"
                             src={logoWhite}
-                          />
-                          <img
-                            className="sticky-logo"
-                            alt="coworking"
-                            src={logoBlack}
                           />
                         </Link>
                       </div>

@@ -16,6 +16,7 @@ const Home = () => {
       id: 1,
       name: "Розробка Web-сайт та інше",
       imageUrl: webImg,
+      link: "/service-single/13",
       category: {
         category1: "ASP.NET / ASP.NET Core...",
         category2: "React, HTML, CSS...",
@@ -26,6 +27,7 @@ const Home = () => {
       id: 2,
       name: "SMM-послуги",
       imageUrl: smmImg,
+      link: "/service-single/11",
       category: {
         category1: "Розробка стратегії",
         category2: "Управління контентом",
@@ -36,6 +38,7 @@ const Home = () => {
       id: 3,
       name: "IT-консультація",
       imageUrl: itImg,
+      link: "/service-single/10",
       category: {
         category1: "Оптимізація ІТ-стратегії",
         category2: "Оптимізація бізнес-процесів",
@@ -138,7 +141,7 @@ const Home = () => {
                             <span>{item.category.category3}</span>
                           </div>
                           <div className="pbmit-ihbox-btn">
-                            <CustomLink propsHref="#">
+                            <CustomLink propsHref={item.link}>
                               <span>Читати більше</span>
                             </CustomLink>
                           </div>
@@ -305,9 +308,6 @@ const Home = () => {
                                 {blogItem.dateCreate}
                               </span>
                             </span>
-                            {/* <span className="pbmit-meta-category pbmit-meta-line">
-                              {blogItem.shortTitle}
-                            </span> */}
                           </div>
                           <div className="pbmit-content-wrapper">
                             <h3 className="pbmit-post-title">

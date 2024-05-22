@@ -82,6 +82,7 @@ const ServiceSingle = () => {
                                     ? "post-active"
                                     : null
                                 }
+                                key={serviceItem.id.toString()}
                               >
                                 <CustomLink
                                   propsHref={`/service-single/${serviceItem.id}`}

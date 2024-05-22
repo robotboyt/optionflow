@@ -17,6 +17,8 @@ const SliderComponent = ({ sliderData }) => {
     return () => {};
   }, []);
 
+  console.log(sliderData);
+
   console.log(sliderData, "data");
   var settings = {
     dots: true,
@@ -36,7 +38,7 @@ const SliderComponent = ({ sliderData }) => {
                 sliderTitle={item.title}
                 sliderIcon={item.iconType}
                 sliderContent={item.subtitle}
-                sliderLink={item.href}
+                sliderLink={item.id}
                 key={item.id.toString()}
               />
             ))}

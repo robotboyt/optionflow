@@ -201,7 +201,7 @@
   font-size: 60px;
   line-height: 60px;
   color: transparent;
-  -webkit-text-stroke: 1px #757c8c;
+  -webkit-text-stroke: 2px #757c8c;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
   font-weight: 700;
