@@ -33,14 +33,16 @@ const TabContent = () => {
                   <div className="pbminfotech-post-item">
                     <div className="pbminfotech-box-content">
                       <div className="pbminfotech-box-content-inner">
-                        <h3 className="pbmit-service-title">LoRem Sofd</h3>
+                        <h3 className="pbmit-service-title">
+                          Наша креативність
+                        </h3>
                         <div className="pbmit-service-cat">
                           <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Porro, commodi?Lorem ipsum dolor sit amet,
-                            consectetur adipisicing elit. Dolores pariatur
-                            explicabo, illum aperiam earum nisi iste voluptas
-                            assumenda ad. Ad.
+                            Наша студія вирізняється неймовірною креативністю,
+                            створюючи унікальні дизайни, що дозволяють вашому
+                            бренду виділятися. Кожен проект – результат аналізу
+                            ідей та потреб клієнтів, що гарантує ефективність та
+                            привабливість.
                           </p>
                         </div>
                       </div>
@@ -53,14 +55,15 @@ const TabContent = () => {
                   <div className="pbminfotech-post-item">
                     <div className="pbminfotech-box-content">
                       <div className="pbminfotech-box-content-inner">
-                        <h3 className="pbmit-service-title">LoRem Sofd</h3>
+                        <h3 className="pbmit-service-title">
+                          Інноваційні технології
+                        </h3>
                         <div className="pbmit-service-cat">
                           <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Porro, commodi?Lorem ipsum dolor sit amet,
-                            consectetur adipisicing elit. Dolores pariatur
-                            explicabo, illum aperiam earum nisi iste voluptas
-                            assumenda ad. Ad.
+                            Використовуючи сучасні технології, такі як React та
+                            .NET, ми забезпечуємо високу продуктивність ваших
+                            сайтів. Наші розробники впроваджують нові рішення,
+                            щоб ваші проекти відповідали найвищим стандартам.
                           </p>
                         </div>
                       </div>
