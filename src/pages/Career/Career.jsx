@@ -1,36 +1,23 @@
 import React, { useEffect, useState, useContext } from "react";
-import axios from "axios";
 import { DataContext } from "../../Context/DataContext";
 import CareerContentBox from "./CareerContentBox";
 import Loader from "../../animation/Loader";
+import FetchModule from "../../components/module/FetchModule";
 
 const Career = () => {
   const [careerData, setCareerData] = useState(null);
   const { careerNewData, setFetchedCareerData } = useContext(DataContext);
+  let careerLink = "https://optionflow.pro/api/Main/Career";
   useEffect(() => {
-    const fetchService = async () => {
-      try {
-        const dataResponse = await axios.get(
-          "https://optionflow.pro/api/Main/Career"
-        );
-        const data = dataResponse.data.reverse();
-        setCareerData(data);
-        setFetchedCareerData(data);
-        console.log("requeest");
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
+    console.log("here is render");
     if (careerNewData !== null && careerData === null) {
       console.log("here is second");
       setCareerData(careerNewData);
     } else if (careerData === null) {
-      fetchService();
+      FetchModule(setCareerData, setFetchedCareerData, careerLink);
+      console.log("here is rerender");
     }
-  }, [careerData, careerNewData, setFetchedCareerData]);
-
-  console.log(careerData);
+  }, [careerData, setCareerData, setFetchedCareerData]);
 
   return (
     <div className="page-wrapper">

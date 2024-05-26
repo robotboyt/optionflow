@@ -4,6 +4,7 @@ import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import CustomLink from "../../components/common/CustomLink";
 import Loader from "../../animation/Loader";
+import FetchDetailsModule from "../../components/module/FetchDetailsModule";
 
 const BlogSingle = () => {
   const navigate = useNavigate();
@@ -11,37 +12,18 @@ const BlogSingle = () => {
   const { blogNewData, setFetchedBlogData } = useContext(DataContext);
   const [currentBlog, setCurrentBlog] = useState(null);
 
+  let blogLink = "https://optionflow.pro/api/Main/Blog";
+
   useEffect(() => {
-    if (blogNewData !== null) {
-      const getResult = (newArr, newID) => {
-        const result = newArr.filter((obj) => obj.id === newID);
-        setCurrentBlog(result);
-      };
-
-      getResult(blogNewData, Number(id));
-    } else {
-      const fetchService = async () => {
-        try {
-          const dataResponse = await axios.get(
-            "https://optionflow.pro/api/Main/Blog"
-          );
-
-          const resultResponse = await dataResponse.data.filter(
-            (obj) => obj.id === +id
-          );
-          if (resultResponse.length === 0) {
-            navigate("/*");
-          }
-          await setCurrentBlog(resultResponse);
-          setFetchedBlogData(dataResponse.data);
-        } catch (error) {
-          console.error(error);
-        }
-      };
-
-      fetchService();
-    }
-  }, [id, navigate, blogNewData, setFetchedBlogData]);
+    FetchDetailsModule(
+      blogNewData,
+      setCurrentBlog,
+      setFetchedBlogData,
+      blogLink,
+      id,
+      navigate
+    );
+  }, [id, blogNewData, setFetchedBlogData]);
 
   return (
     <div className="page-wrapper">

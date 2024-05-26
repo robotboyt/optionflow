@@ -17,9 +17,6 @@ const SliderComponent = ({ sliderData }) => {
     return () => {};
   }, []);
 
-  console.log(sliderData);
-
-  console.log(sliderData, "data");
   var settings = {
     dots: true,
     infinite: true,

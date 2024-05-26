@@ -1,32 +1,21 @@
 import React, { useEffect, useState, useContext } from "react";
-// import ServiceData from "./ServiceData";
 import ServiceContentBox from "./ServiceContentBox";
-import axios from "axios";
 import { DataContext } from "../../Context/DataContext";
 import Loader from "../../animation/Loader";
+import FetchModule from "../../components/module/FetchModule";
 
 const Service = () => {
   const [serviceData, setServiceData] = useState(null);
   const { serviceNewData, setFetchedServiceData } = useContext(DataContext);
 
+  const serviceLink = "https://optionflow.pro/api/Main/Services";
   useEffect(() => {
-    const fetchService = async () => {
-      try {
-        const dataResponse = await axios.get(
-          "https://optionflow.pro/api/Main/Services"
-        );
-        let data = dataResponse.data.reverse();
-        setServiceData(data);
-        setFetchedServiceData(data);
-        console.log("fesdf");
-      } catch (error) {
-        console.error(error);
-      }
-    };
+    console.log("here is render");
     if (serviceNewData !== null && serviceData === null) {
       setServiceData(serviceNewData);
     } else if (serviceData === null) {
-      fetchService();
+      FetchModule(setServiceData, setFetchedServiceData, serviceLink);
+      console.log("here is rerender");
     }
   }, [serviceData, serviceNewData, setFetchedServiceData]);
   return (

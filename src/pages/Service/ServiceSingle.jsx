@@ -6,6 +6,7 @@ import logoBlack from "./../../Images/logo.svg";
 import { useNavigate } from "react-router-dom";
 import CustomLink from "../../components/common/CustomLink";
 import Loader from "../../animation/Loader";
+import FetchDetailsModule from "../../components/module/FetchDetailsModule";
 
 const ServiceSingle = () => {
   const navigate = useNavigate();
@@ -13,36 +14,17 @@ const ServiceSingle = () => {
   const { serviceNewData, setFetchedServiceData } = useContext(DataContext);
   const [currentService, setCurrentService] = useState(null);
 
+  const serviceLink = "https://optionflow.pro/api/Main/Services";
+
   useEffect(() => {
-    if (serviceNewData !== null) {
-      const getResult = (newArr, newID) => {
-        const result = newArr.filter((obj) => obj.id === newID);
-        setCurrentService(result);
-      };
-
-      getResult(serviceNewData, Number(id));
-    } else {
-      const fetchService = async () => {
-        try {
-          const dataResponse = await axios.get(
-            "https://optionflow.pro/api/Main/Services"
-          );
-
-          const resultResponse = await dataResponse.data.filter(
-            (obj) => obj.id === +id
-          );
-          if (resultResponse.length === 0) {
-            navigate("/*");
-          }
-          await setCurrentService(resultResponse);
-          setFetchedServiceData(dataResponse.data.reverse());
-        } catch (error) {
-          console.error(error);
-        }
-      };
-
-      fetchService();
-    }
+    FetchDetailsModule(
+      serviceNewData,
+      setCurrentService,
+      setFetchedServiceData,
+      serviceLink,
+      id,
+      navigate
+    );
   }, [id, navigate, serviceNewData, setFetchedServiceData]);
 
   return (

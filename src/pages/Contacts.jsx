@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import CustomLink from "../components/common/CustomLink";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Contacts = () => {
   const initialState = {
@@ -14,21 +15,61 @@ const Contacts = () => {
   };
 
   const [data, setData] = useState(initialState);
+  const [errors, setErrors] = useState({});
 
-  const handleSubmitForm = async (event) => {
+  const handleSubmitForm = (event) => {
     event.preventDefault();
-    try {
-      const response = await axios.post(
-        "https://optionflow.pro/api/Main/Contact",
-        data
-      );
-      console.log("Has been sended", response.data);
-      console.log(data);
-    } catch (error) {
-      console.log("We got Error", error);
-      console.log(data);
+
+    const newErrors = {};
+
+    const FormSended = async () => {
+      try {
+        const response = await axios.post(
+          "https://optionflow.pro/api/Main/Contact",
+          data
+        );
+        console.log("Has been sended", response.data);
+        console.log(data);
+      } catch (error) {
+        console.log("We got Error", error);
+        console.log(data);
+      }
+      setData(initialState);
+    };
+
+    if (!validateName(data.contact.name)) {
+      newErrors.name = "Будь ласка, введіть коректне ім'я.";
     }
-    setData(initialState);
+
+    if (!validatePhone(data.contact.mobile)) {
+      newErrors.mobile = "Будь ласка, введіть коректний номер телефону.";
+    }
+
+    if (!validateEmail(data.contact.email)) {
+      newErrors.email = "Будь ласка, введіть коректну електронну адресу.";
+    }
+
+    if (Object.keys(newErrors).length === 0) {
+      FormSended();
+      setErrors({});
+    } else {
+      setErrors(newErrors);
+    }
+  };
+
+  const validateName = (name) => {
+    const nameRegex = /^[A-Za-zА-Яа-яЁё\s]+$/;
+    return nameRegex.test(name);
+  };
+
+  const validatePhone = (phone) => {
+    const phoneRegex = /^\+?[0-9]{10,15}$/;
+    return phoneRegex.test(phone);
+  };
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
   };
 
   const handleChange = (event) => {
@@ -108,6 +149,7 @@ const Contacts = () => {
                           value={data.contact.name}
                           onChange={handleChange}
                         />
+                        {errors.name && <p className="error">{errors.name}</p>}
                       </div>
                       <div className="col-lg-6 col-md-6">
                         <input
@@ -119,6 +161,9 @@ const Contacts = () => {
                           value={data.contact.email}
                           onChange={handleChange}
                         />
+                        {errors.email && (
+                          <p className="error">{errors.email}</p>
+                        )}
                       </div>
                       <div className="col-lg-6 col-md-6">
                         <input
@@ -130,12 +175,16 @@ const Contacts = () => {
                           value={data.contact.mobile}
                           onChange={handleChange}
                         />
+                        {errors.mobile && (
+                          <p className="error">{errors.mobile}</p>
+                        )}
                       </div>
                       <div className="col-lg-12 col-sm-12">
                         <textarea
                           className="form-control"
                           name="description"
                           rows="4"
+                          minLength={5}
                           placeholder="Напишіть повідомлення"
                           required={true}
                           value={data.contact.description}
@@ -162,42 +211,52 @@ const Contacts = () => {
                 <div className="col-md-4">
                   <div className="pbmit-ihbox-style-20">
                     <div className="pbmit-ihbox-box d-flex align-items-center">
-                      <div className="pbmit-ihbox-icon">
-                        <div className="pbmit-ihbox-icon-wrapper">
-                          <div className="pbmit-icon-wrapper pbmit-icon-type-icon">
-                            <i className="pbmit-xido-icon-email"></i>
+                      <Link
+                        to="mailto:info@optionflow.pro"
+                        className="about-us-email-widget"
+                      >
+                        <div className="pbmit-ihbox-icon">
+                          <div className="pbmit-ihbox-icon-wrapper">
+                            <div className="pbmit-icon-wrapper pbmit-icon-type-icon">
+                              <i className="pbmit-xido-icon-email"></i>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div className="pbmit-ihbox-contents">
-                        <div className="pbmit-heading-desc">
-                          Відправити Email
+                        <div className="pbmit-ihbox-contents">
+                          <div className="pbmit-heading-desc">
+                            Відправити пошту
+                          </div>
+                          <h2 className="pbmit-element-title">
+                            optionflowit@gmail.com
+                          </h2>
                         </div>
-                        <h2 className="pbmit-element-title">
-                          needhelp@company.com
-                        </h2>
-                      </div>
+                      </Link>
                     </div>
                   </div>
                 </div>
                 <div className="col-md-4">
                   <div className="pbmit-ihbox-style-20">
                     <div className="pbmit-ihbox-box d-flex align-items-center">
-                      <div className="pbmit-ihbox-icon">
-                        <div className="pbmit-ihbox-icon-wrapper">
-                          <div className="pbmit-icon-wrapper pbmit-icon-type-icon">
-                            <i className="pbmit-xido-icon pbmit-xido-icon-call"></i>
+                      <Link
+                        to="tel: +38(099)7607669"
+                        className="about-us-email-widget"
+                      >
+                        <div className="pbmit-ihbox-icon">
+                          <div className="pbmit-ihbox-icon-wrapper">
+                            <div className="pbmit-icon-wrapper pbmit-icon-type-icon">
+                              <i className="pbmit-xido-icon pbmit-xido-icon-call"></i>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div className="pbmit-ihbox-contents">
-                        <div className="pbmit-heading-desc">
-                          Телефонуйте у будь-який час
+                        <div className="pbmit-ihbox-contents">
+                          <div className="pbmit-heading-desc">
+                            Телефонуйте у будь-який час
+                          </div>
+                          <h2 className="pbmit-element-title">
+                            + 92 666 888 0000
+                          </h2>
                         </div>
-                        <h2 className="pbmit-element-title">
-                          + 92 666 888 0000
-                        </h2>
-                      </div>
+                      </Link>
                     </div>
                   </div>
                 </div>

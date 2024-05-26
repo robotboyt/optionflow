@@ -3,30 +3,20 @@ import axios from "axios";
 import PortfolioBlock from "./PortfolioBlock";
 import { DataContext } from "../../Context/DataContext";
 import Loader from "../../animation/Loader";
+import FetchModule from "../../components/module/FetchModule";
 
 const Portfolio = () => {
   const [portfolioData, setPortfolioData] = useState(null);
   const { portfolioNewData, setFetchedPortfolioData } = useContext(DataContext);
 
+  const portfolioLink = "https://optionflow.pro/api/Main/Portfolio";
   useEffect(() => {
-    const fetchService = async () => {
-      try {
-        const dataResponse = await axios.get(
-          "https://optionflow.pro/api/Main/Portfolio"
-        );
-        let data = dataResponse.data.reverse();
-        setPortfolioData(data);
-        setFetchedPortfolioData(data);
-        console.log("requeest");
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
+    console.log("here is render");
     if (portfolioNewData !== null && portfolioData === null) {
       setPortfolioData(portfolioNewData);
     } else if (portfolioData === null) {
-      fetchService();
+      FetchModule(setPortfolioData, setFetchedPortfolioData, portfolioLink);
+      console.log("here is rerender");
     }
   }, [portfolioData, portfolioNewData, setFetchedPortfolioData]);
 

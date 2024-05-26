@@ -2022,6 +2022,9 @@ footer .widget .widget-title::before {
 }
 .accordion-style-3 .accordion-item.active .accordion-body {
   background-color: var(--pbmit-blackish-color);
+  background-color: var(--pbmit-body-typography-color);
+  color: var(--pbmit-white-color);
+  border-radius: 10px;
 }
 .accordion-style-3 .accordion-body {
   padding: 15px 22px;

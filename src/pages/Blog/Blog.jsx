@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useContext } from "react";
 import BlogContetBox from "./BlogContetBox";
 import { DataContext } from "../../Context/DataContext";
-import axios from "axios";
 import Loader from "../../animation/Loader";
 import { useParams } from "react-router-dom";
+import FetchModule from "../../components/module/FetchModule";
 
 const Blog = () => {
   const { category } = useParams();
@@ -11,34 +11,21 @@ const Blog = () => {
   const { blogNewData, setFetchedBlogData } = useContext(DataContext);
   const [filteredData, setFilteredData] = useState(null);
 
-  useEffect(() => {
-    const fetchService = async () => {
-      try {
-        const dataResponse = await axios.get(
-          "https://optionflow.pro/api/Main/Blog"
-        );
-        setBlogData(dataResponse.data);
-        setFetchedBlogData(dataResponse.data);
-        console.log("request");
-      } catch (error) {
-        console.error(error);
-      }
-    };
+  let blogLink = "https://optionflow.pro/api/Main/Blog";
 
+  useEffect(() => {
     if (category !== undefined) {
-      console.log(blogNewData);
       setFilteredData(blogNewData.filter((item) => item.category === category));
     }
 
     if (blogNewData !== null && blogData === null) {
       setBlogData(blogNewData);
-    } else if (blogData === null) {
-      fetchService();
+    } else if (blogData === null || category === undefined) {
+      FetchModule(setBlogData, setFetchedBlogData, blogLink);
     }
-  }, [blogData, blogNewData, setFetchedBlogData, category]);
+  }, []);
 
   let data = category ? filteredData : blogData;
-  console.log(category);
 
   return (
     <div className="page-wrapper">

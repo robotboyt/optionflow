@@ -86,7 +86,7 @@ const Footer = () => {
                       <i className="pbmit-base-icon-arroba"></i>
                     </button>
                   </div>
-                  Наші знання, досвід і страсть до веб-дизайну вирізняють нас
+                  Наші знання, досвід і пристрасть до веб-дизайну вирізняють нас
                   серед інших агентств.
                 </div>
                 <ul className="pbmit-social-links">

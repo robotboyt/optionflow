@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { DataContext } from "../../Context/DataContext";
 import axios from "axios";
 import Loader from "../../animation/Loader";
+import FetchDetailsModule from "../../components/module/FetchDetailsModule";
 
 const PortfolioSingle = () => {
   const navigate = useNavigate();
@@ -10,34 +11,17 @@ const PortfolioSingle = () => {
   const { portfolioNewData, setFetchedPortfolioData } = useContext(DataContext);
   const [currentPortfolio, setCurrentPortfolio] = useState(null);
 
-  useEffect(() => {
-    if (portfolioNewData !== null) {
-      const getResult = (newArr, newID) => {
-        const result = newArr.filter((obj) => obj.id === newID);
-        setCurrentPortfolio(result);
-      };
+  const portfolioLink = "https://optionflow.pro/api/Main/Portfolio";
 
-      getResult(portfolioNewData, Number(id));
-    } else {
-      const fetchService = async () => {
-        try {
-          const dataResponse = await axios.get(
-            "https://optionflow.pro/api/Main/Portfolio"
-          );
-          const resultResponse = await dataResponse.data.filter(
-            (obj) => obj.id === +id
-          );
-          if (resultResponse.length === 0) {
-            navigate("/*");
-          }
-          await setCurrentPortfolio(resultResponse);
-          setFetchedPortfolioData(dataResponse.data);
-        } catch (error) {
-          console.error(error);
-        }
-      };
-      fetchService();
-    }
+  useEffect(() => {
+    FetchDetailsModule(
+      portfolioNewData,
+      setCurrentPortfolio,
+      setFetchedPortfolioData,
+      portfolioLink,
+      id,
+      navigate
+    );
   }, [id, navigate, portfolioNewData, setFetchedPortfolioData]);
 
   return (
@@ -138,11 +122,11 @@ const PortfolioSingle = () => {
 
                         <a
                           href={currentPortfolio[0].projectLink}
-                          class="col-md-6"
+                          className="col-md-6"
                           target="_blank"
                           rel="noreferrer"
                         >
-                          <div class="portfolio-challange-bg">
+                          <div className="portfolio-challange-bg">
                             <img
                               src={`https://optionflow.pro/${currentPortfolio[0].portfolioImage}`}
                               alt="Portfolio present"

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import CustomLink from "../../components/common/CustomLink";
 
 const ServiceContentBox = ({

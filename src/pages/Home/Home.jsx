@@ -48,23 +48,19 @@ const Home = () => {
   ]);
   const [servicesData, setServicesData] = useState({});
   const [blogData, setBlogData] = useState(null);
-  const { setFetchedBlogData } = useContext(DataContext);
+  const [tabData, setTabData] = useState(null);
   const [dataLoading, setDataLoading] = useState(false);
 
   useEffect(() => {
     const getData = async () => {
       try {
-        const servicesResponse = await axios.get(
-          "https://optionflow.pro/api/Main/Services"
+        const dataResponse = await axios.get(
+          "https://optionflow.pro/api/Main/Index"
         );
-        const blogResponse = await axios.get(
-          "https://optionflow.pro/api/Main/Blog"
-        );
-        // setCardData(servicesData.data);
-        setServicesData(servicesResponse.data.reverse());
-        setBlogData(blogResponse.data.slice(0, 3));
+        setServicesData(dataResponse.data.allServices);
+        setBlogData(dataResponse.data.blogs);
+        setTabData(dataResponse.data.contentBlocks);
         setDataLoading(true);
-        setFetchedBlogData(blogResponse.data);
       } catch (error) {
         console.log("We get the error", error);
       }
@@ -74,9 +70,6 @@ const Home = () => {
 
     return () => {};
   }, []);
-
-  console.log(servicesData, "servie");
-  console.log(cardData, "index");
 
   return (
     <div className="page-wrapper">
@@ -276,7 +269,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <TabContent />
+        <TabContent tabData={tabData} />
         <section className="section-lg">
           <div className="container">
             <div className="row g-0">
