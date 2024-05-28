@@ -12,9 +12,9 @@ const Faq = () => {
     FetchModule(setFaqData, undefined, faqLink);
   }, []);
 
-  console.log(faqData);
-  const handleOpenQuestion = (id) => {
-    setQuestionOpened(questionOpened === id ? null : id);
+  const handleOpenQuestion = (index) => {
+    console.log(index);
+    setQuestionOpened(questionOpened === index ? null : index);
   };
   return (
     <div className="page-wrapper">
@@ -38,8 +38,8 @@ const Faq = () => {
             <div className="row justify-content-center">
               <div className="col-lg-8">
                 <div className="pbmit-heading-subheading text-center">
-                  <h4 className="pbmit-subtitle-white">ПОШИРЕНІ ЗАПИТАННЯ</h4>
                   <h2 className="pbmit-title">Часті запитання</h2>
+                  <h4 className="pbmit-subtitle-white">ПОШИРЕНІ ЗАПИТАННЯ</h4>
                 </div>
               </div>
             </div>

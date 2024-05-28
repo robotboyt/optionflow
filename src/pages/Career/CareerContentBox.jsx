@@ -1,5 +1,5 @@
 import React from "react";
-import CustomLink from "../../components/common/CustomLink";
+import { Link } from "react-router-dom";
 
 const CareerContentBox = ({ careerObject }) => {
   return (
@@ -9,9 +9,9 @@ const CareerContentBox = ({ careerObject }) => {
           <div className="pbminfotech-box-content">
             <div className="pbmit-box-content-wrapper">
               <h3 className="pbmit-career-title">
-                <CustomLink propsHref={`/career-single/${careerObject.id}`}>
+                <Link to={`/career-single/${careerObject.id}`}>
                   {careerObject.title}
-                </CustomLink>
+                </Link>
               </h3>
               <div className="pbmit-meta-container">
                 {careerObject.technologies.map((categoryItem) => {

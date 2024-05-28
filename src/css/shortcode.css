@@ -1642,11 +1642,12 @@ body {
   line-height: 27px;
   font-weight: 500;
   padding: 0;
-  padding-bottom: 14px;
+  padding-bottom: 5px;
   height: auto;
   color: var(--pbmit-white-color) !important;
   background-color: transparent;
   border: 0;
+  width: 95%;
 }
 .pbmit-footer-newsletter button {
   position: absolute;
@@ -1708,6 +1709,39 @@ footer .widget .widget-title::before {
   max-width: 150px;
   height: 100px;
   max-height: 100px;
+}
+
+#sendButton {
+  width: fit-content;
+  height: 100%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+#sendButton svg {
+  height: 20px;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+#sendButton svg path {
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+#sendButton:hover svg path {
+  fill: var(--pbmit-blackish-color);
+  stroke: var(--pbmit-global-color);
 }
 
 /*----------------------------------------*/

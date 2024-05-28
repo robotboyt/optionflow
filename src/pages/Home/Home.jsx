@@ -1,10 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
-import CustomLink from "../../components/common/CustomLink.jsx";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import Sphere from "../../animation/Sphere.jsx";
 import TabContent from "../../components/HomeComponents/TabContent.jsx";
 import SliderComponent from "../../components/HomeComponents/Slider.jsx";
-import { DataContext } from "../../Context/DataContext.jsx";
 import Loader from "../../animation/Loader.jsx";
 import webImg from "../../Images/internet/web-service.png";
 import smmImg from "../../Images/internet/smm-service.png";
@@ -94,9 +93,9 @@ const Home = () => {
                     Cпільно творимо майбутнє: об'єднуємо іновації та творчість.
                   </p>
                   <div>
-                    <CustomLink propsHref="/contacts" className="pbmit-btn">
+                    <Link to="/contacts" className="pbmit-btn">
                       Отримати консультацію
-                    </CustomLink>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -134,9 +133,9 @@ const Home = () => {
                             <span>{item.category.category3}</span>
                           </div>
                           <div className="pbmit-ihbox-btn">
-                            <CustomLink propsHref={item.link}>
+                            <Link to={item.link}>
                               <span>Читати більше</span>
-                            </CustomLink>
+                            </Link>
                           </div>
                         </div>
                       </div>
@@ -282,12 +281,12 @@ const Home = () => {
                     Наш блог та новини
                   </h2>
                 </div>
-                <CustomLink
-                  propsHref="/blog"
+                <Link
+                  to="/blog"
                   className="pbmit-btn pbmit-btn-hover-secondary"
                 >
                   ДИВИТИСЬ ВСІ
-                </CustomLink>
+                </Link>
               </div>
               <div className="col-xl-7 col-md-12 p-0">
                 <article className="pbmit-blog-style-5 col-md-12">
@@ -304,19 +303,15 @@ const Home = () => {
                           </div>
                           <div className="pbmit-content-wrapper">
                             <h3 className="pbmit-post-title">
-                              <CustomLink
-                                propsHref={`/blog-single/${blogItem.id}`}
-                              >
+                              <Link to={`/blog-single/${blogItem.id}`}>
                                 {blogItem.title}
-                              </CustomLink>
+                              </Link>
                             </h3>
                           </div>
                           <div className="pbmit-read-more-link">
-                            <CustomLink
-                              propsHref={`/blog-single/${blogItem.id}`}
-                            >
+                            <Link to={`/blog-single/${blogItem.id}`}>
                               <span className="pbmit-arrow"></span>
-                            </CustomLink>
+                            </Link>
                           </div>
                         </div>
                       </div>

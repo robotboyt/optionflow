@@ -68,14 +68,20 @@ const Navbar = () => {
                       <li>
                         <ul className="pbmit-social-links">
                           <li className="pbmit-social-li pbmit-social-linkedin">
-                            <Link to="" target="_blank">
+                            <Link
+                              to="https://www.linkedin.com/company/optionflow/"
+                              target="_blank"
+                            >
                               <span>
                                 <i className="pbmit-base-icon-linkedin-squared"></i>
                               </span>
                             </Link>
                           </li>
                           <li className="pbmit-social-li pbmit-social-instagram">
-                            <Link to="" target="_blank">
+                            <Link
+                              to="https://www.instagram.com/optionflow.pro?igsh=N2djbzNja3BmN3Bt"
+                              target="_blank"
+                            >
                               <span>
                                 <i className="pbmit-base-icon-instagram"></i>
                               </span>
@@ -315,7 +321,8 @@ const Navbar = () => {
                               <li
                                 className={
                                   location.pathname === "/blog" ||
-                                  location.pathname.includes("/blog-single/")
+                                  location.pathname.includes("/blog-single/") ||
+                                  location.pathname.includes("/blog-category/")
                                     ? "active"
                                     : null
                                 }

@@ -1,10 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 import { DataContext } from "../../Context/DataContext";
 import { useParams } from "react-router-dom";
-import axios from "axios";
 import logoBlack from "./../../Images/logo.svg";
 import { useNavigate } from "react-router-dom";
-import CustomLink from "../../components/common/CustomLink";
+import { Link } from "react-router-dom";
 import Loader from "../../animation/Loader";
 import FetchDetailsModule from "../../components/module/FetchDetailsModule";
 
@@ -25,7 +24,7 @@ const ServiceSingle = () => {
       id,
       navigate
     );
-  }, [id, navigate, serviceNewData, setFetchedServiceData]);
+  }, [id]);
 
   return (
     <div className="page-wrapper">
@@ -66,11 +65,9 @@ const ServiceSingle = () => {
                                 }
                                 key={serviceItem.id.toString()}
                               >
-                                <CustomLink
-                                  propsHref={`/service-single/${serviceItem.id}`}
-                                >
+                                <Link to={`/service-single/${serviceItem.id}`}>
                                   {serviceItem.title}
-                                </CustomLink>
+                                </Link>
                               </li>
                             ))}
                           </ul>
@@ -81,15 +78,15 @@ const ServiceSingle = () => {
                           <div className="textwidget custom-html-widget">
                             <div className="pbmit-download">
                               <div className="pbmit-item-download">
-                                <a
-                                  href="https://optionflow.pro/docs/OptionFlow.pdf"
+                                <Link
+                                  to="https://optionflow.pro/docs/OptionFlow.pdf"
                                   target="_blank"
                                   rel="noopener noreferrer"
                                 >
                                   <i className="pbmit-xido-icon pbmit-xido-icon-pdf"></i>
                                   Завантажте нашу презентацію
                                   <i className="industrey-base-icons tstk-rightpostn tstk-base-icon-download"></i>
-                                </a>
+                                </Link>
                               </div>
                             </div>
                           </div>
@@ -105,17 +102,17 @@ const ServiceSingle = () => {
                                 alt="single15img"
                               />
                             </div>
-                            <h3 className="pbmit-ads-title">
+                            {/* <h3 className="pbmit-ads-title">
                               Цифрова <br />
                               ідентичність
                               <br />
                               Як головна <br />
                               Мета
-                            </h3>
+                            </h3> */}
                             <div className="pbmit-ads-button">
-                              <CustomLink propsHref={"/contacts"}>
+                              <Link to={"/contacts"}>
                                 <span>Консультація</span>
-                              </CustomLink>
+                              </Link>
                             </div>
                           </div>
                         </div>

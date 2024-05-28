@@ -1,10 +1,9 @@
 import React, { useEffect, useState, useContext } from "react";
 import { DataContext } from "../../Context/DataContext";
-import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
-import CustomLink from "../../components/common/CustomLink";
 import Loader from "../../animation/Loader";
 import FetchDetailsModule from "../../components/module/FetchDetailsModule";
+import { Link } from "react-router-dom";
 
 const BlogSingle = () => {
   const navigate = useNavigate();
@@ -23,7 +22,8 @@ const BlogSingle = () => {
       id,
       navigate
     );
-  }, [id, blogNewData, setFetchedBlogData]);
+    console.log("open");
+  }, [id, blogNewData]);
 
   return (
     <div className="page-wrapper">
@@ -84,9 +84,9 @@ const BlogSingle = () => {
                               className="recent-post-list-li"
                               key={postItem.id.toString()}
                             >
-                              <CustomLink
+                              <Link
                                 className="recent-post-thum"
-                                propsHref={`/blog-single/${postItem.id}`}
+                                to={`/blog-single/${postItem.id}`}
                               >
                                 <img
                                   src={`https://optionflow.pro/${postItem.blogImage}`}
@@ -98,7 +98,7 @@ const BlogSingle = () => {
                                   {postItem.title}
                                   <span className="post-date"></span>
                                 </div>
-                              </CustomLink>
+                              </Link>
                             </li>
                           ))}
                         </ul>
@@ -114,11 +114,9 @@ const BlogSingle = () => {
                             )
                           ).map((categoryItem) => (
                             <li key={categoryItem.toString()}>
-                              <CustomLink
-                                propsHref={`/blog-category/${categoryItem}`}
-                              >
+                              <Link to={`/blog-category/${categoryItem}`}>
                                 {categoryItem}
-                              </CustomLink>
+                              </Link>
                             </li>
                           ))}
                         </ul>
@@ -133,17 +131,10 @@ const BlogSingle = () => {
                                 alt="single15img"
                               />
                             </div>
-                            <h3 className="pbmit-ads-title">
-                              Цифрова <br />
-                              ідентичність
-                              <br />
-                              Як головна <br />
-                              Мета
-                            </h3>
                             <div className="pbmit-ads-button">
-                              <CustomLink propsHref={"/contacts"}>
+                              <Link to={"/contacts"}>
                                 <span>Консультація</span>
-                              </CustomLink>
+                              </Link>
                             </div>
                           </div>
                         </div>

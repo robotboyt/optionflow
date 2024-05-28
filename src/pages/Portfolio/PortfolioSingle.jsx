@@ -1,7 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { DataContext } from "../../Context/DataContext";
-import axios from "axios";
 import Loader from "../../animation/Loader";
 import FetchDetailsModule from "../../components/module/FetchDetailsModule";
 
@@ -22,7 +21,7 @@ const PortfolioSingle = () => {
       id,
       navigate
     );
-  }, [id, navigate, portfolioNewData, setFetchedPortfolioData]);
+  }, [id, portfolioNewData]);
 
   return (
     <div className="page-wrapper">

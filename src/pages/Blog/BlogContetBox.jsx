@@ -1,5 +1,5 @@
 import React from "react";
-import CustomLink from "../../components/common/CustomLink";
+import { Link } from "react-router-dom";
 
 const BlogContetBox = ({ blogObject }) => {
   return (
@@ -20,16 +20,19 @@ const BlogContetBox = ({ blogObject }) => {
           <div className="pbminfotech-box-content">
             <div className="pbmit-meta-container">
               <span className="pbmit-meta-category">
-                <CustomLink propsHref="/blog-single" rel="category tag">
+                <Link
+                  to={`/blog-category/${blogObject.category}`}
+                  rel="category tag"
+                >
                   {blogObject.category}
-                </CustomLink>
+                </Link>
               </span>
             </div>
             <div className="pbmit-box-content-wrapper">
               <h3 className="pbmit-post-title">
-                <CustomLink propsHref={`/blog-single/${blogObject.id}`}>
+                <Link to={`/blog-single/${blogObject.id}`}>
                   {blogObject.title}
-                </CustomLink>
+                </Link>
               </h3>
               <div className="pbmit-meta-container">
                 <span className="pbmit-meta pbmit-date-wrapper">

@@ -317,6 +317,20 @@ body {
   .marketing-lottie {
     margin: 0px;
   }
+
+  @media (max-width: 458px) {
+    .pbmit-ads-inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .pbmit-ads-inner .pbmit-ads-logo {
+      width: 200px;
+      padding: 0px;
+      margin-bottom: 30px;
+    }
+  }
   /*=== Homepage 07 ===*/
   .startup-section-bg-right {
     padding: 0px 15px 30px;

@@ -32,8 +32,8 @@ const TabContent = ({ tabData }) => {
           <div className="col-xl-7 col-md-12">
             <div className="row">
               {tabData ? (
-                tabData.map((item) => (
-                  <div className="col-md-6 ">
+                tabData.map((item, index) => (
+                  <div className="col-md-6 " key={index.toString()}>
                     <article className="pbmit-service-style-6">
                       <div className="pbminfotech-post-item">
                         <div className="pbminfotech-box-content">

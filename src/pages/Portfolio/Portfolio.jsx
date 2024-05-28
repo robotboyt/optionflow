@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from "react";
-import axios from "axios";
 import PortfolioBlock from "./PortfolioBlock";
 import { DataContext } from "../../Context/DataContext";
 import Loader from "../../animation/Loader";
@@ -18,7 +17,8 @@ const Portfolio = () => {
       FetchModule(setPortfolioData, setFetchedPortfolioData, portfolioLink);
       console.log("here is rerender");
     }
-  }, [portfolioData, portfolioNewData, setFetchedPortfolioData]);
+    console.log("fsd");
+  }, [portfolioData, portfolioNewData]);
 
   return (
     <div className="page-wrapper">

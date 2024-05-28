@@ -26,12 +26,14 @@ import "./css/demo-internet.css";
 import "./css/responsive.css";
 import Navbar from "./components/common/Navbar";
 import Footer from "./components/common/Footer";
+import ScrollTop from "./components/common/ScrollTop";
 
 const App = () => {
   return (
     <div>
       <DataProvider>
         <Navbar />
+        <ScrollTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/service" element={<Service />} />

@@ -8,10 +8,6 @@ const CustomLink = ({ propsHref, propsText, children, className }) => {
     if (openedHeader === true) {
       setHeaderOpened(!openedHeader);
     }
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
   };
 
   return (

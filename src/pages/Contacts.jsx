@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import CustomLink from "../components/common/CustomLink";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
@@ -29,6 +28,7 @@ const Contacts = () => {
           data
         );
         console.log("Has been sended", response.data);
+        localStorage.setItem(`formSended`, true);
         console.log(data);
       } catch (error) {
         console.log("We got Error", error);
@@ -116,18 +116,24 @@ const Contacts = () => {
                   </div>
                   <ul className="pbmit-social-links">
                     <li className="pbmit-social-li pbmit-social-linkedin">
-                      <CustomLink propsHref="#" target="_blank">
+                      <Link
+                        to="https://www.linkedin.com/company/optionflow/"
+                        target="_blank"
+                      >
                         <span>
                           <i className="pbmit-base-icon-linkedin-squared"></i>
                         </span>
-                      </CustomLink>
+                      </Link>
                     </li>
                     <li className="pbmit-social-li pbmit-social-instagram">
-                      <CustomLink propsHref="#" target="_blank">
+                      <Link
+                        to="https://www.instagram.com/optionflow.pro?igsh=N2djbzNja3BmN3Bt"
+                        target="_blank"
+                      >
                         <span>
                           <i className="pbmit-base-icon-instagram"></i>
                         </span>
-                      </CustomLink>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -199,8 +205,13 @@ const Contacts = () => {
                           <i className="form-btn-loader fa fa-circle-o-notch fa-spin fa-fw margin-bottom d-none"></i>
                           Відправити
                         </button>
+
+                        {localStorage.getItem("formSended") ? (
+                          <span className="message-status">
+                            Заявку отримано!
+                          </span>
+                        ) : null}
                       </div>
-                      <div className="col-md-12 col-lg-12 message-status"></div>
                     </div>
                   </form>
                 </div>

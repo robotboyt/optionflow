@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import { DataContext } from "../Context/DataContext";
 import axios from "axios";
-import CustomLink from "../components/common/CustomLink";
 import { Link } from "react-router-dom";
 import Loader from "../animation/Loader";
 
@@ -214,20 +213,18 @@ const About = () => {
                         <div className="pbmit-content-wrapper">
                           <div className="pbmit-meta-cat-wrapper pbmit-meta-line">
                             <div className="pbmit-meta-category">
-                              <CustomLink
-                                propsHref={`/blog-single/${blogItem.id}`}
+                              <Link
+                                to={`/blog-category/${blogItem.category}`}
                                 rel="category tag"
                               >
                                 {blogItem.category}
-                              </CustomLink>
+                              </Link>
                             </div>
                           </div>
                           <h3 className="pbmit-post-title">
-                            <CustomLink
-                              propsHref={`/blog-single/${blogItem.id}`}
-                            >
+                            <Link to={`/blog-single/${blogItem.id}`}>
                               {blogItem.title}
-                            </CustomLink>
+                            </Link>
                           </h3>
                         </div>
                         <div className="pbmit-featured-container">
@@ -242,9 +239,9 @@ const About = () => {
                           </div>
                         </div>
                         <div className="pbmit-read-more-link">
-                          <CustomLink propsHref={`/blog-single/${blogItem.id}`}>
+                          <Link to={`/blog-single/${blogItem.id}`}>
                             <span>Продовжити читати</span>
-                          </CustomLink>
+                          </Link>
                         </div>
                       </div>
                     </div>

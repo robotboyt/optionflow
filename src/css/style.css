@@ -1129,10 +1129,10 @@
   background: none;
 }
 .widget.single-service-contact {
-  background-image: url(../Images/internet/widgetImage.png);
+  /* background-image: url(../Images/internet/widgetImage.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom;
+  background-position: bottom; */
   background-color: #f0f2f7;
   padding: 45px;
   margin-bottom: 40px;
@@ -1219,8 +1219,9 @@
 .pbmit-ads-inner .pbmit-ads-logo-white {
   /* background: var(--pbmit-white-color); */
   display: inline-block;
-  padding: 15px;
-  width: 130px;
+  /* padding: 15px; */
+  margin-bottom: 30px;
+  width: 200px;
   position: relative;
   z-index: 1;
 }
@@ -1389,7 +1390,8 @@ iframe {
   width: 90%;
 }
 .message-status {
-  margin-top: 30px;
+  margin-left: 20px;
+  color: white;
 }
 
 /**07 - Comment Form **/

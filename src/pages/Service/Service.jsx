@@ -17,7 +17,7 @@ const Service = () => {
       FetchModule(setServiceData, setFetchedServiceData, serviceLink);
       console.log("here is rerender");
     }
-  }, [serviceData, serviceNewData, setFetchedServiceData]);
+  }, [serviceData, serviceNewData]);
   return (
     <div>
       <div className="page-wrapper">

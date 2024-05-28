@@ -1,5 +1,5 @@
 import React from "react";
-import CustomLink from "../../components/common/CustomLink";
+import { Link } from "react-router-dom";
 
 const ServiceContentBox = ({
   serviceTitle,
@@ -30,14 +30,12 @@ const ServiceContentBox = ({
               </div>
               <div className="pbmit-service-title-wrapper">
                 <div className="pbmit-service-cat">
-                  <CustomLink propsHref={serviceLink} rel="tag">
+                  <Link to={serviceLink} rel="tag">
                     {serviceCategory}
-                  </CustomLink>
+                  </Link>
                 </div>
                 <h3 className="pbmit-service-title">
-                  <CustomLink propsHref={serviceLink}>
-                    {serviceTitle}
-                  </CustomLink>
+                  <Link to={serviceLink}>{serviceTitle}</Link>
                 </h3>
               </div>
             </div>

@@ -1,6 +1,7 @@
 import React from "react";
-import CustomLink from "./CustomLink";
+import { Link } from "react-router-dom";
 import logoWhite from "../../Images/logo-white.svg";
+import FooterEmailForm from "./FooterEmailForm";
 
 const Footer = () => {
   return (
@@ -13,7 +14,7 @@ const Footer = () => {
                 Не соромтесь звертатися до нас
                 <br />З нетерпінням чекаємо можливості спілкування з вами!
               </h3>
-              <CustomLink propsHref="#">info@optionflow.pro</CustomLink>
+              <Link to="mailto:info@optionflow.pro">info@optionflow.pro</Link>
             </div>
             <div className="col-md-3 col-sm-12">
               <div className="pbmit-footer-logo">
@@ -32,16 +33,16 @@ const Footer = () => {
                 <div className="textwidget">
                   <ul>
                     <li>
-                      <CustomLink propsHref="/contacts">Контаки</CustomLink>
+                      <Link to="/contacts">Контаки</Link>
                     </li>
                     <li>
-                      <CustomLink propsHref="/blog">Блог</CustomLink>
+                      <Link to="/blog">Блог</Link>
                     </li>
                     <li>
-                      <CustomLink propsHref="/career">Карʼєра</CustomLink>
+                      <Link to="/career">Карʼєра</Link>
                     </li>
                     <li>
-                      <CustomLink propsHref="/about">Про нас</CustomLink>
+                      <Link to="/about">Про нас</Link>
                     </li>
                   </ul>
                 </div>
@@ -54,9 +55,9 @@ const Footer = () => {
                   <div className="pbmit-footer-contact-info">
                     <div className="pbmit-content-box">Центр кліентів</div>
                     <div className="pbmit-contact-box">
-                      <CustomLink propsHref="mailto:info@optionflow.pro">
+                      <Link to="mailto:info@optionflow.pro">
                         info@optionflow.pro
-                      </CustomLink>
+                      </Link>
                     </div>
                   </div>
                   <div className="pbmit-footer-contact-info">
@@ -64,9 +65,9 @@ const Footer = () => {
                       Потрібна жива підтримка?
                     </div>
                     <div className="pbmit-contact-box">
-                      <CustomLink propsHref="tel:+38 (099) 760 76 69">
+                      <Link to="tel:+38 (099) 760 76 69">
                         +38 (099) 760 76 69
-                      </CustomLink>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -76,7 +77,7 @@ const Footer = () => {
               <div className="widget">
                 <h3 className="widget-title">Розсилка Новин</h3>
                 <div className="mc4wp-form-fields">
-                  <div className="pbmit-footer-newsletter">
+                  {/* <div className="pbmit-footer-newsletter">
                     <input
                       type="email"
                       name="EMAIL"
@@ -85,20 +86,28 @@ const Footer = () => {
                     <button type="submit" value="Sign up">
                       <i className="pbmit-base-icon-arroba"></i>
                     </button>
-                  </div>
+                  </div> */}
+                  <FooterEmailForm />
                   Наші знання, досвід і пристрасть до веб-дизайну вирізняють нас
                   серед інших агентств.
                 </div>
                 <ul className="pbmit-social-links">
                   <li className="pbmit-social-li pbmit-social-linkedin">
-                    <a href="#" target="_blank">
+                    <a
+                      href="https://www.linkedin.com/company/optionflow/"
+                      target="_blank"
+                    >
                       <span>
                         <i className="pbmit-base-icon-linkedin-squared"></i>
                       </span>
                     </a>
                   </li>
                   <li className="pbmit-social-li pbmit-social-instagram">
-                    <a href="#" target="_blank" rel="noopener">
+                    <a
+                      href="https://www.instagram.com/optionflow.pro?igsh=N2djbzNja3BmN3Bt"
+                      target="_blank"
+                      rel="noopener"
+                    >
                       <span>
                         <i className="pbmit-base-icon-instagram"></i>
                       </span>
@@ -116,8 +125,7 @@ const Footer = () => {
             <div className="row">
               <div className="col-md-6">
                 <div className="pbmit-footer-copyright-text-area">
-                  Copyright © 2024{" "}
-                  <CustomLink propsHref="#">OptionFlow</CustomLink>, All Rights
+                  Copyright © 2024 <Link to="/">OptionFlow</Link>, All Rights
                   Reserved.
                 </div>
               </div>
@@ -126,10 +134,10 @@ const Footer = () => {
                   <div className="menu-copyright-menu-container">
                     <ul className="pbmit-footer-menu">
                       <li className="menu-item">
-                        <CustomLink propsHref="#">Privacy Policy</CustomLink>
+                        <Link to="#">Privacy Policy</Link>
                       </li>
                       <li className="menu-item">
-                        <CustomLink propsHref="#">Contact</CustomLink>
+                        <Link to="/contacts">Contact</Link>
                       </li>
                     </ul>
                   </div>
