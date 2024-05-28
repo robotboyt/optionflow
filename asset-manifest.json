@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/optionflow/static/css/main.93104634.css",
-    "main.js": "/optionflow/static/js/main.083cb16b.js",
+    "main.css": "/optionflow/static/css/main.dd0664ba.css",
+    "main.js": "/optionflow/static/js/main.9948f89d.js",
     "static/media/flaticon.svg": "/optionflow/static/media/flaticon.8dbedf60258bbe4aa064.svg",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/optionflow/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/it-service.png": "/optionflow/static/media/it-service.b68ce1eca29652408fd2.png",
@@ -12,7 +12,6 @@
     "static/media/fontawesome-webfont.ttf?v=4.7.0": "/optionflow/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
     "static/media/history.jpg": "/optionflow/static/media/history.c4254596a64f58c36ef0.jpg",
     "static/media/titlebarbg.jpg": "/optionflow/static/media/titlebarbg.ce2da5852dc2cc0c443d.jpg",
-    "static/media/widgetImage.png": "/optionflow/static/media/widgetImage.f632e937e5689a024cf9.png",
     "static/media/flaticon.eot": "/optionflow/static/media/flaticon.056a850d5284703ea9b0.eot",
     "static/media/flaticon.ttf": "/optionflow/static/media/flaticon.950064507c0a6911efac.ttf",
     "static/media/about.jpg": "/optionflow/static/media/about.8a1e21e27371bd913884.jpg",
@@ -33,11 +32,11 @@
     "static/media/slick.ttf": "/optionflow/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/optionflow/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/optionflow/index.html",
-    "main.93104634.css.map": "/optionflow/static/css/main.93104634.css.map",
-    "main.083cb16b.js.map": "/optionflow/static/js/main.083cb16b.js.map"
+    "main.dd0664ba.css.map": "/optionflow/static/css/main.dd0664ba.css.map",
+    "main.9948f89d.js.map": "/optionflow/static/js/main.9948f89d.js.map"
   },
   "entrypoints": [
-    "static/css/main.93104634.css",
-    "static/js/main.083cb16b.js"
+    "static/css/main.dd0664ba.css",
+    "static/js/main.9948f89d.js"
   ]
 }
