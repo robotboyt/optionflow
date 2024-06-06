@@ -23,7 +23,7 @@ const TabContent = ({ tabData }) => {
               </div>
               <CustomLink
                 propsHref="/contacts"
-                className="pbmit-btn pbmit-btn-hover-white mt-3"
+                className="pbmit-btn pbmit-btn-hover-secondary"
               >
                 консультація
               </CustomLink>

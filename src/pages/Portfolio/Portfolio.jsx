@@ -20,6 +20,8 @@ const Portfolio = () => {
     console.log("fsd");
   }, [portfolioData, portfolioNewData]);
 
+  console.log("re render ? ");
+
   return (
     <div className="page-wrapper">
       <div className="pbmit-title-bar-wrapper">

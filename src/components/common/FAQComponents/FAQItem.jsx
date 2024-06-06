@@ -1,25 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 
-const FAQItem = ({ question, answer, isVisible, isOnToogle }) => {
+const FAQItem = ({ question, answer, identificator }) => {
+  const [questionOpened, setQuestionOpened] = useState(null);
+
+  const handleOpenQuestion = (identificator) => {
+    console.log(identificator);
+    setQuestionOpened(questionOpened === identificator ? null : identificator);
+  };
   return (
     <div
-      className={isVisible ? "accordion-item active" : "accordion-item"}
-      onClick={isOnToogle}
+      className={questionOpened ? "accordion-item active" : "accordion-item"}
+      onClick={handleOpenQuestion}
     >
       <h2 className="accordion-header" id="headingOne">
         <button
           className={
-            isVisible ? "accordion-button " : "accordion-button collapsed"
+            questionOpened ? "accordion-button " : "accordion-button collapsed"
           }
           type="button"
-          id="1"
+          id={identificator}
         >
           {question}
         </button>
       </h2>
       <div
         className={
-          isVisible ? "accordion-collapse" : "accordion-collapse collapse"
+          questionOpened ? "accordion-collapse" : "accordion-collapse collapse"
         }
       >
         <div className="accordion-body">{answer}</div>

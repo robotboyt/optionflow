@@ -4,6 +4,7 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import { DataContext } from "../../Context/DataContext";
 import Loader from "../../animation/Loader";
 import FetchDetailsModule from "../../components/module/FetchDetailsModule";
+import FetchModule from "../../components/module/FetchModule";
 
 const CareerSingle = () => {
   const navigate = useNavigate();
@@ -13,19 +14,17 @@ const CareerSingle = () => {
   const [fileUpload, setFileUpload] = useState(null);
   const [uploading, setUploading] = useState(false);
 
+  const carrerDetailsLink = "https://optionflow.pro/api/Main/CareerDetails/";
   const careerLink = "https://optionflow.pro/api/Main/Career";
 
   useEffect(() => {
-    FetchDetailsModule(
-      careerNewData,
-      setCurrentCareer,
-      setFetchedCareerData,
-      careerLink,
-      id,
-      navigate
-    );
+    FetchDetailsModule(setCurrentCareer, carrerDetailsLink, id, navigate);
+    if (careerNewData === null) {
+      FetchModule(undefined, setFetchedCareerData, careerLink);
+      console.log("is done");
+    }
     console.log("detais render");
-  }, [id, careerNewData, setFetchedCareerData]);
+  }, [id]);
 
   const sendCV = async (event) => {
     event.preventDefault();
@@ -34,7 +33,7 @@ const CareerSingle = () => {
       const dataResponse = await axios.post(
         "https://optionflow.pro/api/Main/CareerDetailPost",
         {
-          "Career.id": currentCareer[0].id,
+          "Career.id": currentCareer.id,
           files: fileUpload,
         },
         {
@@ -65,7 +64,7 @@ const CareerSingle = () => {
                   <div className="pbmit-tbar">
                     <div className="pbmit-tbar-inner container">
                       <h1 className="pbmit-tbar-title">
-                        {currentCareer[0].title}
+                        {currentCareer.title}
                       </h1>
                     </div>
                   </div>
@@ -81,12 +80,12 @@ const CareerSingle = () => {
                   <div className="col-12">
                     <div className="pbmit-short-description">
                       <div className="pbmit-short-head">
-                        <h4>{currentCareer[0].title}</h4>
+                        <h4>{currentCareer.title}</h4>
                         <span className="dropcap rounded">
-                          {currentCareer[0].experiences.tag}
+                          {currentCareer.experiences.experienceTag}
                         </span>
                       </div>
-                      {currentCareer[0].shortTitle}
+                      {currentCareer.shortTitle}
                     </div>
                     <div className="pbmit-single-project-details-list">
                       <div className="pbmit-portfolio-lines-wrapper">
@@ -95,7 +94,7 @@ const CareerSingle = () => {
                             <span className="pbmit-portfolio-line-title">
                               Досвід:
                             </span>
-                            {currentCareer[0].experiences.experiences.map(
+                            {currentCareer.experiences.experiences.map(
                               (experienceItem) => {
                                 return experienceItem ? (
                                   <div key={experienceItem.toString()}>
@@ -112,7 +111,7 @@ const CareerSingle = () => {
                             <span className="pbmit-portfolio-line-title">
                               Технології:
                             </span>
-                            {currentCareer[0].technologies.map(
+                            {currentCareer.technologies.map(
                               (technologyItem) => {
                                 return technologyItem ? (
                                   <div key={technologyItem.toString()}>
@@ -129,7 +128,7 @@ const CareerSingle = () => {
                             <span className="pbmit-portfolio-line-title">
                               Інструменти:
                             </span>
-                            {currentCareer[0].tools.map((toolsItem) => {
+                            {currentCareer.tools.map((toolsItem) => {
                               return toolsItem ? (
                                 <div key={toolsItem.toString()}>
                                   <span className="pbmit-portfolio-line-value">
@@ -219,7 +218,7 @@ const CareerSingle = () => {
                         <div className="col-md-6">
                           <h5>Основні функціональні обов'язки</h5>
                           <ul className="list-group list-group-borderless">
-                            {currentCareer[0].functionalHarnesses.map(
+                            {currentCareer.functionalHarnesses.map(
                               (harnessesItem) => {
                                 return harnessesItem ? (
                                   <li
@@ -237,19 +236,17 @@ const CareerSingle = () => {
                         <div className="col-md-6">
                           <h5>Наші обов'язки</h5>
                           <ul className="list-group list-group-borderless">
-                            {currentCareer[0].ourHarnesses.map(
-                              (harnessesItem) => {
-                                return harnessesItem ? (
-                                  <li
-                                    className="list-group-item"
-                                    key={harnessesItem.toString()}
-                                  >
-                                    <i className="pbmit-base-icon-ok"></i>
-                                    {harnessesItem}
-                                  </li>
-                                ) : null;
-                              }
-                            )}
+                            {currentCareer.ourHarnesses.map((harnessesItem) => {
+                              return harnessesItem ? (
+                                <li
+                                  className="list-group-item"
+                                  key={harnessesItem.toString()}
+                                >
+                                  <i className="pbmit-base-icon-ok"></i>
+                                  {harnessesItem}
+                                </li>
+                              ) : null;
+                            })}
                           </ul>
                         </div>
                       </div>

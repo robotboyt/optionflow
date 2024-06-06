@@ -4,7 +4,9 @@ const FetchModule = async (setPageData, setContextData, link) => {
   try {
     const dataResponse = await axios.get(link);
     const data = dataResponse.data;
-    setPageData(data);
+    if (setPageData) {
+      setPageData(data);
+    }
     if (setContextData) {
       setContextData(data);
     }

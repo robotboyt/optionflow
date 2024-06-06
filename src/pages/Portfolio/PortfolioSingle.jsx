@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { DataContext } from "../../Context/DataContext";
 import Loader from "../../animation/Loader";
 import FetchDetailsModule from "../../components/module/FetchDetailsModule";
+import FetchModule from "../../components/module/FetchModule";
 
 const PortfolioSingle = () => {
   const navigate = useNavigate();
@@ -10,18 +11,22 @@ const PortfolioSingle = () => {
   const { portfolioNewData, setFetchedPortfolioData } = useContext(DataContext);
   const [currentPortfolio, setCurrentPortfolio] = useState(null);
 
+  const portfolioDetailsLink =
+    "https://optionflow.pro/api/Main/PortfolioDetails/";
   const portfolioLink = "https://optionflow.pro/api/Main/Portfolio";
 
   useEffect(() => {
-    FetchDetailsModule(
-      portfolioNewData,
-      setCurrentPortfolio,
-      setFetchedPortfolioData,
-      portfolioLink,
-      id,
-      navigate
-    );
-  }, [id, portfolioNewData]);
+    const detailsFetch = async () => {
+      await FetchDetailsModule(
+        setCurrentPortfolio,
+        portfolioDetailsLink,
+        id,
+        navigate
+      );
+      FetchModule(undefined, setFetchedPortfolioData, portfolioLink);
+    };
+    detailsFetch();
+  }, [id]);
 
   return (
     <div className="page-wrapper">
@@ -34,7 +39,7 @@ const PortfolioSingle = () => {
                   <div className="pbmit-tbar">
                     <div className="pbmit-tbar-inner container">
                       <h1 className="pbmit-tbar-title">
-                        {currentPortfolio[0].title}
+                        {currentPortfolio.title}
                       </h1>
                     </div>
                   </div>
@@ -49,8 +54,8 @@ const PortfolioSingle = () => {
                 <div className="row">
                   <div className="col-12">
                     <div className="pbmit-short-description">
-                      <h4>{currentPortfolio[0].title}</h4>
-                      {currentPortfolio[0].shortTitle}
+                      <h4>{currentPortfolio.title}</h4>
+                      {currentPortfolio.shortTitle}
                     </div>
                     {/* <img
                       src={currentPortfolio[0].portfolioImage}
@@ -65,7 +70,7 @@ const PortfolioSingle = () => {
                               Клієнт:
                             </span>
                             <span className="pbmit-portfolio-line-value">
-                              {currentPortfolio[0].client}
+                              {currentPortfolio.client}
                             </span>
                           </li>
 
@@ -82,7 +87,7 @@ const PortfolioSingle = () => {
                               Категорія:
                             </span>
                             <span className="pbmit-portfolio-line-value">
-                              {currentPortfolio[0].category}
+                              {currentPortfolio.category}
                             </span>
                           </li>
                         </ul>
@@ -97,7 +102,7 @@ const PortfolioSingle = () => {
                           <div
                             className="subchallange"
                             dangerouslySetInnerHTML={{
-                              __html: currentPortfolio[0].aboutProject,
+                              __html: currentPortfolio.aboutProject,
                             }}
                           ></div>
                           <ul className="list-group list-group-borderless">
@@ -120,14 +125,14 @@ const PortfolioSingle = () => {
                         </div>
 
                         <a
-                          href={currentPortfolio[0].projectLink}
+                          href={currentPortfolio.projectLink}
                           className="col-md-6"
                           target="_blank"
                           rel="noreferrer"
                         >
                           <div className="portfolio-challange-bg">
                             <img
-                              src={`https://optionflow.pro/${currentPortfolio[0].portfolioImage}`}
+                              src={`https://optionflow.pro/${currentPortfolio.portfolioImage}`}
                               alt="Portfolio present"
                             />
                           </div>

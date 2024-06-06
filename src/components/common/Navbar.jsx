@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logoWhite from "../../Images/logo-white.svg";
 import CustomLink from "./CustomLink";
@@ -7,8 +7,10 @@ import { DataContext } from "../../Context/DataContext";
 const Navbar = () => {
   const location = useLocation();
   const { openedHeader, setHeaderOpened } = useContext(DataContext);
-  const [scrollWindow, setScrollWindow] = useState(0);
+  // const [scrollWindow, setScrollWindow] = useState(0);
+  const [headerSticky, setHeaderSticky] = useState(false);
   const [aboutSectionOpened, setAboutSerctionOpened] = useState(false);
+  const navbarRef = useRef(null);
 
   const toogleAboutOpened = () => {
     setAboutSerctionOpened(!aboutSectionOpened);
@@ -22,16 +24,32 @@ const Navbar = () => {
   document.body.style.overflow = openedHeader ? "hidden" : "";
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrollWindow(window.scrollY);
-    };
+    // const handleScroll = () => {
+    //   setScrollWindow(window.scrollY);
+    // };
+    // window.addEventListener("scroll", handleScroll);
+    // return () => {
+    //   window.removeEventListener("scroll", handleScroll);
+    // };
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setHeaderSticky(!entry.isIntersecting);
+      },
+      { threshold: 0.2 }
+    );
 
-    window.addEventListener("scroll", handleScroll);
+    const currentHeader = navbarRef.current;
+
+    if (currentHeader) {
+      observer.observe(currentHeader);
+    }
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      if (currentHeader) {
+        observer.unobserve(currentHeader);
+      }
     };
-  }, []);
+  }, [location.pathname]);
 
   return (
     <div>
@@ -43,7 +61,7 @@ const Navbar = () => {
               : "site-header header-style-6"
           }
         >
-          <div className="pbmit-header-overlay">
+          <div ref={navbarRef} className="pbmit-header-overlay">
             <div className="pre-header-wrapper">
               <div className="container">
                 <div className="d-flex justify-content-between">
@@ -96,7 +114,7 @@ const Navbar = () => {
             </div>
             <div
               className={
-                scrollWindow >= 115
+                headerSticky
                   ? "site-header-menu sticky-header"
                   : "site-header-menu"
               }
@@ -109,7 +127,7 @@ const Navbar = () => {
                         <Link to="/">
                           <img
                             className={
-                              scrollWindow >= 115 ? "sticky-logo" : "logo-img"
+                              headerSticky ? "sticky-logo" : "logo-img"
                             }
                             alt="coworking"
                             src={logoWhite}
@@ -232,18 +250,19 @@ const Navbar = () => {
         </header>
       ) : (
         <header
+          ref={navbarRef}
           className={
             openedHeader
               ? "site-header header-style-1 active"
               : "site-header header-style-1"
           }
         >
-          {scrollWindow >= 30 ? (
+          {headerSticky ? (
             <div style={{ widows: "100%", height: "100px" }}></div>
           ) : null}
           <div
             className={
-              scrollWindow >= 30
+              headerSticky
                 ? "site-header-menu sticky-header"
                 : "site-header-menu"
             }
@@ -290,56 +309,25 @@ const Navbar = () => {
                                   propsText={"Головна"}
                                 />
                               </li>
-                              <li
-                                className={
-                                  location.pathname === "/service" ||
-                                  location.pathname.includes("/service-single/")
-                                    ? "active"
-                                    : null
-                                }
-                              >
+                              <li>
                                 <CustomLink
                                   propsHref={"/service"}
                                   propsText={"Послуги"}
                                 />
                               </li>
-                              <li
-                                className={
-                                  location.pathname === "/portfolio" ||
-                                  location.pathname.includes(
-                                    "/portfolio-single/"
-                                  )
-                                    ? "active"
-                                    : null
-                                }
-                              >
+                              <li>
                                 <CustomLink
                                   propsHref={"/portfolio"}
                                   propsText={"Портфоліо"}
                                 />
                               </li>
-                              <li
-                                className={
-                                  location.pathname === "/blog" ||
-                                  location.pathname.includes("/blog-single/") ||
-                                  location.pathname.includes("/blog-category/")
-                                    ? "active"
-                                    : null
-                                }
-                              >
+                              <li>
                                 <CustomLink
                                   propsHref={"/blog"}
                                   propsText={"Блог"}
                                 />
                               </li>
-                              <li
-                                className={
-                                  location.pathname === "/career" ||
-                                  location.pathname.includes("/career-single/")
-                                    ? "active"
-                                    : null
-                                }
-                              >
+                              <li>
                                 <CustomLink
                                   propsHref={"/career"}
                                   propsText={"Карьера"}
@@ -373,25 +361,13 @@ const Navbar = () => {
                                       propsText={"Про нас"}
                                     />
                                   </li>
-                                  <li
-                                    className={
-                                      location.pathname === "/our-history"
-                                        ? "active"
-                                        : null
-                                    }
-                                  >
+                                  <li>
                                     <CustomLink
                                       propsHref={"/our-history"}
                                       propsText={"Наша історія"}
                                     />
                                   </li>
-                                  <li
-                                    className={
-                                      location.pathname === "/faq"
-                                        ? "active"
-                                        : null
-                                    }
-                                  >
+                                  <li>
                                     <CustomLink
                                       propsHref={"/faq"}
                                       propsText={"Faq"}
@@ -411,13 +387,7 @@ const Navbar = () => {
                                   ></i>
                                 </span>
                               </li>
-                              <li
-                                className={
-                                  location.pathname === "/contacts"
-                                    ? "active"
-                                    : null
-                                }
-                              >
+                              <li>
                                 <CustomLink
                                   propsHref={"/contacts"}
                                   propsText={"Контакти"}

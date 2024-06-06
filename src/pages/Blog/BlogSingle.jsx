@@ -4,6 +4,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import Loader from "../../animation/Loader";
 import FetchDetailsModule from "../../components/module/FetchDetailsModule";
 import { Link } from "react-router-dom";
+import FetchModule from "../../components/module/FetchModule";
 
 const BlogSingle = () => {
   const navigate = useNavigate();
@@ -11,19 +12,18 @@ const BlogSingle = () => {
   const { blogNewData, setFetchedBlogData } = useContext(DataContext);
   const [currentBlog, setCurrentBlog] = useState(null);
 
+  let blogDetailsLink = "https://optionflow.pro/api/Main/BlogDetails/";
+
   let blogLink = "https://optionflow.pro/api/Main/Blog";
 
   useEffect(() => {
-    FetchDetailsModule(
-      blogNewData,
-      setCurrentBlog,
-      setFetchedBlogData,
-      blogLink,
-      id,
-      navigate
-    );
+    const detailsFetch = async () => {
+      await FetchDetailsModule(setCurrentBlog, blogDetailsLink, id, navigate);
+      FetchModule(undefined, setFetchedBlogData, blogLink);
+    };
+    detailsFetch();
     console.log("open");
-  }, [id, blogNewData]);
+  }, [id]);
 
   return (
     <div className="page-wrapper">
@@ -36,7 +36,7 @@ const BlogSingle = () => {
                   <div className="pbmit-tbar">
                     <div className="pbmit-tbar-inner container">
                       <h1 className="pbmit-tbar-title-one">
-                        {currentBlog[0].title}
+                        {currentBlog.title}
                       </h1>
                     </div>
                   </div>
@@ -57,7 +57,7 @@ const BlogSingle = () => {
                             <div className="pbmit-featured-container">
                               <div className="pbmit-featured-wrapper">
                                 <img
-                                  src={`https://optionflow.pro/${currentBlog[0].blogImage}`}
+                                  src={`https://optionflow.pro/${currentBlog.blogImage}`}
                                   className="img-fluid w-100"
                                   alt=""
                                 />
@@ -65,7 +65,7 @@ const BlogSingle = () => {
                               <div
                                 className="pbmit-short-description"
                                 dangerouslySetInnerHTML={{
-                                  __html: currentBlog[0].description,
+                                  __html: currentBlog.description,
                                 }}
                               ></div>
                             </div>
@@ -79,46 +79,50 @@ const BlogSingle = () => {
                       <aside className="widget widget-recent-post">
                         <h2 className="widget-title">Останні публікації</h2>
                         <ul className="recent-post-list">
-                          {blogNewData.slice(0, 3).map((postItem) => (
-                            <li
-                              className="recent-post-list-li"
-                              key={postItem.id.toString()}
-                            >
-                              <Link
-                                className="recent-post-thum"
-                                to={`/blog-single/${postItem.id}`}
-                              >
-                                <img
-                                  src={`https://optionflow.pro/${postItem.blogImage}`}
-                                  className="img-fluid"
-                                  alt=""
-                                />
+                          {blogNewData
+                            ? blogNewData.slice(0, 3).map((postItem) => (
+                                <li
+                                  className="recent-post-list-li"
+                                  key={postItem.id.toString()}
+                                >
+                                  <Link
+                                    className="recent-post-thum"
+                                    to={`/blog-single/${postItem.id}`}
+                                  >
+                                    <img
+                                      src={`https://optionflow.pro/${postItem.blogImageLow}`}
+                                      className="img-fluid"
+                                      alt=""
+                                    />
 
-                                <div className="media-body">
-                                  {postItem.title}
-                                  <span className="post-date"></span>
-                                </div>
-                              </Link>
-                            </li>
-                          ))}
+                                    <div className="media-body">
+                                      {postItem.title}
+                                      <span className="post-date"></span>
+                                    </div>
+                                  </Link>
+                                </li>
+                              ))
+                            : null}
                         </ul>
                       </aside>
                       <aside className="widget widget-categories">
                         <h3 className="widget-title">Категорії</h3>
                         <ul>
-                          {Array.from(
-                            new Set(
-                              blogNewData.map((item) => {
-                                return item.category;
-                              })
-                            )
-                          ).map((categoryItem) => (
-                            <li key={categoryItem.toString()}>
-                              <Link to={`/blog-category/${categoryItem}`}>
-                                {categoryItem}
-                              </Link>
-                            </li>
-                          ))}
+                          {blogNewData
+                            ? Array.from(
+                                new Set(
+                                  blogNewData.map((item) => {
+                                    return item.category;
+                                  })
+                                )
+                              ).map((categoryItem) => (
+                                <li key={categoryItem.toString()}>
+                                  <Link to={`/blog-category/${categoryItem}`}>
+                                    {categoryItem}
+                                  </Link>
+                                </li>
+                              ))
+                            : null}
                         </ul>
                       </aside>
                       <aside className="widget single-service-contact">

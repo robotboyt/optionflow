@@ -111,7 +111,7 @@ body {
   top: 50%;
   width: 30px;
   height: 2px;
-  background-color: rgba(var(--pbmit-secondary-color-rgb), 0.6);
+  background-color: rgba(var(--pbmit-secondPnary-color-rgb), 0.6);
 }
 .center-align {
   width: 62%;
@@ -125,12 +125,13 @@ body {
 /** Style 8 **/
 .pbmit-ihbox-style-8 {
   text-align: center;
-  padding: 60px 40px;
+  padding: 60px 0px;
   background-color: var(--pbmit-blackish-color);
   color: var(--pbmit-white-color);
   border-radius: 16px;
   transition: all 500ms ease;
   box-shadow: 0px 2px 40px 0px rgb(0 0 0 / 5%);
+  height: 520px;
 }
 
 .pbmit-ihbox-style-8:hover {
@@ -243,7 +244,7 @@ body {
 .pbmit-ihbox-style-9:hover .pbmit-ihbox-icon-wrapper .pbmit-icon-type-icon,
 .pbmit-ihbox-style-9:hover .pbmit-ihbox-svg-wrapper {
   background-color: var(--pbmit-global-color);
-  font-size: 90px;
+  font-size: 70px;
   transition: 0.3s ease-in-out;
 }
 .pbmit-ihbox-style-9 .pbmit-ihbox-icon-wrapper.pbmit-ihbox-icon-type-image img,
@@ -1392,13 +1393,10 @@ body {
 .header-style-1.site-header .site-navigation ul.navigation > li.active > a {
   color: var(--pbmit-global-color);
 }
-.header-style-1.site-header
-  .site-navigation
-  ul.navigation
-  > li.active
-  > a:after {
+.header-style-1.site-header .site-navigation ul.navigation > li > a.active {
   color: var(--pbmit-global-color);
 }
+
 .pbmit-header-social-wrapper .pbmit-social-links li {
   display: inline-block;
 }
@@ -1433,6 +1431,7 @@ body {
 .header-style-6 .pbmit-header-overlay {
   position: absolute;
   width: 100%;
+  height: 150px;
   z-index: 1;
 }
 .header-style-6 .pre-header-wrapper {
@@ -1480,6 +1479,9 @@ body {
 }
 .header-style-6 .site-navigation ul.navigation > li > a {
   color: var(--pbmit-white-color);
+}
+.header-style-6 .site-navigation ul.navigation > li > a:hover {
+  color: var(--pbmit-global-color);
 }
 .header-style-6 .site-navigation ul.navigation > li > a::after {
   color: var(--pbmit-white-color);
@@ -1547,7 +1549,7 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 }
-.site-footer:before {
+/* .site-footer:before {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -1556,7 +1558,7 @@ body {
   content: "";
   display: block;
   z-index: -1;
-}
+} */
 .footer-wrap {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -1647,7 +1649,7 @@ body {
   color: var(--pbmit-white-color) !important;
   background-color: transparent;
   border: 0;
-  width: 95%;
+  width: 93%;
 }
 .pbmit-footer-newsletter button {
   position: absolute;

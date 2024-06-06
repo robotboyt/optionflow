@@ -1477,6 +1477,7 @@ textarea.form-control:focus {
 }
 
 .slick-track {
+  cursor: grab;
   min-width: 30px;
 }
 

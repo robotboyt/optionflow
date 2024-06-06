@@ -1,19 +1,19 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { DataContext } from "../../Context/DataContext";
 
 const CustomLink = ({ propsHref, propsText, children, className }) => {
   const { openedHeader, setHeaderOpened } = useContext(DataContext);
-  const scrollToTop = () => {
+  const openHeaderMenu = () => {
     if (openedHeader === true) {
       setHeaderOpened(!openedHeader);
     }
   };
 
   return (
-    <Link to={propsHref} onClick={scrollToTop} className={className}>
+    <NavLink to={propsHref} onClick={openHeaderMenu} className={className}>
       {propsText ? propsText : children}
-    </Link>
+    </NavLink>
   );
 };
 

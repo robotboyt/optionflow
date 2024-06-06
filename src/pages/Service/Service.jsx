@@ -45,7 +45,7 @@ const Service = () => {
                       serviceTitle={serviceItem.title}
                       serviceCategory={serviceItem.category}
                       serviceLink={`/service-single/${serviceItem.id}`}
-                      serviceImg={serviceItem.serviceImage}
+                      serviceImg={serviceItem.serviceImageLow}
                       serviceDescription={serviceItem.description}
                       serviceIcon={serviceItem.iconType}
                       key={serviceItem.id}

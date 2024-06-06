@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Loader from "../../animation/Loader";
 import FetchDetailsModule from "../../components/module/FetchDetailsModule";
+import FetchModule from "../../components/module/FetchModule";
 
 const ServiceSingle = () => {
   const navigate = useNavigate();
@@ -13,18 +14,15 @@ const ServiceSingle = () => {
   const { serviceNewData, setFetchedServiceData } = useContext(DataContext);
   const [currentService, setCurrentService] = useState(null);
 
+  const serviceDetailsLink = "https://optionflow.pro/api/Main/ServiceDetails/";
   const serviceLink = "https://optionflow.pro/api/Main/Services";
 
   useEffect(() => {
-    FetchDetailsModule(
-      serviceNewData,
-      setCurrentService,
-      setFetchedServiceData,
-      serviceLink,
-      id,
-      navigate
-    );
+    FetchDetailsModule(setCurrentService, serviceDetailsLink, id, navigate);
+    FetchModule(undefined, setFetchedServiceData, serviceLink);
   }, [id]);
+
+  console.log(currentService, "current");
 
   return (
     <div className="page-wrapper">
@@ -37,7 +35,7 @@ const ServiceSingle = () => {
                   <div className="pbmit-tbar">
                     <div className="pbmit-tbar-inner container">
                       <h1 className="pbmit-tbar-title">
-                        {currentService[0].title}
+                        {currentService.title}
                       </h1>
                     </div>
                   </div>
@@ -59,7 +57,7 @@ const ServiceSingle = () => {
                             {serviceNewData.map((serviceItem) => (
                               <li
                                 className={
-                                  serviceItem.title === currentService[0].title
+                                  serviceItem.id === currentService.id
                                     ? "post-active"
                                     : null
                                 }
@@ -102,13 +100,7 @@ const ServiceSingle = () => {
                                 alt="single15img"
                               />
                             </div>
-                            {/* <h3 className="pbmit-ads-title">
-                              Цифрова <br />
-                              ідентичність
-                              <br />
-                              Як головна <br />
-                              Мета
-                            </h3> */}
+
                             <div className="pbmit-ads-button">
                               <Link to={"/contacts"}>
                                 <span>Консультація</span>
@@ -121,16 +113,16 @@ const ServiceSingle = () => {
                   </div>
                   <div className="col-lg-8 service-right-col order-1">
                     <img
-                      src={`https://optionflow.pro/${currentService[0].serviceImage}`}
+                      src={`https://optionflow.pro/${currentService.serviceImage}`}
                       className="w-100"
                       alt=""
                     />
                     <div className="service-details">
-                      <h4 className="pbmit-title">{currentService[0].title}</h4>
+                      <h4 className="pbmit-title">{currentService.title}</h4>
                       <div className="mt-4">
                         <div
                           dangerouslySetInnerHTML={{
-                            __html: currentService[0].description,
+                            __html: currentService.description,
                           }}
                         ></div>
                       </div>

@@ -4,7 +4,6 @@ import FetchModule from "../components/module/FetchModule";
 import Loader from "../animation/Loader";
 
 const Faq = () => {
-  const [questionOpened, setQuestionOpened] = useState(null);
   const [faqData, setFaqData] = useState(null);
 
   const faqLink = "https://optionflow.pro/api/Main/FAQ";
@@ -12,10 +11,6 @@ const Faq = () => {
     FetchModule(setFaqData, undefined, faqLink);
   }, []);
 
-  const handleOpenQuestion = (index) => {
-    console.log(index);
-    setQuestionOpened(questionOpened === index ? null : index);
-  };
   return (
     <div className="page-wrapper">
       <div className="pbmit-title-bar-wrapper">
@@ -52,8 +47,9 @@ const Faq = () => {
                         question={item.question}
                         answer={item.answer}
                         key={`col1-${index}`}
-                        isVisible={questionOpened === `col1-${index}`}
-                        isOnToogle={() => handleOpenQuestion(`col1-${index}`)}
+                        identificator={`col1-${index}`}
+                        // isVisible={questionOpened === `col1-${index}`}
+                        // isOnToogle={() => handleOpenQuestion(`col1-${index}`)}
                       />
                     ))}
                   </div>
@@ -65,8 +61,9 @@ const Faq = () => {
                         question={item.question}
                         answer={item.answer}
                         key={`col2-${index}`}
-                        isVisible={questionOpened === `col2-${index}`}
-                        isOnToogle={() => handleOpenQuestion(`col2-${index}`)}
+                        identificator={`col2-${index}`}
+                        // isVisible={questionOpened === `col2-${index}`}
+                        // isOnToogle={() => handleOpenQuestion(`col2-${index}`)}
                       />
                     ))}
                   </div>
@@ -96,8 +93,9 @@ const Faq = () => {
                         question={item.question}
                         answer={item.answer}
                         key={`col3-${index}`}
-                        isVisible={questionOpened === `col3-${index}`}
-                        isOnToogle={() => handleOpenQuestion(`col3-${index}`)}
+                        identificator={`col3-${index}`}
+                        // isVisible={questionOpened === `col3-${index}`}
+                        // isOnToogle={() => handleOpenQuestion(`col3-${index}`)}
                       />
                     ))}
                   </div>

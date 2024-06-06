@@ -1,41 +1,23 @@
 import axios from "axios";
 
-const FetchDetailsModule = (
-  pageNewData,
-  setCurrentPageData,
-  setContextData,
-  link,
-  id,
-  navigate
-) => {
-  if (pageNewData !== null) {
-    const getResult = (newArr, newID) => {
-      const result = newArr.filter((obj) => obj.id === newID);
-      setCurrentPageData(result);
-      console.log("here is filter");
-    };
-    getResult(pageNewData, Number(id));
-  } else {
-    const fetchService = async () => {
-      try {
-        const dataResponse = await axios.get(link);
+const FetchDetailsModule = (setCurrentPageData, link, id, navigate) => {
+  const fetchService = async () => {
+    try {
+      const dataResponse = await axios.get(link + id);
 
-        const resultResponse = await dataResponse.data.filter(
-          (obj) => obj.id === +id
-        );
-        if (resultResponse.length === 0) {
-          navigate("/*");
-        }
-        await setCurrentPageData(resultResponse);
-        setContextData(dataResponse.data.reverse());
-      } catch (error) {
-        console.error(error);
+      const resultResponse = await dataResponse.data;
+      if (resultResponse.length === 0) {
+        navigate("/*");
       }
-      console.log("here is fetch");
-    };
+      await setCurrentPageData(resultResponse);
+      console.log(resultResponse);
+    } catch (error) {
+      console.error(error);
+    }
+    console.log("here is fetch");
+  };
 
-    fetchService();
-  }
+  fetchService();
 };
 
 export default FetchDetailsModule;

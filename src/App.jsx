@@ -32,8 +32,8 @@ const App = () => {
   return (
     <div>
       <DataProvider>
-        <Navbar />
         <ScrollTop />
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/service" element={<Service />} />
