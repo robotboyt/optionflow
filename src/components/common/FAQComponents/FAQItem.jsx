@@ -1,37 +1,30 @@
-import React, { useState } from "react";
+import React from "react";
 
-const FAQItem = ({ question, answer, identificator }) => {
-  const [questionOpened, setQuestionOpened] = useState(null);
-
-  const handleOpenQuestion = (identificator) => {
-    console.log(identificator);
-    setQuestionOpened(questionOpened === identificator ? null : identificator);
-  };
+const FAQItem = React.memo(({ index, question, answer, isOpen, onClick }) => {
   return (
     <div
-      className={questionOpened ? "accordion-item active" : "accordion-item"}
-      onClick={handleOpenQuestion}
+      className={isOpen ? "accordion-item active" : "accordion-item"}
+      onClick={() => onClick(index)}
     >
       <h2 className="accordion-header" id="headingOne">
         <button
           className={
-            questionOpened ? "accordion-button " : "accordion-button collapsed"
+            isOpen ? "accordion-button " : "accordion-button collapsed"
           }
           type="button"
-          id={identificator}
         >
           {question}
         </button>
       </h2>
       <div
         className={
-          questionOpened ? "accordion-collapse" : "accordion-collapse collapse"
+          isOpen ? "accordion-collapse" : "accordion-collapse collapse"
         }
       >
         <div className="accordion-body">{answer}</div>
       </div>
     </div>
   );
-};
+});
 
 export default FAQItem;

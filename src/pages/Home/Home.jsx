@@ -13,7 +13,7 @@ const Home = () => {
   const [cardData, setCardData] = useState([
     {
       id: 1,
-      name: "Розробка Web-сайт та інше",
+      name: "Розробка Web-сайтів та інше",
       imageUrl: webImg,
       link: "/service-single/13",
       category: {

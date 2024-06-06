@@ -604,7 +604,7 @@ body {
 
 /** Style 6 **/
 .pbmit-service-style-6 {
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 
 .pbmit-service-style-6 .pbminfotech-post-item {
@@ -1568,8 +1568,8 @@ body {
 }
 .pbmit-footer-big-area h3,
 .pbmit-footer-big-area a {
-  font-size: 30px;
-  line-height: 48px;
+  font-size: 25px;
+  line-height: 30px;
   font-weight: 400;
   margin-bottom: 20px;
   color: var(--pbmit-white-color);

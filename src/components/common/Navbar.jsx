@@ -187,7 +187,7 @@ const Navbar = () => {
                                 <li className="">
                                   <CustomLink
                                     propsHref={"/career"}
-                                    propsText={"Карьера"}
+                                    propsText={"Кар’єра"}
                                   />
                                 </li>
                                 <li className="dropdown">
@@ -330,7 +330,7 @@ const Navbar = () => {
                               <li>
                                 <CustomLink
                                   propsHref={"/career"}
-                                  propsText={"Карьера"}
+                                  propsText={"Кар’єра"}
                                 />
                               </li>
                               <li

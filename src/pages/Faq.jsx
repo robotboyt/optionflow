@@ -1,14 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import FAQItem from "../components/common/FAQComponents/FAQItem";
 import FetchModule from "../components/module/FetchModule";
 import Loader from "../animation/Loader";
 
 const Faq = () => {
   const [faqData, setFaqData] = useState(null);
+  const [openIndex, setOpenIndex] = useState(null);
 
   const faqLink = "https://optionflow.pro/api/Main/FAQ";
   useEffect(() => {
     FetchModule(setFaqData, undefined, faqLink);
+  }, []);
+
+  const handleOpenQuestion = useCallback((index) => {
+    console.log(index);
+    setOpenIndex((prevOpenIndex) => (prevOpenIndex === index ? null : index));
   }, []);
 
   return (
@@ -46,10 +52,10 @@ const Faq = () => {
                       <FAQItem
                         question={item.question}
                         answer={item.answer}
-                        key={`col1-${index}`}
-                        identificator={`col1-${index}`}
-                        // isVisible={questionOpened === `col1-${index}`}
-                        // isOnToogle={() => handleOpenQuestion(`col1-${index}`)}
+                        key={index + "first"}
+                        index={index + "first"}
+                        isOpen={index + "first" === openIndex}
+                        onClick={handleOpenQuestion}
                       />
                     ))}
                   </div>
@@ -60,10 +66,10 @@ const Faq = () => {
                       <FAQItem
                         question={item.question}
                         answer={item.answer}
-                        key={`col2-${index}`}
-                        identificator={`col2-${index}`}
-                        // isVisible={questionOpened === `col2-${index}`}
-                        // isOnToogle={() => handleOpenQuestion(`col2-${index}`)}
+                        key={index + "second"}
+                        index={index + "second"}
+                        isOpen={index + "second" === openIndex}
+                        onClick={handleOpenQuestion}
                       />
                     ))}
                   </div>
@@ -92,10 +98,10 @@ const Faq = () => {
                       <FAQItem
                         question={item.question}
                         answer={item.answer}
-                        key={`col3-${index}`}
-                        identificator={`col3-${index}`}
-                        // isVisible={questionOpened === `col3-${index}`}
-                        // isOnToogle={() => handleOpenQuestion(`col3-${index}`)}
+                        key={index + "third"}
+                        index={index + "third"}
+                        isOpen={index + "third" === openIndex}
+                        onClick={handleOpenQuestion}
                       />
                     ))}
                   </div>
