@@ -12,12 +12,7 @@ const CustomLink = ({ propsHref, propsText, children, className }) => {
   };
 
   return (
-    <NavLink
-      to={propsHref}
-      onClick={openHeaderMenu}
-      className={className}
-      isActive={() => location.pathname.startsWith(propsHref)}
-    >
+    <NavLink to={propsHref} onClick={openHeaderMenu} className={className}>
       {propsText ? propsText : children}
     </NavLink>
   );

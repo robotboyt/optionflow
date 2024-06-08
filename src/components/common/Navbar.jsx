@@ -24,13 +24,6 @@ const Navbar = () => {
   document.body.style.overflow = openedHeader ? "hidden" : "";
 
   useEffect(() => {
-    // const handleScroll = () => {
-    //   setScrollWindow(window.scrollY);
-    // };
-    // window.addEventListener("scroll", handleScroll);
-    // return () => {
-    //   window.removeEventListener("scroll", handleScroll);
-    // };
     const observer = new IntersectionObserver(
       ([entry]) => {
         setHeaderSticky(!entry.isIntersecting);
@@ -309,25 +302,49 @@ const Navbar = () => {
                                   propsText={"Головна"}
                                 />
                               </li>
-                              <li>
+                              <li
+                                className={
+                                  location.pathname.includes("/service")
+                                    ? "active"
+                                    : null
+                                }
+                              >
                                 <CustomLink
                                   propsHref={"/service"}
                                   propsText={"Послуги"}
                                 />
                               </li>
-                              <li>
+                              <li
+                                className={
+                                  location.pathname.includes("/portfolio")
+                                    ? "active"
+                                    : null
+                                }
+                              >
                                 <CustomLink
                                   propsHref={"/portfolio"}
                                   propsText={"Портфоліо"}
                                 />
                               </li>
-                              <li>
+                              <li
+                                className={
+                                  location.pathname.includes("/blog")
+                                    ? "active"
+                                    : null
+                                }
+                              >
                                 <CustomLink
                                   propsHref={"/blog"}
                                   propsText={"Блог"}
                                 />
                               </li>
-                              <li>
+                              <li
+                                className={
+                                  location.pathname.includes("/career")
+                                    ? "active"
+                                    : null
+                                }
+                              >
                                 <CustomLink
                                   propsHref={"/career"}
                                   propsText={"Кар’єра"}
@@ -361,13 +378,25 @@ const Navbar = () => {
                                       propsText={"Про нас"}
                                     />
                                   </li>
-                                  <li>
+                                  <li
+                                    className={
+                                      location.pathname === "/our-history"
+                                        ? "active"
+                                        : null
+                                    }
+                                  >
                                     <CustomLink
                                       propsHref={"/our-history"}
                                       propsText={"Наша історія"}
                                     />
                                   </li>
-                                  <li>
+                                  <li
+                                    className={
+                                      location.pathname === "/faq"
+                                        ? "active"
+                                        : null
+                                    }
+                                  >
                                     <CustomLink
                                       propsHref={"/faq"}
                                       propsText={"Faq"}
@@ -387,7 +416,13 @@ const Navbar = () => {
                                   ></i>
                                 </span>
                               </li>
-                              <li>
+                              <li
+                                className={
+                                  location.pathname === "/contacts"
+                                    ? "active"
+                                    : null
+                                }
+                              >
                                 <CustomLink
                                   propsHref={"/contacts"}
                                   propsText={"Контакти"}

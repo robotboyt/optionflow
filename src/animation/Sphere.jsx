@@ -1,29 +1,31 @@
 import * as THREE from "three";
 
 import { useEffect, useRef, useState } from "react";
+import { render } from "@testing-library/react";
 
 function Sphere() {
-  const containerRef = useRef(null);
+  const sceneRef = useRef(null);
+  const mountRef = useRef(null);
+  const cameraRef = useRef(null);
+  const renderRef = useRef(null);
 
   useEffect(() => {
-    const scene = new THREE.Scene();
+    const width = mountRef.current.clientWidth;
+    const height = mountRef.current.clientHeight;
 
-    const camera = new THREE.PerspectiveCamera(
-      75,
-      containerRef.current.offsetWidth / containerRef.current.offsetHeight,
-      0.1,
-      1000
-    );
+    const scene = new THREE.Scene();
+    sceneRef.current = scene;
+
+    const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
     window.innerWidth >= 870
       ? (camera.position.z = 2)
       : (camera.position.z = 2.2);
+    cameraRef.current = camera;
 
     const renderer = new THREE.WebGLRenderer({ alpha: true });
-    renderer.setSize(
-      containerRef.current.offsetWidth,
-      containerRef.current.offsetHeight
-    );
-    containerRef.current.appendChild(renderer.domElement);
+    renderer.setSize(width, height);
+    mountRef.current.appendChild(renderer.domElement);
+    renderRef.current = render;
 
     const sphereContainer = new THREE.Group();
 
@@ -55,18 +57,32 @@ function Sphere() {
 
     animate();
 
+    const handleResize = () => {
+      const width = mountRef.current.clientWidth;
+      const height = mountRef.current.clientHeight;
+      renderer.setSize(width, height);
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+    };
+
+    window.addEventListener("resize", handleResize);
+
     return () => {
-      renderer.dispose();
+      window.removeEventListener("resize", handleResize);
+      if (
+        renderRef.current &&
+        typeof renderRef.current.dispose === "function"
+      ) {
+        renderRef.current.dispose();
+      }
+      if (mountRef.current && renderRef.current.domElement) {
+        mountRef.current.removeChild(renderRef.current.domElement);
+      }
+      renderRef.current = null;
     };
   }, []);
 
-  return (
-    <div
-      ref={containerRef}
-      // style={{ width: "100%", height: "100vh" }}
-      className="sphere"
-    ></div>
-  );
+  return <div ref={mountRef} className="sphere"></div>;
 }
 
 export default Sphere;
