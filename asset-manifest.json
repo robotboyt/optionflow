@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/optionflow/static/css/main.dd0664ba.css",
-    "main.js": "/optionflow/static/js/main.9948f89d.js",
+    "main.css": "/optionflow/static/css/main.f89ce9dd.css",
+    "main.js": "/optionflow/static/js/main.8e21763a.js",
     "static/media/flaticon.svg": "/optionflow/static/media/flaticon.8dbedf60258bbe4aa064.svg",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/optionflow/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/it-service.png": "/optionflow/static/media/it-service.b68ce1eca29652408fd2.png",
@@ -32,11 +32,11 @@
     "static/media/slick.ttf": "/optionflow/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/optionflow/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/optionflow/index.html",
-    "main.dd0664ba.css.map": "/optionflow/static/css/main.dd0664ba.css.map",
-    "main.9948f89d.js.map": "/optionflow/static/js/main.9948f89d.js.map"
+    "main.f89ce9dd.css.map": "/optionflow/static/css/main.f89ce9dd.css.map",
+    "main.8e21763a.js.map": "/optionflow/static/js/main.8e21763a.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd0664ba.css",
-    "static/js/main.9948f89d.js"
+    "static/css/main.f89ce9dd.css",
+    "static/js/main.8e21763a.js"
   ]
 }
