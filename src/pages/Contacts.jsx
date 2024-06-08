@@ -27,12 +27,9 @@ const Contacts = () => {
           "https://optionflow.pro/api/Main/Contact",
           data
         );
-        console.log("Has been sended", response.data);
         localStorage.setItem(`formSended`, true);
-        console.log(data);
       } catch (error) {
         console.log("We got Error", error);
-        console.log(data);
       }
       setData(initialState);
     };

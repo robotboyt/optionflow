@@ -9,13 +9,10 @@ const Career = () => {
   const { careerNewData, setFetchedCareerData } = useContext(DataContext);
   let careerLink = "https://optionflow.pro/api/Main/Career";
   useEffect(() => {
-    console.log("here is render");
     if (careerNewData !== null && careerData === null) {
-      console.log("here is second");
       setCareerData(careerNewData);
     } else if (careerData === null) {
       FetchModule(setCareerData, setFetchedCareerData, careerLink);
-      console.log("here is rerender");
     }
   }, [careerData, setCareerData, setFetchedCareerData]);
 

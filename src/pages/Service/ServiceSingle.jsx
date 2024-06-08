@@ -22,8 +22,6 @@ const ServiceSingle = () => {
     FetchModule(undefined, setFetchedServiceData, serviceLink);
   }, [id]);
 
-  console.log(currentService, "current");
-
   return (
     <div className="page-wrapper">
       {currentService ? (

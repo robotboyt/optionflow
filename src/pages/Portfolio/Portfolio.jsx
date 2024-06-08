@@ -10,17 +10,12 @@ const Portfolio = () => {
 
   const portfolioLink = "https://optionflow.pro/api/Main/Portfolio";
   useEffect(() => {
-    console.log("here is render");
     if (portfolioNewData !== null && portfolioData === null) {
       setPortfolioData(portfolioNewData);
     } else if (portfolioData === null) {
       FetchModule(setPortfolioData, setFetchedPortfolioData, portfolioLink);
-      console.log("here is rerender");
     }
-    console.log("fsd");
   }, [portfolioData, portfolioNewData]);
-
-  console.log("re render ? ");
 
   return (
     <div className="page-wrapper">

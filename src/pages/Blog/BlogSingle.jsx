@@ -22,7 +22,6 @@ const BlogSingle = () => {
       FetchModule(undefined, setFetchedBlogData, blogLink);
     };
     detailsFetch();
-    console.log("open");
   }, [id]);
 
   return (

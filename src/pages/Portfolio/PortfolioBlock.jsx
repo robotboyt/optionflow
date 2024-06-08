@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const PortfolioBlock = ({ portfolioObject, id }) => {
+const PortfolioBlock = ({ portfolioObject }) => {
   return (
     <div className="col-sm-12 col-md-4">
       <article className="pbmit-portfolio-style-4">

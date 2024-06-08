@@ -21,9 +21,7 @@ const CareerSingle = () => {
     FetchDetailsModule(setCurrentCareer, carrerDetailsLink, id, navigate);
     if (careerNewData === null) {
       FetchModule(undefined, setFetchedCareerData, careerLink);
-      console.log("is done");
     }
-    console.log("detais render");
   }, [id]);
 
   const sendCV = async (event) => {

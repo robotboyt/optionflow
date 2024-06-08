@@ -17,18 +17,14 @@ const Blog = () => {
     if (category !== undefined) {
       setFilteredData(blogNewData.filter((item) => item.category === category));
     }
-
     if (blogNewData !== null && blogData === null) {
       setBlogData(blogNewData);
     } else if (blogData === null) {
       FetchModule(setBlogData, setFetchedBlogData, blogLink);
     }
-    console.log("open");
   }, [category]);
 
   let data = category ? filteredData : blogData;
-
-  console.log(category);
 
   return (
     <div className="page-wrapper">

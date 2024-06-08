@@ -10,7 +10,6 @@ const FetchModule = async (setPageData, setContextData, link) => {
     if (setContextData) {
       setContextData(data);
     }
-    console.log("requeest");
   } catch (error) {
     console.error(error);
   }

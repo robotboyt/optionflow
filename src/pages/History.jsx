@@ -22,8 +22,6 @@ const History = () => {
     fetchData();
   }, []);
 
-  console.log(historyData);
-
   return (
     <div className="page-wrapper">
       <div className="pbmit-title-bar-wrapper">

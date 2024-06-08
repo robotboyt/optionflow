@@ -10,7 +10,6 @@ const Service = () => {
 
   const serviceLink = "https://optionflow.pro/api/Main/Services";
   useEffect(() => {
-    console.log("here is render");
     if (serviceNewData !== null && serviceData === null) {
       setServiceData(serviceNewData);
     } else if (serviceData === null) {
