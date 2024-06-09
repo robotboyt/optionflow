@@ -8,13 +8,12 @@ const Service = () => {
   const [serviceData, setServiceData] = useState(null);
   const { serviceNewData, setFetchedServiceData } = useContext(DataContext);
 
-  const serviceLink = "https://optionflow.pro/api/Main/Services";
+  const serviceLink = "https://api.optionflow.pro/api/Main/Services";
   useEffect(() => {
     if (serviceNewData !== null && serviceData === null) {
       setServiceData(serviceNewData);
     } else if (serviceData === null) {
       FetchModule(setServiceData, setFetchedServiceData, serviceLink);
-      console.log("here is rerender");
     }
   }, [serviceData, serviceNewData]);
   return (

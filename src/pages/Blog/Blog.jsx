@@ -11,7 +11,7 @@ const Blog = () => {
   const { blogNewData, setFetchedBlogData } = useContext(DataContext);
   const [filteredData, setFilteredData] = useState(null);
 
-  let blogLink = "https://optionflow.pro/api/Main/Blog";
+  let blogLink = "https://api.optionflow.pro/api/Main/Blog";
 
   useEffect(() => {
     if (category !== undefined) {

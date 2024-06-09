@@ -54,7 +54,7 @@ const Home = () => {
     const getData = async () => {
       try {
         const dataResponse = await axios.get(
-          "https://optionflow.pro/api/Main/Index"
+          "https://api.optionflow.pro/api/Main/Index"
         );
         setServicesData(dataResponse.data.allServices);
         setBlogData(dataResponse.data.blogs);
@@ -202,44 +202,6 @@ const Home = () => {
                       Наявність мобільного додатку підвищує технологічний статус
                       вашого бренду, створюючи враження сучасності та
                       інноваційності
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="pbmit-ihbox-style-9">
-                <div className="pbmit-ihbox-box d-flex align-items-center">
-                  <div className="pbmit-ihbox-icon">
-                    <div className="pbmit-ihbox-icon-wrapper">
-                      <div className="pbmit-icon-wrapper pbmit-icon-type-icon">
-                        <i className="pbmit-xido-icon pbmit-xido-icon-analysis"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="pbmit-ihbox-contents">
-                    <h2 className="pbmit-element-title">Blockchain розробка</h2>
-                    <div className="pbmit-heading-desc">
-                      Blockchain це не тільки грошові перекази криптовалют, але
-                      й безпечні обміни інформації такими як повідомлення або
-                      корпоративні системи управління даними.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="pbmit-ihbox-style-9">
-                <div className="pbmit-ihbox-box d-flex align-items-center">
-                  <div className="pbmit-ihbox-icon">
-                    <div className="pbmit-ihbox-icon-wrapper">
-                      <div className="pbmit-icon-wrapper pbmit-icon-type-icon">
-                        <i className="pbmit-xido-icon pbmit-xido-icon-networking"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="pbmit-ihbox-contents">
-                    <h2 className="pbmit-element-title">ШІ - розробка</h2>
-                    <div className="pbmit-heading-desc">
-                      Штучний інтелект це вже не майбутнє - а реальність.
-                      Створюємо онлайн-чати на основі ШІ для більш зручної
-                      комунікації з клієнтами та аналізу даних.
                     </div>
                   </div>
                 </div>

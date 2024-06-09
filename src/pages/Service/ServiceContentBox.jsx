@@ -16,7 +16,7 @@ const ServiceContentBox = ({
             <div className="pbmit-featured-img-wrapper">
               <div className="pbmit-featured-wrapper">
                 <img
-                  src={`https://optionflow.pro/${serviceImg}`}
+                  src={`https://api.optionflow.pro/${serviceImg}`}
                   className="img-fluid"
                   alt=""
                 />

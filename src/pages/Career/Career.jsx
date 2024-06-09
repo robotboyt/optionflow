@@ -7,7 +7,7 @@ import FetchModule from "../../components/module/FetchModule";
 const Career = () => {
   const [careerData, setCareerData] = useState(null);
   const { careerNewData, setFetchedCareerData } = useContext(DataContext);
-  let careerLink = "https://optionflow.pro/api/Main/Career";
+  let careerLink = "https://api.optionflow.pro/api/Main/Career";
   useEffect(() => {
     if (careerNewData !== null && careerData === null) {
       setCareerData(careerNewData);
@@ -15,6 +15,8 @@ const Career = () => {
       FetchModule(setCareerData, setFetchedCareerData, careerLink);
     }
   }, [careerData, setCareerData, setFetchedCareerData]);
+
+  console.log(careerData);
 
   return (
     <div className="page-wrapper">
@@ -36,13 +38,26 @@ const Career = () => {
           <div className="container">
             <div className="row">
               {careerData ? (
-                careerData.map((item) => (
-                  <CareerContentBox careerObject={item} key={item.id} />
-                ))
+                careerData.length === 0 ? (
+                  <h3
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      height: "400px",
+                      color: "white",
+                    }}
+                  >
+                    {"Поки що немає вільних вакансій :("}
+                  </h3>
+                ) : (
+                  careerData.map((item) => (
+                    <CareerContentBox careerObject={item} key={item.id} />
+                  ))
+                )
               ) : (
                 <Loader />
               )}
-              {/* <Loader /> */}
             </div>
           </div>
         </section>

@@ -14,13 +14,16 @@ const ServiceSingle = () => {
   const { serviceNewData, setFetchedServiceData } = useContext(DataContext);
   const [currentService, setCurrentService] = useState(null);
 
-  const serviceDetailsLink = "https://optionflow.pro/api/Main/ServiceDetails/";
-  const serviceLink = "https://optionflow.pro/api/Main/Services";
+  const serviceDetailsLink =
+    "https://api.optionflow.pro/api/Main/ServiceDetails/";
+  const serviceLink = "https://api.optionflow.pro/api/Main/Services";
 
   useEffect(() => {
     FetchDetailsModule(setCurrentService, serviceDetailsLink, id, navigate);
     FetchModule(undefined, setFetchedServiceData, serviceLink);
   }, [id]);
+
+  console.log(currentService);
 
   return (
     <div className="page-wrapper">
@@ -33,7 +36,7 @@ const ServiceSingle = () => {
                   <div className="pbmit-tbar">
                     <div className="pbmit-tbar-inner container">
                       <h1 className="pbmit-tbar-title">
-                        {currentService.title}
+                        {currentService.service.title}
                       </h1>
                     </div>
                   </div>
@@ -75,7 +78,7 @@ const ServiceSingle = () => {
                             <div className="pbmit-download">
                               <div className="pbmit-item-download">
                                 <Link
-                                  to="https://optionflow.pro/docs/OptionFlow.pdf"
+                                  to="https://api.optionflow.pro/docs/OptionFlow.pdf"
                                   target="_blank"
                                   rel="noopener noreferrer"
                                 >
@@ -111,16 +114,18 @@ const ServiceSingle = () => {
                   </div>
                   <div className="col-lg-8 service-right-col order-1">
                     <img
-                      src={`https://optionflow.pro/${currentService.serviceImage}`}
+                      src={`https://api.optionflow.pro/${currentService.service.serviceImage}`}
                       className="w-100"
                       alt=""
                     />
                     <div className="service-details">
-                      <h4 className="pbmit-title">{currentService.title}</h4>
+                      <h4 className="pbmit-title">
+                        {currentService.service.title}
+                      </h4>
                       <div className="mt-4">
                         <div
                           dangerouslySetInnerHTML={{
-                            __html: currentService.description,
+                            __html: currentService.service.description,
                           }}
                         ></div>
                       </div>

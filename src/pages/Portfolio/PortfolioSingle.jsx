@@ -12,8 +12,8 @@ const PortfolioSingle = () => {
   const [currentPortfolio, setCurrentPortfolio] = useState(null);
 
   const portfolioDetailsLink =
-    "https://optionflow.pro/api/Main/PortfolioDetails/";
-  const portfolioLink = "https://optionflow.pro/api/Main/Portfolio";
+    "https://api.optionflow.pro/api/Main/PortfolioDetails/";
+  const portfolioLink = "https://api.optionflow.pro/api/Main/Portfolio";
 
   useEffect(() => {
     const detailsFetch = async () => {
@@ -132,7 +132,7 @@ const PortfolioSingle = () => {
                         >
                           <div className="portfolio-challange-bg">
                             <img
-                              src={`https://optionflow.pro/${currentPortfolio.portfolioImage}`}
+                              src={`https://api.optionflow.pro/${currentPortfolio.portfolioImage}`}
                               alt="Portfolio present"
                             />
                           </div>

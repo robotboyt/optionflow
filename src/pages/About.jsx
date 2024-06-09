@@ -12,7 +12,7 @@ const About = () => {
     const getData = async () => {
       try {
         const blogResponse = await axios.get(
-          "https://optionflow.pro/api/Main/Blog"
+          "https://api.optionflow.pro/api/Main/Blog"
         );
         setBlogData(blogResponse.data.slice(0, 3));
         setFetchedBlogData(blogResponse.data);
@@ -128,7 +128,7 @@ const About = () => {
                           Відправити пошту
                         </div>
                         <h2 className="pbmit-element-title">
-                          optionflowit@gmail.com
+                          info@optionflow.pro
                         </h2>
                       </div>
                     </Link>

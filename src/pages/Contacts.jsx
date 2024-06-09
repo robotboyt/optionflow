@@ -24,7 +24,7 @@ const Contacts = () => {
     const FormSended = async () => {
       try {
         const response = await axios.post(
-          "https://optionflow.pro/api/Main/Contact",
+          "https://api.optionflow.pro/api/Main/Contact",
           data
         );
         localStorage.setItem(`formSended`, true);
@@ -235,7 +235,7 @@ const Contacts = () => {
                             Відправити пошту
                           </div>
                           <h2 className="pbmit-element-title">
-                            optionflowit@gmail.com
+                            info@optionflow.pro
                           </h2>
                         </div>
                       </Link>
@@ -261,7 +261,7 @@ const Contacts = () => {
                             Телефонуйте у будь-який час
                           </div>
                           <h2 className="pbmit-element-title">
-                            + 92 666 888 0000
+                            +38 (099) 760 76 69
                           </h2>
                         </div>
                       </Link>

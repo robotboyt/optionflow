@@ -12,9 +12,9 @@ const BlogSingle = () => {
   const { blogNewData, setFetchedBlogData } = useContext(DataContext);
   const [currentBlog, setCurrentBlog] = useState(null);
 
-  let blogDetailsLink = "https://optionflow.pro/api/Main/BlogDetails/";
+  let blogDetailsLink = "https://api.optionflow.pro/api/Main/BlogDetails/";
 
-  let blogLink = "https://optionflow.pro/api/Main/Blog";
+  let blogLink = "https://api.optionflow.pro/api/Main/Blog";
 
   useEffect(() => {
     const detailsFetch = async () => {
@@ -56,7 +56,7 @@ const BlogSingle = () => {
                             <div className="pbmit-featured-container">
                               <div className="pbmit-featured-wrapper">
                                 <img
-                                  src={`https://optionflow.pro/${currentBlog.blogImage}`}
+                                  src={`https://api.optionflow.pro/${currentBlog.blogImage}`}
                                   className="img-fluid w-100"
                                   alt=""
                                 />
@@ -89,7 +89,7 @@ const BlogSingle = () => {
                                     to={`/blog-single/${postItem.id}`}
                                   >
                                     <img
-                                      src={`https://optionflow.pro/${postItem.blogImageLow}`}
+                                      src={`https://api.optionflow.pro/${postItem.blogImageLow}`}
                                       className="img-fluid"
                                       alt=""
                                     />

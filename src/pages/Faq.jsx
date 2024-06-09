@@ -7,13 +7,12 @@ const Faq = () => {
   const [faqData, setFaqData] = useState(null);
   const [openIndex, setOpenIndex] = useState(null);
 
-  const faqLink = "https://optionflow.pro/api/Main/FAQ";
+  const faqLink = "https://api.optionflow.pro/api/Main/FAQ";
   useEffect(() => {
     FetchModule(setFaqData, undefined, faqLink);
   }, []);
 
   const handleOpenQuestion = useCallback((index) => {
-    console.log(index);
     setOpenIndex((prevOpenIndex) => (prevOpenIndex === index ? null : index));
   }, []);
 

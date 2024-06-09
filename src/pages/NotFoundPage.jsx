@@ -28,7 +28,7 @@ const NotFoundPage = () => {
                 color: "white",
               }}
             >
-              <h3>{"PAGE NOT FOUND :("}</h3>
+              <h3>{"Такої стрінки не існує :("}</h3>
             </div>
           </div>
         </section>

@@ -10,7 +10,7 @@ const History = () => {
     const fetchData = async () => {
       try {
         const dataResponse = await axios.get(
-          "https://optionflow.pro/api/Main/OurHistory"
+          "https://api.optionflow.pro/api/Main/OurHistory"
         );
         setHistoryData(dataResponse.data);
         setFetchedHistoryData(dataResponse.data);
@@ -115,7 +115,7 @@ const History = () => {
                             <div className="col-md-6 pbmit-ourhistory-left">
                               <span className="pbmit-timeline-image">
                                 <img
-                                  src="images/coworking/history/history-01.jpg"
+                                  src={historyItem.image}
                                   className="img-fluid w-100"
                                   alt="We started  business industry"
                                 />

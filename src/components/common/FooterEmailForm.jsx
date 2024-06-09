@@ -8,7 +8,7 @@ const FooterEmailForm = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://optionflow.pro/api/Main/SubscribeToNewsletter",
+        "https://api.optionflow.pro/api/Main/SubscribeToNewsletter",
         {
           email: formEmail,
         }
